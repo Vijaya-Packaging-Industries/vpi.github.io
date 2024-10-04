@@ -6,7 +6,6 @@
     <meta name="description" content="Vijaya Packaging Industries offers high-quality, eco-friendly packaging solutions including corrugated boxes, rolls, and custom packaging solutions.">
     <title>Vijaya Packaging Industries</title>
     <style>
-        /* Basic Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f0f0f0; }
         a { text-decoration: none; color: #333; }
@@ -32,7 +31,7 @@
 
         /* Hero Section */
         .hero {
-            background: url('https://t3.ftcdn.net/jpg/06/51/07/16/360_F_651071674_16EYWhDOGnLvX6fr52OIzxBilwCHN4kQ.jpg') center/cover no-repeat;
+            background: url('files/video.mp4') center/cover no-repeat;
             color: #fff;
             padding: 100px 20px;
             text-align: center;
@@ -53,7 +52,15 @@
         .hero button:hover { background: #d18d00; }
 
         /* About Section */
-        .about { background: #f4f4f4; padding: 50px 20px; animation: fadeIn 2s ease-in-out; }
+        .about {
+            background: #f4f4f4;
+            padding: 50px 20px;
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 1s;
+        }
+        .about:hover {
+            transform: scale(1.02);
+        }
 
         /* Products Section */
         .products { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; padding: 50px 20px; }
@@ -69,10 +76,10 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        /* Corrugated Boxes Section */
-        .corrugated-boxes { background: #f4f4f4; padding: 50px 20px; animation: slideInFromRight 1.5s ease-in-out; }
+        /* Section Dividers */
+        .corrugated-boxes { background: #d2b48c; padding: 50px 20px; animation: slideInFromRight 1.5s ease-in-out; }
         .corrugated-rolls { background: #fff; padding: 50px 20px; animation: slideInFromLeft 1.5s ease-in-out; }
-        .custom-solutions { background: #f4f4f4; padding: 50px 20px; animation: slideInFromBottom 1.5s ease-in-out; }
+        .custom-solutions { background: #d2b48c; padding: 50px 20px; animation: slideInFromBottom 1.5s ease-in-out; }
 
         /* Image Container */
         .product-images {
@@ -82,8 +89,8 @@
             margin-top: 20px;
         }
         .image-container {
-            width: 150px;
-            height: 150px;
+            width: 180px; /* Increased size */
+            height: 180px; /* Increased size */
             overflow: hidden;
             border: 1px solid #ddd;
             padding: 5px;
@@ -98,6 +105,13 @@
             cursor: pointer;
         }
         .image-container:hover img { transform: scale(1.2); }
+
+        /* Image Titles */
+        .image-title {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
 
         /* Contact Section */
         .contact-form {
@@ -149,6 +163,60 @@
             .hero { height: auto; }
         }
 
+        .box-container {
+            width: 100px; /* Box width */
+            height: 100px; /* Box height */
+            background: url('image.png') center/contain no-repeat; /* Image of the cardboard box */
+            position: absolute;
+            animation: fall 1.5s ease-in-out forwards; /* Fall faster (1.5s) */
+            opacity: 0; /* Initially hidden */
+        }
+
+        .box {
+            width: 100px; /* Box width */
+            height: 100px; /* Box height */
+            margin: 0 5px;
+            background: url('open-cardboard-box-transparent-background-png.jpg') center/contain no-repeat; /* Image of the cardboard box */
+            animation: fall 3s infinite ease-in-out;
+            position: absolute;
+            opacity: 0; /* Initially hidden */
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-150%); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        .stack {
+            position: absolute;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            background: url('open-cardboard-box-transparent-background-png.jpg') center/contain no-repeat; /* Stacked boxes */
+        }
+
+        /* Different starting positions for boxes */
+        .box:nth-child(1) { left: 10%; }
+        .box:nth-child(2) { left: 30%; }
+        .box:nth-child(3) { left: 50%; }
+        .box:nth-child(4) { left: 70%; }
+        .box:nth-child(5) { left: 90%; }
+
+        /* Stacking of boxes with delay for realism */
+        .stack:nth-child(1) { left: 40%; }
+        .stack:nth-child(2) { left: 50%; }
+        .stack:nth-child(3) { left: 60%; }
+
+        /* Hover effect: hide Learn More button */
+        .commitment:hover + .learn-more {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .learn-more {
+            transition: opacity 0.5s ease;
+        }
+
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -182,9 +250,22 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
+        <div class="box-container">
+            <!-- 5 boxes falling from different positions -->
+            <div class="box" style="animation-delay: 0.5s;"></div>
+            <div class="box" style="animation-delay: 1s;"></div>
+            <div class="box" style="animation-delay: 1.5s;"></div>
+            <div class="box" style="animation-delay: 2s;"></div>
+            <div class="box" style="animation-delay: 2.5s;"></div>
+
+            <!-- Stacked boxes that appear after fall -->
+            <div class="stack"></div>
+            <div class="stack"></div>
+            <div class="stack"></div>
+        </div>
         <h1>Vijaya Packaging Industries</h1>
         <p>Your trusted partner for all your packaging needs.</p>
-        <button>Learn More</button>
+        <button class="learn-more">Learn More</button>
     </section>
 
     <!-- About Section -->
@@ -198,9 +279,18 @@
         <h2>Corrugated Boxes</h2>
         <p>We offer high-quality corrugated boxes suitable for various industries and shipping needs. Durable, eco-friendly, and customizable.</p>
         <div class="product-images">
-            <div class="image-container"><a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 1"></a></div>
-            <div class="image-container"><a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 2"></a></div>
-            <div class="image-container"><a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 3"></a></div>
+            <div class="image-container">
+                <a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 1"></a>
+                <p class="image-title">E-flute</p>
+            </div>
+            <div class="image-container">
+                <a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 2"></a>
+                <p class="image-title">A-flute</p>
+            </div>
+            <div class="image-container">
+                <a href="corrugated-boxes.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Box 3"></a>
+                <p class="image-title">V-flute</p>
+            </div>
         </div>
     </section>
 
@@ -220,9 +310,18 @@
         <h2>Custom Solutions</h2>
         <p>We provide tailored packaging solutions designed to meet your specific needs. Whether it's custom shapes, sizes, or branding, we've got you covered.</p>
         <div class="product-images">
-            <div class="image-container"><a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 1"></a></div>
-            <div class="image-container"><a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 2"></a></div>
-            <div class="image-container"><a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 3"></a></div>
+            <div class="image-container">
+                <a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 1"></a>
+                <p class="image-title">3 ply</p>
+            </div>
+            <div class="image-container">
+                <a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 2"></a>
+                <p class="image-title">5 ply</p>
+            </div>
+            <div class="image-container">
+                <a href="custom-solutions.html"><img src="https://www.upack.in/media/catalog/product/cache/eef43a2c5f92fe473fe2ae78487be82f/u/c/ucp118srd.jpg" alt="Custom Solution 3"></a>
+                <p class="image-title">7 ply</p>
+            </div>
         </div>
     </section>
 
@@ -240,6 +339,7 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Vijaya Packaging Industries. All rights reserved.</p>
+        <p>Email: vijayapkgindustries@gmail.com | Phone: +91 9343840540 (WhatsApp)</p>
     </footer>
 
 </body>
