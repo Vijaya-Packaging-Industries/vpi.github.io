@@ -342,6 +342,36 @@
             margin-right: 6px;
         }
 
+        /* Mobile Header Controls */
+        .mobile-header-controls {
+            display: none; /* Hidden by default, shown in media query */
+            align-items: center;
+        }
+        
+        /* Mobile Language Button */
+        .mobile-language-btn-container {
+            position: relative;
+            margin-right: 10px;
+        }
+        
+        .mobile-language-btn {
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+        
+        .mobile-language-btn-container .language-dropdown {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            transform: none;
+            min-width: 120px;
+            z-index: 1006;
+        }
+        
+        .mobile-language-btn-container.open .language-dropdown {
+            display: block;
+        }
+        
         /* Mobile Menu Toggle Button */
         .mobile-menu-toggle {
             display: none; /* Hidden by default, shown in media query */
@@ -350,7 +380,6 @@
             cursor: pointer;
             padding: 15px; /* Good touch target */
             z-index: 1005; /* Above sticky header content, below opened menu */
-            margin-left: auto; /* Pushes to the right if nav is also present for a moment */
         }
 
         .mobile-menu-toggle .menu-icon-bar {
@@ -457,11 +486,19 @@
 
         /* Media Query for Mobile Navigation (up to 1024px) */
         @media (max-width: 1024px) {
+            .mobile-header-controls {
+                display: flex; /* Show mobile controls container */
+            }
+            
             .mobile-menu-toggle {
                 display: block; /* Show hamburger */
                 position: relative;
                 padding: 10px;
-                margin-left: 5px;
+            }
+            
+            /* Hide language button in main navigation on mobile */
+            #main-navigation .language-btn-container {
+                display: none;
             }
             
             .logo-container {
@@ -1209,11 +1246,22 @@
                     <div class="logo-subtitle">ಇಂಡಸ್ಟ್ರೀಸ್</div>
                 </div>
             </div>
-            <button class="mobile-menu-toggle" aria-label="ನ್ಯಾವಿಗೇಷನ್ ಟಾಗಲ್ ಮಾಡಿ" aria-expanded="false" aria-controls="main-navigation">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
+            <div class="mobile-header-controls">
+                <div class="mobile-language-btn-container">
+                    <button type="button" class="language-btn mobile-language-btn" aria-label="ಭಾಷೆ ಬದಲಿಸಿ" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon">🌐</span> ಭಾಷೆ
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="index.html">English</a>
+                        <a href="index_hindi.html">हिन्दी</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="ನ್ಯಾವಿಗೇಷನ್ ಟಾಗಲ್ ಮಾಡಿ" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+            </div>
             <nav id="main-navigation"> <ul>
                     <li class="language-btn-container">
                         <button type="button" class="language-btn" aria-label="ಭಾಷೆ ಬದಲಿಸಿ" aria-haspopup="true" aria-expanded="false">
@@ -1682,11 +1730,27 @@
                 langBtn.setAttribute('aria-expanded', langBtnContainer.classList.contains('open'));
             });
         }
+        
+        // Mobile Language Dropdown Toggle
+        const mobileLangBtnContainer = document.querySelector('.mobile-language-btn-container');
+        const mobileLangBtn = document.querySelector('.mobile-language-btn');
+        if (mobileLangBtnContainer && mobileLangBtn) { 
+            mobileLangBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); 
+                mobileLangBtnContainer.classList.toggle('open');
+                mobileLangBtn.setAttribute('aria-expanded', mobileLangBtnContainer.classList.contains('open'));
+            });
+        }
         // Close language dropdown if clicked outside (specific to language dropdown)
         document.addEventListener('click', function(event) {
             if (langBtnContainer && langBtnContainer.classList.contains('open') && !langBtnContainer.contains(event.target)) {
                 langBtnContainer.classList.remove('open');
                 if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            }
+            
+            if (mobileLangBtnContainer && mobileLangBtnContainer.classList.contains('open') && !mobileLangBtnContainer.contains(event.target)) {
+                mobileLangBtnContainer.classList.remove('open');
+                if (mobileLangBtn) mobileLangBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
