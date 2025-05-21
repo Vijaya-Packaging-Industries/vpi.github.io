@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="kn"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ - ಪ್ರೀಮಿಯಂ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #f39c12;
+            --light-bg: #ecf0f1; /* Renamed for clarity */
+            --light-text: #333;
+            --light-card-bg: #ffffff;
+            --light-section-title: var(--primary);
+            --light-header-bg: #ffffff;
+            --light-header-text: var(--dark);
+            --light-footer-bg: var(--dark);
+            --light-footer-text: #bbb;
+
+
+            --dark-bg: #2c3e50;
+            --dark-text: #ecf0f1;
+            --dark-card-bg: #34495e;
+            --dark-section-title: var(--accent); /* Example: accent color for titles in dark mode */
+            --dark-header-bg: #34495e;
+            --dark-header-text: var(--light-bg);
+            --dark-footer-bg: #232f3c;
+            --dark-footer-text: #a0a0a0;
+
+
+            /* Default to light theme */
+            --bg-color: var(--light-bg);
+            --text-color: var(--light-text);
+            --card-bg-color: var(--light-card-bg);
+            --section-title-color: var(--light-section-title);
+            --header-bg-color: var(--light-header-bg);
+            --header-text-color: var(--light-header-text);
+            --footer-bg-color: var(--light-footer-bg);
+            --footer-text-color: var(--light-footer-text);
+            --logo-text-color: var(--primary);
+            --nav-link-color: var(--dark);
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: white;
+            --form-control-border: #ddd;
+            --form-control-focus-border: var(--secondary);
+            --product-img-bg: #f5f5f5;
+            --testimonial-border: var(--primary);
+            --contact-icon-bg: var(--primary);
+            --contact-icon-text: white;
+            --social-link-bg: #444;
+        }
+
+        body.dark-theme {
+            --bg-color: var(--dark-bg);
+            --text-color: var(--dark-text);
+            --card-bg-color: var(--dark-card-bg);
+            --section-title-color: var(--dark-section-title);
+            --header-bg-color: var(--dark-header-bg);
+            --header-text-color: var(--dark-header-text);
+            --footer-bg-color: var(--dark-footer-bg);
+            --footer-text-color: var(--dark-footer-text);
+            --logo-text-color: var(--accent);
+            --nav-link-color: var(--light-bg);
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: var(--dark-bg);
+            --form-control-border: #555;
+            --form-control-focus-border: var(--accent);
+            --product-img-bg: #4a4a4a;
+            --testimonial-border: var(--accent);
+            --contact-icon-bg: var(--accent);
+            --contact-icon-text: var(--dark-bg);
+            --social-link-bg: #555;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consider Kannada web fonts */
+        }
+        
+        body {
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6;
+            position: relative; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e67e22;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--btn-outline-border-color);
+            color: var(--btn-outline-text-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--btn-outline-hover-bg-color);
+            color: var(--btn-outline-hover-text-color);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--header-bg-color); 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--logo-text-color); 
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            align-items: center; 
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a,
+        .language-btn-container button
+         {
+            font-weight: 600;
+            color: var(--nav-link-color); 
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn-container button {
+            background: none;
+            border: 1px solid var(--nav-link-color); 
+            cursor: pointer;
+        }
+        
+        nav ul li a:hover,
+        .language-btn-container button:hover {
+            color: var(--nav-link-hover-color); 
+            border-color: var(--nav-link-hover-color); 
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white; 
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .about {
+            padding: 80px 0;
+            background-color: var(--card-bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: var(--section-title-color); 
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-color); 
+        }
+        
+        .about-img {
+            flex: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .products {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg-color); 
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card:hover .product-img img { 
+            transform: scale(1.1);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background-color: var(--product-img-bg); 
+            overflow: hidden; 
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.3s ease; 
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-color); 
+        }
+        
+        .product-info p {
+            color: var(--text-color); 
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .capabilities {
+            padding: 80px 0;
+            background-color: var(--card-bg-color);  
+            transition: background-color 0.3s ease;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .capability-card { 
+            text-align: center;
+            border-radius: 8px;
+            background-color: var(--card-bg-color); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            overflow: hidden; 
+            position: relative;
+            min-height: 300px; 
+        }
+
+        .capability-collage {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .capability-collage-img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            transition: width 0.5s ease;
+        }
+
+        .capability-card:hover .capability-collage-img {
+            width: 33.333%; 
+        }
+
+        .capability-collage-img:nth-child(n+2) {
+            width: 0; 
+        }
+        .capability-card:hover .capability-collage-img:nth-child(n+2) {
+            width: 33.333%;
+        }
+        
+        .capability-text-content {
+            position: relative; 
+            z-index: 2;
+            padding: 20px;
+            /* background-color: rgba(var(--card-bg-color-rgb, 255,255,255),0.8); */
+            color: var(--text-color); 
+            margin-top: auto; 
+        }
+        body.light-theme .capability-text-content {
+             background-color: rgba(236,240,241,0.8); 
+        }
+        body.dark-theme .capability-text-content {
+             background-color: rgba(44,62,80,0.8); 
+        }
+
+
+        .capability-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-color); 
+        }
+        
+        .sustainability {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .sustainability-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .sustainability-img {
+            flex: 1;
+        }
+        
+        .sustainability-img img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .sustainability-text {
+            flex: 1;
+        }
+        
+        .sustainability-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-color); 
+        }
+        
+        .eco-features {
+            margin-top: 20px;
+        }
+        
+        .eco-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .eco-icon { 
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--success);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--card-bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--card-bg-color); 
+            border-left: 4px solid var(--testimonial-border); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, border-left-color 0.3s ease;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-color); 
+            opacity: 0.9;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: var(--product-img-bg); 
+            overflow: hidden;
+        }
+         .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--text-color); 
+        }
+        
+        .author-info p {
+            color: var(--text-color); 
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .cta { 
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        .contact {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-color); 
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--contact-icon-bg); 
+            color: var(--contact-icon-text); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--card-bg-color); 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-color); 
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--form-control-border); 
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--form-control-focus-border); 
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        footer {
+            background-color: var(--footer-bg-color); 
+            color: var(--footer-text-color); 
+            padding: 60px 0 30px;
+            position: relative; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            color: var(--header-text-color); 
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: var(--footer-text-color); 
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--accent); 
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--social-link-bg); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--social-link-bg); 
+            padding-top: 20px;
+            text-align: center;
+            color: var(--footer-text-color); 
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        .theme-logos {
+            position: absolute;
+            bottom: 20px; 
+            right: 20px; 
+            display: flex;
+            gap: 10px;
+            z-index: 10; 
+        }
+
+        .theme-logos img {
+            width: 50px; 
+            height: 50px; 
+            object-fit: contain;
+        }
+
+        .floating-buttons-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+        }
+
+        .floating-btn {
+            background-color: var(--accent);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .floating-btn:hover {
+            background-color: #e67e22; 
+            transform: scale(1.1);
+            color: white;
+        }
+
+        #theme-toggle-btn .icon-sun { display: inline; } 
+        #theme-toggle-btn .icon-moon { display: none; } 
+
+        body.dark-theme #theme-toggle-btn .icon-sun { display: none; } 
+        body.dark-theme #theme-toggle-btn .icon-moon { display: inline; } 
+
+        @media (max-width: 992px) {
+            .about-content, .sustainability-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-img, .sustainability-img {
+                margin-top: 30px;
+            }
+            .capabilities-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start; 
+            }
+            
+            .logo {
+                margin-bottom: 10px; 
+            }
+
+            nav ul {
+                margin-top: 10px; 
+                padding-left: 0; 
+                flex-direction: column; 
+                align-items: flex-start; 
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px; 
+                width: 100%;
+            }
+            nav ul li:last-child {
+                margin-bottom: 0;
+            }
+            nav ul li a, .language-btn-container button {
+                display: block; 
+                padding: 10px;
+                text-align: left;
+            }
+            .language-btn-container {
+                width: 100%;
+                margin-left: 0; 
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            .floating-buttons-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            .theme-logos {
+                bottom: 10px;
+                right: 10px;
+            }
+            .theme-logos img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        @media print {
+            header, footer, .contact-form, .hero-btns .btn:last-child, .floating-buttons-container, .theme-logos {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container header-container">
+            <div class="logo">ವಿಜಯ <span>ಪ್ಯಾಕೇಜಿಂಗ್</span></div>
+            <nav>
+                <ul>
+                    <li class="language-btn-container">
+                        <button type="button">🌐 ಭಾಷೆ</button>
+                        <div class="language-dropdown">
+                            <a href="index.html">English</a>
+                            <a href="index_hindi.html">हिन्दी</a>
+                        </div>
+                    </li>
+                    <li><a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a></li>
+                    <li><a href="#products">ಉತ್ಪನ್ನಗಳು</a></li>
+                    <li><a href="#capabilities">ಸಾಮರ್ಥ್ಯಗಳು</a></li>
+                    <li><a href="#sustainability">ಸುಸ್ಥಿರತೆ</a></li>
+                    <li><a href="#contact">ಸಂಪರ್ಕಿಸಿ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>ಪ್ರೀಮಿಯಂ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು</h1>
+            <p>ನವೀನ, ಪರಿಸರ ಸ್ನೇಹಿ, ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಯಾಕೇಜಿಂಗ್ ನಿಮ್ಮ ಉತ್ಪನ್ನಗಳನ್ನು ರಕ್ಷಿಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಬ್ರ್ಯಾಂಡ್ ಅನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ. 2005 ರಿಂದ ಹೆಮ್ಮೆಯಿಂದ ಮಹಿಳಾ ಸ್ವಾಮ್ಯದ ಮತ್ತು ನಿರ್ವಹಣೆಯಲ್ಲಿದೆ.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn"> نرخ quote ವಿನಂತಿಸಿ</a>
+                <a href="#" class="btn btn-outline">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮ ಬಗ್ಗೆ</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>ನಮ್ಮ ಕಥೆ</h3>
+                    <p>2019 ರಲ್ಲಿ ದೂರದೃಷ್ಟಿಯ ಉದ್ಯಮಿ ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ ಅವರಿಂದ ಸ್ಥಾಪಿತವಾದ ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್, ಸಣ್ಣ ಕಾರುಗೇಟೆಡ್ ಬಾಕ್ಸ್ ತಯಾರಿಕಾ ಘಟಕದಿಂದ ಈ ಪ್ರಾಂತ್ಯದ ಪ್ರಮುಖ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರ ಒದಗಿಸುವವರಲ್ಲಿ ಒಂದಾಗಿ ಬೆಳೆದಿದೆ.</p>
+                    <p>ಗುಣಮಟ್ಟ, ನಾವೀನ್ಯತೆ, ಮತ್ತು ಸುಸ್ಥಿರತೆಗೆ ಬದ್ಧತೆಯೊಂದಿಗೆ, ನಾವು FMCG, ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್, ಫಾರ್ಮಾಸ್ಯುಟಿಕಲ್ಸ್, ಮತ್ತು ಇ-ಕಾಮರ್ಸ್ ಸೇರಿದಂತೆ ವಿವಿಧ ಕೈಗಾರಿಕೆಗಳಲ್ಲಿ ಗ್ರಾಹಕರ ವಿಶ್ವಾಸವನ್ನು ಗಳಿಸಿದ್ದೇವೆ.</p>
+                   <br> <h3>ನಮ್ಮ ಸಂಸ್ಥಾಪಕರು</h3>
+                    <p>ಬಹುತೇಕ ಪುರುಷ ಪ್ರಾಬಲ್ಯದ ಪ್ಯಾಕೇಜಿಂಗ್ ಉದ್ಯಮದಲ್ಲಿ ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಅವರ ಪಯಣವು ಸ್ಥಳೀಯ ಸಮುದಾಯವನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸುವ ಜೊತೆಗೆ ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳನ್ನು ರಚಿಸುವ ದೃಷ್ಟಿಯೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಯಿತು. ಅವರ ನಾಯಕತ್ವವನ್ನು ಹಲವಾರು ಉದ್ಯಮಶೀಲತಾ ಪ್ರಶಸ್ತಿಗಳೊಂದಿಗೆ ಗುರುತಿಸಲಾಗಿದೆ, ಇದರಲ್ಲಿ 2018 ರ ಪ್ರತಿಷ್ಠಿತ ಬಿಸಿನೆಸ್ ಎಕ್ಸಲೆನ್ಸ್ ಪ್ರಶಸ್ತಿಯೂ ಸೇರಿದೆ.</p>
+                    <p>[Translate more content here...]</p>
+                </div>
+                <div class="about-img">
+                    <img src="logo.png" alt="ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ ಕಾರ್ಖಾನೆ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮ ಉತ್ಪನ್ನಗಳು</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Regular Slotted Cartons.png" alt="ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು">
+                    </div>
+                    <div class="product-info">
+                        <h3>ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು (RSC)</h3>
+                        <p>[Translate product description here...]</p>
+                        <a href="rsc-boxes.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮ ಸಾಮರ್ಥ್ಯಗಳು</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-collage">
+                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1A" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1A" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1B" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1B" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1C" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1C" class="capability-collage-img">
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>ಕಸ್ಟಮ್ ಗಾತ್ರ ಮತ್ತು ವಿನ್ಯಾಸ</h3>
+                        <p>[Translate capability description here...]</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮ ಸುಸ್ಥಿರತಾ ಬದ್ಧತೆ</h2>
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>ವಿನ್ಯಾಸದಿಂದ ಪರಿಸರ ಸ್ನೇಹಿ</h3>
+                    <p>[Translate sustainability content here...]</p>
+                    <div class="eco-features">
+                        <div class="eco-feature">
+                            <div class="eco-icon">♻️</div>
+                            <div>
+                                <h4>ಮರುಬಳಕೆಯ ವಸ್ತುಗಳು</h4>
+                                <p>[Translate description...]</p>
+                            </div>
+                        </div>
+                         </div>
+                </div>
+                <div class="sustainability-img">
+                    <img src="Sustainable Packaging Process.jpeg" alt="ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪ್ರಕ್ರಿಯೆ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮ ಗ್ರಾಹಕರು ಏನು ಹೇಳುತ್ತಾರೆ</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "[Translate testimonial here...]"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Client.png" alt="ಗ್ರಾಹಕರು">
+                        </div>
+                        <div class="author-info">
+                            <h4>ಅನಿಲ್ ಮೆಹ್ತಾ</h4>
+                            <p>ಕಾರ್ಯಾಚರಣೆ ನಿರ್ದೇಶಕರು, ಹೆಲ್ತ್‌ಕೇರ್ ಪ್ರಾಡಕ್ಟ್ಸ್</p>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>ನಿಮ್ಮ ಪ್ಯಾಕೇಜಿಂಗ್ ಅನ್ನು ನವೀಕರಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?</h2>
+            <p>[Translate CTA paragraph here...]</p>
+            <a href="#contact" class="btn">ಇಂದು ಉಚಿತ نرخ quote ಪಡೆಯಿರಿ</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>ಸಂಪರ್ಕದಲ್ಲಿರಿ</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>ವಿಳಾಸ</h4>
+                                <p>ಪ್ಲಾಟ್ ನಂ. 42, ಇಂಡಸ್ಟ್ರಿಯಲ್ ಏರಿಯಾ ಫೇಸ್ II<br>ಹೈದರಾಬಾದ್, ತೆಲಂಗಾಣ 500072 (Address may remain partially in English for postal accuracy)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>ದೂರವಾಣಿ</h4>
+                                <p>+91 40 2345 6789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>ಇಮೇಲ್</h4>
+                                <p>info@vijayapackaging.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>ಕೆಲಸದ ಸಮಯ</h4>
+                                <p>ಸೋಮವಾರ - ಶನಿವಾರ: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>ಪ್ರಮಾಣೀಕರಣಗಳು</h3>
+                    <div class="certification-logos">
+                        <img src="/api/placeholder/80/40?text=ISO" alt="ISO 9001:2015">
+                        <img src="/api/placeholder/80/40?text=FSC" alt="FSC ಪ್ರಮಾಣೀಕೃತ">
+                        <img src="/api/placeholder/80/40?text=BRC" alt="BRC ಪ್ಯಾಕೇಜಿಂಗ್">
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</h3>
+                       <form id="contactForm" action="https://formsubmit.co/vijiguruamit@gmail.com" method="POST">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/">
+                            <input type="hidden" name="_template" value="table">
+                            <div class="form-group">
+                                <label for="name">ನಿಮ್ಮ ಹೆಸರು</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">ಕಂಪನಿ ಹೆಸರು</label>
+                                <input type="text" id="company" name="company" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ಇಮೇಲ್ ವಿಳಾಸ</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">ದೂರವಾಣಿ ಸಂಖ್ಯೆ</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">ನಿಮ್ಮ ಸಂದೇಶ</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">ವಿನಂತಿಯನ್ನು ಸಲ್ಲಿಸಿ</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <div class="footer-content">
+                <div class="footer-col">
+                    <h3>ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್</h3>
+                    <p>[Translate footer description...]</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="ಫೇಸ್‌ಬುಕ್">📱</a> 
+                        <a href="#" class="social-link" aria-label="ಟ್ವಿಟರ್">📘</a>
+                        <a href="#" class="social-link" aria-label="ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್">📸</a>
+                        <a href="#" class="social-link" aria-label="ಲಿಂಕ್ಡ್‌ಇನ್">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು</h3>
+                    <ul>
+                        <li><a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a></li>
+                        <li><a href="#products">ಉತ್ಪನ್ನಗಳು</a></li>
+                        <li><a href="#capabilities">ಸಾಮರ್ಥ್ಯಗಳು</a></li>
+                        <li><a href="#sustainability">ಸುಸ್ಥಿರತೆ</a></li>
+                        <li><a href="#contact">ಸಂಪರ್ಕಿಸಿ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ನಮ್ಮ ಉತ್ಪನ್ನಗಳು</h3>
+                    <ul>
+                        <li><a href="#">ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು</a></li>
+                        <li><a href="#">ಡೈ-ಕಟ್ ಬಾಕ್ಸ್‌ಗಳು</a></li>
+                        <li><a href="#">ಟೆಲಿಸ್ಕೋಪಿಂಗ್ ಕಂಟೇನರ್‌ಗಳು</a></li>
+                        <li><a href="#">ಚಿಲ್ಲರೆ ಪ್ರದರ್ಶನ ಪ್ಯಾಕೇಜಿಂಗ್</a></li>
+                        <li><a href="#">ಕಸ್ಟಮ್ ಇನ್ಸರ್ಟ್‌ಗಳು ಮತ್ತು ಡಿವೈಡರ್‌ಗಳು</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>ಸಂಪನ್ಮೂಲಗಳು</h3>
+                    <ul>
+                        <li><a href="#">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a></li>
+                        <li><a href="#">ಪ್ಯಾಕೇಜಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ</a></li>
+                        <li><a href="#">ವಸ್ತು ವಿಶೇಷಣಗಳು</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">ಬ್ಲಾಗ್</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
+            </div>
+            <div class="theme-logos">
+                <img src="/api/placeholder/50/50?text=Light" alt="ಲೈಟ್ ಥೀಮ್ ಲೋಗೋ">
+                <img src="/api/placeholder/50/50?text=Dark" alt="ಡಾರ್ಕ್ ಥೀಮ್ ಲೋಗೋ">
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons-container">
+        <button id="theme-toggle-btn" class="floating-btn" aria-label="ಥೀಮ್ ಬದಲಿಸಿ">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ">
+            💬
+        </a>
+    </div>
+
+    <script>
+        const brochureButton = document.querySelector('.hero-btns .btn-outline');
+        if (brochureButton) {
+            brochureButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.print();
+            });
+        }
+
+        const langButton = document.querySelector('.language-btn-container button');
+        if (langButton) {
+            langButton.addEventListener('click', function() {
+                alert('ಭಾಷಾ ಬದಲಾವಣೆಯ ಕಾರ್ಯವನ್ನು ಅಳವಡಿಸಲಾಗುವುದು!');
+            });
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            body.className = themeName + '-theme';
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+
+        (function () {
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        })();
+    </script>
+</body>
+</html>

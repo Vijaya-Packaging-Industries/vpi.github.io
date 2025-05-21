@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="hi"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>विजया पैकेजिंग इंडस्ट्रीज - प्रीमियम कोरगेटेड पैकेजिंग समाधान</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #f39c12;
+            --light-bg: #ecf0f1; /* Renamed for clarity */
+            --light-text: #333;
+            --light-card-bg: #ffffff;
+            --light-section-title: var(--primary);
+            --light-header-bg: #ffffff;
+            --light-header-text: var(--dark);
+            --light-footer-bg: var(--dark);
+            --light-footer-text: #bbb;
+
+
+            --dark-bg: #2c3e50;
+            --dark-text: #ecf0f1;
+            --dark-card-bg: #34495e;
+            --dark-section-title: var(--accent); /* Example: accent color for titles in dark mode */
+            --dark-header-bg: #34495e;
+            --dark-header-text: var(--light-bg);
+            --dark-footer-bg: #232f3c;
+            --dark-footer-text: #a0a0a0;
+
+
+            /* Default to light theme */
+            --bg-color: var(--light-bg);
+            --text-color: var(--light-text);
+            --card-bg-color: var(--light-card-bg);
+            --section-title-color: var(--light-section-title);
+            --header-bg-color: var(--light-header-bg);
+            --header-text-color: var(--light-header-text);
+            --footer-bg-color: var(--light-footer-bg);
+            --footer-text-color: var(--light-footer-text);
+            --logo-text-color: var(--primary);
+            --nav-link-color: var(--dark);
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: white;
+            --form-control-border: #ddd;
+            --form-control-focus-border: var(--secondary);
+            --product-img-bg: #f5f5f5;
+            --testimonial-border: var(--primary);
+            --contact-icon-bg: var(--primary);
+            --contact-icon-text: white;
+            --social-link-bg: #444;
+        }
+
+        body.dark-theme {
+            --bg-color: var(--dark-bg);
+            --text-color: var(--dark-text);
+            --card-bg-color: var(--dark-card-bg);
+            --section-title-color: var(--dark-section-title);
+            --header-bg-color: var(--dark-header-bg);
+            --header-text-color: var(--dark-header-text);
+            --footer-bg-color: var(--dark-footer-bg);
+            --footer-text-color: var(--dark-footer-text);
+            --logo-text-color: var(--accent);
+            --nav-link-color: var(--light-bg);
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: var(--dark-bg);
+            --form-control-border: #555;
+            --form-control-focus-border: var(--accent);
+            --product-img-bg: #4a4a4a;
+            --testimonial-border: var(--accent);
+            --contact-icon-bg: var(--accent);
+            --contact-icon-text: var(--dark-bg);
+            --social-link-bg: #555;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consider Hindi web fonts */
+        }
+        
+        body {
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6;
+            position: relative; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e67e22;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--btn-outline-border-color);
+            color: var(--btn-outline-text-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--btn-outline-hover-bg-color);
+            color: var(--btn-outline-hover-text-color);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--header-bg-color); 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--logo-text-color); 
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            align-items: center; 
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a,
+        .language-btn-container button
+         {
+            font-weight: 600;
+            color: var(--nav-link-color); 
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn-container button {
+            background: none;
+            border: 1px solid var(--nav-link-color); 
+            cursor: pointer;
+        }
+        
+        nav ul li a:hover,
+        .language-btn-container button:hover {
+            color: var(--nav-link-hover-color); 
+            border-color: var(--nav-link-hover-color); 
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white; 
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .about {
+            padding: 80px 0;
+            background-color: var(--card-bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            color: var(--section-title-color); 
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-color); 
+        }
+        
+        .about-img {
+            flex: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .products {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background-color: var(--card-bg-color); 
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card:hover .product-img img { 
+            transform: scale(1.1);
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 200px;
+            background-color: var(--product-img-bg); 
+            overflow: hidden; 
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.3s ease; 
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-color); 
+        }
+        
+        .product-info p {
+            color: var(--text-color); 
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+        
+        .capabilities {
+            padding: 80px 0;
+            background-color: var(--card-bg-color);  
+            transition: background-color 0.3s ease;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .capability-card { 
+            text-align: center;
+            border-radius: 8px;
+            background-color: var(--card-bg-color); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            overflow: hidden; 
+            position: relative;
+            min-height: 300px; 
+        }
+
+        .capability-collage {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .capability-collage-img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            transition: width 0.5s ease;
+        }
+
+        .capability-card:hover .capability-collage-img {
+            width: 33.333%; 
+        }
+
+        .capability-collage-img:nth-child(n+2) {
+            width: 0; 
+        }
+        .capability-card:hover .capability-collage-img:nth-child(n+2) {
+            width: 33.333%;
+        }
+        
+        .capability-text-content {
+            position: relative; 
+            z-index: 2;
+            padding: 20px;
+            /* background-color: rgba(var(--card-bg-color-rgb, 255,255,255),0.8); */
+            color: var(--text-color); 
+            margin-top: auto; 
+        }
+        body.light-theme .capability-text-content {
+             background-color: rgba(236,240,241,0.8); 
+        }
+        body.dark-theme .capability-text-content {
+             background-color: rgba(44,62,80,0.8); 
+        }
+
+
+        .capability-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-color); 
+        }
+        
+        .sustainability {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .sustainability-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .sustainability-img {
+            flex: 1;
+        }
+        
+        .sustainability-img img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .sustainability-text {
+            flex: 1;
+        }
+        
+        .sustainability-text h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-color); 
+        }
+        
+        .eco-features {
+            margin-top: 20px;
+        }
+        
+        .eco-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .eco-icon { 
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--success);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--card-bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--card-bg-color); 
+            border-left: 4px solid var(--testimonial-border); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, border-left-color 0.3s ease;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-color); 
+            opacity: 0.9;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: var(--product-img-bg); 
+            overflow: hidden;
+        }
+         .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: var(--text-color); 
+        }
+        
+        .author-info p {
+            color: var(--text-color); 
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        .cta { 
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        .contact {
+            padding: 80px 0;
+            background-color: var(--bg-color); 
+            transition: background-color 0.3s ease;
+        }
+        
+        .contact-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--text-color); 
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--contact-icon-bg); 
+            color: var(--contact-icon-text); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--card-bg-color); 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-color); 
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--form-control-border); 
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--form-control-focus-border); 
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        footer {
+            background-color: var(--footer-bg-color); 
+            color: var(--footer-text-color); 
+            padding: 60px 0 30px;
+            position: relative; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            color: var(--header-text-color); 
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: var(--footer-text-color); 
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--accent); 
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--social-link-bg); 
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--social-link-bg); 
+            padding-top: 20px;
+            text-align: center;
+            color: var(--footer-text-color); 
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        .theme-logos {
+            position: absolute;
+            bottom: 20px; 
+            right: 20px; 
+            display: flex;
+            gap: 10px;
+            z-index: 10; 
+        }
+
+        .theme-logos img {
+            width: 50px; 
+            height: 50px; 
+            object-fit: contain;
+        }
+
+        .floating-buttons-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column; 
+            gap: 15px; 
+        }
+
+        .floating-btn {
+            background-color: var(--accent);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .floating-btn:hover {
+            background-color: #e67e22; 
+            transform: scale(1.1);
+            color: white;
+        }
+
+        #theme-toggle-btn .icon-sun { display: inline; } 
+        #theme-toggle-btn .icon-moon { display: none; } 
+
+        body.dark-theme #theme-toggle-btn .icon-sun { display: none; } 
+        body.dark-theme #theme-toggle-btn .icon-moon { display: inline; } 
+
+        @media (max-width: 992px) {
+            .about-content, .sustainability-content, .contact-content {
+                flex-direction: column;
+            }
+            
+            .about-img, .sustainability-img {
+                margin-top: 30px;
+            }
+            .capabilities-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start; 
+            }
+            
+            .logo {
+                margin-bottom: 10px; 
+            }
+
+            nav ul {
+                margin-top: 10px; 
+                padding-left: 0; 
+                flex-direction: column; 
+                align-items: flex-start; 
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px; 
+                width: 100%;
+            }
+            nav ul li:last-child {
+                margin-bottom: 0;
+            }
+            nav ul li a, .language-btn-container button {
+                display: block; 
+                padding: 10px;
+                text-align: left;
+            }
+            .language-btn-container {
+                width: 100%;
+                margin-left: 0; 
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            .floating-buttons-container {
+                bottom: 20px;
+                right: 20px;
+                gap: 10px;
+            }
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            .theme-logos {
+                bottom: 10px;
+                right: 10px;
+            }
+            .theme-logos img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        @media print {
+            header, footer, .contact-form, .hero-btns .btn:last-child, .floating-buttons-container, .theme-logos {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container header-container">
+            <div class="logo">विजया <span>पैकेजिंग</span></div>
+            <nav>
+                <ul>
+                    <li class="language-btn-container">
+                            <button type="button">🌐 भाषा</button>
+                            <div class="language-dropdown">
+                                <a href="index.html">English</a>
+                                <a href="index_kannada.html">ಕನ್ನಡ</a>
+                            </div>
+                        </li>
+                    <li><a href="#about">हमारे बारे में</a></li>
+                    <li><a href="#products">उत्पाद</a></li>
+                    <li><a href="#capabilities">क्षमताएँ</a></li>
+                    <li><a href="#sustainability">वहनीयता</a></li>
+                    <li><a href="#contact">संपर्क करें</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>प्रीमियम कोरगेटेड पैकेजिंग समाधान</h1>
+            <p>अभिनव, पर्यावरण-अनुकूल, और विश्वसनीय पैकेजिंग जो आपके उत्पादों की सुरक्षा करती है और आपके ब्रांड को बढ़ाती है। 2005 से गर्व से महिला-स्वामित्व और संचालित।</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">कोट का अनुरोध करें</a>
+                <a href="#" class="btn btn-outline">ब्रोशर डाउनलोड करें</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">हमारे बारे में</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>हमारी कहानी</h3>
+                    <p>2019 में दूरदर्शी उद्यमी श्रीमती विजयलक्ष्मी डी द्वारा स्थापित, विजया पैकेजिंग इंडस्ट्रीज एक छोटी कोरगेटेड बॉक्स निर्माण इकाई से बढ़कर क्षेत्र के अग्रणी पैकेजिंग समाधान प्रदाताओं में से एक बन गई है।</p>
+                    <p>गुणवत्ता, नवीनता और वहनीयता के प्रति प्रतिबद्धता के साथ, हमने FMCG, इलेक्ट्रॉनिक्स, फार्मास्यूटिकल्स और ई-कॉमर्स सहित विभिन्न उद्योगों में ग्राहकों का विश्वास अर्जित किया है।</p>
+                   <br> <h3>हमारी संस्थापक</h3>
+                    <p>मुख्य रूप से पुरुष-प्रधान पैकेजिंग उद्योग में श्रीमती विजयलक्ष्मी की यात्रा स्थानीय समुदाय को सशक्त बनाने के साथ-साथ स्थायी पैकेजिंग समाधान बनाने की दृष्टि से शुरू हुई। उनके नेतृत्व को कई उद्यमिता पुरस्कारों से मान्यता मिली है, जिसमें 2018 का प्रतिष्ठित बिजनेस एक्सीलेंस अवार्ड भी शामिल है।</p>
+                    <p>[Translate more content here...]</p>
+                </div>
+                <div class="about-img">
+                    <img src="logo.png" alt="विजया पैकेजिंग इंडस्ट्रीज फैक्टरी">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">हमारे उत्पाद</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Regular Slotted Cartons.png" alt="नियमित स्लॉटेड कार्टन">
+                    </div>
+                    <div class="product-info">
+                        <h3>नियमित स्लॉटेड कार्टन (RSC)</h3>
+                        <p>[Translate product description here...]</p>
+                        <a href="rsc-boxes.html" class="btn btn-outline">और जानें</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title">हमारी क्षमताएँ</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-collage">
+                        <img src="/api/placeholder/400/300?text=क्षमता+1A" alt="क्षमता छवि 1A" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=क्षमता+1B" alt="क्षमता छवि 1B" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=क्षमता+1C" alt="क्षमता छवि 1C" class="capability-collage-img">
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>कस्टम साइज़िंग और डिज़ाइन</h3>
+                        <p>[Translate capability description here...]</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2 class="section-title">हमारी वहनीयता प्रतिबद्धता</h2>
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>डिज़ाइन द्वारा पर्यावरण-अनुकूल</h3>
+                    <p>[Translate sustainability content here...]</p>
+                    <div class="eco-features">
+                        <div class="eco-feature">
+                            <div class="eco-icon">♻️</div>
+                            <div>
+                                <h4>पुनर्नवीनीकरण सामग्री</h4>
+                                <p>[Translate description...]</p>
+                            </div>
+                        </div>
+                         </div>
+                </div>
+                <div class="sustainability-img">
+                    <img src="Sustainable Packaging Process.jpeg" alt="वहनीय पैकेजिंग प्रक्रिया">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">हमारे ग्राहक क्या कहते हैं</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "[Translate testimonial here...]"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Client.png" alt="ग्राहक">
+                        </div>
+                        <div class="author-info">
+                            <h4>अनिल मेहता</h4>
+                            <p>संचालन निदेशक, हेल्थकेयर उत्पाद</p>
+                        </div>
+                    </div>
+                </div>
+                 </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>क्या आप अपनी पैकेजिंग को अपग्रेड करने के लिए तैयार हैं?</h2>
+            <p>[Translate CTA paragraph here...]</p>
+            <a href="#contact" class="btn">आज ही निःशुल्क कोट प्राप्त करें</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">हमसे संपर्क करें</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>संपर्क में रहें</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>पता</h4>
+                                <p>प्लॉट नंबर 42, इंडस्ट्रियल एरिया फेज II<br>हैदराबाद, तेलंगाना 500072 (Address may remain partially in English for postal accuracy)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>फ़ोन</h4>
+                                <p>+91 40 2345 6789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>ईमेल</h4>
+                                <p>info@vijayapackaging.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>व्यावसायिक घंटे</h4>
+                                <p>सोमवार - शनिवार: सुबह 9:00 - शाम 6:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>प्रमाणन</h3>
+                    <div class="certification-logos">
+                        <img src="/api/placeholder/80/40?text=ISO" alt="ISO 9001:2015">
+                        <img src="/api/placeholder/80/40?text=FSC" alt="FSC प्रमाणित">
+                        <img src="/api/placeholder/80/40?text=BRC" alt="BRC पैकेजिंग">
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>हमें संदेश भेजें</h3>
+                       <form id="contactForm" action="https://formsubmit.co/vijiguruamit@gmail.com" method="POST">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/">
+                            <input type="hidden" name="_template" value="table">
+                            <div class="form-group">
+                                <label for="name">आपका नाम</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">कंपनी का नाम</label>
+                                <input type="text" id="company" name="company" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ईमेल पता</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">फ़ोन नंबर</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">आपका संदेश</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">अनुरोध सबमिट करें</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <div class="footer-content">
+                <div class="footer-col">
+                    <h3>विजया पैकेजिंग इंडस्ट्रीज</h3>
+                    <p>[Translate footer description...]</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="फेसबुक">📱</a> 
+                        <a href="#" class="social-link" aria-label="ट्विटर">📘</a>
+                        <a href="#" class="social-link" aria-label="इंस्टाग्राम">📸</a>
+                        <a href="#" class="social-link" aria-label="लिंक्डइन">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>त्वरित लिंक्स</h3>
+                    <ul>
+                        <li><a href="#about">हमारे बारे में</a></li>
+                        <li><a href="#products">उत्पाद</a></li>
+                        <li><a href="#capabilities">क्षमताएँ</a></li>
+                        <li><a href="#sustainability">वहनीयता</a></li>
+                        <li><a href="#contact">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>हमारे उत्पाद</h3>
+                    <ul>
+                        <li><a href="#">नियमित स्लॉटेड कार्टन</a></li>
+                        <li><a href="#">डाई-कट बॉक्स</a></li>
+                        <li><a href="#">टेलीस्कोपिंग कंटेनर</a></li>
+                        <li><a href="#">खुदरा प्रदर्शन पैकेजिंग</a></li>
+                        <li><a href="#">कस्टम इंसर्ट और डिवाइडर</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>संसाधन</h3>
+                    <ul>
+                        <li><a href="#">ब्रोशर डाउनलोड करें</a></li>
+                        <li><a href="#">पैकेजिंग गाइड</a></li>
+                        <li><a href="#">सामग्री विनिर्देश</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">ब्लॉग</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 विजया पैकेजिंग इंडस्ट्रीज। सर्वाधिकार सुरक्षित।</p>
+            </div>
+            <div class="theme-logos">
+                <img src="/api/placeholder/50/50?text=Light" alt="लाइट थीम लोगो">
+                <img src="/api/placeholder/50/50?text=Dark" alt="डार्क थीम लोगो">
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons-container">
+        <button id="theme-toggle-btn" class="floating-btn" aria-label="थीम टॉगल करें">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="हमसे संपर्क करें">
+            💬
+        </a>
+    </div>
+
+    <script>
+        const brochureButton = document.querySelector('.hero-btns .btn-outline');
+        if (brochureButton) {
+            brochureButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.print();
+            });
+        }
+
+        const langButton = document.querySelector('.language-btn-container button');
+        if (langButton) {
+            langButton.addEventListener('click', function() {
+                alert('भाषा स्विच कार्यक्षमता लागू की जानी है!');
+            });
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            body.className = themeName + '-theme';
+        }
+
+        themeToggleButton.addEventListener('click', () => {
+            if (localStorage.getItem('theme') === 'dark') {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+
+        (function () {
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        })();
+    </script>
+</body>
+</html>

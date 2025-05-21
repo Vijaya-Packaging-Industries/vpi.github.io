@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijaya Packaging Industries - Premium Corrugated Packaging Solutions</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2e86c1;
+            --accent: #f39c12;
+            --light-bg: #ecf0f1; 
+            --light-text: #333;
+            --light-card-bg: #ffffff;
+            --light-section-title: var(--primary);
+            --light-header-bg: #ffffff;
+            --light-header-text: var(--dark); /* This was var(--dark) before, ensure consistency */
+            --light-footer-bg: var(--dark); /* This was var(--dark) before */
+            --light-footer-text: #bbb;
+
+
+            --dark-bg: #2c3e50;
+            --dark-text: #ecf0f1;
+            --dark-card-bg: #34495e;
+            --dark-section-title: var(--accent); 
+            --dark-header-bg: #34495e;
+            --dark-header-text: var(--light-bg);
+            --dark-footer-bg: #232f3c;
+            --dark-footer-text: #a0a0a0;
+
+
+            /* Default to light theme */
+            --bg-color: var(--light-bg);
+            --text-color: var(--light-text);
+            --card-bg-color: var(--light-card-bg);
+            --section-title-color: var(--light-section-title);
+            --header-bg-color: var(--light-header-bg);
+            --header-text-color: var(--light-header-text); /* Default to light theme header text */
+            --footer-bg-color: var(--light-footer-bg);
+            --footer-text-color: var(--light-footer-text);
+            --logo-text-color: var(--primary);
+            --nav-link-color: var(--dark); /* Default nav link color for light theme */
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: white;
+            --form-control-border: #ddd;
+            --form-control-focus-border: var(--secondary);
+            --product-img-bg: #f5f5f5;
+            --testimonial-border: var(--primary);
+            --contact-icon-bg: var(--primary);
+            --contact-icon-text: white;
+            --social-link-bg: #444;
+        }
+
+        body.dark-theme {
+            --bg-color: var(--dark-bg);
+            --text-color: var(--dark-text);
+            --card-bg-color: var(--dark-card-bg);
+            --section-title-color: var(--dark-section-title);
+            --header-bg-color: var(--dark-header-bg);
+            --header-text-color: var(--dark-header-text); /* Dark theme header text */
+            --footer-bg-color: var(--dark-footer-bg);
+            --footer-text-color: var(--dark-footer-text);
+            --logo-text-color: var(--accent);
+            --nav-link-color: var(--light-bg); /* Dark theme nav link color */
+            --nav-link-hover-color: var(--accent);
+            --btn-outline-text-color: var(--accent);
+            --btn-outline-border-color: var(--accent);
+            --btn-outline-hover-bg-color: var(--accent);
+            --btn-outline-hover-text-color: var(--dark-bg);
+            --form-control-border: #555;
+            --form-control-focus-border: var(--accent);
+            --product-img-bg: #4a4a4a;
+            --testimonial-border: var(--accent);
+            --contact-icon-bg: var(--accent);
+            --contact-icon-text: var(--dark-bg);
+            --social-link-bg: #555;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            position: relative; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e67e22;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--btn-outline-border-color);
+            color: var(--btn-outline-text-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--btn-outline-hover-bg-color);
+            color: var(--btn-outline-hover-text-color);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--header-bg-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure header is above other content, but dropdown above header */
+            transition: background-color 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0; /* Slightly reduced padding */
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--logo-text-color);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            align-items: center; 
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px; /* Slightly reduced margin */
+            position: relative; 
+        }
+        
+        nav ul li a,
+        .language-btn
+         {
+            font-weight: 600;
+            color: var(--nav-link-color);
+            padding: 8px 12px; 
+            border-radius: 4px;
+            transition: color 0.3s ease, border-color 0.3s ease; /* Added border-color transition */
+            background: none;
+            border: 1px solid transparent; 
+            cursor: pointer;
+            display: inline-flex; 
+            align-items: center;
+            text-decoration: none; /* Ensure links don't have underline */
+        }
+
+        .language-btn {
+             border: 1px solid var(--nav-link-color); /* Explicit border for button */
+        }
+        
+        nav ul li a:hover,
+        .language-btn:hover {
+            color: var(--nav-link-hover-color);
+            border-color: var(--nav-link-hover-color); 
+        }
+        nav ul li a.active { /* Style for active page link if needed */
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+
+        /* Language Dropdown Styles */
+        .language-dropdown {
+            display: none; 
+            position: absolute;
+            top: calc(100% + 5px); /* Position below the button with a small gap */
+            left: 50%; /* Start from center of parent */
+            transform: translateX(-50%); /* Center the dropdown */
+            background-color: var(--card-bg-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 1001; 
+            min-width: 120px; 
+            border: 1px solid var(--form-control-border);
+        }
+
+        .language-dropdown a {
+            display: block;
+            padding: 10px 20px; /* Increased padding for easier clicking */
+            color: var(--text-color);
+            white-space: nowrap;
+            border: none; 
+            font-size: 15px; /* Slightly adjust font size */
+        }
+
+        .language-dropdown a:hover {
+            background-color: var(--bg-color);
+            color: var(--accent); 
+            border: none;
+        }
+        
+        .language-btn-container.open .language-dropdown {
+            display: block; 
+        }
+        /* Styling for the icon in the lang button */
+        .language-btn .icon {
+            margin-right: 6px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/600?text=Hero+Image') center/cover no-repeat;
+            color: white;
+            padding: 80px 0; /* Adjusted padding */
+            text-align: center;
+        }
+        /* Other sections styling mostly as before, with focus on Capabilities */
+
+        .section-title {
+            font-size: 30px; /* Slightly adjusted */
+            color: var(--section-title-color);
+            margin-bottom: 25px; /* Adjusted */
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px; /* Adjusted */
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        /* Capabilities Section - MODIFIED LAYOUT */
+        .capabilities {
+            padding: 80px 0;
+            background-color: var(--bg-color); /* Use main bg or a slightly different one */
+            transition: background-color 0.3s ease;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted minmax */
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .capability-card { 
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            display: flex; /* Use flex to control child elements */
+            flex-direction: column; /* Stack image and text vertically */
+            overflow: hidden; /* To contain image effects */
+        }
+         .capability-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .capability-collage {
+            width: 100%;
+            height: 250px; /* Fixed height for the collage area */
+            position: relative; /* For absolute positioning of images inside */
+            display: flex; /* To manage the images within the collage */
+            overflow: hidden; /* Important for the hover effect */
+        }
+
+        .capability-collage-img {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            position: absolute; /* Allow layering/switching */
+            top: 0;
+            left: 0;
+            opacity: 0; /* Hide all images by default */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and potential transform */
+        }
+        
+        /* Initial image to show (or the first one in the sequence) */
+        .capability-collage-img:first-child {
+            opacity: 1; /* Show the first image */
+        }
+
+        /* Hover effect for collage: shows three images side-by-side */
+
+        .capability-card:hover .capability-collage-img {
+            position: relative; /* Change to relative for side-by-side */
+            width: calc(100% / 3); /* Divide width by 3 */
+            opacity: 1; /* Ensure all are visible */
+            transform: scale(1.05); /* Slight zoom on image parts */
+        }
+         /* Ensure only first child is absolute before hover */
+        .capability-collage-img:not(:first-child) {
+            position: absolute;
+        }
+        
+        .capability-text-content {
+            padding: 20px 25px 25px; /* Adjusted padding */
+            text-align: center; /* Center align the text below image */
+            flex-grow: 1; /* Allow text content to take remaining space if needed */
+        }
+
+        .capability-card h3 {
+            font-size: 20px; /* Increased size */
+            margin-bottom: 10px;
+            color: var(--text-color); 
+        }
+        .capability-card p {
+            font-size: 15px; /* Standardized paragraph size */
+            color: var(--text-color);
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+        
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--card-bg-color);
+        }
+         .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .about-text { flex: 1; }
+        .about-text h3 { font-size: 24px; margin-bottom: 15px; color: var(--text-color); }
+        .about-img { flex: 1; }
+        .about-img img { width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+        /* Products Section */
+        .products { padding: 80px 0; background-color: var(--bg-color); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card { background-color: var(--card-bg-color); border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+        .product-card:hover .product-img img { transform: scale(1.1); }
+        .product-img { width: 100%; height: 200px; background-color: var(--product-img-bg); overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 20px; margin-bottom: 10px; color: var(--text-color); }
+        .product-info p { color: var(--text-color); opacity: 0.8; margin-bottom: 15px; }
+
+        /* Sustainability Section */
+        .sustainability { padding: 80px 0; background-color: var(--light-bg); } /* Assuming light-bg is intended here */
+        body.dark-theme .sustainability { background-color: var(--dark-bg); } /* Ensure dark theme overrides */
+        .sustainability-content { display: flex; align-items: center; gap: 40px; margin-top: 40px; }
+        .sustainability-img { flex: 1; }
+        .sustainability-img img { width: 100%; border-radius: 8px; }
+        .sustainability-text { flex: 1; }
+        .sustainability-text h3 { font-size: 24px; margin-bottom: 15px; color: var(--text-color); }
+        .eco-features { margin-top: 20px; }
+        .eco-feature { display: flex; align-items: center; margin-bottom: 15px; }
+        .eco-icon { width: 40px; height: 40px; border-radius: 50%; background-color: var(--success); color: white; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 20px; }
+        
+        /* Testimonials Section */
+        .testimonials { padding: 80px 0; background-color: var(--card-bg-color); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .testimonial-card { background-color: var(--card-bg-color); border-left: 4px solid var(--testimonial-border); box-shadow: 0 5px 15px rgba(0,0,0,0.05); padding: 25px; border-radius: 4px; }
+        .testimonial-text { font-style: italic; margin-bottom: 20px; color: var(--text-color); opacity: 0.9; }
+        .testimonial-author { display: flex; align-items: center; }
+        .author-img { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; background-color: var(--product-img-bg); overflow: hidden; }
+        .author-img img { width: 100%; height: 100%; object-fit: cover; }
+        .author-info h4 { font-size: 16px; margin-bottom: 5px; color: var(--text-color); }
+        .author-info p { color: var(--text-color); opacity: 0.7; font-size: 14px; }
+
+        /* CTA Section */
+        .cta { padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/600?text=CTA+Background') center/cover no-repeat; color: white; text-align: center; }
+        .cta h2 { font-size: 36px; margin-bottom: 20px; }
+        .cta p { max-width: 700px; margin: 0 auto 30px; font-size: 18px; }
+
+        /* Contact Section */
+        .contact { padding: 80px 0; background-color: var(--bg-color); }
+        .contact-content { display: flex; gap: 40px; margin-top: 40px; }
+        .contact-info { flex: 1; }
+        .contact-info h3 { font-size: 24px; margin-bottom: 20px; color: var(--text-color); }
+        .contact-details { margin-bottom: 30px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 15px; }
+        .contact-icon { width: 40px; height: 40px; border-radius: 50%; background-color: var(--contact-icon-bg); color: var(--contact-icon-text); display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 18px; }
+        .contact-form { flex: 1; background-color: var(--card-bg-color); padding: 30px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: var(--text-color); }
+        .form-control { width: 100%; padding: 12px; border: 1px solid var(--form-control-border); border-radius: 4px; font-size: 16px; background-color: var(--card-bg-color); color: var(--text-color); } /* Ensure form inputs also use card-bg */
+        .form-control:focus { outline: none; border-color: var(--form-control-focus-border); }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        
+        /* Footer */
+        footer { background-color: var(--footer-bg-color); color: var(--footer-text-color); padding: 60px 0 30px; position: relative; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 40px; } /* Adjusted minmax and gap */
+        .footer-col h3 { font-size: 18px; color: var(--header-text-color); margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+        .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--accent); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { color: var(--footer-text-color); }
+        .footer-col ul li a:hover { color: var(--accent); }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-link { width: 40px; height: 40px; border-radius: 50%; background-color: var(--social-link-bg); color: white; display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.3s ease; }
+        .social-link:hover { background-color: var(--accent); transform: translateY(-3px); }
+        .footer-bottom { border-top: 1px solid var(--social-link-bg); padding-top: 20px; text-align: center; color: var(--footer-text-color); opacity: 0.8; font-size: 14px; }
+        .theme-logos { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 10px; z-index: 10; }
+        .theme-logos img { width: 50px; height: 50px; object-fit: contain; }
+
+        /* Floating Buttons Container */
+        .floating-buttons-container { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
+        .floating-btn { background-color: var(--accent); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease; }
+        .floating-btn:hover { background-color: #e67e22; transform: scale(1.1); color: white; }
+        #theme-toggle-btn .icon-sun { display: inline; } 
+        #theme-toggle-btn .icon-moon { display: none; } 
+        body.dark-theme #theme-toggle-btn .icon-sun { display: none; } 
+        body.dark-theme #theme-toggle-btn .icon-moon { display: inline; } 
+
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) { /* Tablet and larger phone portrait */
+            .about-content, .sustainability-content, .contact-content {
+                flex-direction: column;
+                text-align: center; /* Center align text when stacked */
+            }
+            .about-content .about-text, .sustainability-content .sustainability-text, .contact-content .contact-info, .contact-content .contact-form {
+                width: 100%; /* Full width when stacked */
+                margin-bottom: 30px;
+            }
+            .about-img, .sustainability-img {
+                margin-top: 0; /* Reset margin as they are part of the flow */
+                max-width: 80%; /* Control image size */
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .capabilities-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust for slightly smaller cards */
+            }
+            .capability-collage {
+                height: 220px; /* Slightly reduce image height on tablets */
+            }
+             .footer-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) { /* Smaller tablets and mobile phones */
+            .header-container {
+                flex-direction: column;
+                align-items: center; /* Center logo and nav on mobile */
+            }
+            .logo {
+                margin-bottom: 15px; 
+            }
+            nav ul {
+                margin-top: 0; 
+                padding-left: 0; 
+                flex-direction: column; 
+                align-items: center; 
+                width: 100%;
+            }
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px; 
+                width: 100%;
+                text-align: center; /* Center nav items */
+            }
+            nav ul li:last-child {
+                margin-bottom: 0;
+            }
+            nav ul li a, .language-btn {
+                display: block; /* Make links and button take full width for easier tap */
+                padding: 12px; /* Increase padding for tap targets */
+                text-align: center;
+                border: 1px solid transparent; /* Consistent border handling */
+            }
+             .language-btn {
+                border: 1px solid var(--nav-link-color);
+             }
+            .language-dropdown {
+                left: 0; /* Full width dropdown on mobile */
+                transform: none;
+                width: 100%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Softer shadow */
+            }
+            
+            .hero h1 { font-size: 28px; } /* Adjust hero text */
+            .hero p { font-size: 16px; }
+            .hero-btns { flex-direction: column; gap: 15px; align-items: center; }
+            .hero-btns .btn { width: 80%; max-width: 300px; }
+            
+            .section-title { font-size: 26px; }
+            .capabilities-grid {
+                grid-template-columns: 1fr; /* Single column for capability cards on mobile */
+            }
+            .capability-collage {
+                height: 200px; /* Adjust image height for mobile */
+            }
+            .capability-card h3 { font-size: 18px; }
+            .capability-card p { font-size: 14px; }
+
+
+            .floating-buttons-container { bottom: 20px; right: 20px; gap: 10px; }
+            .floating-btn { width: 50px; height: 50px; font-size: 20px; }
+            .theme-logos { display: none; /* Optionally hide theme logos on very small screens */ }
+
+            .contact-content { flex-direction: column; }
+            .footer-content { text-align: center; } /* Center footer columns */
+            .footer-col h3::after { left: 50%; transform: translateX(-50%); } /* Center underline */
+            .social-links { justify-content: center; }
+        }
+        
+        @media print {
+            header, footer, .contact-form, .hero-btns .btn:last-child, .floating-buttons-container, .theme-logos, .language-btn-container {
+                display: none;
+            }
+            .capability-collage, .capability-card:hover .capability-collage-img {
+                display: block; /* Simpler display for print */
+                height: auto;
+            }
+            .capability-card:hover .capability-collage-img { width: 100%; transform: none;}
+            .capability-collage-img { position: static; opacity: 1; width: 100%;}
+            .capability-collage-img:not(:first-child) { display: none; } /* Show only first image in print */
+            .capability-text-content { position: static; background-color: transparent; }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container header-container">
+            <div class="logo">Vijaya <span>Packaging</span></div>
+            <nav>
+                <ul>
+                    <li class="language-btn-container">
+                        <button type="button" class="language-btn" aria-label="Switch Language" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon">🌐</span> Lang
+                        </button>
+                        <div class="language-dropdown">
+                            <a href="index_kannada.html">ಕನ್ನಡ</a>
+                            <a href="index_hindi.html">हिन्दी</a>
+                            </div>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#sustainability">Sustainability</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Vijaya Packaging Industries</h1>
+            <p>Your trusted partner for premium corrugated packaging solutions.</p>
+            <p>Innovative, eco-friendly, and reliable packaging that protects your products and enhances your brand. Proudly women-owned and operated since 2019.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Request a Quote</a>
+                <a href="#" class="btn btn-outline" id="downloadBrochureBtn">Download Brochure</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2019 by visionary entrepreneur Mrs. Vijayalakshmi D, Vijaya Packaging Industries has grown from a small corrugated box manufacturing unit into one of the region's leading packaging solution providers.</p>
+                    <p>With a commitment to quality, innovation, and sustainability, we have earned the trust of clients across various industries including FMCG, electronics, pharmaceuticals, and e-commerce.</p>
+                   <br> <h3>Our Founder</h3>
+                    <p>Mrs. Vijayalakshmi's journey in the predominantly male-driven packaging industry began with a vision to create sustainable packaging solutions while empowering the local community. Her leadership has been recognized with several entrepreneurship awards, including the prestigious Business Excellence Award in 2018.</p>
+                    <p>Under her guidance, Vijaya Packaging Industries has consistently pushed the boundaries of innovation while maintaining a strong focus on environmental responsibility and social impact.</p>
+                </div>
+                <div class="about-img">
+                    <img src="logo.png" alt="Vijaya Packaging Industries Factory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Regular Slotted Cartons.png" alt="Regular Slotted Cartons">
+                    </div>
+                    <div class="product-info">
+                        <h3>Regular Slotted Cartons (RSC)</h3>
+                        <p>Our most versatile and commonly used box style, perfect for shipping and storage across various industries.</p>
+                        <a href="rsc-boxes.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Die-Cut Boxes.png" alt="Die-Cut Boxes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Die-Cut Boxes</h3>
+                        <p>Custom-designed boxes with precise cuts and folds for specialized products and enhanced brand presentation.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Telescoping Containers.jpg" alt="Telescoping Containers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Telescoping Containers</h3>
+                        <p>Two-piece boxes with separate lids, ideal for heavy items and products requiring added protection.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Retail Display Packaging.jpg" alt="Retail Display Packaging">
+                    </div>
+                    <div class="product-info">
+                        <h3>Retail Display Packaging</h3>
+                        <p>Eye-catching point-of-purchase displays and shelf-ready packaging that enhances product visibility.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Heavy-Duty Packaging.jpg" alt="Heavy-Duty Packaging">
+                    </div>
+                    <div class="product-info">
+                        <h3>Heavy-Duty Packaging</h3>
+                        <p>Multi-wall corrugated solutions designed for industrial applications and robust protection requirements.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Custom Inserts & Dividers.jpg" alt="Custom Inserts & Dividers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Custom Inserts & Dividers</h3>
+                        <p>Interior components that provide organization, separation, and additional protection for your products.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title">Our Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-collage">
+                        <img src="/api/placeholder/400/300?text=Design+Concept" alt="Custom Design Concept" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Prototyping" alt="Packaging Prototype" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Final+Product" alt="Final Custom Box" class="capability-collage-img">
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>Custom Sizing & Design</h3>
+                        <p>Tailored dimensions and structural design to fit your product perfectly, minimizing waste and maximizing protection.</p>
+                    </div>
+                </div>
+                <div class="capability-card">
+                     <div class="capability-collage">
+                        <img src="/api/placeholder/400/300?text=Flexo+Print" alt="Flexographic Printing Detail" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Digital+Print+Sample" alt="Digital Print Sample" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Color+Matching" alt="Color Matching Process" class="capability-collage-img">
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>Advanced Printing</h3>
+                        <p>High-quality flexographic and digital printing options to bring your brand and designs to life vibrantly.</p>
+                    </div>
+                </div>
+                 <div class="capability-card">
+                     <div class="capability-collage">
+                        <img src="/api/placeholder/400/300?text=Material+Testing" alt="Material Strength Test" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Sustainable+Materials" alt="Sustainable Material Options" class="capability-collage-img">
+                        <img src="/api/placeholder/400/300?text=Quality+Check" alt="Quality Check of Materials" class="capability-collage-img">
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>Material Expertise</h3>
+                        <p>Comprehensive material testing and selection to ensure optimal performance and sustainability for your packaging needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustainability" class="sustainability">
+        <div class="container">
+            <h2 class="section-title">Our Sustainability Commitment</h2>
+            <div class="sustainability-content">
+                <div class="sustainability-text">
+                    <h3>Eco-Friendly By Design</h3>
+                    <p>At Vijaya Packaging Industries, environmental responsibility is at the core of everything we do. We believe that quality packaging and sustainability can go hand in hand.</p>
+                    <p>Our comprehensive approach to sustainability encompasses our raw materials, manufacturing processes, and end-of-life recyclability.</p>
+                    <div class="eco-features">
+                        <div class="eco-feature">
+                            <div class="eco-icon">♻️</div>
+                            <div>
+                                <h4>Recycled Materials</h4>
+                                <p>Our corrugated board contains up to 70% post-consumer recycled content, reducing demand for virgin materials.</p>
+                            </div>
+                        </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">💧</div>
+                            <div>
+                                <h4>Water-Based Inks</h4>
+                                <p>We exclusively use water-based inks that are free from harmful VOCs and heavy metals.</p>
+                            </div>
+                        </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">⚡</div>
+                            <div>
+                                <h4>Energy Efficiency</h4>
+                                <p>Our facility operates with energy-efficient machinery and practices to minimize our carbon footprint.</p>
+                            </div>
+                        </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">🌱</div>
+                            <div>
+                                <h4>Waste Reduction</h4>
+                                <p>Our zero-waste initiative ensures that 95% of our production waste is recycled or repurposed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sustainability-img">
+                    <img src="Sustainable Packaging Process.jpeg" alt="Sustainable Packaging Process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Vijaya Packaging has been our trusted packaging partner for over 5 years. Their attention to detail, consistent quality, and reliable delivery have been crucial to our supply chain efficiency."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="Client.png" alt="Client Anil Mehta">
+                        </div>
+                        <div class="author-info">
+                            <h4>Anil Mehta</h4>
+                            <p>Operations Director, HealthCare Products</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The custom die-cut boxes they designed for our new product line are fantastic. They look great and provide excellent protection during shipping. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                             <img src="/api/placeholder/50/50?text=PS" alt="Client Priya Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Marketing Manager, Artisan Goods Co.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Their commitment to sustainability aligns perfectly with our company values. The use of recycled materials and eco-friendly inks is a big plus for us."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="/api/placeholder/50/50?text=RK" alt="Client Rahul Kumar">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Kumar</h4>
+                            <p>Founder, Organic Foods Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Upgrade Your Packaging?</h2>
+            <p>Let us help you create the perfect corrugated packaging solution for your products. Whether you need standard boxes or custom-designed solutions, our team is ready to assist you.</p>
+            <a href="#contact" class="btn">Get a Free Quote Today</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>Plot No. 42, Industrial Area Phase II<br>Hyderabad, Telangana 500072</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 40 2345 6789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@vijayapackaging.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Certifications</h3>
+                    <div class="certification-logos">
+                        <img src="/api/placeholder/80/40?text=ISO" alt="ISO 9001:2015 Certification">
+                        <img src="/api/placeholder/80/40?text=FSC" alt="FSC Certified Paper">
+                        <img src="/api/placeholder/80/40?text=BRC" alt="BRC Packaging Certification">
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                       <form id="contactForm" action="https://formsubmit.co/vijiguruamit@gmail.com" method="POST">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/">
+                            <input type="hidden" name="_template" value="table">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit Request</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+             <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Vijaya Packaging Industries</h3>
+                    <p>Premium corrugated packaging solutions tailored to your needs. Woman-owned and committed to sustainability since 2005.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">FB</a> <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Products</h3>
+                    <ul>
+                        <li><a href="#">Regular Slotted Cartons</a></li>
+                        <li><a href="#">Die-Cut Boxes</a></li>
+                        <li><a href="#">Telescoping Containers</a></li>
+                        <li><a href="#">Retail Display Packaging</a></li>
+                        <li><a href="#">Custom Inserts & Dividers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#" id="footerDownloadBrochure">Download Brochure</a></li>
+                        <li><a href="#">Packaging Guide</a></li>
+                        <li><a href="#">Material Specifications</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vijaya Packaging Industries. All Rights Reserved.</p>
+            </div>
+            <div class="theme-logos">
+                <img src="/api/placeholder/50/50?text=Light" alt="Light Theme Logo">
+                <img src="/api/placeholder/50/50?text=Dark" alt="Dark Theme Logo">
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-buttons-container">
+        <button id="theme-toggle-btn" class="floating-btn" aria-label="Toggle theme">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="Contact Us">
+            💬 </a>
+    </div>
+
+    <script>
+        // Brochure Download
+        function downloadBrochure() {
+            window.print(); // Or link to an actual PDF: window.location.href = 'path/to/brochure.pdf';
+        }
+        const downloadBrochureBtn = document.getElementById('downloadBrochureBtn');
+        if (downloadBrochureBtn) {
+            downloadBrochureBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                downloadBrochure();
+            });
+        }
+        const footerDownloadBrochureLink = document.getElementById('footerDownloadBrochure');
+        if (footerDownloadBrochureLink) {
+            footerDownloadBrochureLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                downloadBrochure();
+            });
+        }
+
+
+        // Language Dropdown Toggle
+        const langBtnContainer = document.querySelector('.language-btn-container');
+        const langBtn = document.querySelector('.language-btn');
+        if (langBtn) {
+            langBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent click from immediately closing dropdown
+                langBtnContainer.classList.toggle('open');
+                langBtn.setAttribute('aria-expanded', langBtnContainer.classList.contains('open'));
+            });
+        }
+        // Close dropdown if clicked outside
+        document.addEventListener('click', function(event) {
+            if (langBtnContainer && langBtnContainer.classList.contains('open') && !langBtnContainer.contains(event.target)) {
+                langBtnContainer.classList.remove('open');
+                langBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+
+        // Theme Toggle Functionality
+        const themeToggleButton = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            body.className = themeName + '-theme'; 
+        }
+
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                if (localStorage.getItem('theme') === 'dark') {
+                    setTheme('light');
+                } else {
+                    setTheme('dark');
+                }
+            });
+        }
+
+        // Load saved theme or default to light
+        (function () {
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme === 'dark') {
+                setTheme('dark');
+            } else {
+                setTheme('light'); 
+            }
+        })();
+
+    </script>
+</body>
+</html>
