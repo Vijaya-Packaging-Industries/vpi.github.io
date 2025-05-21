@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="kn"> <head>
+<html lang="kn">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ - ಪ್ರೀಮಿಯಂ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು</title>
+    <title>ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ - ಪ್ರೀಮಿಯಂ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು</title>
     <style>
         :root {
-            --primary: #1a5276;
-            --secondary: #2e86c1;
-            --accent: #f39c12;
-            --light-bg: #ecf0f1; /* Renamed for clarity */
-            --light-text: #333;
+            /* Updated Color Palette */
+            --primary-deep-blue: #0A2342; /* For headings, dark backgrounds, primary text */
+            --primary-dark-blue: #003366; /* Alternative dark blue */
+            --primary-bright-blue: #007BFF; /* For links, interactive elements */
+            
+            --accent-orange: #FFA500;     /* Primary accent for CTAs */
+            --accent-gold: #FFBF00;       /* Secondary accent */
+
+            /* Light Theme Variables */
+            --light-bg: #f0f8ff; /* AliceBlue - for a professional, slightly colored background */
+            --light-text: #333333;
             --light-card-bg: #ffffff;
-            --light-section-title: var(--primary);
+            --light-section-title: var(--primary-deep-blue);
             --light-header-bg: #ffffff;
-            --light-header-text: var(--dark);
-            --light-footer-bg: var(--dark);
-            --light-footer-text: #bbb;
+            --light-header-text: var(--primary-deep-blue); 
+            --light-footer-bg: var(--primary-deep-blue); 
+            --light-footer-text: #e0e0e0;
 
-
-            --dark-bg: #2c3e50;
-            --dark-text: #ecf0f1;
-            --dark-card-bg: #34495e;
-            --dark-section-title: var(--accent); /* Example: accent color for titles in dark mode */
-            --dark-header-bg: #34495e;
+            /* Dark Theme Variables */
+            --dark-bg: #0A192F; /* Very dark blue for dark mode background */
+            --dark-text: #E0E0E0;
+            --dark-card-bg: #172A45; /* Darker blue for cards in dark mode */
+            --dark-section-title: var(--accent-gold); 
+            --dark-header-bg: #172A45;
             --dark-header-text: var(--light-bg);
-            --dark-footer-bg: #232f3c;
-            --dark-footer-text: #a0a0a0;
-
+            --dark-footer-bg: #071322;
+            --dark-footer-text: #b0b0b0;
 
             /* Default to light theme */
             --bg-color: var(--light-bg);
@@ -37,20 +43,28 @@
             --header-text-color: var(--light-header-text);
             --footer-bg-color: var(--light-footer-bg);
             --footer-text-color: var(--light-footer-text);
-            --logo-text-color: var(--primary);
-            --nav-link-color: var(--dark);
-            --nav-link-hover-color: var(--accent);
-            --btn-outline-text-color: var(--accent);
-            --btn-outline-border-color: var(--accent);
-            --btn-outline-hover-bg-color: var(--accent);
+            
+            --logo-text-color: var(--primary-deep-blue);
+            --logo-subtitle-color: var(--primary-deep-blue);
+            --nav-link-color: var(--primary-deep-blue);
+            --nav-link-hover-color: var(--accent-orange);
+            
+            --btn-primary-bg: var(--accent-orange);
+            --btn-primary-text: white;
+            --btn-primary-hover-bg: var(--accent-gold);
+
+            --btn-outline-text-color: var(--accent-orange);
+            --btn-outline-border-color: var(--accent-orange);
+            --btn-outline-hover-bg-color: var(--accent-orange);
             --btn-outline-hover-text-color: white;
-            --form-control-border: #ddd;
-            --form-control-focus-border: var(--secondary);
+            
+            --form-control-border: #dddddd;
+            --form-control-focus-border: var(--primary-bright-blue);
             --product-img-bg: #f5f5f5;
-            --testimonial-border: var(--primary);
-            --contact-icon-bg: var(--primary);
+            --testimonial-border: var(--primary-bright-blue);
+            --contact-icon-bg: var(--primary-bright-blue);
             --contact-icon-text: white;
-            --social-link-bg: #444;
+            --social-link-bg: #444444; /* Default for light theme footer */
         }
 
         body.dark-theme {
@@ -62,45 +76,57 @@
             --header-text-color: var(--dark-header-text);
             --footer-bg-color: var(--dark-footer-bg);
             --footer-text-color: var(--dark-footer-text);
-            --logo-text-color: var(--accent);
-            --nav-link-color: var(--light-bg);
-            --nav-link-hover-color: var(--accent);
-            --btn-outline-text-color: var(--accent);
-            --btn-outline-border-color: var(--accent);
-            --btn-outline-hover-bg-color: var(--accent);
+
+            --logo-text-color: var(--accent-gold);
+            --logo-subtitle-color: var(--accent-gold);
+            --nav-link-color: var(--light-bg); 
+            --nav-link-hover-color: var(--accent-orange);
+
+            --btn-primary-bg: var(--accent-orange);
+            --btn-primary-text: var(--primary-deep-blue);
+            --btn-primary-hover-bg: var(--accent-gold);
+            
+            --btn-outline-text-color: var(--accent-gold);
+            --btn-outline-border-color: var(--accent-gold);
+            --btn-outline-hover-bg-color: var(--accent-gold);
             --btn-outline-hover-text-color: var(--dark-bg);
-            --form-control-border: #555;
-            --form-control-focus-border: var(--accent);
+            
+            --form-control-border: #555555;
+            --form-control-focus-border: var(--accent-gold);
             --product-img-bg: #4a4a4a;
-            --testimonial-border: var(--accent);
-            --contact-icon-bg: var(--accent);
+            --testimonial-border: var(--accent-gold);
+            --contact-icon-bg: var(--accent-gold);
             --contact-icon-text: var(--dark-bg);
-            --social-link-bg: #555;
+            --social-link-bg: #555555;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consider Kannada web fonts */
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Added Inter as primary */
         }
         
         body {
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
             position: relative; 
             transition: background-color 0.3s ease, color 0.3s ease;
+            font-size: 16px; /* Base font size */
+        }
+        body.mobile-menu-open {
+            overflow: hidden; /* Prevent body scroll when mobile menu is open */
         }
         
         a {
             text-decoration: none;
-            color: var(--secondary);
+            color: var(--primary-bright-blue);
             transition: all 0.3s ease;
         }
         
         a:hover {
-            color: var(--primary);
+            color: var(--accent-orange);
         }
         
         .container {
@@ -110,23 +136,31 @@
             padding: 0 20px;
         }
         
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px; /* Less padding on very small screens */
+            }
+        }
+        
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--accent);
-            color: white;
-            border-radius: 4px;
+            padding: 12px 28px; 
+            background-color: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
+            border-radius: 5px; 
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
         }
         
         .btn:hover {
-            background-color: #e67e22;
-            color: white;
+            background-color: var(--btn-primary-hover-bg);
+            color: var(--btn-primary-text); 
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         .btn-outline {
@@ -139,6 +173,22 @@
             background-color: var(--btn-outline-hover-bg-color);
             color: var(--btn-outline-hover-text-color);
         }
+
+        .btn-gemini { /* Style for the new Gemini button */
+            background-color: var(--primary-bright-blue);
+            color: white;
+            margin-top: 10px;
+        }
+        .btn-gemini:hover {
+            background-color: var(--primary-deep-blue);
+        }
+        body.dark-theme .btn-gemini {
+            background-color: var(--accent-gold);
+            color: var(--primary-deep-blue);
+        }
+        body.dark-theme .btn-gemini:hover {
+            background-color: var(--accent-orange);
+        }
         
         .text-center {
             text-align: center;
@@ -146,102 +196,331 @@
         
         /* Header */
         header {
-            background-color: var(--header-bg-color); 
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--header-bg-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000; 
             transition: background-color 0.3s ease;
+            padding: 0; /* Adjusted padding to be handled by container or specific elements */
         }
         
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0; 
+            position: relative; /* For mobile menu positioning */
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+        
+        .logo-img {
+            height: 35px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-link:hover .logo-img {
+            transform: scale(1.05);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
         }
         
         .logo {
-            font-size: 24px;
+            font-size: 22px; 
             font-weight: 700;
-            color: var(--logo-text-color); 
+            color: var(--logo-text-color);
+            margin-bottom: 2px;
         }
         
         .logo span {
-            color: var(--accent);
+            color: var(--accent-orange);
         }
         
+        .logo-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--logo-subtitle-color);
+            letter-spacing: 0.5px;
+        }
+        
+        /* Desktop Navigation Styles */
+        nav { /* Renamed from #main-navigation for simpler targeting initially */
+             /* Default state for desktop */
+        }
+
         nav ul {
             display: flex;
             align-items: center; 
             list-style: none;
+            padding: 0; margin: 0;
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: 30px; 
+            position: relative; 
         }
         
         nav ul li a,
-        .language-btn-container button
-         {
+        .language-btn { /* Original styles for desktop */
             font-weight: 600;
-            color: var(--nav-link-color); 
-            padding: 5px 10px;
+            font-size: 15px; 
+            color: var(--nav-link-color);
+            padding: 8px 12px; 
             border-radius: 4px;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            background: none;
+            border: 1px solid transparent; 
+            cursor: pointer;
+            display: inline-flex; 
+            align-items: center;
+            text-decoration: none;
         }
 
-        .language-btn-container button {
-            background: none;
-            border: 1px solid var(--nav-link-color); 
-            cursor: pointer;
+        .language-btn {
+             border: 1px solid var(--nav-link-color); 
         }
         
         nav ul li a:hover,
-        .language-btn-container button:hover {
-            color: var(--nav-link-hover-color); 
+        .language-btn:hover {
+            color: var(--nav-link-hover-color);
             border-color: var(--nav-link-hover-color); 
         }
+        nav ul li a.active { 
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+
+        .language-dropdown { /* Original for desktop */
+            display: none; 
+            position: absolute;
+            top: calc(100% + 5px); 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background-color: var(--card-bg-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            padding: 8px 0;
+            z-index: 1001; 
+            min-width: 120px; 
+            border: 1px solid var(--form-control-border);
+        }
+
+        .language-dropdown a { /* Original for desktop */
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-color);
+            white-space: nowrap;
+            border: none; 
+            font-size: 15px; 
+        }
+
+        .language-dropdown a:hover { /* Original for desktop */
+            background-color: var(--bg-color); 
+            color: var(--accent-orange); 
+            border: none;
+        }
         
+        .language-btn-container.open .language-dropdown {
+            display: block; 
+        }
+        .language-btn .icon {
+            margin-right: 6px;
+        }
+
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 15px; /* Good touch target */
+            z-index: 1005; /* Above sticky header content, below opened menu */
+            margin-left: auto; /* Pushes to the right if nav is also present for a moment */
+        }
+
+        .mobile-menu-toggle .menu-icon-bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--nav-link-color); /* Consistent with nav links */
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 1px;
+        }
+        body.dark-theme .mobile-menu-toggle .menu-icon-bar {
+            background-color: var(--nav-link-color); /* Ensure dark theme uses its nav link color */
+        }
+
+        .mobile-menu-toggle.open .menu-icon-bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .mobile-menu-toggle.open .menu-icon-bar:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-toggle.open .menu-icon-bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        /* Mobile Navigation Container (the <nav> tag with ID) */
+        #main-navigation {
+            /* Styles for when it's hidden on mobile by default */
+        }
+
+        /* Styles for when mobile menu is open */
+        #main-navigation.open {
+            display: block;
+            position: absolute;
+            top: 100%; /* Below the header block */
+            left: 0;
+            right: 0;
+            background-color: var(--header-bg-color);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            z-index: 1002; /* Above content, below toggle if it needs to overlap */
+            border-top: 1px solid var(--form-control-border);
+            max-height: calc(100vh - 60px); /* Example: viewport height minus header height */
+            overflow-y: auto; /* Scroll if content exceeds height */
+            padding-top: 5px; /* Add a little space at the top */
+        }
+
+        #main-navigation.open ul {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0; /* Padding for the list itself */
+        }
+
+        #main-navigation.open ul li {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid var(--form-control-border);
+        }
+        #main-navigation.open ul li:last-child {
+            border-bottom: none;
+        }
+        
+        #main-navigation.open ul li a,
+        #main-navigation.open .language-btn {
+            display: block;
+            padding: 15px 20px; /* Generous padding for touch */
+            color: var(--nav-link-color);
+            font-weight: 600;
+            border: none; /* Remove desktop borders */
+            border-radius: 0;
+        }
+        #main-navigation.open ul li a:hover,
+        #main-navigation.open .language-btn:hover {
+            background-color: var(--bg-color); /* Subtle hover */
+            color: var(--nav-link-hover-color);
+        }
+
+        #main-navigation.open .language-btn-container {
+             width: 100%;
+    display: block;
+    text-align: center;
+            /* Stacks like other li items */
+        }
+        #main-navigation.open .language-dropdown {
+            position: static; /* Flow naturally in the mobile menu */
+            transform: none;
+            box-shadow: none;
+            border: none;
+            border-top: 1px dashed var(--form-control-border); /* Separator within language section */
+            background-color: var(--header-bg-color); /* Match parent menu */
+            min-width: auto;
+            padding: 0;
+        }
+        #main-navigation.open .language-dropdown a {
+             padding: 12px 20px; /* Consistent padding */
+             color: var(--nav-link-color);
+        }
+         #main-navigation.open .language-dropdown a:hover {
+            background-color: var(--bg-color);
+            color: var(--accent-orange);
+        }
+
+
+        /* Media Query for Mobile Navigation (up to 1024px) */
+        @media (max-width: 1024px) {
+            .mobile-menu-toggle {
+                display: block; /* Show hamburger */
+                position: relative;
+                padding: 10px;
+                margin-left: 5px;
+            }
+            
+            .logo-container {
+                flex-shrink: 1; /* Allow logo container to shrink if needed */
+            }
+            
+            .logo {
+                font-size: 20px; /* Slightly smaller font size */
+                white-space: nowrap; /* Prevent text wrapping */
+                margin-bottom: 1px;
+            }
+            
+            .logo-subtitle {
+                font-size: 12px;
+            }
+            
+            nav { /* The desktop nav container */
+                 display: none; /* Hide desktop nav container */
+            }
+            #main-navigation.open { /* This rule now correctly targets the <nav id="main-navigation"> */
+                display: block;
+            }
+        }
+
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            color: white; 
-            padding: 100px 0;
+            background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(0, 51, 102, 0.7)), url('https://placehold.co/1200x600/0A2342/FFFFFF?text=Premium+Packaging') center/cover no-repeat; 
+            color: white;
+            padding: 100px 0; 
             text-align: center;
         }
-        
         .hero h1 {
-            font-size: 42px;
+            font-size: 42px; 
             margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-weight: 700;
         }
-        
         .hero p {
             font-size: 18px;
             max-width: 700px;
-            margin: 0 auto 40px;
+            margin: 0 auto 30px auto;
+            line-height: 1.7;
         }
-        
         .hero-btns {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 30px;
         }
-        
-        .about {
-            padding: 80px 0;
-            background-color: var(--card-bg-color); 
-            transition: background-color 0.3s ease;
-        }
-        
+
+
         .section-title {
-            font-size: 32px;
-            color: var(--section-title-color); 
-            margin-bottom: 20px;
+            font-size: 36px; 
+            color: var(--section-title-color);
+            margin-bottom: 30px; 
             text-align: center;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px; 
+            font-weight: 700;
         }
         
         .section-title::after {
@@ -250,621 +529,696 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--text-color); 
-        }
-        
-        .about-img {
-            flex: 1;
-        }
-        
-        .about-img img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .products {
-            padding: 80px 0;
-            background-color: var(--bg-color); 
-            transition: background-color 0.3s ease;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .product-card {
-            background-color: var(--card-bg-color); 
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            width: 80px; 
+            height: 4px; 
+            background-color: var(--accent-orange);
+            border-radius: 2px;
         }
 
-        .product-card:hover .product-img img { 
-            transform: scale(1.1);
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--card-bg-color); 
+        }
+         .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px; 
+            margin-top: 40px;
         }
         
-        .product-img {
-            width: 100%;
-            height: 200px;
+        .about-text { flex: 1; }
+        .about-text h3 { font-size: 26px; margin-bottom: 20px; color: var(--primary-dark-blue); font-weight: 600; }
+        body.dark-theme .about-text h3 { color: var(--accent-gold); }
+        .about-text p { margin-bottom: 15px; font-size: 17px; opacity: 0.9;}
+        .about-img { flex: 1; text-align: center; }
+        .about-img img { 
+            width: 100%; 
+            max-width: 450px; 
+            border-radius: 8px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+        }
+        .founder-quote {
+            font-style: italic;
+            color: var(--primary-dark-blue);
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--accent-orange);
+            background-color: #fdf5e6; 
+        }
+        body.dark-theme .founder-quote {
+            background-color: var(--dark-card-bg); 
+            border-left-color: var(--accent-gold);
+            color: var(--dark-text);
+        }
+
+
+        /* Products Section */
+        .products { padding: 80px 0; background-color: var(--bg-color); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card { 
+            background-color: var(--card-bg-color); 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07); 
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12); 
+        }
+        .product-card:hover .product-img img { 
+            transform: scale(1.05); 
+        }
+        .product-img { 
+            width: 100%; 
+            height: 220px; 
             background-color: var(--product-img-bg); 
             overflow: hidden; 
         }
-
-        .product-img img {
-            width: 100%;
-            height: 100%;
+        .product-img img { 
+            width: 100%; 
+            height: 100%; 
             object-fit: cover; 
-            display: block;
-            transition: transform 0.3s ease; 
+            display: block; 
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
         }
-        
-        .product-info {
-            padding: 20px;
+        .product-info { 
+            padding: 25px; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
-        
-        .product-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--text-color); 
+        .product-info h3 { 
+            font-size: 22px; 
+            margin-bottom: 10px; 
+            color: var(--primary-deep-blue); 
+            font-weight: 600;
         }
-        
-        .product-info p {
-            color: var(--text-color); 
-            opacity: 0.8;
+        body.dark-theme .product-info h3 { color: var(--accent-gold); }
+        .product-info p { color: var(--text-color); opacity: 0.85; margin-bottom: 15px; flex-grow: 1; }
+        .product-feature-hint {
+            font-size: 0.85em;
+            color: var(--primary-bright-blue);
             margin-bottom: 15px;
+            font-style: italic;
         }
-        
+        body.dark-theme .product-feature-hint { color: var(--accent-gold); }
+
+
+        /* Capabilities Section */
         .capabilities {
             padding: 80px 0;
-            background-color: var(--card-bg-color);  
-            transition: background-color 0.3s ease;
+            background-color: var(--card-bg-color); 
         }
-        
         .capabilities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
         .capability-card { 
-            text-align: center;
+            background-color: var(--bg-color); 
+            body.dark-theme & { background-color: var(--dark-card-bg); }
             border-radius: 8px;
-            background-color: var(--card-bg-color); 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
+            display: flex; 
+            flex-direction: column; 
             overflow: hidden; 
-            position: relative;
-            min-height: 300px; 
         }
-
+         .capability-card:hover {
+            transform: translateY(-5px) scale(1.02); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
         .capability-collage {
-            display: flex;
             width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
+            height: 250px; 
+            position: relative; 
+            display: flex; 
+            overflow: hidden; 
+            cursor: pointer;
         }
-
-        .capability-collage-img {
+        
+        /* Default state - show cover image */
+        .capability-cover-img {
             width: 100%; 
             height: 100%;
             object-fit: cover;
-            transition: width 0.5s ease;
-        }
-
-        .capability-card:hover .capability-collage-img {
-            width: 33.333%; 
-        }
-
-        .capability-collage-img:nth-child(n+2) {
-            width: 0; 
-        }
-        .capability-card:hover .capability-collage-img:nth-child(n+2) {
-            width: 33.333%;
-        }
-        
-        .capability-text-content {
-            position: relative; 
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 0.4s ease-in-out;
             z-index: 2;
-            padding: 20px;
-            /* background-color: rgba(var(--card-bg-color-rgb, 255,255,255),0.8); */
-            color: var(--text-color); 
-            margin-top: auto; 
-        }
-        body.light-theme .capability-text-content {
-             background-color: rgba(236,240,241,0.8); 
-        }
-        body.dark-theme .capability-text-content {
-             background-color: rgba(44,62,80,0.8); 
-        }
-
-
-        .capability-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: var(--text-color); 
         }
         
-        .sustainability {
-            padding: 80px 0;
-            background-color: var(--bg-color); 
-            transition: background-color 0.3s ease;
-        }
-        
-        .sustainability-content {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .sustainability-img {
-            flex: 1;
-        }
-        
-        .sustainability-img img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        
-        .sustainability-text {
-            flex: 1;
-        }
-        
-        .sustainability-text h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--text-color); 
-        }
-        
-        .eco-features {
-            margin-top: 20px;
-        }
-        
-        .eco-feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .eco-icon { 
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--success);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-        
-        .testimonials {
-            padding: 80px 0;
-            background-color: var(--card-bg-color); 
-            transition: background-color 0.3s ease;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .testimonial-card {
-            background-color: var(--card-bg-color); 
-            border-left: 4px solid var(--testimonial-border); 
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            padding: 25px;
-            border-radius: 4px;
-            transition: background-color 0.3s ease, border-left-color 0.3s ease;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-color); 
-            opacity: 0.9;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-        }
-        
-        .author-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 15px;
-            background-color: var(--product-img-bg); 
-            overflow: hidden;
-        }
-         .author-img img {
+        /* Gallery images (hidden by default) */
+        .capability-gallery {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            display: flex;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            z-index: 1;
+        }
+        
+        .capability-gallery-img {
+            width: calc(100% / 3); 
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease-in-out;
         }
         
-        .author-info h4 {
-            font-size: 16px;
-            margin-bottom: 5px;
-            color: var(--text-color); 
+        /* Hover/active state */
+        .capability-card.active .capability-cover-img,
+        .capability-card:hover .capability-cover-img {
+            opacity: 0;
         }
         
-        .author-info p {
-            color: var(--text-color); 
-            opacity: 0.7;
-            font-size: 14px;
+        .capability-card.active .capability-gallery,
+        .capability-card:hover .capability-gallery {
+            opacity: 1;
         }
         
-        .cta { 
-            padding: 80px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/api/placeholder/1200/600') center/cover no-repeat;
-            color: white;
-            text-align: center;
+        .capability-card.active .capability-gallery-img,
+        .capability-card:hover .capability-gallery-img {
+            transform: scale(1.05);
         }
         
-        .cta h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        /* Disable hover effect on mobile devices to prevent issues */
+        @media (max-width: 768px) {
+            .capability-card:hover .capability-cover-img {
+                opacity: 1; /* Keep cover image visible on hover for mobile */
+            }
+            
+            .capability-card:hover .capability-gallery {
+                opacity: 0; /* Keep gallery hidden on hover for mobile */
+            }
+            
+            .capability-card:hover .capability-gallery-img {
+                transform: none; /* No transform on hover for mobile */
+            }
+            
+            /* Only show gallery on active state for mobile */
+            .capability-card.active .capability-cover-img {
+                opacity: 0;
+            }
+            
+            .capability-card.active .capability-gallery {
+                opacity: 1;
+            }
         }
         
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-size: 18px;
+        /* No eye emoji indicator */
+        .capability-text-content {
+            padding: 25px; 
+            text-align: center; 
+            flex-grow: 1; 
         }
+        .capability-card h3 {
+            font-size: 22px; 
+            margin-bottom: 12px;
+            color: var(--primary-dark-blue); 
+            font-weight: 600;
+        }
+        body.dark-theme .capability-card h3 { color: var(--accent-gold); }
+        .capability-card p {
+            font-size: 16px; 
+            color: var(--text-color);
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        /* Sustainability Section */
+        .sustainability { padding: 80px 0; background-color: var(--bg-color); }
+        .sustainability-content { display: flex; align-items: center; gap: 50px; margin-top: 40px; }
+        .sustainability-img { flex: 1; text-align: center; }
+        .sustainability-img img { 
+            width: 100%; 
+            max-width: 500px; 
+            border-radius: 8px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .sustainability-text { flex: 1; }
+        .sustainability-text h3 { font-size: 26px; margin-bottom: 20px; color: var(--primary-dark-blue); font-weight: 600;}
+        body.dark-theme .sustainability-text h3 { color: var(--accent-gold); }
+        .sustainability-text p { margin-bottom: 15px; font-size: 17px; opacity: 0.9;}
+        .eco-features { margin-top: 30px; }
+        .eco-feature { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .eco-icon { 
+            width: 45px; height: 45px; 
+            border-radius: 50%; 
+            background-color: var(--accent-orange); 
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 20px; 
+            font-size: 22px; 
+            flex-shrink: 0;
+        }
+        body.dark-theme .eco-icon { background-color: var(--accent-gold); color: var(--primary-deep-blue); }
+        .eco-feature h4 { font-size: 18px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600;}
+        body.dark-theme .eco-feature h4 { color: var(--light-text); }
+        .eco-feature p { font-size: 15px; opacity: 0.8; margin-bottom: 0; }
         
-        .contact {
-            padding: 80px 0;
+        /* Testimonials Section */
+        .testimonials { padding: 80px 0; background-color: var(--card-bg-color); } 
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+        .testimonial-card { 
             background-color: var(--bg-color); 
-            transition: background-color 0.3s ease;
+            body.dark-theme & { background-color: var(--dark-card-bg); }
+            border-left: 5px solid var(--testimonial-border); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07); 
+            padding: 30px; 
+            border-radius: 8px; 
         }
-        
-        .contact-content {
-            display: flex;
-            gap: 40px;
-            margin-top: 40px;
+        .testimonial-text { font-style: italic; margin-bottom: 25px; color: var(--text-color); opacity: 0.9; font-size: 17px; line-height: 1.7;}
+        .testimonial-author { display: flex; align-items: center; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; background-color: var(--product-img-bg); overflow: hidden; }
+        .author-img img { width: 100%; height: 100%; object-fit: cover; }
+        .author-info h4 { font-size: 17px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600; }
+        body.dark-theme .author-info h4 { color: var(--light-text); }
+        .author-info p { color: var(--text-color); opacity: 0.75; font-size: 14px; }
+
+        /* CTA Section */
+        .cta { 
+            padding: 80px 0; 
+            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(0, 51, 102, 0.8)), url('https://placehold.co/1200x400/0A2342/FFFFFF?text=Get+In+Touch') center/cover no-repeat; 
+            color: white; 
+            text-align: center; 
         }
-        
-        .contact-info {
-            flex: 1;
+        .cta h2 { font-size: 38px; margin-bottom: 20px; font-weight: 700; }
+        .cta p { max-width: 750px; margin: 0 auto 35px; font-size: 18px; line-height: 1.7;}
+
+        /* Contact Section */
+        .contact { padding: 80px 0; background-color: var(--bg-color); }
+        .contact-content { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-info h3 { font-size: 26px; margin-bottom: 25px; color: var(--primary-dark-blue); font-weight: 600;}
+        body.dark-theme .contact-info h3 { color: var(--accent-gold); }
+        .contact-details { margin-bottom: 30px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .contact-link { 
+            text-decoration: none; 
+            color: inherit; 
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 10px;
+            margin: -10px;
+            cursor: pointer;
         }
-        
-        .contact-info h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--text-color); 
+        .contact-link:hover { 
+            background-color: rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
         }
-        
-        .contact-details {
-            margin-bottom: 30px;
+        body.dark-theme .contact-link:hover {
+            background-color: rgba(255, 255, 255, 0.05);
         }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+        .contact-icon { 
+            width: 45px; height: 45px; 
+            border-radius: 50%; 
             background-color: var(--contact-icon-bg); 
             color: var(--contact-icon-text); 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 18px;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 20px; 
+            font-size: 20px; 
+            flex-shrink: 0;
         }
-        
-        .contact-form {
-            flex: 1;
-            background-color: var(--card-bg-color); 
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s ease;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: var(--text-color); 
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--form-control-border); 
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--form-control-focus-border); 
-        }
-        
-        textarea.form-control {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
-        footer {
-            background-color: var(--footer-bg-color); 
-            color: var(--footer-text-color); 
-            padding: 60px 0 30px;
-            position: relative; 
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-col h3 {
-            font-size: 18px;
-            color: var(--header-text-color); 
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-col h3::after {
+        .contact-item div h4 { font-size: 18px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600;}
+        .contact-link div h4 { position: relative; display: inline-block; }
+        .contact-link div h4::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
+            width: 0;
             height: 2px;
-            background-color: var(--accent);
+            bottom: -2px;
+            left: 0;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
         }
-        
-        .footer-col ul {
-            list-style: none;
+        .contact-link:hover div h4::after {
+            width: 100%;
         }
-        
-        .footer-col ul li {
-            margin-bottom: 10px;
+        body.dark-theme .contact-item div h4 { color: var(--light-text); }
+        .contact-item div p { font-size: 16px; opacity: 0.9; }
+
+        .contact-form { 
+            flex: 1.5; 
+            min-width: 320px;
+            background-color: var(--card-bg-color); 
+            padding: 35px; 
+            border-radius: 8px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
         }
-        
-        .footer-col ul li a {
-            color: var(--footer-text-color); 
+        .contact-form h3 { font-size: 26px; margin-bottom: 25px; color: var(--primary-dark-blue); font-weight: 600;}
+        body.dark-theme .contact-form h3 { color: var(--accent-gold); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 15px;}
+        .form-control { 
+            width: 100%; 
+            padding: 14px; 
+            border: 1px solid var(--form-control-border); 
+            border-radius: 5px; 
+            font-size: 16px; 
+            background-color: var(--bg-color); 
+            body.dark-theme & { background-color: var(--dark-card-bg); } 
+            color: var(--text-color); 
+            transition: border-color 0.3s ease;
         }
-        
-        .footer-col ul li a:hover {
-            color: var(--accent); 
+        .form-control:focus { 
+            outline: none; 
+            border-color: var(--form-control-focus-border); 
+            box-shadow: 0 0 0 0.2rem rgba(var(--rgb-primary-bright-blue, 0, 123, 255), 0.25); 
         }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
+        body.dark-theme .form-control:focus {
+             box-shadow: 0 0 0 0.2rem rgba(var(--rgb-accent-gold, 255, 191, 0), 0.25);
+        }
+
+        textarea.form-control { resize: vertical; min-height: 130px; }
+        .certification-logos { margin-top: 20px; display: flex; gap: 15px; align-items: center;}
+        .certification-logos img { height: 40px; opacity: 0.8; }
+
+        /* Gemini Suggestion Output Styling */
+        #gemini-suggestion-output {
             margin-top: 20px;
+            padding: 15px;
+            border: 1px dashed var(--primary-bright-blue);
+            border-radius: 5px;
+            background-color: var(--bg-color); /* Consistent with form input bg */
+            min-height: 50px;
+            white-space: pre-wrap; /* Preserve formatting from API */
+            font-size: 0.95em;
         }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
+        body.dark-theme #gemini-suggestion-output {
+            border-color: var(--accent-gold);
+            background-color: var(--dark-card-bg);
+        }
+        #gemini-suggestion-output h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-deep-blue);
+        }
+        body.dark-theme #gemini-suggestion-output h4 {
+            color: var(--accent-gold);
+        }
+        #gemini-suggestion-output ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        #gemini-suggestion-output li {
+            margin-bottom: 5px;
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0,0,0,.3);
             border-radius: 50%;
-            background-color: var(--social-link-bg); 
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            transition: all 0.3s ease;
+            border-top-color: var(--primary-bright-blue);
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        body.dark-theme .loading-spinner {
+            border-top-color: var(--accent-gold);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
         
-        .social-link:hover {
-            background-color: var(--accent);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            border-top: 1px solid var(--social-link-bg); 
-            padding-top: 20px;
-            text-align: center;
+        /* Footer */
+        footer { 
+            background-color: var(--footer-bg-color); 
             color: var(--footer-text-color); 
-            opacity: 0.8;
-            font-size: 14px;
+            padding: 70px 0 30px; 
+            position: relative; 
         }
-
-        .theme-logos {
-            position: absolute;
-            bottom: 20px; 
-            right: 20px; 
-            display: flex;
-            gap: 10px;
-            z-index: 10; 
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 50px; } 
+        .footer-col h3 { 
+            font-size: 20px; 
+            color: var(--accent-gold); 
+            margin-bottom: 25px; 
+            position: relative; 
+            padding-bottom: 12px; 
+            font-weight: 600;
         }
-
-        .theme-logos img {
-            width: 50px; 
-            height: 50px; 
-            object-fit: contain;
+        .footer-col h3::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 40px; 
+            height: 3px; 
+            background-color: var(--accent-orange); 
         }
-
-        .floating-buttons-container {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-            display: flex;
-            flex-direction: column; 
-            gap: 15px; 
+        .footer-col p { line-height: 1.7; opacity: 0.9; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 12px; }
+        .footer-col ul li a { color: var(--footer-text-color); opacity: 0.85; }
+        .footer-col ul li a:hover { color: var(--accent-orange); opacity: 1; }
+        .social-links { display: flex; gap: 15px; margin-top: 25px; }
+        .social-link { 
+            width: 40px; height: 40px; 
+            border-radius: 50%; 
+            background-color: rgba(255,255,255,0.1); 
+            color: var(--footer-text-color); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 18px; 
+            transition: all 0.3s ease; 
         }
-
-        .floating-btn {
-            background-color: var(--accent);
+        .social-link:hover { 
+            background-color: var(--accent-orange); 
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform: translateY(-3px); 
         }
-        .floating-btn:hover {
-            background-color: #e67e22; 
-            transform: scale(1.1);
-            color: white;
+        .footer-bottom { 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            padding-top: 30px; 
+            text-align: center; 
+            color: var(--footer-text-color); 
+            opacity: 0.8; 
+            font-size: 14px; 
         }
+        .theme-logos { display:none; }
 
+        /* Floating Buttons Container */
+        .floating-buttons-container { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
+        .floating-btn { 
+            background-color: var(--accent-orange); 
+            color: white; 
+            width: 55px; height: 55px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 22px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+            cursor: pointer; 
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border: none;
+        }
+        .floating-btn:hover { 
+            background-color: var(--accent-gold); 
+            transform: scale(1.1); 
+        }
         #theme-toggle-btn .icon-sun { display: inline; } 
         #theme-toggle-btn .icon-moon { display: none; } 
-
         body.dark-theme #theme-toggle-btn .icon-sun { display: none; } 
         body.dark-theme #theme-toggle-btn .icon-moon { display: inline; } 
 
-        @media (max-width: 992px) {
-            .about-content, .sustainability-content, .contact-content {
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) { /* Mobile menu kicks in here */
+            /* Existing header-container changes from 768px are now relevant here too if nav is hidden */
+             /* .header-container {
+                flex-direction: column; No, keep space-between for logo and toggle
+                align-items: center; 
+            } */
+            /* .logo {
+                margin-bottom: 15px; Only if header stacks, not yet
+            } */
+            /* Original nav ul modifications are now handled by #main-navigation.open */
+        }
+
+        @media (max-width: 992px) { 
+            .about-content, .sustainability-content {
                 flex-direction: column;
+                text-align: center; 
             }
-            
+            .about-content .about-text, .sustainability-content .sustainability-text, .contact-content .contact-info, .contact-content .contact-form {
+                width: 100%; 
+                margin-bottom: 30px;
+            }
             .about-img, .sustainability-img {
-                margin-top: 30px;
+                margin-top: 0; 
+                max-width: 80%; 
+                margin-left: auto;
+                margin-right: auto;
             }
             .capabilities-grid {
-                grid-template-columns: 1fr; 
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            }
+            .capability-collage {
+                height: 220px; 
+            }
+             .footer-content {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 17px; }
+            .section-title { font-size: 32px; }
+        }
+        
+        @media (max-width: 768px) { 
+            .header-container {
+                flex-direction: row; /* Keep in a single line */
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 0; /* Reduced padding */
+            }
+            
+            .logo-container {
+                margin-bottom: 0;
+                flex-shrink: 1; /* Allow logo container to shrink if needed */
+            }
+            
+            .logo-img {
+                height: 30px; /* Smaller on mobile */
+            }
+            
+            .logo {
+                font-size: 18px; /* Smaller font size on mobile */
+                white-space: nowrap; /* Prevent text wrapping */
+                margin-bottom: 1px;
+            }
+            
+            .logo-subtitle {
+                font-size: 11px;
+            }
+            
+            .mobile-menu-toggle {
+                position: relative;
+                padding: 10px; /* Smaller padding */
+                margin-left: 5px;
+            }
+            
+            /* Header remains in a single line with reduced sizes */
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .logo-img {
+                height: 25px; /* Even smaller on very small screens */
+            }
+            
+            .logo {
+                font-size: 16px; /* Smaller font on very small screens */
+                margin-bottom: 0;
+            }
+            
+            .logo-subtitle {
+                font-size: 10px;
+            }
+            
+            .mobile-menu-toggle {
+                padding: 8px; /* Smaller padding */
+            }
+            
+            .mobile-menu-toggle .menu-icon-bar {
+                width: 20px; /* Smaller hamburger icon */
+                height: 2px;
+                margin: 4px 0;
             }
         }
         
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start; 
-            }
+            .hero h1 { font-size: 30px; } 
+            .hero p { font-size: 16px; }
+            .hero-btns { flex-direction: column; gap: 15px; align-items: center; }
+            .hero-btns .btn { width: 80%; max-width: 300px; }
             
-            .logo {
-                margin-bottom: 10px; 
+            .section-title { font-size: 28px; }
+            .capabilities-grid {
+                grid-template-columns: 1fr; 
             }
+            .capability-collage {
+                height: 200px; 
+            }
+            .capability-card h3 { font-size: 20px; }
+            .capability-card p { font-size: 15px; }
 
-            nav ul {
-                margin-top: 10px; 
-                padding-left: 0; 
-                flex-direction: column; 
-                align-items: flex-start; 
-                width: 100%;
-            }
-            
-            nav ul li {
-                margin-left: 0;
-                margin-bottom: 10px; 
-                width: 100%;
-            }
-            nav ul li:last-child {
-                margin-bottom: 0;
-            }
-            nav ul li a, .language-btn-container button {
-                display: block; 
-                padding: 10px;
-                text-align: left;
-            }
-            .language-btn-container {
-                width: 100%;
-                margin-left: 0; 
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            .floating-buttons-container {
-                bottom: 20px;
-                right: 20px;
-                gap: 10px;
-            }
-            .floating-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            .theme-logos {
-                bottom: 10px;
-                right: 10px;
-            }
-            .theme-logos img {
-                width: 40px;
-                height: 40px;
-            }
+            .floating-buttons-container { bottom: 20px; right: 20px; gap: 10px; }
+            .floating-btn { width: 50px; height: 50px; font-size: 20px; }
+
+            .contact-content { flex-direction: column; }
+            .footer-content { text-align: center; } 
+            .footer-col h3::after { left: 50%; transform: translateX(-50%); } 
+            .social-links { justify-content: center; }
         }
         
         @media print {
-            header, footer, .contact-form, .hero-btns .btn:last-child, .floating-buttons-container, .theme-logos {
-                display: none;
+            header, footer, .contact-form .btn, .contact-form .btn-gemini, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle {
+                display: none !important; /* Ensure mobile toggle is also hidden */
             }
+            #main-navigation, #main-navigation.open {
+                display: none !important; /* Hide mobile nav structure in print */
+            }
+            body { background-color: white !important; color: black !important; } 
+            .capability-collage {
+                display: block; 
+                height: auto;
+            }
+            .capability-cover-img { 
+                position: static; 
+                opacity: 1; 
+                width: 100%;
+            }
+            .capability-gallery { 
+                display: none; 
+            } 
+            .capability-text-content { position: static; background-color: transparent; }
+            .btn, .btn-outline { border: 1px solid #ccc; color: #333; background: #eee; }
         }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body class="light-theme">
+<body class="light-theme"> 
     <header>
         <div class="container header-container">
-            <div class="logo">ವಿಜಯ <span>ಪ್ಯಾಕೇಜಿಂಗ್</span></div>
-            <nav>
-                <ul>
+            <div class="logo-container">
+                <a href="index_kannada.html" class="logo-link">
+                    <img src="logo.png" alt="ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಲೋಗೋ" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <div class="logo">ವಿಜಯಾ <span>ಪ್ಯಾಕೇಜಿಂಗ್</span></div>
+                    <div class="logo-subtitle">ಇಂಡಸ್ಟ್ರೀಸ್</div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="ನ್ಯಾವಿಗೇಷನ್ ಟಾಗಲ್ ಮಾಡಿ" aria-expanded="false" aria-controls="main-navigation">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+            <nav id="main-navigation"> <ul>
                     <li class="language-btn-container">
-                        <button type="button">🌐 ಭಾಷೆ</button>
+                        <button type="button" class="language-btn" aria-label="ಭಾಷೆ ಬದಲಿಸಿ" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon">🌐</span> ಭಾಷೆ
+                        </button>
                         <div class="language-dropdown">
                             <a href="index.html">English</a>
                             <a href="index_hindi.html">हिन्दी</a>
@@ -882,29 +1236,33 @@
 
     <section class="hero">
         <div class="container">
-            <h1>ಪ್ರೀಮಿಯಂ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು</h1>
-            <p>ನವೀನ, ಪರಿಸರ ಸ್ನೇಹಿ, ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಯಾಕೇಜಿಂಗ್ ನಿಮ್ಮ ಉತ್ಪನ್ನಗಳನ್ನು ರಕ್ಷಿಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಬ್ರ್ಯಾಂಡ್ ಅನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ. 2005 ರಿಂದ ಹೆಮ್ಮೆಯಿಂದ ಮಹಿಳಾ ಸ್ವಾಮ್ಯದ ಮತ್ತು ನಿರ್ವಹಣೆಯಲ್ಲಿದೆ.</p>
+            <h1>ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್</h1>
+            <p>ಪ್ರೀಮಿಯಂ, ಪರಿಸರ ಸ್ನೇಹಿ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳಿಗಾಗಿ ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಪಾಲುದಾರರು. 2019 ರಿಂದ ಹೆಮ್ಮೆಯಿಂದ <strong>ಮಹಿಳಾ-ಮಾಲೀಕತ್ವದ</strong> ಮತ್ತು ನಿರ್ವಹಣೆಯಲ್ಲಿದೆ.</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn"> نرخ quote ವಿನಂತಿಸಿ</a>
-                <a href="#" class="btn btn-outline">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a>
+                <a href="#contact" class="btn">ಉಲ್ಲೇಖವನ್ನು ವಿನಂತಿಸಿ</a>
+                <a href="#" class="btn btn-outline" id="downloadBrochureBtn">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">ನಮ್ಮ ಬಗ್ಗೆ</h2>
+            <h2 class="section-title">ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಬಗ್ಗೆ</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>ನಮ್ಮ ಕಥೆ</h3>
-                    <p>2019 ರಲ್ಲಿ ದೂರದೃಷ್ಟಿಯ ಉದ್ಯಮಿ ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ ಅವರಿಂದ ಸ್ಥಾಪಿತವಾದ ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್, ಸಣ್ಣ ಕಾರುಗೇಟೆಡ್ ಬಾಕ್ಸ್ ತಯಾರಿಕಾ ಘಟಕದಿಂದ ಈ ಪ್ರಾಂತ್ಯದ ಪ್ರಮುಖ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರ ಒದಗಿಸುವವರಲ್ಲಿ ಒಂದಾಗಿ ಬೆಳೆದಿದೆ.</p>
-                    <p>ಗುಣಮಟ್ಟ, ನಾವೀನ್ಯತೆ, ಮತ್ತು ಸುಸ್ಥಿರತೆಗೆ ಬದ್ಧತೆಯೊಂದಿಗೆ, ನಾವು FMCG, ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್, ಫಾರ್ಮಾಸ್ಯುಟಿಕಲ್ಸ್, ಮತ್ತು ಇ-ಕಾಮರ್ಸ್ ಸೇರಿದಂತೆ ವಿವಿಧ ಕೈಗಾರಿಕೆಗಳಲ್ಲಿ ಗ್ರಾಹಕರ ವಿಶ್ವಾಸವನ್ನು ಗಳಿಸಿದ್ದೇವೆ.</p>
-                   <br> <h3>ನಮ್ಮ ಸಂಸ್ಥಾಪಕರು</h3>
-                    <p>ಬಹುತೇಕ ಪುರುಷ ಪ್ರಾಬಲ್ಯದ ಪ್ಯಾಕೇಜಿಂಗ್ ಉದ್ಯಮದಲ್ಲಿ ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಅವರ ಪಯಣವು ಸ್ಥಳೀಯ ಸಮುದಾಯವನ್ನು ಸಬಲೀಕರಣಗೊಳಿಸುವ ಜೊತೆಗೆ ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳನ್ನು ರಚಿಸುವ ದೃಷ್ಟಿಯೊಂದಿಗೆ ಪ್ರಾರಂಭವಾಯಿತು. ಅವರ ನಾಯಕತ್ವವನ್ನು ಹಲವಾರು ಉದ್ಯಮಶೀಲತಾ ಪ್ರಶಸ್ತಿಗಳೊಂದಿಗೆ ಗುರುತಿಸಲಾಗಿದೆ, ಇದರಲ್ಲಿ 2018 ರ ಪ್ರತಿಷ್ಠಿತ ಬಿಸಿನೆಸ್ ಎಕ್ಸಲೆನ್ಸ್ ಪ್ರಶಸ್ತಿಯೂ ಸೇರಿದೆ.</p>
-                    <p>[Translate more content here...]</p>
+                    <h3>ನಮ್ಮ ಕಥೆ: ನಾವೀನ್ಯತೆ ಮತ್ತು ವಿಶ್ವಾಸದ ಪರಂಪರೆ</h3>
+                    <p>2019 ರಲ್ಲಿ ದೂರದೃಷ್ಟಿಯ ಉದ್ಯಮಿ <strong>ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ</strong> ಅವರಿಂದ ಸ್ಥಾಪಿಸಲ್ಪಟ್ಟ ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್, ಸಮರ್ಪಿತ ಕಾರುಗೇಟೆಡ್ ಬಾಕ್ಸ್ ತಯಾರಿಕಾ ಘಟಕದಿಂದ ಈ ಪ್ರದೇಶದ ಪ್ರಮುಖ ಮತ್ತು ಅತ್ಯಂತ ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರ ಪೂರೈಕೆದಾರರಲ್ಲಿ ಒಂದಾಗಿ ವೇಗವಾಗಿ ಬೆಳೆದಿದೆ. ನಾವು ಹೆಮ್ಮೆಯ <strong>ಮಹಿಳಾ ನೇತೃತ್ವದ ಉದ್ಯಮ</strong>, ಶ್ರೇಷ್ಠತೆಗೆ ಬದ್ಧರಾಗಿದ್ದೇವೆ.</p>
+                    <p>ಅಸಮಾನ ಗುಣಮಟ್ಟ, ನಿರಂತರ ನಾವೀನ್ಯತೆ, ಮತ್ತು ಅಚಲವಾದ ಸುಸ್ಥಿರತೆಗೆ ನಮ್ಮ ಬದ್ಧತೆಯು ಎಫ್‌ಎಂಸಿಜಿ, ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್, ಫಾರ್ಮಾಸ್ಯುಟಿಕಲ್ಸ್, ಮತ್ತು ಇ-ಕಾಮರ್ಸ್ ಸೇರಿದಂತೆ ವಿವಿಧ ಕೈಗಾರಿಕೆಗಳಲ್ಲಿನ ವೈವಿಧ್ಯಮಯ ಗ್ರಾಹಕರ ವಿಶ್ವಾಸವನ್ನು ಗಳಿಸಿದೆ.</p>
+                    
+                    <h3>ನಮ್ಮ ಸಂಸ್ಥಾಪಕರನ್ನು ಭೇಟಿ ಮಾಡಿ: ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ</h3>
+                    <p>ಡೈನಾಮಿಕ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಉದ್ಯಮದಲ್ಲಿ ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಅವರ ಪ್ರಯಾಣವು ಅವರ ಪ್ರವರ್ತಕ ಮನೋಭಾವಕ್ಕೆ ಸಾಕ್ಷಿಯಾಗಿದೆ. ಸ್ಥಳೀಯ ಸಮುದಾಯದಲ್ಲಿ ಆರ್ಥಿಕ ಸಬಲೀಕರಣವನ್ನು ಉತ್ತೇಜಿಸುತ್ತಲೇ ಉತ್ತಮ, ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳನ್ನು ರಚಿಸುವ ಸ್ಪಷ್ಟ ದೃಷ್ಟಿಯೊಂದಿಗೆ ಅವರು ಈ ಹಾದಿಯನ್ನು ಪ್ರಾರಂಭಿಸಿದರು. ಅವರ ನಾಯಕತ್ವ ಮತ್ತು ವ್ಯವಹಾರ ಕುಶಾಗ್ರಮತಿಯನ್ನು 2018 ರ ಗಮನಾರ್ಹ ಬಿಸಿನೆಸ್ ಎಕ್ಸಲೆನ್ಸ್ ಪ್ರಶಸ್ತಿ ಸೇರಿದಂತೆ ಹಲವಾರು ಪ್ರತಿಷ್ಠಿತ ಉದ್ಯಮಶೀಲತಾ ಪ್ರಶಸ್ತಿಗಳೊಂದಿಗೆ ಗುರುತಿಸಲಾಗಿದೆ.</p>
+                    <p>ಅವರ ಸ್ಪೂರ್ತಿದಾಯಕ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ, ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ ಪರಿಸರ ಜವಾಬ್ದಾರಿ ಮತ್ತು ಸಕಾರಾತ್ಮಕ ಸಾಮಾಜಿಕ ಪರಿಣಾಮದ ಮೇಲೆ ಅಚಲವಾದ ಗಮನವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳುತ್ತಲೇ ನಾವೀನ್ಯತೆಯ ಗಡಿಗಳನ್ನು ಸ್ಥಿರವಾಗಿ ತಳ್ಳುತ್ತದೆ.</p>
+                    <div class="founder-quote">
+                        <p>"ನಾವು ಕೇವಲ ಬಾಕ್ಸ್‌ಗಳನ್ನು ತಯಾರಿಸುವುದಿಲ್ಲ; ನಾವು ವಿಶ್ವಾಸವನ್ನು ನಿರ್ಮಿಸುತ್ತೇವೆ ಮತ್ತು ನಮ್ಮ ಗ್ರಾಹಕರಿಗೆ ಮತ್ತು ನಮ್ಮ ಗ್ರಹಕ್ಕೆ ಮೌಲ್ಯಯುತವಾದದ್ದನ್ನು ರಕ್ಷಿಸುವ ಪರಿಹಾರಗಳನ್ನು ನೀಡುತ್ತೇವೆ." - ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ</p>
+                    </div>
                 </div>
                 <div class="about-img">
-                    <img src="logo.png" alt="ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ ಕಾರ್ಖಾನೆ">
+                    <img src="mom.png" alt="ಶ್ರೀಮತಿ ವಿಜಯಲಕ್ಷ್ಮಿ ಡಿ, ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್ ಸಂಸ್ಥಾಪಕರು" onerror="this.onerror=null;this.src='https://placehold.co/450x350/cccccc/333333?text=Image+Not+Found';">
                 </div>
             </div>
         </div>
@@ -912,60 +1270,170 @@
 
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title">ನಮ್ಮ ಉತ್ಪನ್ನಗಳು</h2>
+            <h2 class="section-title">ನಮ್ಮ ಪ್ರೀಮಿಯಂ ಉತ್ಪನ್ನಗಳು</h2>
+            <p class="text-center" style="max-width: 700px; margin: -20px auto 40px auto; font-size: 17px; opacity:0.9;">ನಮ್ಮ ಉತ್ತಮ-ಗುಣಮಟ್ಟದ, ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದಾದ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಶ್ರೇಣಿಯನ್ನು ಅನ್ವೇಷಿಸಿ. ವರ್ಧಿತ ಉತ್ಪನ್ನ ಪರಿಶೋಧನೆ ಅನುಭವಕ್ಕಾಗಿ ನಾವು ಸಂವಾದಾತ್ಮಕ 3D ಅನಿಮೇಟೆಡ್ ವೀಕ್ಷಣೆಗಳನ್ನು ತರಲು ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೇವೆ!</p>
             <div class="product-grid">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="Regular Slotted Cartons.png" alt="ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು">
+                        <img src="Regular Slotted Cartons.png" alt="ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=RSC+Box';">
                     </div>
                     <div class="product-info">
                         <h3>ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು (RSC)</h3>
-                        <p>[Translate product description here...]</p>
-                        <a href="rsc-boxes.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                        <p>ನಮ್ಮ ಅತ್ಯಂತ ಬಹುಮುಖ ಮತ್ತು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸುವ ಬಾಕ್ಸ್ ಶೈಲಿ, ವಿವಿಧ ಕೈಗಾರಿಕೆಗಳಲ್ಲಿ ಸಾಗಾಟ ಮತ್ತು ಸಂಗ್ರಹಣೆಗೆ ಸೂಕ್ತವಾಗಿದೆ.</p>
+                        <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="regular_slotted_cartoons.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
                     </div>
                 </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Die-Cut Boxes.png" alt="ಡೈ-ಕಟ್ ಬಾಕ್ಸ್‌ಗಳು" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Die-Cut+Box';">
+                    </div>
+                    <div class="product-info">
+                        <h3>ಡೈ-ಕಟ್ ಬಾಕ್ಸ್‌ಗಳು</h3>
+                        <p>ವಿಶೇಷ ಉತ್ಪನ್ನಗಳಿಗಾಗಿ ಮತ್ತು ವರ್ಧಿತ ಬ್ರ್ಯಾಂಡ್ ಪ್ರಸ್ತುತಿಗಾಗಿ ನಿಖರವಾದ ಕಟ್‌ಗಳು ಮತ್ತು ಮಡಿಕೆಗಳೊಂದಿಗೆ ಕಸ್ಟಮ್-ವಿನ್ಯಾಸಗೊಳಿಸಿದ ಬಾಕ್ಸ್‌ಗಳು.</p>
+                         <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="Die-Cut Boxes.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
                 </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Telescoping Containers.jpg" alt="ಟೆಲಿಸ್ಕೋಪಿಂಗ್ ಕಂಟೈನರ್‌ಗಳು" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Telescopic+Box';">
+                    </div>
+                    <div class="product-info">
+                        <h3>ಟೆಲಿಸ್ಕೋಪಿಂಗ್ ಕಂಟೈನರ್‌ಗಳು</h3>
+                        <p>ಪ್ರತ್ಯೇಕ ಮುಚ್ಚಳಗಳೊಂದಿಗೆ ಎರಡು-ತುಂಡು ಬಾಕ್ಸ್‌ಗಳು, ಭಾರವಾದ ವಸ್ತುಗಳು ಮತ್ತು ಹೆಚ್ಚುವರಿ ರಕ್ಷಣೆ ಅಗತ್ಯವಿರುವ ಉತ್ಪನ್ನಗಳಿಗೆ ಸೂಕ್ತವಾಗಿದೆ.</p>
+                         <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="Telescoping Containers.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="Retail Display Packaging.jpg" alt="ಚಿಲ್ಲರೆ ಪ್ರದರ್ಶನ ಪ್ಯಾಕೇಜಿಂಗ್" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Retail+Display';">
+                    </div>
+                    <div class="product-info">
+                        <h3>ಚಿಲ್ಲರೆ ಪ್ರದರ್ಶನ ಪ್ಯಾಕೇಜಿಂಗ್</h3>
+                        <p>ಆಕರ್ಷಕ ಪಾಯಿಂಟ್-ಆಫ್-ಪರ್ಚೇಸ್ ಡಿಸ್‌ಪ್ಲೇಗಳು ಮತ್ತು ಶೆಲ್ಫ್-ರೆಡಿ ಪ್ಯಾಕೇಜಿಂಗ್ ಉತ್ಪನ್ನದ ಗೋಚರತೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತದೆ.</p>
+                         <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="Retail Display Packaging.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <div class="product-img">
+                        <img src="Heavy-Duty Packaging.jpg" alt="ಹೆವಿ-ಡ್ಯೂಟಿ ಪ್ಯಾಕೇಜಿಂಗ್" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Heavy+Duty';">
+                    </div>
+                    <div class="product-info">
+                        <h3>ಹೆವಿ-ಡ್ಯೂಟಿ ಪ್ಯಾಕೇಜಿಂಗ್</h3>
+                        <p>ಕೈಗಾರಿಕಾ ಅನ್ವಯಿಕೆಗಳು ಮತ್ತು ದೃಢವಾದ ರಕ್ಷಣಾ ಅವಶ್ಯಕತೆಗಳಿಗಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಬಹು-ಗೋಡೆಯ ಕಾರುಗೇಟೆಡ್ ಪರಿಹಾರಗಳು.</p>
+                         <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="Heavy-Duty Packaging.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
+                </div>
+                 <div class="product-card">
+                    <div class="product-img">
+                        <img src="Custom Inserts & Dividers.jpg" alt="ಕಸ್ಟಮ್ ಇನ್ಸರ್ಟ್‌ಗಳು ಮತ್ತು ಡಿವೈಡರ್‌ಗಳು" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Inserts';">
+                    </div>
+                    <div class="product-info">
+                        <h3>ಕಸ್ಟಮ್ ಇನ್ಸರ್ಟ್‌ಗಳು ಮತ್ತು ಡಿವೈಡರ್‌ಗಳು</h3>
+                        <p>ನಿಮ್ಮ ಉತ್ಪನ್ನಗಳಿಗೆ ಸಂಘಟನೆ, ಪ್ರತ್ಯೇಕತೆ ಮತ್ತು ಹೆಚ್ಚುವರಿ ರಕ್ಷಣೆಯನ್ನು ಒದಗಿಸುವ ಆಂತರಿಕ ಘಟಕಗಳು.</p>
+                         <p class="product-feature-hint"><small><em>ಸಂವಾದಾತ್ಮಕ 3D ವೀಕ್ಷಣೆ ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ!</em></small></p>
+                        <a href="Custom Inserts & Dividers.html" class="btn btn-outline">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="capabilities" class="capabilities">
         <div class="container">
-            <h2 class="section-title">ನಮ್ಮ ಸಾಮರ್ಥ್ಯಗಳು</h2>
+            <h2 class="section-title">ನಮ್ಮ ಪ್ರಮುಖ ಸಾಮರ್ಥ್ಯಗಳು</h2>  
             <div class="capabilities-grid">
-                <div class="capability-card">
+                <div class="capability-card" id="capability-1">
                     <div class="capability-collage">
-                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1A" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1A" class="capability-collage-img">
-                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1B" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1B" class="capability-collage-img">
-                        <img src="/api/placeholder/400/300?text=ಸಾಮರ್ಥ್ಯ+1C" alt="ಸಾಮರ್ಥ್ಯ ಚಿತ್ರ 1C" class="capability-collage-img">
+                        <img src="custom_cover.jpg" alt="ಕಸ್ಟಮ್ ವಿನ್ಯಾಸ ಕವರ್" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Custom+Design';">
+                        <div class="capability-gallery">
+                            <img src="custom_1.jpg" alt="ವಿನ್ಯಾಸ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Design';">
+                            <img src="custom_2.jpg" alt="ಪ್ಯಾಕೇಜಿಂಗ್ ಮೂಲಮಾದರಿ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Prototype';">
+                            <img src="custom_3.jpg" alt="ಅಂತಿಮ ಕಸ್ಟಮ್ ಬಾಕ್ಸ್" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Final+Box';">
+                        </div>
                     </div>
                     <div class="capability-text-content">
                         <h3>ಕಸ್ಟಮ್ ಗಾತ್ರ ಮತ್ತು ವಿನ್ಯಾಸ</h3>
-                        <p>[Translate capability description here...]</p>
+                        <p>ನಿಮ್ಮ ಉತ್ಪನ್ನಕ್ಕೆ ಸಂಪೂರ್ಣವಾಗಿ ಸರಿಹೊಂದುವಂತೆ, ತ್ಯಾಜ್ಯವನ್ನು ಕಡಿಮೆಗೊಳಿಸಿ ಮತ್ತು ನವೀನತೆಯೊಂದಿಗೆ ರಕ್ಷಣೆಯನ್ನು ಗರಿಷ್ಠಗೊಳಿಸಲು ಹೇಳಿ ಮಾಡಿಸಿದ ಆಯಾಮಗಳು ಮತ್ತು ರಚನಾತ್ಮಕ ವಿನ್ಯಾಸ.</p>
                     </div>
                 </div>
+                <div class="capability-card" id="capability-2">
+                    <div class="capability-collage">
+                        <img src="advanced_cover.jpg" alt="ಸುಧಾರಿತ ಮುದ್ರಣ ಕವರ್" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Advanced+Printing';">
+                        <div class="capability-gallery">
+                            <img src="advanced_1.jpg" alt="ಫ್ಲೆಕ್ಸೋಗ್ರಾಫಿಕ್ ಮುದ್ರಣ ವಿವರ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Flexo+Print';">
+                            <img src="advanced_2.jpg" alt="ಡಿಜಿಟಲ್ ಮುದ್ರಣ ಮಾದರಿ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Digital+Print';">
+                            <img src="advanced_3.jpg" alt="ಬಣ್ಣ ಹೊಂದಾಣಿಕೆ ಪ್ರಕ್ರಿಯೆ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Colors';">
+                        </div>
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>ಸುಧಾರಿತ ಮುದ್ರಣ</h3>
+                        <p>ಉತ್ತಮ-ಗುಣಮಟ್ಟದ ಫ್ಲೆಕ್ಸೋಗ್ರಾಫಿಕ್ ಮತ್ತು ಡಿಜಿಟಲ್ ಮುದ್ರಣ ಆಯ್ಕೆಗಳು, ರೋಮಾಂಚಕ ಜಲ-ಆಧಾರಿತ ಶಾಯಿಗಳನ್ನು ಒಳಗೊಂಡಂತೆ, ನಿಮ್ಮ ಬ್ರ್ಯಾಂಡ್‌ಗೆ ಸುಂದರವಾಗಿ ಜೀವ ತುಂಬಲು.</p>
+                    </div>
                 </div>
+                <div class="capability-card" id="capability-3">
+                    <div class="capability-collage">
+                        <img src="material_cover.jpg" alt="ಕಚ್ಚಾ ವಸ್ತು ಪರಿಣತಿ ಕವರ್" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Material+Expertise';">
+                        <div class="capability-gallery">
+                            <img src="material_1.png" alt="ಕಚ್ಚಾ ವಸ್ತು ಸಾಮರ್ಥ್ಯ ಪರೀಕ್ಷೆ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Testing';">
+                            <img src="material_2.png" alt="ಸುಸ್ಥಿರ ಕಚ್ಚಾ ವಸ್ತು ಆಯ್ಕೆಗಳು" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Eco+Materials';">
+                            <img src="material_3.jpg" alt="ಕಚ್ಚಾ ವಸ್ತುಗಳ ಗುಣಮಟ್ಟ ಪರಿಶೀಲನೆ" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Quality';">
+                        </div>
+                    </div>
+                    <div class="capability-text-content">
+                        <h3>ಕಚ್ಚಾ ವಸ್ತು ಪರಿಣತಿ</h3>
+                        <p>ಸಮಗ್ರ ಕಚ್ಚಾ ವಸ್ತು ಪರೀಕ್ಷೆ ಮತ್ತು ಆಯ್ಕೆ, ಮರುಬಳಕೆ ಮಾಡಿದ ಮತ್ತು ಸುಸ್ಥಿರ ಆಯ್ಕೆಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕರಿಸಿ, ಗರಿಷ್ಠ ಕಾರ್ಯಕ್ಷಮತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="sustainability" class="sustainability">
         <div class="container">
-            <h2 class="section-title">ನಮ್ಮ ಸುಸ್ಥಿರತಾ ಬದ್ಧತೆ</h2>
+            <h2 class="section-title">ಸುಸ್ಥಿರತೆಗೆ ನಮ್ಮ ಬದ್ಧತೆ</h2>
             <div class="sustainability-content">
                 <div class="sustainability-text">
-                    <h3>ವಿನ್ಯಾಸದಿಂದ ಪರಿಸರ ಸ್ನೇಹಿ</h3>
-                    <p>[Translate sustainability content here...]</p>
+                    <h3>ವಿನ್ಯಾಸದಿಂದ ಪರಿಸರ ಸ್ನೇಹಿ, ಆಯ್ಕೆಯಿಂದ ನೈತಿಕ</h3>
+                    <p>ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್‌ನಲ್ಲಿ, ಪರಿಸರ ಜವಾಬ್ದಾರಿಯು ನಂತರದ ಚಿಂತನೆಯಲ್ಲ - ಇದು ನಮ್ಮ ಗುರುತಿನ ಅವಿಭಾಜ್ಯ ಅಂಗವಾಗಿದೆ. ಪ್ರೀಮಿಯಂ ಪ್ಯಾಕೇಜಿಂಗ್ ಮತ್ತು ಆಳವಾದ ಸುಸ್ಥಿರತೆ ಸಹಬಾಳ್ವೆ ನಡೆಸಬಹುದು ಮತ್ತು ನಡೆಸಬೇಕು ಎಂಬ ನಂಬಿಕೆಯನ್ನು ನಾವು ಎತ್ತಿಹಿಡಿಯುತ್ತೇವೆ.</p>
+                    <p>ಸುಸ್ಥಿರತೆಗೆ ನಮ್ಮ ಸಮಗ್ರ ವಿಧಾನವು ನಮ್ಮ ಕಾರ್ಯಾಚರಣೆಗಳ ರಚನೆಯಲ್ಲಿ ಹೆಣೆದುಕೊಂಡಿದೆ, ಜವಾಬ್ದಾರಿಯುತವಾಗಿ ಮೂಲದ ಕಚ್ಚಾ ವಸ್ತುಗಳು ಮತ್ತು ಪರಿಸರ ಪ್ರಜ್ಞೆಯ ಉತ್ಪಾದನಾ ಪ್ರಕ್ರಿಯೆಗಳಿಂದ ಹಿಡಿದು ನಮ್ಮ ಉತ್ಪನ್ನಗಳ ಜೀವನದ ಅಂತ್ಯದ ಮರುಬಳಕೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳುವವರೆಗೆ.</p>
                     <div class="eco-features">
                         <div class="eco-feature">
                             <div class="eco-icon">♻️</div>
                             <div>
-                                <h4>ಮರುಬಳಕೆಯ ವಸ್ತುಗಳು</h4>
-                                <p>[Translate description...]</p>
+                                <h4>ಮರುಬಳಕೆಯ ವಸ್ತುಗಳ ಮೇಲೆ ಗಮನ</h4>
+                                <p>ನಮ್ಮ ಕಾರುಗೇಟೆಡ್ ಬೋರ್ಡ್ ಹೆಮ್ಮೆಯಿಂದ ಹೆಚ್ಚಿನ ಶೇಕಡಾವಾರು (ಸಾಧ್ಯವಾದಲ್ಲಿ 70-100% ವರೆಗೆ) ಗ್ರಾಹಕ-ನಂತರದ ಮರುಬಳಕೆಯ ವಿಷಯವನ್ನು ಹೊಂದಿದೆ, ಇದು ಹೊಸ ಸಂಪನ್ಮೂಲಗಳ ಮೇಲಿನ ಅವಲಂಬನೆಯನ್ನು ಗಣನೀಯವಾಗಿ ಕಡಿಮೆ ಮಾಡುತ್ತದೆ.</p>
                             </div>
                         </div>
-                         </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">💧</div> 
+                            <div>
+                                <h4>ವಿಶೇಷವಾಗಿ ಜಲ-ಆಧಾರಿತ ಶಾಯಿಗಳು</h4>
+                                <p>ನಾವು ಹಾನಿಕಾರಕ ಬಾಷ್ಪಶೀಲ ಸಾವಯವ ಸಂಯುಕ್ತಗಳಿಂದ (VOCs) ಮತ್ತು ಭಾರ ಲೋಹಗಳಿಂದ ಮುಕ್ತವಾದ ಸುಧಾರಿತ ಜಲ-ಆಧಾರಿತ ಶಾಯಿಗಳನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಬಳಸುತ್ತೇವೆ, ಸುರಕ್ಷತೆ ಮತ್ತು ಕನಿಷ್ಠ ಪರಿಸರ ಪರಿಣಾಮವನ್ನು ಖಾತ್ರಿಪಡಿಸುತ್ತೇವೆ.</p>
+                            </div>
+                        </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">⚡</div>
+                            <div>
+                                <h4>ಇಂಧನ ದಕ್ಷತೆ ಮತ್ತು ಹಸಿರು ಪದ್ಧತಿಗಳು</h4>
+                                <p>ನಮ್ಮ ಅತ್ಯಾಧುನಿಕ ಸೌಲಭ್ಯವು ಇಂಧನ-ಸಮರ್ಥ ಯಂತ್ರೋಪಕರಣಗಳೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಮತ್ತು ನಮ್ಮ ಇಂಗಾಲದ ಹೆಜ್ಜೆಗುರುತನ್ನು ಸಕ್ರಿಯವಾಗಿ ಕಡಿಮೆ ಮಾಡಲು ಹಸಿರು ಉತ್ಪಾದನಾ ಪದ್ಧತಿಗಳನ್ನು ಅಳವಡಿಸಿಕೊಂಡಿದೆ.</p>
+                            </div>
+                        </div>
+                        <div class="eco-feature">
+                            <div class="eco-icon">🌱</div>
+                            <div>
+                                <h4>ತ್ಯಾಜ್ಯ ಕಡಿತ ಮತ್ತು ವೃತ್ತಾಕಾರ</h4>
+                                <p>ನಮ್ಮ ದೃಢವಾದ ಶೂನ್ಯ-ತ್ಯಾಜ್ಯ ಉಪಕ್ರಮವು ನಮ್ಮ ಉತ್ಪಾದನಾ ತ್ಯಾಜ್ಯದ 95% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಎಚ್ಚರಿಕೆಯಿಂದ ಮರುಬಳಕೆ ಮಾಡುವುದನ್ನು ಅಥವಾ ಮರುಬಳಕೆ ಮಾಡುವುದನ್ನು ಖಚಿತಪಡಿಸುತ್ತದೆ, ಇದು ವೃತ್ತಾಕಾರದ ಆರ್ಥಿಕತೆಗೆ ಕೊಡುಗೆ ನೀಡುತ್ತದೆ.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="sustainability-img">
-                    <img src="Sustainable Packaging Process.jpeg" alt="ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪ್ರಕ್ರಿಯೆ">
+                    <img src="Sustainable Packaging Process.jpeg" alt="ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್‌ನಲ್ಲಿ ಸುಸ್ಥಿರ ಪ್ಯಾಕೇಜಿಂಗ್ ಪ್ರಕ್ರಿಯೆ" onerror="this.onerror=null;this.src='https://placehold.co/500x400/cccccc/333333?text=Eco+Process';">
                 </div>
             </div>
         </div>
@@ -977,11 +1445,11 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "[Translate testimonial here...]"
+                        "ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ 5 ವರ್ಷಗಳಿಂದ ನಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಪ್ಯಾಕೇಜಿಂಗ್ ಪಾಲುದಾರರಾಗಿದ್ದಾರೆ. ಅವರ ವಿವರಗಳಿಗೆ ಗಮನ, ಸ್ಥಿರ ಗುಣಮಟ್ಟ, ಮತ್ತು ವಿಶ್ವಾಸಾರ್ಹ ವಿತರಣೆಯು ನಮ್ಮ ಪೂರೈಕೆ ಸರಪಳಿ ದಕ್ಷತೆಗೆ ನಿರ್ಣಾಯಕವಾಗಿದೆ. ಅವರು ಬಲವಾದ ನೈತಿಕ ಆಚರಣೆಗಳೊಂದಿಗೆ ಮಹಿಳಾ ನೇತೃತ್ವದ ವ್ಯವಹಾರ ಎಂಬುದು ನಮಗೆ ಒಂದು ದೊಡ್ಡ ಪ್ಲಸ್!"
                     </div>
                     <div class="testimonial-author">
                         <div class="author-img">
-                            <img src="Client.png" alt="ಗ್ರಾಹಕರು">
+                            <img src="https://placehold.co/60x60/FFA500/FFFFFF?text=AM" alt="ಗ್ರಾಹಕ ಅನಿಲ್ ಮೆಹ್ತಾ" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=AM';">
                         </div>
                         <div class="author-info">
                             <h4>ಅನಿಲ್ ಮೆಹ್ತಾ</h4>
@@ -989,15 +1457,43 @@
                         </div>
                     </div>
                 </div>
-                 </div>
+                 <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "ನಮ್ಮ ಹೊಸ ಉತ್ಪನ್ನ ಶ್ರೇಣಿಗಾಗಿ ಅವರು ವಿನ್ಯಾಸಗೊಳಿಸಿದ ಕಸ್ಟಮ್ ಡೈ-ಕಟ್ ಬಾಕ್ಸ್‌ಗಳು ಅದ್ಭುತವಾಗಿವೆ. ಅವು ಉತ್ತಮವಾಗಿ ಕಾಣುತ್ತವೆ ಮತ್ತು ಅತ್ಯುತ್ತಮ ರಕ್ಷಣೆಯನ್ನು ಒದಗಿಸುತ್ತವೆ. ಅವರ ನವೀನ ವಿಧಾನ ಮತ್ತು ಸುಸ್ಥಿರತೆಗೆ ಬದ್ಧತೆ ನಿಜವಾಗಿಯೂ ಎದ್ದು ಕಾಣುತ್ತದೆ."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                             <img src="https://placehold.co/60x60/007BFF/FFFFFF?text=PS" alt="ಗ್ರಾಹಕ ಪ್ರಿಯಾ ಶರ್ಮಾ" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=PS';">
+                        </div>
+                        <div class="author-info">
+                            <h4>ಪ್ರಿಯಾ ಶರ್ಮಾ</h4>
+                            <p>ಮಾರ್ಕೆಟಿಂಗ್ ಮ್ಯಾನೇಜರ್, ಆರ್ಟಿಸನ್ ಗೂಡ್ಸ್ ಕಂ.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "ಸುಸ್ಥಿರತೆಗೆ ಅವರ ಬದ್ಧತೆ, ವಿಶೇಷವಾಗಿ ಮರುಬಳಕೆಯ ವಸ್ತುಗಳು ಮತ್ತು ಜಲ-ಆಧಾರಿತ ಶಾಯಿಗಳ ಬಳಕೆ, ನಮ್ಮ ಕಂಪನಿಯ ಮೌಲ್ಯಗಳೊಂದಿಗೆ ಸಂಪೂರ್ಣವಾಗಿ ಹೊಂದಿಕೆಯಾಗುತ್ತದೆ. ವೃತ್ತಿಪರ, ವಿಶ್ವಾಸಾರ್ಹ, ಮತ್ತು ನವೀನ!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://placehold.co/60x60/0A2342/FFFFFF?text=RK" alt="ಗ್ರಾಹಕ ರಾಹುಲ್ ಕುಮಾರ್" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=RK';">
+                        </div>
+                        <div class="author-info">
+                            <h4>ರಾಹುಲ್ ಕುಮಾರ್</h4>
+                            <p>ಸಂಸ್ಥಾಪಕರು, ಆರ್ಗಾನಿಕ್ ಫುಡ್ಸ್ ಲಿ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="cta">
         <div class="container">
-            <h2>ನಿಮ್ಮ ಪ್ಯಾಕೇಜಿಂಗ್ ಅನ್ನು ನವೀಕರಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?</h2>
-            <p>[Translate CTA paragraph here...]</p>
-            <a href="#contact" class="btn">ಇಂದು ಉಚಿತ نرخ quote ಪಡೆಯಿರಿ</a>
+            <h2>ನಿಮ್ಮ ಪ್ಯಾಕೇಜಿಂಗ್ ಅನ್ನು ಉನ್ನತೀಕರಿಸಲು ಸಿದ್ಧರಿದ್ದೀರಾ?</h2>
+            <p>ನಿಮ್ಮ ಬ್ರ್ಯಾಂಡ್ ಅನ್ನು ಬೆಳಗಿಸುವ ನವೀನ, ಸುಸ್ಥಿರ, ಮತ್ತು ಉತ್ತಮ-ಗುಣಮಟ್ಟದ ಕಾರುಗೇಟೆಡ್ ಪರಿಹಾರಗಳಿಗಾಗಿ ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್‌ನೊಂದಿಗೆ ಪಾಲುದಾರರಾಗಿ. ನಮ್ಮ ಪರಿಣತಿ ನಿಮಗಾಗಿ ಕೆಲಸ ಮಾಡಲಿ.</p>
+            <a href="#contact" class="btn">ಇಂದೇ ಉಚಿತ ಉಲ್ಲೇಖ ಪಡೆಯಿರಿ</a>
         </div>
     </section>
 
@@ -1007,50 +1503,51 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>ಸಂಪರ್ಕದಲ್ಲಿರಿ</h3>
+                    <p style="margin-bottom:20px; opacity:0.9;">ನಿಮ್ಮ ಎಲ್ಲಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಅಗತ್ಯಗಳಿಗಾಗಿ ನಾವು ಇಲ್ಲಿದ್ದೇವೆ. ವಿಚಾರಣೆಗಳು, ಉಲ್ಲೇಖಗಳಿಗಾಗಿ ಅಥವಾ ನಿಮ್ಮ ಮುಂದಿನ ಯೋಜನೆಯನ್ನು ಚರ್ಚಿಸಲು ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
                     <div class="contact-details">
-                        <div class="contact-item">
+                        <a href="https://maps.app.goo.gl/QtHuJUWojt1bhhWy9" target="_blank" class="contact-item contact-link">
                             <div class="contact-icon">📍</div>
                             <div>
                                 <h4>ವಿಳಾಸ</h4>
-                                <p>ಪ್ಲಾಟ್ ನಂ. 42, ಇಂಡಸ್ಟ್ರಿಯಲ್ ಏರಿಯಾ ಫೇಸ್ II<br>ಹೈದರಾಬಾದ್, ತೆಲಂಗಾಣ 500072 (Address may remain partially in English for postal accuracy)</p>
+                                <p>ಕ್ಯೂ 211, ಕೆಎಸ್‌ಎಸ್‌ಐಡಿಸಿ ಇಂಡಸ್ಟ್ರಿಯಲ್ ಎಸ್ಟೇಟ್, ಹೆಬ್ಬಾಳ, ಮೈಸೂರು 570016</p>
                             </div>
-                        </div>
-                        <div class="contact-item">
+                        </a>
+                        <a href="tel:+919343830540" class="contact-item contact-link">
                             <div class="contact-icon">📞</div>
                             <div>
                                 <h4>ದೂರವಾಣಿ</h4>
-                                <p>+91 40 2345 6789</p>
+                                <p>+91 9343830540</p>
                             </div>
-                        </div>
-                        <div class="contact-item">
+                        </a>
+                        <a href="mailto:vijayapkgindustries@gmail.com" class="contact-item contact-link">
                             <div class="contact-icon">✉️</div>
                             <div>
                                 <h4>ಇಮೇಲ್</h4>
-                                <p>info@vijayapackaging.com</p>
+                                <p>vijayapkgindustries@gmail.com</p>
                             </div>
-                        </div>
+                        </a>
                         <div class="contact-item">
                             <div class="contact-icon">🕒</div>
                             <div>
-                                <h4>ಕೆಲಸದ ಸಮಯ</h4>
+                                <h4>ವ್ಯವಹಾರ ಸಮಯಗಳು</h4>
                                 <p>ಸೋಮವಾರ - ಶನಿವಾರ: 9:00 AM - 6:00 PM</p>
                             </div>
                         </div>
                     </div>
-                    <h3>ಪ್ರಮಾಣೀಕರಣಗಳು</h3>
+                    <h3>ನಮ್ಮ ಪ್ರಮಾಣೀಕರಣಗಳು</h3>
                     <div class="certification-logos">
-                        <img src="/api/placeholder/80/40?text=ISO" alt="ISO 9001:2015">
-                        <img src="/api/placeholder/80/40?text=FSC" alt="FSC ಪ್ರಮಾಣೀಕೃತ">
-                        <img src="/api/placeholder/80/40?text=BRC" alt="BRC ಪ್ಯಾಕೇಜಿಂಗ್">
+                        <img src="https://placehold.co/100x50/cccccc/333333?text=ISO+9001" alt="ISO 9001:2015 ಪ್ರಮಾಣೀಕರಣ" title="ISO 9001:2015 ಪ್ರಮಾಣೀಕೃತ">
+                        <img src="https://placehold.co/100x50/cccccc/333333?text=FSC" alt="FSC ಪ್ರಮಾಣೀಕೃತ ಕಾಗದ" title="FSC ಪ್ರಮಾಣೀಕೃತ">
+                        <img src="https://placehold.co/100x50/cccccc/333333?text=EcoVadis" alt="EcoVadis ರೇಟಿಂಗ್" title="EcoVadis ರೇಟೆಡ್">
                     </div>
                 </div>
                 <div class="contact-form">
                     <h3>ನಮಗೆ ಸಂದೇಶ ಕಳುಹಿಸಿ</h3>
-                       <form id="contactForm" action="https://formsubmit.co/vijiguruamit@gmail.com" method="POST">
-                            <input type="text" name="_honey" style="display:none">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/">
-                            <input type="hidden" name="_template" value="table">
+                       <form id="contactForm" action="https://formsubmit.co/bestpersonal8@gmail.com" method="POST"> 
+                            <input type="text" name="_honey" style="display:none"> 
+                            <input type="hidden" name="_captcha" value="false"> 
+                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/"> 
+                            <input type="hidden" name="_template" value="table"> 
                             <div class="form-group">
                                 <label for="name">ನಿಮ್ಮ ಹೆಸರು</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -1064,14 +1561,24 @@
                                 <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                             <div class="form-group">
-                                <label for="phone">ದೂರವಾಣಿ ಸಂಖ್ಯೆ</label>
+                                <label for="phone">ದೂರವಾಣಿ ಸಂಖ್ಯೆ (ಐಚ್ಛಿಕ)</label>
                                 <input type="tel" id="phone" name="phone" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="message">ನಿಮ್ಮ ಸಂದೇಶ</label>
-                                <textarea id="message" name="message" class="form-control" required></textarea>
+                                <label for="message">ನಿಮ್ಮ ಸಂದೇಶ / ವಿಚಾರಣೆ</label>
+                                <textarea id="message" name="message" class="form-control" required rows="5"></textarea>
                             </div>
-                            <button type="submit" class="btn">ವಿನಂತಿಯನ್ನು ಸಲ್ಲಿಸಿ</button>
+                            <div id="gemini-suggestion-output-container" style="display: none;">
+                                <h4>✨ AI-ಚಾಲಿತ ಪ್ಯಾಕೇಜಿಂಗ್ ಐಡಿಯಾಗಳು:</h4>
+                                <div id="gemini-suggestion-output">
+                                    </div>
+                            </div>
+                            <div id="gemini-loading-spinner" style="display: none;">
+                                <div class="loading-spinner"></div> ಐಡಿಯಾಗಳ ಬಗ್ಗೆ ಯೋಚಿಸಲಾಗುತ್ತಿದೆ...
+                            </div>
+
+                            <button type="button" id="getSuggestionBtn" class="btn btn-gemini">✨ ಪ್ಯಾಕೇಜಿಂಗ್ ಐಡಿಯಾಗಳನ್ನು ಪಡೆಯಿರಿ</button>
+                            <button type="submit" class="btn" style="margin-top: 10px;">ವಿನಂತಿಯನ್ನು ಸಲ್ಲಿಸಿ</button>
                         </form>
                 </div>
             </div>
@@ -1082,13 +1589,12 @@
         <div class="container">
              <div class="footer-content">
                 <div class="footer-col">
-                    <h3>ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್</h3>
-                    <p>[Translate footer description...]</p>
+                    <h3>ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್</h3>
+                    <p>ಪ್ರೀಮಿಯಂ, ಪರಿಸರ ಸ್ನೇಹಿ ಕಾರುಗೇಟೆಡ್ ಪ್ಯಾಕೇಜಿಂಗ್ ಪರಿಹಾರಗಳು. 2019 ರಿಂದ ನಾವೀನ್ಯತೆ, ಗುಣಮಟ್ಟ ಮತ್ತು ಸುಸ್ಥಿರತೆಗೆ ಬದ್ಧವಾಗಿರುವ ಮಹಿಳಾ-ಮಾಲೀಕತ್ವದ ಉದ್ಯಮ.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" aria-label="ಫೇಸ್‌ಬುಕ್">📱</a> 
-                        <a href="#" class="social-link" aria-label="ಟ್ವಿಟರ್">📘</a>
-                        <a href="#" class="social-link" aria-label="ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್">📸</a>
-                        <a href="#" class="social-link" aria-label="ಲಿಂಕ್ಡ್‌ಇನ್">💼</a>
+                        <a href="#" class="social-link" aria-label="ಫೇಸ್‌ಬುಕ್" title="ಫೇಸ್‌ಬುಕ್">FB</a> 
+                        <a href="#" class="social-link" aria-label="ಲಿಂಕ್ಡ್‌ಇನ್" title="ಲಿಂಕ್ಡ್‌ಇನ್">LI</a>
+                        <a href="#" class="social-link" aria-label="ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್" title="ಇನ್‌ಸ್ಟಾಗ್ರಾಮ್">IG</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -1098,7 +1604,8 @@
                         <li><a href="#products">ಉತ್ಪನ್ನಗಳು</a></li>
                         <li><a href="#capabilities">ಸಾಮರ್ಥ್ಯಗಳು</a></li>
                         <li><a href="#sustainability">ಸುಸ್ಥಿರತೆ</a></li>
-                        <li><a href="#contact">ಸಂಪರ್ಕಿಸಿ</a></li>
+                        <li><a href="#contact">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</a></li>
+                        <li><a href="#">ಗೌಪ್ಯತೆ ನೀತಿ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -1106,82 +1613,382 @@
                     <ul>
                         <li><a href="#">ನಿಯಮಿತ ಸ್ಲಾಟೆಡ್ ಕಾರ್ಟನ್‌ಗಳು</a></li>
                         <li><a href="#">ಡೈ-ಕಟ್ ಬಾಕ್ಸ್‌ಗಳು</a></li>
-                        <li><a href="#">ಟೆಲಿಸ್ಕೋಪಿಂಗ್ ಕಂಟೇನರ್‌ಗಳು</a></li>
+                        <li><a href="#">ಟೆಲಿಸ್ಕೋಪಿಂಗ್ ಕಂಟೈನರ್‌ಗಳು</a></li>
                         <li><a href="#">ಚಿಲ್ಲರೆ ಪ್ರದರ್ಶನ ಪ್ಯಾಕೇಜಿಂಗ್</a></li>
+                        <li><a href="#">ಹೆವಿ-ಡ್ಯೂಟಿ ಪರಿಹಾರಗಳು</a></li>
                         <li><a href="#">ಕಸ್ಟಮ್ ಇನ್ಸರ್ಟ್‌ಗಳು ಮತ್ತು ಡಿವೈಡರ್‌ಗಳು</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>ಸಂಪನ್ಮೂಲಗಳು</h3>
                     <ul>
-                        <li><a href="#">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a></li>
+                        <li><a href="#" id="footerDownloadBrochure">ಕರಪತ್ರ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</a></li>
                         <li><a href="#">ಪ್ಯಾಕೇಜಿಂಗ್ ಮಾರ್ಗದರ್ಶಿ</a></li>
-                        <li><a href="#">ವಸ್ತು ವಿಶೇಷಣಗಳು</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">ಬ್ಲಾಗ್</a></li>
+                        <li><a href="#">ಕಚ್ಚಾ ವಸ್ತು ವಿಶೇಷಣಗಳು</a></li>
+                        <li><a href="#">FAQಗಳು</a></li>
+                        <li><a href="#">ಬ್ಲಾಗ್ / ಸುದ್ದಿ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 ವಿಜಯ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</p>
-            </div>
-            <div class="theme-logos">
-                <img src="/api/placeholder/50/50?text=Light" alt="ಲೈಟ್ ಥೀಮ್ ಲೋಗೋ">
-                <img src="/api/placeholder/50/50?text=Dark" alt="ಡಾರ್ಕ್ ಥೀಮ್ ಲೋಗೋ">
+                <p>© <span id="currentYear"></span> ವಿಜಯಾ ಪ್ಯಾಕೇಜಿಂಗ್ ಇಂಡಸ್ಟ್ರೀಸ್. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ. ಕಾಳಜಿಯಿಂದ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.</p>
             </div>
         </div>
     </footer>
 
     <div class="floating-buttons-container">
-        <button id="theme-toggle-btn" class="floating-btn" aria-label="ಥೀಮ್ ಬದಲಿಸಿ">
+        <button id="theme-toggle-btn" class="floating-btn" aria-label="ಥೀಮ್ ಟಾಗಲ್ ಮಾಡಿ" title="ಥೀಮ್ ಟಾಗಲ್ ಮಾಡಿ">
             <span class="icon-sun">☀️</span>
             <span class="icon-moon">🌙</span>
         </button>
-        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ">
-            💬
+        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ" title="ತ್ವರಿತ ಸಂಪರ್ಕ">
+            💬 
         </a>
     </div>
 
     <script>
-        const brochureButton = document.querySelector('.hero-btns .btn-outline');
-        if (brochureButton) {
-            brochureButton.addEventListener('click', function(e) {
+        // Brochure Download
+        function downloadBrochure() {
+            const brochureUrl = 'brochure.pdf'; 
+            const link = document.createElement('a');
+            link.href = brochureUrl;
+            link.download = 'ವಿಜಯಾ_ಪ್ಯಾಕೇಜಿಂಗ್_ಕರಪತ್ರ.pdf'; 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        const downloadBrochureBtn = document.getElementById('downloadBrochureBtn');
+        if (downloadBrochureBtn) {
+            downloadBrochureBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                window.print();
+                downloadBrochure();
+            });
+        }
+        const footerDownloadBrochureLink = document.getElementById('footerDownloadBrochure');
+        if (footerDownloadBrochureLink) {
+            footerDownloadBrochureLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                downloadBrochure();
             });
         }
 
-        const langButton = document.querySelector('.language-btn-container button');
-        if (langButton) {
-            langButton.addEventListener('click', function() {
-                alert('ಭಾಷಾ ಬದಲಾವಣೆಯ ಕಾರ್ಯವನ್ನು ಅಳವಡಿಸಲಾಗುವುದು!');
+        // Language Dropdown Toggle
+        const langBtnContainer = document.querySelector('.language-btn-container');
+        const langBtn = document.querySelector('.language-btn');
+        if (langBtnContainer && langBtn) { 
+            langBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); 
+                langBtnContainer.classList.toggle('open');
+                langBtn.setAttribute('aria-expanded', langBtnContainer.classList.contains('open'));
             });
         }
+        // Close language dropdown if clicked outside (specific to language dropdown)
+        document.addEventListener('click', function(event) {
+            if (langBtnContainer && langBtnContainer.classList.contains('open') && !langBtnContainer.contains(event.target)) {
+                langBtnContainer.classList.remove('open');
+                if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
 
+
+        // Theme Toggle Functionality
         const themeToggleButton = document.getElementById('theme-toggle-btn');
         const body = document.body;
 
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
-            body.className = themeName + '-theme';
-        }
-
-        themeToggleButton.addEventListener('click', () => {
-            if (localStorage.getItem('theme') === 'dark') {
-                setTheme('light');
+            body.className = themeName + '-theme'; 
+            const root = document.documentElement;
+            if (themeName === 'dark') {
+                root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-accent-gold-val, 255, 191, 0)');
             } else {
-                setTheme('dark');
+                root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-primary-bright-blue-val, 0, 123, 255)');
             }
-        });
+             if (body.classList.contains('mobile-menu-open') && themeName === 'dark') {
+                body.classList.add('dark-theme'); // re-apply if mobile-menu-open removed it
+            } else if (body.classList.contains('mobile-menu-open') && themeName === 'light') {
+                body.classList.remove('dark-theme'); // ensure it's just light-theme
+            }
+        }
+        
+        document.documentElement.style.setProperty('--rgb-primary-bright-blue-val', '0, 123, 255');
+        document.documentElement.style.setProperty('--rgb-accent-gold-val', '255, 191, 0');
 
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                const currentClass = body.className;
+                if (currentClass.includes('dark-theme')) {
+                    setTheme('light');
+                } else {
+                    setTheme('dark');
+                }
+            });
+        }
         (function () {
             const currentTheme = localStorage.getItem('theme');
             if (currentTheme === 'dark') {
                 setTheme('dark');
             } else {
-                setTheme('light');
+                setTheme('light'); 
             }
         })();
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth Scroll for internal links (original)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const isMobileNavLink = this.closest('#main-navigation.open');
+                if (!isMobileNavLink) { // Prevent default only if not handled by mobile nav close
+                    e.preventDefault();
+                }
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Delay slightly for menu to close if it was open
+                    const delay = isMobileNavLink ? 150 : 0;
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }, delay);
+                }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuToggleBtn = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.getElementById('main-navigation');
+
+        if (menuToggleBtn && mainNav) {
+            menuToggleBtn.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent click from bubbling to document listener immediately
+                const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true' || false;
+                menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+                menuToggleBtn.classList.toggle('open');
+                mainNav.classList.toggle('open');
+                // Toggle body class for overflow and theme consistency
+                const currentTheme = localStorage.getItem('theme') || 'light';
+                const bodyClass = currentTheme + '-theme' + (!isExpanded ? ' mobile-menu-open' : '');
+                body.className = bodyClass.trim();
+            });
+
+            // Close menu when a link inside it is clicked
+            mainNav.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function () {
+                    if (mainNav.classList.contains('open')) {
+                        menuToggleBtn.setAttribute('aria-expanded', 'false');
+                        menuToggleBtn.classList.remove('open');
+                        mainNav.classList.remove('open');
+                        const currentTheme = localStorage.getItem('theme') || 'light';
+                        body.className = currentTheme + '-theme'; // Remove mobile-menu-open
+                    }
+                    // Smooth scroll is handled by the general anchor click listener
+                });
+            });
+        }
+        
+        // Close mobile menu if clicked outside
+        document.addEventListener('click', function(event) {
+            if (mainNav && menuToggleBtn) { // Ensure elements exist
+                const isClickInsideNav = mainNav.contains(event.target);
+                const isClickOnToggle = menuToggleBtn.contains(event.target);
+
+                if (!isClickInsideNav && !isClickOnToggle && mainNav.classList.contains('open')) {
+                    menuToggleBtn.setAttribute('aria-expanded', 'false');
+                    menuToggleBtn.classList.remove('open');
+                    mainNav.classList.remove('open');
+                    const currentTheme = localStorage.getItem('theme') || 'light';
+                    body.className = currentTheme + '-theme'; // Remove mobile-menu-open
+                }
+            }
+        });
+
+
+        // Gemini API Integration
+        const getSuggestionBtn = document.getElementById('getSuggestionBtn');
+        const messageTextarea = document.getElementById('message');
+        const suggestionOutputDiv = document.getElementById('gemini-suggestion-output');
+        const suggestionContainerDiv = document.getElementById('gemini-suggestion-output-container');
+        const loadingSpinnerDiv = document.getElementById('gemini-loading-spinner');
+
+        if (getSuggestionBtn) {
+            getSuggestionBtn.addEventListener('click', async () => {
+                const userMessage = messageTextarea.value.trim();
+                if (!userMessage) {
+                    suggestionOutputDiv.innerHTML = '<p style="color: red;">ದಯವಿಟ್ಟು ಮೊದಲು ಸಂದೇಶ ಬಾಕ್ಸ್‌ನಲ್ಲಿ ನಿಮ್ಮ ಪ್ಯಾಕೇಜಿಂಗ್ ಅಗತ್ಯಗಳನ್ನು ವಿವರಿಸಿ.</p>';
+                    suggestionContainerDiv.style.display = 'block';
+                    loadingSpinnerDiv.style.display = 'none'; 
+                    return;
+                }
+
+                suggestionOutputDiv.innerHTML = ''; 
+                loadingSpinnerDiv.style.display = 'block'; 
+                suggestionContainerDiv.style.display = 'none';
+
+
+                const prompt = `
+                    A potential customer is looking for corrugated packaging. Their message is: "${userMessage}".
+
+                    Based on this, please provide concise and actionable suggestions for Vijaya Packaging Industries. Structure your response under the following headings:
+                    1.  **Suggested Box Types:** (e.g., Regular Slotted Carton (RSC), Die-Cut Box, Full Overlap Box, Telescopic Box). Suggest 1-2 most relevant types.
+                    2.  **Eco-Friendly Material Insights:** (e.g., Consider high recycled content board, specific flute type like B-flute for balance or E-flute for printability, kraft vs. white paper). Mention 1-2 key material aspects.
+                    3.  **Customization & Branding Ideas:** (e.g., Flexographic printing with water-based inks for branding, custom inserts for product protection, unique structural design for unboxing experience). Suggest 1-2 ideas.
+
+                    Keep the overall response brief, helpful, and easy to understand. Focus on actionable advice.
+                    Example of a good concise point: "Consider a Die-Cut Box for a unique shape and branding."
+                `;
+
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = "AIzaSyCl6_FYAQQHLxQV4mVC0eEnuQKoaZfeWdw"; // API key will be injected by the environment
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    let result;
+                    try {
+                        result = await response.json();
+                    } catch (jsonError) {
+                        loadingSpinnerDiv.style.display = 'none';
+                        suggestionContainerDiv.style.display = 'block';
+                        console.error('Error parsing JSON response:', jsonError);
+                        let errorText = "ಸರ್ವರ್ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.";
+                        if (response && typeof response.text === 'function') {
+                            try {
+                                errorText = await response.text();
+                            } catch (textErr) {
+                                // ignore if text cannot be read
+                            }
+                        }
+                        suggestionOutputDiv.innerHTML = `<p style="color: red;">ದೋಷ: ಸರ್ವರ್ ಸಂವಹನ ಸಮಸ್ಯೆ. ${errorText}</p>`;
+                        return; 
+                    }
+
+
+                    if (!response.ok) {
+                        const errorMessage = result?.error?.message || `API ವಿನಂತಿಯು ಸ್ಥಿತಿ ${response.status} ನೊಂದಿಗೆ ವಿಫಲವಾಗಿದೆ.`;
+                        console.error("API Error Full Payload:", result);
+                        throw new Error(errorMessage);
+                    }
+                    
+                    loadingSpinnerDiv.style.display = 'none'; 
+                    suggestionContainerDiv.style.display = 'block'; 
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        
+                        let text = result.candidates[0].content.parts[0].text;
+                        
+                        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); 
+                        text = text.replace(/\n\s*\n/g, '<br><br>'); 
+                        text = text.replace(/\n/g, '<br>'); 
+                        text = text.replace(/(\d\.\s*<br>\s*<strong>.*?<\/strong>|<br>\s*\d\.\s*<strong>.*?<\/strong>)/g, (match) => {
+                            return match.startsWith('<br>') ? `<p style="margin-top:10px;">${match.substring(4)}</p>` : `<p style="margin-top:10px;">${match}</p>`;
+                        });
+                        text = text.replace(/(\d\.\s*<strong>.*?<\/strong>)/g, '<p style="margin-top:10px;">$1</p>');
+
+
+                        suggestionOutputDiv.innerHTML = text;
+                    } else {
+                        if (result.promptFeedback && result.promptFeedback.blockReason) {
+                            let feedbackMessage = `ವಿನಂತಿಯನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ. ಕಾರಣ: ${result.promptFeedback.blockReason}.`;
+                            if (result.promptFeedback.safetyRatings && result.promptFeedback.safetyRatings.length > 0) {
+                                feedbackMessage += " ವಿವರಗಳು: ";
+                                result.promptFeedback.safetyRatings.forEach(rating => {
+                                    feedbackMessage += `${rating.category}: ${rating.probability}; `;
+                                });
+                            }
+                            suggestionOutputDiv.innerHTML = `<p style="color: orange;">${feedbackMessage} ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಪುನರ್‌ರಚಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</p>`;
+                            console.error("Prompt Feedback:", result.promptFeedback);
+                        } else {
+                            suggestionOutputDiv.innerHTML = '<p>ಕ್ಷಮಿಸಿ, ಯಾವುದೇ ಸಲಹೆಗಳನ್ನು ರಚಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಪುನರ್‌ರಚಿಸಿ ಅಥವಾ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</p>';
+                        }
+                        console.error("No candidates or unexpected API response structure:", result);
+                    }
+                } catch (error) { 
+                    loadingSpinnerDiv.style.display = 'none'; 
+                    suggestionContainerDiv.style.display = 'block'; 
+                    console.error('ಪ್ಯಾಕೇಜಿಂಗ್ ಸಲಹೆಗಳನ್ನು ಪಡೆಯುವಲ್ಲಿ ದೋಷ:', error);
+                    suggestionOutputDiv.innerHTML = `<p style="color: red;">ದೋಷ: ಸಲಹೆಗಳನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ${error.message}</p>`;
+                }
+            });
+        }
+
+        // Capability Cards Gallery Interaction
+        const capabilityCards = document.querySelectorAll('.capability-card');
+        
+        // Function to check if device is mobile
+        function isMobileDevice() {
+            return window.matchMedia("(max-width: 768px)").matches || 
+                   ('ontouchstart' in window) || 
+                   (navigator.maxTouchPoints > 0);
+        }
+        
+        const isMobile = isMobileDevice();
+        
+        capabilityCards.forEach(card => {
+            // Toggle active class on click
+            card.querySelector('.capability-collage').addEventListener('click', (event) => {
+                // For mobile devices, we need to handle click events
+                if (isMobile) {
+                    event.preventDefault();
+                    // If already active, deactivate
+                    if (card.classList.contains('active')) {
+                        card.classList.remove('active');
+                    } else {
+                        // Deactivate all cards first
+                        capabilityCards.forEach(c => c.classList.remove('active'));
+                        // Activate this card
+                        card.classList.add('active');
+                    }
+                }
+            });
+            
+            // Close when clicking outside (for mobile)
+            document.addEventListener('click', (event) => {
+                if (isMobile && !card.contains(event.target) && card.classList.contains('active')) {
+                    card.classList.remove('active');
+                }
+            });
+            
+            // Improved touch support for mobile
+            let touchStartX, touchStartY;
+            let touchEndX, touchEndY;
+            
+            card.addEventListener('touchstart', (event) => {
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+            });
+            
+            card.addEventListener('touchend', (event) => {
+                if (event.changedTouches.length > 0) {
+                    touchEndX = event.changedTouches[0].clientX;
+                    touchEndY = event.changedTouches[0].clientY;
+                    
+                    // Calculate distance moved
+                    const distX = Math.abs(touchEndX - touchStartX);
+                    const distY = Math.abs(touchEndY - touchStartY);
+                    
+                    // Only trigger if it's a tap (not a scroll)
+                    if (distX < 10 && distY < 10) {
+                        if (card.classList.contains('active')) {
+                            card.classList.remove('active');
+                        } else {
+                            capabilityCards.forEach(c => c.classList.remove('active'));
+                            card.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+
     </script>
 </body>
 </html>
