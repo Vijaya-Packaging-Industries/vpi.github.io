@@ -314,6 +314,36 @@
         .language-btn .icon {
             margin-right: 6px;
         }
+        
+        /* Mobile Header Controls */
+        .mobile-header-controls {
+            display: none; /* Hidden by default, shown in media query */
+            align-items: center;
+        }
+        
+        /* Mobile Language Button */
+        .mobile-language-btn-container {
+            position: relative;
+            margin-right: 10px;
+        }
+        
+        .mobile-language-btn {
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+        
+        .mobile-language-btn-container .language-dropdown {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            transform: none;
+            min-width: 120px;
+            z-index: 1006;
+        }
+        
+        .mobile-language-btn-container.open .language-dropdown {
+            display: block;
+        }
 
         .mobile-menu-toggle {
             display: none; 
@@ -322,7 +352,6 @@
             cursor: pointer;
             padding: 15px; 
             z-index: 1005; 
-            margin-left: auto; 
         }
 
         .mobile-menu-toggle .menu-icon-bar {
@@ -420,11 +449,19 @@
         }
 
         @media (max-width: 1024px) {
+            .mobile-header-controls {
+                display: flex; /* Show mobile controls container */
+            }
+            
             .mobile-menu-toggle {
                 display: block; 
                 position: relative;
                 padding: 10px;
-                margin-left: 5px;
+            }
+            
+            /* Hide language button in main navigation on mobile */
+            #main-navigation .language-btn-container {
+                display: none;
             }
             
             .logo-container {
@@ -786,7 +823,12 @@
             .logo-img { height: 30px; }
             .logo { font-size: 18px; }
             .logo-subtitle { font-size: 11px; }
-            .mobile-menu-toggle { padding: 10px; margin-left: 5px; }
+            .mobile-menu-toggle { padding: 10px; }
+            
+            .mobile-language-btn {
+                padding: 6px 8px;
+                font-size: 13px;
+            }
 
             .product-hero h1 { font-size: 26px; }
             .product-hero p { font-size: 15px; }
@@ -856,11 +898,22 @@
                     <div class="logo-subtitle">Industries</div>
                 </div>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
+            <div class="mobile-header-controls">
+                <div class="mobile-language-btn-container">
+                    <button type="button" class="language-btn mobile-language-btn" aria-label="Switch Language" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon">🌐</span> Lang
+                    </button>
+                    <div class="language-dropdown">
+                        <a href="index_kannada.html">ಕನ್ನಡ</a>
+                        <a href="index_hindi.html">हिन्दी</a>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                    <span class="menu-icon-bar"></span>
+                </button>
+            </div>
             <nav id="main-navigation"> 
                 <ul>
                     <li class="language-btn-container">
@@ -1195,10 +1248,27 @@
                 langBtn.setAttribute('aria-expanded', langBtnContainer.classList.contains('open'));
             });
         }
+        
+        // Mobile Language Dropdown Toggle
+        const mobileLangBtnContainer = document.querySelector('.mobile-language-btn-container');
+        const mobileLangBtn = document.querySelector('.mobile-language-btn');
+        if (mobileLangBtnContainer && mobileLangBtn) { 
+            mobileLangBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); 
+                mobileLangBtnContainer.classList.toggle('open');
+                mobileLangBtn.setAttribute('aria-expanded', mobileLangBtnContainer.classList.contains('open'));
+            });
+        }
+        
         document.addEventListener('click', function(event) {
             if (langBtnContainer && langBtnContainer.classList.contains('open') && !langBtnContainer.contains(event.target)) {
                 langBtnContainer.classList.remove('open');
                 if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
+            }
+            
+            if (mobileLangBtnContainer && mobileLangBtnContainer.classList.contains('open') && !mobileLangBtnContainer.contains(event.target)) {
+                mobileLangBtnContainer.classList.remove('open');
+                if (mobileLangBtn) mobileLangBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
