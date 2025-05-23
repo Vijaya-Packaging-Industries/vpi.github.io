@@ -1720,40 +1720,39 @@
             });
         }
 
-        // Language Dropdown Toggle
-        const langBtnContainers = document.querySelectorAll('.language-btn-container, .mobile-language-btn-container');
-        langBtnContainers.forEach(container => {
-            const btn = container.querySelector('.language-btn');
-            if (btn) {
-                btn.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    container.classList.toggle('open');
-                    btn.setAttribute('aria-expanded', container.classList.contains('open'));
-                });
-            }
-        });
-        
-        // Mobile Language Dropdown Toggle
+        // Language Dropdown Toggle - Desktop
+        const desktopLangBtnContainer = document.querySelector('#main-navigation .language-btn-container');
+        const desktopLangBtn = document.querySelector('#main-navigation .language-btn');
+        if (desktopLangBtnContainer && desktopLangBtn) {
+            desktopLangBtn.addEventListener('click', function(event) {
+                event.stopPropagation();
+                desktopLangBtnContainer.classList.toggle('open');
+                desktopLangBtn.setAttribute('aria-expanded', desktopLangBtnContainer.classList.contains('open'));
+            });
+        }
+
+        // Language Dropdown Toggle - Mobile
         const mobileLangBtnContainer = document.querySelector('.mobile-language-btn-container');
         const mobileLangBtn = document.querySelector('.mobile-language-btn');
-        if (mobileLangBtnContainer && mobileLangBtn) { 
+        if (mobileLangBtnContainer && mobileLangBtn) {
             mobileLangBtn.addEventListener('click', function(event) {
-                event.stopPropagation(); 
+                event.stopPropagation();
                 mobileLangBtnContainer.classList.toggle('open');
                 mobileLangBtn.setAttribute('aria-expanded', mobileLangBtnContainer.classList.contains('open'));
             });
         }
-        // Close language dropdown if clicked outside (specific to language dropdown)
+
+        // Close language dropdown if clicked outside
         document.addEventListener('click', function(event) {
-            langBtnContainers.forEach(container => {
-                if (container.classList.contains('open') && !container.contains(event.target)) {
-                    container.classList.remove('open');
-                    const btn = container.querySelector('.language-btn');
-                    if (btn) {
-                        btn.setAttribute('aria-expanded', 'false');
-                    }
-                }
-            });
+            if (desktopLangBtnContainer && desktopLangBtnContainer.classList.contains('open') && !desktopLangBtnContainer.contains(event.target)) {
+                desktopLangBtnContainer.classList.remove('open');
+                if (desktopLangBtn) desktopLangBtn.setAttribute('aria-expanded', 'false');
+            }
+
+            if (mobileLangBtnContainer && mobileLangBtnContainer.classList.contains('open') && !mobileLangBtnContainer.contains(event.target)) {
+                mobileLangBtnContainer.classList.remove('open');
+                if (mobileLangBtn) mobileLangBtn.setAttribute('aria-expanded', 'false');
+            }
         });
 
 
