@@ -15,7 +15,7 @@
             --accent-gold: #FFBF00;       /* Secondary accent */
 
             /* Light Theme Variables */
-            --light-bg: #f0f8ff; /* AliceBlue - for a professional, slightly colored background */
+            --light-bg: #f0f8ff;
             --light-text: #333333;
             --light-card-bg: #ffffff;
             --light-section-title: var(--primary-deep-blue);
@@ -25,15 +25,15 @@
             --light-footer-text: #e0e0e0;
 
             /* Dark Theme Variables */
-            --dark-bg: #0A192F; /* Very dark blue for dark mode background */
+            --dark-bg: #0A192F;
             --dark-text: #E0E0E0;
-            --dark-card-bg: #172A45; /* Darker blue for cards in dark mode */
+            --dark-card-bg: #172A45;
             --dark-section-title: var(--accent-gold); 
             --dark-header-bg: #172A45;
             --dark-header-text: var(--light-bg);
             --dark-footer-bg: #071322;
             --dark-footer-text: #b0b0b0;
-
+            
             /* Default to light theme */
             --bg-color: var(--light-bg);
             --text-color: var(--light-text);
@@ -64,7 +64,7 @@
             --testimonial-border: var(--primary-bright-blue);
             --contact-icon-bg: var(--primary-bright-blue);
             --contact-icon-text: white;
-            --social-link-bg: #444444; /* Default for light theme footer */
+            --social-link-bg: #444444;
         }
 
         body.dark-theme {
@@ -104,7 +104,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Added Inter as primary */
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
         
         body {
@@ -113,10 +117,10 @@
             line-height: 1.6;
             position: relative; 
             transition: background-color 0.3s ease, color 0.3s ease;
-            font-size: 16px; /* Base font size */
+            font-size: 16px;
         }
         body.mobile-menu-open {
-            overflow: hidden; /* Prevent body scroll when mobile menu is open */
+            overflow: hidden;
         }
         
         a {
@@ -134,11 +138,13 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 2;
         }
         
         @media (max-width: 480px) {
             .container {
-                padding: 0 10px; /* Less padding on very small screens */
+                padding: 0 10px;
             }
         }
         
@@ -174,7 +180,7 @@
             color: var(--btn-outline-hover-text-color);
         }
 
-        .btn-gemini { /* Style for the new Gemini button */
+        .btn-gemini {
             background-color: var(--primary-bright-blue);
             color: white;
             margin-top: 10px;
@@ -202,15 +208,15 @@
             top: 0;
             z-index: 1000; 
             transition: background-color 0.3s ease;
-            padding: 0; /* Adjusted padding to be handled by container or specific elements */
+            padding: 0;
         }
         
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0; 
-            position: relative; /* For mobile menu positioning */
+            padding: 10px 0;
+            position: relative;
         }
         
         .logo-container {
@@ -221,11 +227,11 @@
         .logo-link {
             display: flex;
             align-items: center;
-            margin-right: 10px;
+            margin-right: 15px;
         }
         
         .logo-img {
-            height: 35px;
+            height: 55px; 
             width: auto;
             transition: transform 0.3s ease;
         }
@@ -237,11 +243,11 @@
         .logo-text {
             display: flex;
             flex-direction: column;
-            line-height: 1;
+            line-height: 1.1;
         }
         
         .logo {
-            font-size: 22px; 
+            font-size: 26px; 
             font-weight: 700;
             color: var(--logo-text-color);
             margin-bottom: 2px;
@@ -252,17 +258,13 @@
         }
         
         .logo-subtitle {
-            font-size: 14px;
+            font-size: 16px; 
             font-weight: 600;
             color: var(--logo-subtitle-color);
             letter-spacing: 0.5px;
         }
         
         /* Desktop Navigation Styles */
-        nav { /* Renamed from #main-navigation for simpler targeting initially */
-             /* Default state for desktop */
-        }
-
         nav ul {
             display: flex;
             align-items: center; 
@@ -276,7 +278,7 @@
         }
         
         nav ul li a,
-        .language-btn { /* Original styles for desktop */
+        .language-btn {
             font-weight: 600;
             font-size: 15px; 
             color: var(--nav-link-color);
@@ -305,7 +307,7 @@
             font-weight: 700;
         }
 
-        .language-dropdown { /* Original for desktop */
+        .language-dropdown {
             display: none; 
             position: absolute;
             top: calc(100% + 5px); 
@@ -320,7 +322,7 @@
             border: 1px solid var(--form-control-border);
         }
 
-        .language-dropdown a { /* Original for desktop */
+        .language-dropdown a {
             display: block;
             padding: 10px 20px;
             color: var(--text-color);
@@ -329,7 +331,7 @@
             font-size: 15px; 
         }
 
-        .language-dropdown a:hover { /* Original for desktop */
+        .language-dropdown a:hover {
             background-color: var(--bg-color); 
             color: var(--accent-orange); 
             border: none;
@@ -344,11 +346,10 @@
 
         /* Mobile Header Controls */
         .mobile-header-controls {
-            display: none; /* Hidden by default, shown in media query */
+            display: none;
             align-items: center;
         }
         
-        /* Mobile Language Button */
         .mobile-language-btn-container {
             position: relative;
             margin-right: 10px;
@@ -372,27 +373,26 @@
             display: block;
         }
         
-        /* Mobile Menu Toggle Button */
         .mobile-menu-toggle {
-            display: none; /* Hidden by default, shown in media query */
+            display: none;
             background: none;
             border: none;
             cursor: pointer;
-            padding: 15px; /* Good touch target */
-            z-index: 1005; /* Above sticky header content, below opened menu */
+            padding: 15px;
+            z-index: 1005;
         }
 
         .mobile-menu-toggle .menu-icon-bar {
             display: block;
             width: 25px;
             height: 3px;
-            background-color: var(--nav-link-color); /* Consistent with nav links */
+            background-color: var(--nav-link-color);
             margin: 5px 0;
             transition: transform 0.3s ease, opacity 0.3s ease;
             border-radius: 1px;
         }
         body.dark-theme .mobile-menu-toggle .menu-icon-bar {
-            background-color: var(--nav-link-color); /* Ensure dark theme uses its nav link color */
+            background-color: var(--nav-link-color);
         }
 
         .mobile-menu-toggle.open .menu-icon-bar:nth-child(1) {
@@ -405,32 +405,26 @@
             transform: translateY(-8px) rotate(-45deg);
         }
         
-        /* Mobile Navigation Container (the <nav> tag with ID) */
-        #main-navigation {
-            /* Styles for when it's hidden on mobile by default */
-        }
-
-        /* Styles for when mobile menu is open */
         #main-navigation.open {
             display: block;
             position: absolute;
-            top: 100%; /* Below the header block */
+            top: 100%; 
             left: 0;
             right: 0;
             background-color: var(--header-bg-color);
             box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            z-index: 1002; /* Above content, below toggle if it needs to overlap */
+            z-index: 1002;
             border-top: 1px solid var(--form-control-border);
-            max-height: calc(100vh - 60px); /* Example: viewport height minus header height */
-            overflow-y: auto; /* Scroll if content exceeds height */
-            padding-top: 5px; /* Add a little space at the top */
+            max-height: calc(100vh - 60px); 
+            overflow-y: auto; 
+            padding-top: 5px; 
         }
 
         #main-navigation.open ul {
             flex-direction: column;
             align-items: center;
             width: 100%;
-            padding: 10px 0; /* Padding for the list itself */
+            padding: 10px 0;
         }
 
         #main-navigation.open ul li {
@@ -446,36 +440,35 @@
         #main-navigation.open ul li a,
         #main-navigation.open .language-btn {
             display: block;
-            padding: 15px 20px; /* Generous padding for touch */
+            padding: 15px 20px; 
             color: var(--nav-link-color);
             font-weight: 600;
-            border: none; /* Remove desktop borders */
+            border: none;
             border-radius: 0;
         }
         #main-navigation.open ul li a:hover,
         #main-navigation.open .language-btn:hover {
-            background-color: var(--bg-color); /* Subtle hover */
+            background-color: var(--bg-color); 
             color: var(--nav-link-hover-color);
         }
 
         #main-navigation.open .language-btn-container {
-             width: 100%;
-    display: block;
-    text-align: center;
-            /* Stacks like other li items */
+            width: 100%;
+            display: block;
+            text-align: center;
         }
         #main-navigation.open .language-dropdown {
-            position: static; /* Flow naturally in the mobile menu */
+            position: static; 
             transform: none;
             box-shadow: none;
             border: none;
-            border-top: 1px dashed var(--form-control-border); /* Separator within language section */
-            background-color: var(--header-bg-color); /* Match parent menu */
+            border-top: 1px dashed var(--form-control-border);
+            background-color: var(--header-bg-color);
             min-width: auto;
             padding: 0;
         }
         #main-navigation.open .language-dropdown a {
-             padding: 12px 20px; /* Consistent padding */
+             padding: 12px 20px; 
              color: var(--nav-link-color);
         }
          #main-navigation.open .language-dropdown a:hover {
@@ -483,64 +476,64 @@
             color: var(--accent-orange);
         }
 
-
-        /* Media Query for Mobile Navigation (up to 1024px) */
         @media (max-width: 1024px) {
             .mobile-header-controls {
-                display: flex; /* Show mobile controls container */
+                display: flex; 
             }
-            
             .mobile-menu-toggle {
-                display: block; /* Show hamburger */
+                display: block; 
                 position: relative;
                 padding: 10px;
             }
-            
-            /* Hide language button in main navigation on mobile */
             #main-navigation .language-btn-container {
                 display: none;
             }
-            
             .logo-container {
-                flex-shrink: 1; /* Allow logo container to shrink if needed */
+                flex-shrink: 1; 
             }
-            
             .logo {
-                font-size: 20px; /* Slightly smaller font size */
-                white-space: nowrap; /* Prevent text wrapping */
+                font-size: 20px;
+                white-space: nowrap;
                 margin-bottom: 1px;
             }
-            
             .logo-subtitle {
                 font-size: 12px;
             }
-            
-            nav { /* The desktop nav container */
-                 display: none; /* Hide desktop nav container */
+            nav {
+                 display: none;
             }
-            #main-navigation.open { /* This rule now correctly targets the <nav id="main-navigation"> */
+            #main-navigation.open {
                 display: block;
             }
         }
-
-
+        
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(0, 51, 102, 0.7)), url('https://placehold.co/1200x600/0A2342/FFFFFF?text=Premium+Packaging') center/cover no-repeat; 
-            color: white;
-            padding: 100px 0; 
+            background: linear-gradient(rgba(240, 248, 255, 0.9), rgba(240, 248, 255, 0.9)), url('hero_lightmode.jpg') center/cover no-repeat;
+            color: var(--primary-deep-blue);
+            padding: 100px 0;
             text-align: center;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        body.dark-theme .hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('hero_darkmode.jpg') center/cover no-repeat;
+            color: white;
         }
         .hero h1 {
-            font-size: 42px; 
+            font-size: 42px;
             margin-bottom: 20px;
             font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         .hero p {
             font-size: 18px;
             max-width: 700px;
-            margin: 0 auto 30px auto;
+            margin: 20px auto 30px auto;
             line-height: 1.7;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        body.dark-theme .hero h1, body.dark-theme .hero p {
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
         }
         .hero-btns {
             display: flex;
@@ -548,7 +541,6 @@
             gap: 20px;
             margin-top: 30px;
         }
-
 
         .section-title {
             font-size: 36px; 
@@ -601,7 +593,7 @@
             margin-top: 20px;
             padding: 15px;
             border-left: 3px solid var(--accent-orange);
-            background-color: #fdf5e6; 
+            background-color: var(--bg-color);
         }
         body.dark-theme .founder-quote {
             background-color: var(--dark-card-bg); 
@@ -609,9 +601,121 @@
             color: var(--dark-text);
         }
 
+        /* Achievements Section */
+        .achievements {
+            padding: 80px 0;
+            background: var(--primary-deep-blue);
+        }
+        .achievements .section-title {
+            color: var(--accent-gold);
+        }
+        .achievements .section-title::after {
+            background-color: var(--accent-gold);
+        }
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .achievement-card {
+            background: var(--dark-card-bg);
+            color: var(--dark-text);
+            padding: 35px;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .achievement-card .icon {
+            font-size: 40px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+        .achievement-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .achievement-card .cert-number {
+            font-size: 14px;
+            font-family: monospace;
+            opacity: 0.6;
+            margin-top: 15px;
+            display: block;
+        }
+        
+        /* Section Styling for background decorations */
+        .products, .sustainability, .contact {
+            position: relative;
+            overflow: hidden; /* Contains the decorative images */
+        }
+        
+        /* Background Decoration Container */
+        .background-decor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Individual Decorative Images */
+        .decor-image {
+            position: absolute;
+            width: 60px;  /* Initial small size */
+            height: 60px;
+            border-radius: 50%; /* Makes it a "dot" */
+            object-fit: cover;
+            filter: blur(8px) grayscale(1); /* Blurry and no color */
+            transform: scale(0.5); /* Scaled down */
+            opacity: 0; /* Initially hidden */
+            transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s ease;
+            will-change: transform, opacity, filter;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* State when image scrolls into view */
+        .decor-image.is-visible {
+            transform: scale(1);
+            opacity: 0.15; /* Faintly visible */
+            filter: blur(5px) grayscale(0.8);
+        }
+        
+        body.dark-theme .decor-image.is-visible {
+            opacity: 0.1; /* Slightly less visible on dark bg */
+        }
+
+        /* State when user hovers over the "dot" */
+        .decor-image:hover {
+            width: 250px; /* Enlarge */
+            height: 250px;
+            border-radius: 8px; /* Become a square */
+            opacity: 1; /* Fully visible */
+            filter: blur(0) grayscale(0); /* Clear and colorful */
+            transform: scale(1.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 10; /* Bring to front */
+        }
+
+        /* Grid Layouts and Content Z-indexing */
+        .product-grid, .capabilities-grid, .sustainability-content, 
+        .testimonials-grid, .contact-content, .about-content, .achievements-grid {
+            position: relative;
+            z-index: 2; /* Ensures content is above background decorations */
+        }
 
         /* Products Section */
-        .products { padding: 80px 0; background-color: var(--bg-color); }
+        .products { 
+            padding: 80px 0; 
+            background-color: var(--bg-color);
+        }
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .product-card { 
             background-color: var(--card-bg-color); 
@@ -699,7 +803,6 @@
             cursor: pointer;
         }
         
-        /* Default state - show cover image */
         .capability-cover-img {
             width: 100%; 
             height: 100%;
@@ -712,7 +815,6 @@
             z-index: 2;
         }
         
-        /* Gallery images (hidden by default) */
         .capability-gallery {
             position: absolute;
             top: 0;
@@ -732,7 +834,6 @@
             transition: transform 0.4s ease-in-out;
         }
         
-        /* Hover/active state */
         .capability-card.active .capability-cover-img,
         .capability-card:hover .capability-cover-img {
             opacity: 0;
@@ -748,31 +849,24 @@
             transform: scale(1.05);
         }
         
-        /* Disable hover effect on mobile devices to prevent issues */
         @media (max-width: 768px) {
             .capability-card:hover .capability-cover-img {
-                opacity: 1; /* Keep cover image visible on hover for mobile */
+                opacity: 1;
             }
-            
             .capability-card:hover .capability-gallery {
-                opacity: 0; /* Keep gallery hidden on hover for mobile */
+                opacity: 0;
             }
-            
             .capability-card:hover .capability-gallery-img {
-                transform: none; /* No transform on hover for mobile */
+                transform: none;
             }
-            
-            /* Only show gallery on active state for mobile */
             .capability-card.active .capability-cover-img {
                 opacity: 0;
             }
-            
             .capability-card.active .capability-gallery {
                 opacity: 1;
             }
         }
         
-        /* No eye emoji indicator */
         .capability-text-content {
             padding: 25px; 
             text-align: center; 
@@ -793,7 +887,10 @@
         }
 
         /* Sustainability Section */
-        .sustainability { padding: 80px 0; background-color: var(--bg-color); }
+        .sustainability { 
+            padding: 80px 0; 
+            background-color: var(--bg-color); 
+        }
         .sustainability-content { display: flex; align-items: center; gap: 50px; margin-top: 40px; }
         .sustainability-img { flex: 1; text-align: center; }
         .sustainability-img img { 
@@ -855,7 +952,10 @@
         .cta p { max-width: 750px; margin: 0 auto 35px; font-size: 18px; line-height: 1.7;}
 
         /* Contact Section */
-        .contact { padding: 80px 0; background-color: var(--bg-color); }
+        .contact { 
+            padding: 80px 0; 
+            background-color: var(--bg-color); 
+        }
         .contact-content { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
         .contact-info { flex: 1; min-width: 300px; }
         .contact-info h3 { font-size: 26px; margin-bottom: 25px; color: var(--primary-dark-blue); font-weight: 600;}
@@ -941,8 +1041,11 @@
         }
 
         textarea.form-control { resize: vertical; min-height: 130px; }
-        .certification-logos { margin-top: 20px; display: flex; gap: 15px; align-items: center;}
-        .certification-logos img { height: 40px; opacity: 0.8; }
+        .certification-logos { margin-top: 20px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .certification-logos img { height: 50px; opacity: 0.9; }
+        .certification-text { font-weight: 600; font-size: 16px; color: var(--primary-deep-blue); }
+        body.dark-theme .certification-text { color: var(--light-text); }
+
 
         /* Gemini Suggestion Output Styling */
         #gemini-suggestion-output {
@@ -950,9 +1053,9 @@
             padding: 15px;
             border: 1px dashed var(--primary-bright-blue);
             border-radius: 5px;
-            background-color: var(--bg-color); /* Consistent with form input bg */
+            background-color: var(--bg-color); 
             min-height: 50px;
-            white-space: pre-wrap; /* Preserve formatting from API */
+            white-space: pre-wrap;
             font-size: 0.95em;
         }
         body.dark-theme #gemini-suggestion-output {
@@ -1049,6 +1152,29 @@
             font-size: 14px; 
         }
         .theme-logos { display:none; }
+        
+        /* Fixed GSTIN Badge */
+        .fixed-gstin {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: var(--card-bg-color);
+            color: var(--text-color);
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: monospace;
+            z-index: 998;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 1px solid var(--form-control-border);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        .fixed-gstin:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
 
         /* Floating Buttons Container */
         .floating-buttons-container { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
@@ -1077,18 +1203,6 @@
 
         
         /* Responsive Adjustments */
-        @media (max-width: 1024px) { /* Mobile menu kicks in here */
-            /* Existing header-container changes from 768px are now relevant here too if nav is hidden */
-             /* .header-container {
-                flex-direction: column; No, keep space-between for logo and toggle
-                align-items: center; 
-            } */
-            /* .logo {
-                margin-bottom: 15px; Only if header stacks, not yet
-            } */
-            /* Original nav ul modifications are now handled by #main-navigation.open */
-        }
-
         @media (max-width: 992px) { 
             .about-content, .sustainability-content {
                 flex-direction: column;
@@ -1118,87 +1232,67 @@
             .section-title { font-size: 32px; }
         }
         
+        @media (min-width: 481px) and (max-width: 768px) {
+            .product-grid, .capabilities-grid, .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .testimonials-grid {
+                 grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) { 
             .header-container {
-                flex-direction: row; /* Keep in a single line */
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                padding: 8px 0; /* Reduced padding */
+                padding: 8px 0; 
             }
             
             .logo-container {
                 margin-bottom: 0;
-                flex-shrink: 1; /* Allow logo container to shrink if needed */
+                flex-shrink: 1; 
             }
             
             .logo-img {
-                height: 30px; /* Smaller on mobile */
+                height: 40px; 
             }
             
             .logo {
-                font-size: 18px; /* Smaller font size on mobile */
-                white-space: nowrap; /* Prevent text wrapping */
-                margin-bottom: 1px;
+                font-size: 20px; 
             }
             
             .logo-subtitle {
-                font-size: 11px;
+                font-size: 13px; 
             }
             
             .mobile-menu-toggle {
                 position: relative;
-                padding: 10px; /* Smaller padding */
+                padding: 10px; 
                 margin-left: 5px;
             }
-            
-            /* Header remains in a single line with reduced sizes */
         }
-        
-        /* Extra small screens */
+
         @media (max-width: 480px) {
-            .logo-img {
-                height: 25px; /* Even smaller on very small screens */
-            }
-            
-            .logo {
-                font-size: 16px; /* Smaller font on very small screens */
-                margin-bottom: 0;
-            }
-            
-            .logo-subtitle {
-                font-size: 10px;
-            }
-            
-            .mobile-menu-toggle {
-                padding: 8px; /* Smaller padding */
-            }
-            
-            .mobile-menu-toggle .menu-icon-bar {
-                width: 20px; /* Smaller hamburger icon */
-                height: 2px;
-                margin: 4px 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
+            .logo-img { height: 35px; }
+            .logo { font-size: 18px; margin-bottom: 0; }
+            .logo-subtitle { font-size: 11px; }
+            .mobile-menu-toggle { padding: 8px; }
+            .mobile-menu-toggle .menu-icon-bar { width: 20px; height: 2px; margin: 4px 0; }
             .hero h1 { font-size: 30px; } 
             .hero p { font-size: 16px; }
             .hero-btns { flex-direction: column; gap: 15px; align-items: center; }
             .hero-btns .btn { width: 80%; max-width: 300px; }
-            
             .section-title { font-size: 28px; }
-            .capabilities-grid {
+            .capabilities-grid, .product-grid, .achievements-grid, .testimonials-grid {
                 grid-template-columns: 1fr; 
             }
-            .capability-collage {
-                height: 200px; 
-            }
+            .capability-collage { height: 200px; }
             .capability-card h3 { font-size: 20px; }
             .capability-card p { font-size: 15px; }
-
             .floating-buttons-container { bottom: 20px; right: 20px; gap: 10px; }
             .floating-btn { width: 50px; height: 50px; font-size: 20px; }
-
+            .fixed-gstin { font-size: 10px; padding: 6px 10px; bottom: 15px; left: 15px; }
             .contact-content { flex-direction: column; }
             .footer-content { text-align: center; } 
             .footer-col h3::after { left: 50%; transform: translateX(-50%); } 
@@ -1206,13 +1300,14 @@
         }
         
         @media print {
-            header, footer, .contact-form .btn, .contact-form .btn-gemini, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle {
-                display: none !important; /* Ensure mobile toggle is also hidden */
+            header, footer, .contact-form .btn, .contact-form .btn-gemini, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle, .fixed-gstin {
+                display: none !important; 
             }
             #main-navigation, #main-navigation.open {
-                display: none !important; /* Hide mobile nav structure in print */
+                display: none !important; 
             }
-            body { background-color: white !important; color: black !important; } 
+            body { background: white !important; color: black !important; } 
+            .background-decor { display: none !important; } /* Hide decor images for printing */
             .capability-collage {
                 display: block; 
                 height: auto;
@@ -1235,6 +1330,9 @@
 
 </head>
 <body class="light-theme"> 
+
+    <div class="fixed-gstin">GSTIN: XX-XXXXXXXXXX-X</div>
+
     <header>
         <div class="container header-container">
             <div class="logo-container">
@@ -1285,7 +1383,7 @@
     <section class="hero">
         <div class="container">
             <h1>Vijaya Packaging Industries</h1>
-            <p>Your trusted partner for premium, eco-friendly corrugated packaging solutions. Proudly <strong>woman-owned</strong> and operated since 2019.</p>
+            <p>Your trusted partner for premium, eco-friendly corrugated packaging solutions. Proudly <strong>woman-owned</strong> and operated in <strong>Mysore</strong> since 2019.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn">Request a Quote</a>
                 <a href="#" class="btn btn-outline" id="downloadBrochureBtn">Download Brochure</a>
@@ -1299,12 +1397,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Our Story: A Legacy of Innovation & Trust</h3>
-                    <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has rapidly evolved from a dedicated corrugated box manufacturing unit into one of the region's leading and most trusted packaging solution providers. We are a proud <strong>woman-led enterprise</strong>, committed to excellence.</p>
-                    <p>Our commitment to unparalleled quality, continuous innovation, and unwavering sustainability has earned us the trust of a diverse clientele across industries including FMCG, electronics, pharmaceuticals, and e-commerce.</p>
-                    
-                    <h3>Meet Our Founder: Mrs. Vijayalakshmi D</h3>
-                    <p>Mrs. Vijayalakshmi's journey in the dynamic packaging industry is a testament to her pioneering spirit. She embarked on this path with a clear vision: to create superior, sustainable packaging solutions while fostering economic empowerment within the local community. Her leadership and business acumen have been recognized with several prestigious entrepreneurship awards, including the notable Business Excellence Award in 2018.</p>
-                    <p>Under her inspiring guidance, Vijaya Packaging Industries consistently pushes the boundaries of innovation, all while maintaining an unwavering focus on environmental responsibility and positive social impact.</p>
+                    <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has rapidly evolved into one of the region's leading packaging solution providers. We are a proud <strong>woman-led enterprise</strong>, deeply rooted in the vibrant city of <strong>Mysore</strong>.</p>
+                    <h3>Meet Our Founder</h3>
+                    <p>Under her inspiring guidance, Vijaya Packaging Industries consistently pushes boundaries, focusing on environmental responsibility and positive social impact.</p>
                     <div class="founder-quote">
                         <p>"We don't just make boxes; we build trust and deliver solutions that protect what's valuable, both for our clients and our planet." - Mrs. Vijayalakshmi D</p>
                     </div>
@@ -1316,7 +1411,33 @@
         </div>
     </section>
 
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">Our Accolades</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="icon">🏆</div>
+                    <h3>IIB Best Packaging Award 2022</h3>
+                    <p>Recognized for excellence and innovation by the Icons of Indian Business Magazine.</p>
+                    <span class="cert-number">Reg: KARENG/2021/81053</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon">🏅</div>
+                    <h3>ISO 9001:2015 Certified</h3>
+                    <p>For maintaining the highest standards in Quality Management for manufacturing and supply.</p>
+                    <span class="cert-number">Cert: 0726Q192423</span>
+                </div>
+                <div class="achievement-card">
+                    <div class="icon">🤝</div>
+                    <h3>Community & Enterprise</h3>
+                    <p>A proud lifetime member of KASSIA and an active participant in WISE (Women in Small Enterprise) 2023.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="products" class="products">
+        <div class="background-decor"></div>
         <div class="container">
             <h2 class="section-title">Our Premium Products</h2>
             <p class="text-center" style="max-width: 700px; margin: -20px auto 40px auto; font-size: 17px; opacity:0.9;">Discover our range of high-quality, customizable corrugated packaging. We are working on bringing interactive 3D animated views for an enhanced product exploration experience!</p>
@@ -1442,6 +1563,7 @@
     </section>
 
     <section id="sustainability" class="sustainability">
+        <div class="background-decor"></div>
         <div class="container">
             <h2 class="section-title">Our Commitment to Sustainability</h2>
             <div class="sustainability-content">
@@ -1546,6 +1668,7 @@
     </section>
 
     <section id="contact" class="contact">
+        <div class="background-decor"></div>
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
@@ -1581,12 +1704,18 @@
                                 <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
                             </div>
                         </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📄</div>
+                            <div>
+                                <h4>Business Info</h4>
+                                <p><strong>MSME Certified</strong><br><strong>GSTIN:</strong> XX-XXXXXXXXXX-X</p>
+                            </div>
+                        </div>
                     </div>
                     <h3>Our Certifications</h3>
                     <div class="certification-logos">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=ISO+9001" alt="ISO 9001:2015 Certification" title="ISO 9001:2015 Certified">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=FSC" alt="FSC Certified Paper" title="FSC Certified">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=EcoVadis" alt="EcoVadis Rating" title="EcoVadis Rated">
+                        <img src="https://placehold.co/120x60/cccccc/333333?text=ISO+9001:2015" alt="ISO 9001:2015 Certification" title="ISO 9001:2015 Certified">
+                        <span class="certification-text">Quality Management System</span>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1679,7 +1808,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Vijaya Packaging Industries. All Rights Reserved. Designed with care.</p>
+                <p>© <span id="currentYear"></span> Vijaya Packaging Industries. All Rights Reserved. Designed with care.</p>
             </div>
         </div>
     </footer>
@@ -1770,9 +1899,9 @@
                 root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-primary-bright-blue-val, 0, 123, 255)');
             }
              if (body.classList.contains('mobile-menu-open') && themeName === 'dark') {
-                body.classList.add('dark-theme'); // re-apply if mobile-menu-open removed it
+                body.classList.add('dark-theme');
             } else if (body.classList.contains('mobile-menu-open') && themeName === 'light') {
-                body.classList.remove('dark-theme'); // ensure it's just light-theme
+                body.classList.remove('dark-theme');
             }
         }
         
@@ -1800,17 +1929,16 @@
 
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Smooth Scroll for internal links (original)
+        // Smooth Scroll for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const isMobileNavLink = this.closest('#main-navigation.open');
-                if (!isMobileNavLink) { // Prevent default only if not handled by mobile nav close
+                if (!isMobileNavLink) {
                     e.preventDefault();
                 }
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
-                    // Delay slightly for menu to close if it was open
                     const delay = isMobileNavLink ? 150 : 0;
                     setTimeout(() => {
                         targetElement.scrollIntoView({
@@ -1827,18 +1955,16 @@
 
         if (menuToggleBtn && mainNav) {
             menuToggleBtn.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevent click from bubbling to document listener immediately
+                event.stopPropagation();
                 const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true' || false;
                 menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
                 menuToggleBtn.classList.toggle('open');
                 mainNav.classList.toggle('open');
-                // Toggle body class for overflow and theme consistency
                 const currentTheme = localStorage.getItem('theme') || 'light';
                 const bodyClass = currentTheme + '-theme' + (!isExpanded ? ' mobile-menu-open' : '');
                 body.className = bodyClass.trim();
             });
 
-            // Close menu when a link inside it is clicked
             mainNav.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function () {
                     if (mainNav.classList.contains('open')) {
@@ -1846,16 +1972,14 @@
                         menuToggleBtn.classList.remove('open');
                         mainNav.classList.remove('open');
                         const currentTheme = localStorage.getItem('theme') || 'light';
-                        body.className = currentTheme + '-theme'; // Remove mobile-menu-open
+                        body.className = currentTheme + '-theme';
                     }
-                    // Smooth scroll is handled by the general anchor click listener
                 });
             });
         }
         
-        // Close mobile menu if clicked outside
         document.addEventListener('click', function(event) {
-            if (mainNav && menuToggleBtn) { // Ensure elements exist
+            if (mainNav && menuToggleBtn) {
                 const isClickInsideNav = mainNav.contains(event.target);
                 const isClickOnToggle = menuToggleBtn.contains(event.target);
 
@@ -1864,9 +1988,50 @@
                     menuToggleBtn.classList.remove('open');
                     mainNav.classList.remove('open');
                     const currentTheme = localStorage.getItem('theme') || 'light';
-                    body.className = currentTheme + '-theme'; // Remove mobile-menu-open
+                    body.className = currentTheme + '-theme';
                 }
             }
+        });
+
+
+        // Interactive Background Animation Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const productImages = [
+                'Regular Slotted Cartons.png', 'Die-Cut Boxes.png',
+                'Telescoping Containers.jpg', 'Retail Display Packaging.jpg',
+                'Heavy-Duty Packaging.jpg', 'Custom Inserts & Dividers.jpg'
+            ];
+
+            const decorSections = document.querySelectorAll('.products, .sustainability, .contact');
+
+            decorSections.forEach(section => {
+                const container = section.querySelector('.background-decor');
+                if (container) {
+                    for (let i = 0; i < 6; i++) {
+                        const img = document.createElement('img');
+                        img.className = 'decor-image';
+                        img.src = productImages[i % productImages.length];
+                        img.alt = 'Decorative background image of a corrugated box';
+                        img.onerror = function() { this.style.display = 'none'; }; // Hide if image fails to load
+                        img.style.top = `${Math.random() * 80 + 10}%`;
+                        img.style.left = `${Math.random() * 80 + 10}%`;
+                        img.style.transitionDelay = `${Math.random() * 0.5}s`;
+                        container.appendChild(img);
+                    }
+                }
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const images = entry.target.querySelectorAll('.decor-image');
+                        images.forEach(img => img.classList.add('is-visible'));
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            decorSections.forEach(section => observer.observe(section));
         });
 
 
@@ -1989,7 +2154,6 @@
         // Capability Cards Gallery Interaction
         const capabilityCards = document.querySelectorAll('.capability-card');
         
-        // Function to check if device is mobile
         function isMobileDevice() {
             return window.matchMedia("(max-width: 768px)").matches || 
                    ('ontouchstart' in window) || 
@@ -1999,31 +2163,24 @@
         const isMobile = isMobileDevice();
         
         capabilityCards.forEach(card => {
-            // Toggle active class on click
             card.querySelector('.capability-collage').addEventListener('click', (event) => {
-                // For mobile devices, we need to handle click events
                 if (isMobile) {
                     event.preventDefault();
-                    // If already active, deactivate
                     if (card.classList.contains('active')) {
                         card.classList.remove('active');
                     } else {
-                        // Deactivate all cards first
                         capabilityCards.forEach(c => c.classList.remove('active'));
-                        // Activate this card
                         card.classList.add('active');
                     }
                 }
             });
             
-            // Close when clicking outside (for mobile)
             document.addEventListener('click', (event) => {
                 if (isMobile && !card.contains(event.target) && card.classList.contains('active')) {
                     card.classList.remove('active');
                 }
             });
             
-            // Improved touch support for mobile
             let touchStartX, touchStartY;
             let touchEndX, touchEndY;
             
@@ -2037,11 +2194,9 @@
                     touchEndX = event.changedTouches[0].clientX;
                     touchEndY = event.changedTouches[0].clientY;
                     
-                    // Calculate distance moved
                     const distX = Math.abs(touchEndX - touchStartX);
                     const distY = Math.abs(touchEndY - touchStartY);
                     
-                    // Only trigger if it's a tap (not a scroll)
                     if (distX < 10 && distY < 10) {
                         if (card.classList.contains('active')) {
                             card.classList.remove('active');
