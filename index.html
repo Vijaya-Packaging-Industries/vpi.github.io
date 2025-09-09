@@ -12,7 +12,7 @@
             --primary-bright-blue: #007BFF; /* For links, interactive elements */
             
             --accent-orange: #FFA500;     /* Primary accent for CTAs */
-            --accent-gold: #FFBF00;       /* Secondary accent */
+            --accent-gold: #FFBF00;      /* Secondary accent */
 
             /* Light Theme Variables */
             --light-bg: #f0f8ff; /* AliceBlue - for a professional, slightly colored background */
@@ -172,22 +172,6 @@
         .btn-outline:hover {
             background-color: var(--btn-outline-hover-bg-color);
             color: var(--btn-outline-hover-text-color);
-        }
-
-        .btn-gemini { /* Style for the new Gemini button */
-            background-color: var(--primary-bright-blue);
-            color: white;
-            margin-top: 10px;
-        }
-        .btn-gemini:hover {
-            background-color: var(--primary-deep-blue);
-        }
-        body.dark-theme .btn-gemini {
-            background-color: var(--accent-gold);
-            color: var(--primary-deep-blue);
-        }
-        body.dark-theme .btn-gemini:hover {
-            background-color: var(--accent-orange);
         }
         
         .text-center {
@@ -964,55 +948,6 @@
         .certification-logos { margin-top: 20px; display: flex; gap: 15px; align-items: center;}
         .certification-logos img { height: 40px; opacity: 0.8; }
 
-        /* Gemini Suggestion Output Styling */
-        #gemini-suggestion-output {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px dashed var(--primary-bright-blue);
-            border-radius: 5px;
-            background-color: var(--bg-color); /* Consistent with form input bg */
-            min-height: 50px;
-            white-space: pre-wrap; /* Preserve formatting from API */
-            font-size: 0.95em;
-        }
-        body.dark-theme #gemini-suggestion-output {
-            border-color: var(--accent-gold);
-            background-color: var(--dark-card-bg);
-        }
-        #gemini-suggestion-output h4 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: var(--primary-deep-blue);
-        }
-        body.dark-theme #gemini-suggestion-output h4 {
-            color: var(--accent-gold);
-        }
-        #gemini-suggestion-output ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        #gemini-suggestion-output li {
-            margin-bottom: 5px;
-        }
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(0,0,0,.3);
-            border-radius: 50%;
-            border-top-color: var(--primary-bright-blue);
-            animation: spin 1s ease-in-out infinite;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        body.dark-theme .loading-spinner {
-            border-top-color: var(--accent-gold);
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
         /* Footer */
         footer {
             background-color: var(--footer-bg-color); 
@@ -1100,11 +1035,11 @@
         @media (max-width: 1024px) { /* Mobile menu kicks in here */
             /* Existing header-container changes from 768px are now relevant here too if nav is hidden */
              /* .header-container {
-                flex-direction: column; No, keep space-between for logo and toggle
-                align-items: center; 
+                 flex-direction: column; No, keep space-between for logo and toggle
+                 align-items: center; 
             } */
             /* .logo {
-                margin-bottom: 15px; Only if header stacks, not yet */
+                 margin-bottom: 15px; Only if header stacks, not yet */
             /* */
             /* Original nav ul modifications are now handled by #main-navigation.open */
         }
@@ -1226,7 +1161,7 @@
         }
         
         @media print {
-            header, footer, .contact-form .btn, .contact-form .btn-gemini, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle {
+            header, footer, .contact-form .btn, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle {
                 display: none !important; /* Ensure mobile toggle is also hidden */
             }
             #main-navigation, #main-navigation.open {
@@ -1614,7 +1549,7 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                       <form id="contactForm" action="https://formsubmit.co/bestpersonal8@gmail.com" method="POST"> 
+                        <form id="contactForm" action="https://formsubmit.co/bestpersonal8@gmail.com" method="POST"> 
                             <input type="text" name="_honey" style="display:none">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/">
@@ -1639,16 +1574,6 @@
                                 <label for="message">Your Message / Inquiry</label>
                                 <textarea id="message" name="message" class="form-control" required rows="5"></textarea>
                             </div>
-                            <div id="gemini-suggestion-output-container" style="display: none;">
-                                <h4>✨ AI-Powered Packaging Ideas:</h4>
-                                <div id="gemini-suggestion-output">
-                                    </div>
-                            </div>
-                            <div id="gemini-loading-spinner" style="display: none;">
-                                <div class="loading-spinner"></div> Thinking of ideas...
-                            </div>
-
-                            <button type="button" id="getSuggestionBtn" class="btn btn-gemini">✨ Get Packaging Ideas</button>
                             <button type="submit" class="btn" style="margin-top: 10px;">Submit Request</button>
                         </form>
                 </div>
@@ -1702,7 +1627,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Vijaya Packaging Industries. All Rights Reserved. Designed with care.</p>
+                <p>© <span id="currentYear"></span> Vijaya Packaging Industries. All Rights Reserved. Designed with care.</p>
             </div>
         </div>
     </footer>
@@ -1793,9 +1718,9 @@
                 root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-primary-bright-blue-val, 0, 123, 255)');
             }
              if (body.classList.contains('mobile-menu-open') && themeName === 'dark') {
-                body.classList.add('dark-theme'); // re-apply if mobile-menu-open removed it
+                 body.classList.add('dark-theme'); // re-apply if mobile-menu-open removed it
             } else if (body.classList.contains('mobile-menu-open') && themeName === 'light') {
-                body.classList.remove('dark-theme'); // ensure it\'s just light-theme
+                 body.classList.remove('dark-theme'); // ensure it\'s just light-theme
             }
         }
         
@@ -1891,124 +1816,6 @@
                 }
             }
         });
-
-
-        // Gemini API Integration
-        const getSuggestionBtn = document.getElementById('getSuggestionBtn');
-        const messageTextarea = document.getElementById('message');
-        const suggestionOutputDiv = document.getElementById('gemini-suggestion-output');
-        const suggestionContainerDiv = document.getElementById('gemini-suggestion-output-container');
-        const loadingSpinnerDiv = document.getElementById('gemini-loading-spinner');
-
-        if (getSuggestionBtn) {
-            getSuggestionBtn.addEventListener('click', async () => {
-                const userMessage = messageTextarea.value.trim();
-                if (!userMessage) {
-                    suggestionOutputDiv.innerHTML = '<p style="color: red;">Please describe your packaging needs in the message box first.</p>';
-                    suggestionContainerDiv.style.display = 'block';
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    return;
-                }
-
-                suggestionOutputDiv.innerHTML = ''; 
-                loadingSpinnerDiv.style.display = 'block'; 
-                suggestionContainerDiv.style.display = 'none';
-
-
-                const prompt = `
-                    A potential customer is looking for corrugated packaging. Their message is: "${userMessage}".
-
-                    Based on this, please provide concise and actionable suggestions for Vijaya Packaging Industries. Structure your response under the following headings:
-                    1.  **Suggested Box Types:** (e.g., Regular Slotted Carton (RSC), Die-Cut Box, Full Overlap Box, Telescopic Box). Suggest 1-2 most relevant types.
-                    2.  **Eco-Friendly Material Insights:** (e.g., Consider high recycled content board, specific flute type like B-flute for balance or E-flute for printability, kraft vs. white paper). Mention 1-2 key material aspects.
-                    3.  **Customization & Branding Ideas:** (e.g., Flexographic printing with water-based inks for branding, custom inserts for product protection, unique structural design for unboxing experience). Suggest 1-2 ideas.
-
-                    Keep the overall response brief, helpful, and easy to understand. Focus on actionable advice.
-                    Example of a good concise point: "Consider a Die-Cut Box for a unique shape and branding."
-                `;
-
-                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-                const payload = { contents: chatHistory };
-                // IMPORTANT: Do not hardcode API keys in production. Use environment variables or a secure key management service.
-                const apiKey = "YOUR_API_KEY"; // API key will be injected by the environment
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    let result;
-                    try {
-                        result = await response.json();
-                    } catch (jsonError) {
-                        loadingSpinnerDiv.style.display = 'none';
-                        suggestionContainerDiv.style.display = 'block';
-                        console.error('Error parsing JSON response:', jsonError);
-                        let errorText = "Could not parse server response.";
-                        if (response && typeof response.text === 'function') {
-                            try {
-                                errorText = await response.text();
-                            } catch (textErr) {
-                                // ignore if text cannot be read
-                            }
-                        }
-                        suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Server communication issue. ${errorText}</p>`;
-                        return; 
-                    }
-
-
-                    if (!response.ok) {
-                        const errorMessage = result?.error?.message || `API request failed with status ${response.status}.`;
-                        console.error("API Error Full Payload:", result);
-                        throw new Error(errorMessage);
-                    }
-                    
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    suggestionContainerDiv.style.display = 'block'; 
-
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        
-                        let text = result.candidates[0].content.parts[0].text;
-                        
-                        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); 
-                        text = text.replace(/\n\s*\n/g, '<br><br>'); 
-                        text = text.replace(/\n/g, '<br>'); 
-                        text = text.replace(/(\d\.\s*<br>\s*<strong>.*?<\/strong>|<br>\s*\d\.\s*<strong>.*?<\/strong>)/g, (match) => {
-                            return match.startsWith('<br>') ? `<p style="margin-top:10px;">${match.substring(4)}</p>` : `<p style="margin-top:10px;">${match}</p>`;
-                        });
-                        text = text.replace(/(\d\.\s*<strong>.*?<\/strong>)/g, '<p style="margin-top:10px;">$1</p>');
-
-
-                        suggestionOutputDiv.innerHTML = text;
-                    } else {
-                        if (result.promptFeedback && result.promptFeedback.blockReason) {
-                            let feedbackMessage = `The request was blocked. Reason: ${result.promptFeedback.blockReason}.`;
-                            if (result.promptFeedback.safetyRatings && result.promptFeedback.safetyRatings.length > 0) {
-                                feedbackMessage += " Details: ";
-                                result.promptFeedback.safetyRatings.forEach(rating => {
-                                    feedbackMessage += `${rating.category}: ${rating.probability}; `; 
-                                });
-                            }
-                            suggestionOutputDiv.innerHTML = `<p style="color: orange;">${feedbackMessage} Please rephrase your message and try again.</p>`;
-                            console.error("Prompt Feedback:", result.promptFeedback);
-                        } else {
-                            suggestionOutputDiv.innerHTML = '<p>Sorry, no suggestions were generated. Please try rephrasing your message or try again later.</p>';
-                        }
-                        console.error("No candidates or unexpected API response structure:", result);
-                    }
-                } catch (error) { 
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    suggestionContainerDiv.style.display = 'block'; 
-                    console.error('Error fetching packaging suggestions:', error);
-                    suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Could not fetch suggestions. ${error.message}</p>`;
-                }
-            });
-        }
 
         // Capability Cards Gallery Interaction
         const capabilityCards = document.querySelectorAll('.capability-card');
