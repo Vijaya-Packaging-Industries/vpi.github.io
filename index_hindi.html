@@ -1355,8 +1355,9 @@
 
       @media (max-width: 992px) {
         .about-content,
-        .sustainability-content {
-          flex-direction: column;
+        .sustainability-content,
+        .services-content {
+          flex-direction: column !important;
           text-align: center;
         }
         .about-content .about-text,
@@ -1622,6 +1623,7 @@
             </li>
             <li><a href="#about">हमारे बारे में</a></li>
             <li><a href="#products">उत्पाद</a></li>
+            <li><a href="#services">सेवाएं</a></li>
             <li><a href="#capabilities">क्षमताएँ</a></li>
             <li><a href="#sustainability">स्थिरता</a></li>
             <li><a href="#contact">संपर्क करें</a></li>
@@ -1886,6 +1888,112 @@
                 >और जानें</a
               >
             </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Industrial Tapes.jpg"
+                alt="औद्योगिक टेप"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=टेप';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>औद्योगिक टेप</h3>
+              <p>
+                सीलिंग, शिपिंग और औद्योगिक अनुप्रयोगों के लिए उच्च गुणवत्ता वाले
+                चिपकने वाले टेप। भूरे, पारदर्शी और सफेद रंगों में उपलब्ध।
+              </p>
+              <p class="product-feature-hint">
+                <small><em>कस्टम प्रिंटिंग उपलब्ध!</em></small>
+              </p>
+              <a href="Industrial_Tapes.html" class="btn btn-outline"
+                >और जानें</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="services"
+      style="padding: 80px 0; background-color: var(--bg-color)"
+    >
+      <div class="container">
+        <h2 class="section-title">हमारी प्रिंटिंग सेवाएं</h2>
+        <div
+          class="services-content sustainability-content"
+          style="
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-direction: row-reverse;
+          "
+        >
+          <div class="sustainability-text">
+            <h3>कस्टम ब्रांडिंग और प्रिंटिंग</h3>
+            <p>
+              हमारे उच्च गुणवत्ता वाली प्रिंटिंग सेवाओं के साथ अपनी ब्रांड
+              विजिबिलिटी बढ़ाएं। हम उन्नत जल-आधारित स्याही तकनीक का उपयोग करके
+              मानक भूरे रंग के बक्सों को शक्तिशाली मार्केटिंग टूल्स में बदलते
+              हैं।
+            </p>
+            <div class="eco-features">
+              <div class="eco-feature">
+                <div class="eco-icon">🎨</div>
+                <div>
+                  <h4>लोगो प्रिंटिंग</h4>
+                  <p>
+                    प्रत्येक पैकेज पर अपना ब्रांड लोगो प्रमुखता से प्रदर्शित
+                    करें। हम पेशेवर प्रभाव के लिए स्पष्ट और सुसंगत प्रिंटिंग
+                    सुनिश्चित करते हैं।
+                  </p>
+                </div>
+              </div>
+              <div class="eco-feature">
+                <div class="eco-icon">⚠️</div>
+                <div>
+                  <h4>हैंडलिंग निर्देश</h4>
+                  <p>
+                    यह सुनिश्चित करने के लिए कि आपके उत्पाद सुरक्षित रूप से
+                    पहुँचें, स्पष्ट रूप से देखभाल निर्देश (नाज़ुक, यह हिस्सा
+                    ऊपर, सूखा रखें) प्रिंट करें।
+                  </p>
+                </div>
+              </div>
+              <div class="eco-feature">
+                <div class="eco-icon">📦</div>
+                <div>
+                  <h4>उत्पाद जानकारी</h4>
+                  <p>
+                    दक्षता के लिए बैच नंबर, बारकोड और उत्पाद विवरण सीधे कार्टन
+                    पर प्रिंट करें।
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sustainability-img">
+            <img
+              src="printing_service.jpg"
+              alt="कार्टन पर कस्टम प्रिंटिंग"
+              style="
+                width: 100%;
+                max-width: 500px;
+                border-radius: 8px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+              "
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/500x400/0A2342/FFFFFF?text=Printing+Services';
+              "
+            />
           </div>
         </div>
       </div>
@@ -2938,6 +3046,40 @@
           }
         });
       });
+      // Contact Form Validation & Feedback
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+          let hasError = false;
+
+          if (name.length < 2) {
+            alert("कृपया अपना पूरा नाम दर्ज करें।");
+            hasError = true;
+          } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            alert("कृपया एक वैध ईमेल पता दर्ज करें।");
+            hasError = true;
+          } else if (message.length < 10) {
+            alert("संदेश कम से कम 10 वर्णों का होना चाहिए।");
+            hasError = true;
+          }
+
+          if (hasError) {
+            e.preventDefault();
+          } else {
+            // Optional: Show loading state
+            const submitBtn = contactForm.querySelector(
+              'button[type="submit"]',
+            );
+            if (submitBtn) {
+              submitBtn.textContent = "भेजा जा रहा है...";
+              submitBtn.disabled = true;
+            }
+          }
+        });
+      }
     </script>
   </body>
 </html>

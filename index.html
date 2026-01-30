@@ -1306,8 +1306,9 @@
 
       @media (max-width: 992px) {
         .about-content,
-        .sustainability-content {
-          flex-direction: column;
+        .sustainability-content,
+        .services-content {
+          flex-direction: column !important;
           text-align: center;
         }
         .about-content .about-text,
@@ -1871,7 +1872,15 @@
     >
       <div class="container">
         <h2 class="section-title">Our Printing Services</h2>
-        <div class="sustainability-content" style="flex-direction: row-reverse">
+        <div
+          class="services-content sustainability-content"
+          style="
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-direction: row-reverse;
+          "
+        >
           <div class="sustainability-text">
             <h3>Custom Branding & Printing</h3>
             <p>
@@ -2803,4 +2812,67 @@
             touchEndX = event.changedTouches[0].clientX;
             touchEndY = event.changedTouches[0].clientY;
 
-            // Calculate dista
+            // Calculate distance moved
+            const distX = Math.abs(touchEndX - touchStartX);
+            const distY = Math.abs(touchEndY - touchStartY);
+
+            // Only trigger if it\'s a tap (not a scroll)
+            if (distX < 10 && distY < 10) {
+              if (card.classList.contains("active")) {
+                card.classList.remove("active");
+              } else {
+                capabilityCards.forEach((c) => c.classList.remove("active"));
+                card.classList.add("active");
+              }
+            }
+          }
+        });
+      });
+    </script>
+    <script>
+      const video = document.getElementById("hero-video");
+      const videoSources = ["1.mp4", "2.mp4", "3.mp4", "4.mp4"];
+      let currentVideo = 0;
+
+      video.addEventListener("ended", () => {
+        currentVideo = (currentVideo + 1) % videoSources.length;
+        video.src = videoSources[currentVideo];
+        video.play();
+      });
+      // Contact Form Validation & Feedback
+      const contactForm = document.getElementById("contactForm");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+          let hasError = false;
+
+          if (name.length < 2) {
+            alert("Please enter your full name.");
+            hasError = true;
+          } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+            alert("Please enter a valid email address.");
+            hasError = true;
+          } else if (message.length < 10) {
+            alert("Message should be at least 10 characters long.");
+            hasError = true;
+          }
+
+          if (hasError) {
+            e.preventDefault();
+          } else {
+            // Optional: Show loading state
+            const submitBtn = contactForm.querySelector(
+              'button[type="submit"]',
+            );
+            if (submitBtn) {
+              submitBtn.textContent = "Sending...";
+              submitBtn.disabled = true;
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
