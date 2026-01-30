@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vijaya Packaging Industries - Brochure</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-deep-blue: #0A2342;
+            --primary-dark-blue: #003366;
+            --primary-bright-blue: #007BFF;
+            --accent-orange: #FFA500;
+            --accent-gold: #FFBF00;
+            --light-bg: #f0f8ff;
+            --light-text: #333333;
+            --white: #ffffff;
+            --footer-text: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #eee; /* Grey background for viewing HTML */
+            color: var(--light-text);
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
+            margin: 20px auto;
+            background-color: var(--white);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25mm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden; /* Ensure elements don't spill out */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-deep-blue);
+            font-weight: 700;
+        }
+
+        h1 { font-size: 28pt; margin-bottom: 10px; }
+        h2 { font-size: 20pt; margin-bottom: 15px; border-bottom: 3px solid var(--accent-orange); padding-bottom: 8px; margin-top: 30px;}
+        h3 { font-size: 16pt; margin-bottom: 10px; color: var(--primary-dark-blue); }
+        h4 { font-size: 12pt; margin-bottom: 5px; color: var(--primary-dark-blue); font-weight: 600;}
+
+        p, ul {
+            font-size: 11pt;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: var(--primary-bright-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-orange);
+            text-decoration: underline;
+        }
+
+        .header, .footer {
+            width: calc(100% + 50mm); /* Span full width including padding */
+            margin-left: -25mm;
+            padding: 15px 25mm;
+            box-sizing: border-box;
+            background-color: var(--primary-deep-blue);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .header {
+            padding: 20px 25mm;
+            background-color: var(--white);
+            color: var(--primary-deep-blue);
+            border-bottom: 5px solid var(--accent-orange);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+         .header .logo-img { height: 45px; }
+         .header .logo-text { text-align: left; }
+         .header .logo { font-size: 24px; font-weight: 700; }
+         .header .logo span { color: var(--accent-orange); }
+         .header .logo-subtitle { font-size: 16px; font-weight: 600; }
+
+        .footer {
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 15px 25mm;
+            font-size: 9pt;
+            color: var(--footer-text);
+            text-align: center;
+        }
+        .footer a { color: var(--accent-gold); }
+
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .cover-page .logo-img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .cover-page h1 {
+            font-size: 36pt;
+            color: var(--primary-deep-blue);
+            line-height: 1.2;
+        }
+         .cover-page h1 span { color: var(--accent-orange); }
+        .cover-page p.tagline {
+            font-size: 16pt;
+            color: var(--primary-dark-blue);
+            margin: 20px 0 40px 0;
+            max-width: 80%;
+        }
+        .cover-page .contact-info {
+            font-size: 12pt;
+            font-weight: 600;
+        }
+        .cover-page .contact-info a {
+            color: var(--primary-dark-blue);
+            text-decoration: none;
+        }
+        .cover-page .contact-info a:hover {
+            color: var(--accent-orange);
+        }
+
+        .two-column {
+            display: flex;
+            gap: 20mm;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+        .column { flex: 1; }
+
+        .founder-quote {
+            font-style: italic;
+            color: var(--primary-dark-blue);
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 4px solid var(--accent-orange);
+            background-color: #fdf5e6;
+            font-size: 12pt;
+        }
+
+        .product-list, .capability-list, .sustainability-list {
+            list-style: none;
+            padding: 0;
+        }
+        .product-list li, .capability-list li, .sustainability-list li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-left: 4px solid var(--accent-gold);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .sustainability-list li {
+            display: flex;
+            align-items: flex-start;
+        }
+        .sustainability-list .icon {
+            font-size: 20pt;
+            margin-right: 15px;
+            color: var(--accent-orange);
+            line-height: 1;
+        }
+
+        .cta-box {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .cta-box h2 {
+            color: var(--white);
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 22pt;
+        }
+        .cta-box p { font-size: 13pt; }
+        .cta-box a.btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--accent-orange);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14pt;
+        }
+         .cta-box a.btn:hover { background-color: #f0f0f0; }
+
+        .contact-details { margin-top: 20px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 15px; }
+        .contact-icon { font-size: 18pt; margin-right: 15px; width: 30px; text-align: center; color: var(--accent-orange); }
+
+        .placeholder-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 10pt;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @media print {
+            body { background-color: var(--white); }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 20mm; /* Adjust padding for print if needed */
+                page-break-after: always; /* Ensure each div.page starts a new page */
+            }
+             .page:last-child {
+                page-break-after: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page cover-page">
+        <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none'">
+        <h1>Vijaya <span>Packaging</span><br>Industries</h1>
+        <p class="tagline">Your Trusted Partner for Premium, Eco-Friendly Corrugated Packaging Solutions.</p>
+        <div class="placeholder-img">
+            (Suggestion: Add an attractive image here - maybe a high-quality photo of your best products or your facility)
+        </div>
+        <p class="tagline">Proudly <strong>Woman-Owned</strong> and Operated Since 2019.</p>
+        <div class="contact-info">
+            <p>
+                <a href="https://shorturl.at/aXkKu/">https://shorturl.at/aXkKu</a><br>
+                <a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a> | <a href="tel:+919343830540">+91 93438 30540</a>
+            </p>
+        </div>
+        <div class="footer">
+             Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none'">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <h2>About Vijaya Packaging</h2>
+        <div class="two-column">
+            <div class="column">
+                <h3>Our Story: Innovation & Trust</h3>
+                <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has swiftly grown into a leading and trusted packaging solution provider. As a proud <strong>woman-led enterprise</strong>, we are deeply committed to excellence in everything we do.</p>
+                <p>Our dedication to superior quality, ongoing innovation, and strong sustainability practices has built trust with clients across diverse sectors like FMCG, electronics, pharmaceuticals, and e-commerce.</p>
+
+                <h3>Meet Our Founder</h3>
+                <p>Mrs. Vijayalakshmi D is a pioneer in the packaging industry. Her vision extends beyond creating top-tier, sustainable packaging; she aims to foster economic empowerment within our community. Her leadership has been celebrated with prestigious awards.</p>
+                 <div class="founder-quote">
+                    <p>"We don't just make boxes; we build trust and deliver solutions that protect what's valuable, both for our clients and our planet."<br>– Mrs. Vijayalakshmi D</p>
+                </div>
+            </div>
+            <div class="column">
+                 <div class="placeholder-img" style="height: 250px;">
+                    (Suggestion: Place an image of Mrs. Vijayalakshmi D or your team here)
+                </div>
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li><strong>Unmatched Quality:</strong> We deliver durable and reliable packaging every time.</li>
+                    <li><strong>Woman-Led Enterprise:</strong> Supporting diversity and strong leadership.</li>
+                    <li><strong>Innovative Solutions:</strong> Custom designs and advanced techniques.</li>
+                    <li><strong>Sustainable Focus:</strong> Eco-friendly materials and processes.</li>
+                    <li><strong>Customer-Centric:</strong> Your needs are our priority.</li>
+                    <li><strong>Reliable Delivery:</strong> Ensuring your supply chain runs smoothly.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Learn More: <a href="https://vijaya-packaging-industries.github.io/">vijaya-packaging-industries.github.io</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+             <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none'">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <h2>Our Premium Products</h2>
+                <p>We offer a comprehensive range of high-quality, customizable corrugated packaging solutions.</p>
+                <ul class="product-list">
+                    <li><strong>Regular Slotted Cartons (RSC):</strong> Versatile and widely used for shipping and storage.</li>
+                    <li><strong>Die-Cut Boxes:</strong> Custom shapes for unique products and branding.</li>
+                    <li><strong>Telescoping Containers:</strong> Two-piece boxes for added strength and protection.</li>
+                    <li><strong>Retail Display Packaging:</strong> Eye-catching designs for point-of-purchase.</li>
+                    <li><strong>Heavy-Duty Packaging:</strong> Robust solutions for industrial needs.</li>
+                    <li><strong>Custom Inserts & Dividers:</strong> Internal protection and organization.</li>
+                </ul>
+                 <div class="placeholder-img" style="height: 150px;">
+                    (Suggestion: Add a collage of your different box types here)
+                </div>
+            </div>
+            <div class="column">
+                <h2>Our Core Capabilities</h2>
+                <p>Our state-of-the-art facility and expert team enable us to deliver exceptional results.</p>
+                <ul class="capability-list">
+                    <li>
+                        <h4>Custom Sizing & Design</h4>
+                        <p>Tailored packaging to perfectly fit your product, minimizing waste and maximizing protection with innovative structural designs.</p>
+                    </li>
+                    <li>
+                        <h4>Advanced Printing</h4>
+                        <p>High-quality flexographic and digital printing with vibrant, eco-friendly water-based inks to elevate your brand.</p>
+                    </li>
+                   
+                     <li>
+                        <h4>Prototyping & Testing</h4>
+                        <p>We can create samples and conduct tests to guarantee your packaging performs under real-world conditions.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Quality | Innovation | Sustainability | <a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none'">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        
+
+        <div class="cta-box">
+            <h2>Ready to Elevate Your Packaging?</h2>
+            <p>Partner with us for innovative, sustainable, and high-quality solutions. Let our expertise work for you.</p>
+            <a href="#contact" class="btn" onclick="window.location.href='mailto:vijayapkgindustries@gmail.com?subject=Packaging%20Inquiry%20from%20Brochure'; return false;">Get a Free Quote Today!</a>
+        </div>
+
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div><h4>Address:</h4> <p>Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016</p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div><h4>Phone:</h4> <p><a href="tel:+919343830540">+91 93438 30540</a></p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div><h4>Email:</h4> <p><a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a></p></div>
+            </div>
+             <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div><h4>Website:</h4> <p><a href="https://shorturl.at/aXkKu">https://shorturl.at/aXkKu</a></p></div>
+            </div>
+        </div>
+
+        <div class="footer">
+             © 2025 Vijaya Packaging Industries. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
