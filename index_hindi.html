@@ -572,15 +572,26 @@
         }
       }
 
-      /* Hero Section */
       .hero {
-        background:
-          linear-gradient(rgba(10, 35, 66, 0.7), rgba(0, 51, 102, 0.7)),
-          url("https://placehold.co/1200x600/0A2342/FFFFFF?text=Premium+Packaging")
-            center/cover no-repeat;
+        position: relative;
         color: white;
         padding: 100px 0;
         text-align: center;
+        overflow: hidden;
+        background: rgba(10, 35, 66, 0.7);
+      }
+
+      #hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
       }
       .hero h1 {
         font-size: 42px;
@@ -1666,6 +1677,9 @@
     </header>
 
     <section class="hero">
+      <video autoplay muted playsinline id="hero-video">
+        <source src="1.mp4" type="video/mp4" />
+      </video>
       <div class="container">
         <h1>विजया पैकेजिंग इंडस्ट्रीज</h1>
         <p>
@@ -3078,6 +3092,17 @@
             }
           }
         });
+      });
+    </script>
+    <script>
+      const video = document.getElementById("hero-video");
+      const videoSources = ["1.mp4", "2.mp4", "3.mp4", "4.mp4"];
+      let currentVideo = 0;
+
+      video.addEventListener("ended", () => {
+        currentVideo = (currentVideo + 1) % videoSources.length;
+        video.src = videoSources[currentVideo];
+        video.play();
       });
       // Contact Form Validation & Feedback
       const contactForm = document.getElementById("contactForm");
