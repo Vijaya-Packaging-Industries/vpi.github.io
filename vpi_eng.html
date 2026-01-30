@@ -1,1833 +1,2699 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijaya Packaging Industries - Premium Corrugated Packaging Solutions</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Vijaya Packaging Industries - Premium Corrugated Packaging Solutions
+    </title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://vijayapackaging.com/vpi_eng.html"
+    />
+    <meta
+      property="og:title"
+      content="Vijaya Packaging Industries - Premium Packaging Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Explore our complete range of premium, eco-friendly corrugated packaging and printing services."
+    />
+    <meta property="og:image" content="OG_VPI.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://vijayapackaging.com/vpi_eng.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Vijaya Packaging Industries - Premium Packaging Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Explore our complete range of premium, eco-friendly corrugated packaging and printing services."
+    />
+    <meta property="twitter:image" content="OG_VPI.png" />
     <style>
-        :root {
-            /* Updated Color Palette */
-            --primary-deep-blue: #0A2342; /* For headings, dark backgrounds, primary text */
-            --primary-dark-blue: #003366; /* Alternative dark blue */
-            --primary-bright-blue: #007BFF; /* For links, interactive elements */
-            
-            --accent-orange: #FFA500;     /* Primary accent for CTAs */
-            --accent-gold: #FFBF00;       /* Secondary accent */
+      :root {
+        /* Updated Color Palette */
+        --primary-deep-blue: #0a2342; /* For headings, dark backgrounds, primary text */
+        --primary-dark-blue: #003366; /* Alternative dark blue */
+        --primary-bright-blue: #007bff; /* For links, interactive elements */
 
-            /* Light Theme Variables */
-            --light-bg: #f0f8ff; /* AliceBlue - for a professional, slightly colored background */
-            --light-text: #333333;
-            --light-card-bg: #ffffff;
-            --light-section-title: var(--primary-deep-blue);
-            --light-header-bg: #ffffff;
-            --light-header-text: var(--primary-deep-blue); 
-            --light-footer-bg: var(--primary-deep-blue); 
-            --light-footer-text: #e0e0e0;
+        --accent-orange: #ffa500; /* Primary accent for CTAs */
+        --accent-gold: #ffbf00; /* Secondary accent */
 
-            /* Dark Theme Variables */
-            --dark-bg: #0A192F; /* Very dark blue for dark mode background */
-            --dark-text: #E0E0E0;
-            --dark-card-bg: #172A45; /* Darker blue for cards in dark mode */
-            --dark-section-title: var(--accent-gold); 
-            --dark-header-bg: #172A45;
-            --dark-header-text: var(--light-bg);
-            --dark-footer-bg: #071322;
-            --dark-footer-text: #b0b0b0;
+        /* Light Theme Variables */
+        --light-bg: #f0f8ff; /* AliceBlue - for a professional, slightly colored background */
+        --light-text: #333333;
+        --light-card-bg: #ffffff;
+        --light-section-title: var(--primary-deep-blue);
+        --light-header-bg: #ffffff;
+        --light-header-text: var(--primary-deep-blue);
+        --light-footer-bg: var(--primary-deep-blue);
+        --light-footer-text: #e0e0e0;
 
-            /* Default to light theme */
-            --bg-color: var(--light-bg);
-            --text-color: var(--light-text);
-            --card-bg-color: var(--light-card-bg);
-            --section-title-color: var(--light-section-title);
-            --header-bg-color: var(--light-header-bg);
-            --header-text-color: var(--light-header-text);
-            --footer-bg-color: var(--light-footer-bg);
-            --footer-text-color: var(--light-footer-text);
-            
-            --logo-text-color: var(--primary-deep-blue);
-            --logo-subtitle-color: var(--primary-deep-blue);
-            --nav-link-color: var(--primary-deep-blue);
-            --nav-link-hover-color: var(--accent-orange);
-            
-            --btn-primary-bg: var(--accent-orange);
-            --btn-primary-text: white;
-            --btn-primary-hover-bg: var(--accent-gold);
+        /* Dark Theme Variables */
+        --dark-bg: #0a192f; /* Very dark blue for dark mode background */
+        --dark-text: #e0e0e0;
+        --dark-card-bg: #172a45; /* Darker blue for cards in dark mode */
+        --dark-section-title: var(--accent-gold);
+        --dark-header-bg: #172a45;
+        --dark-header-text: var(--light-bg);
+        --dark-footer-bg: #071322;
+        --dark-footer-text: #b0b0b0;
 
-            --btn-outline-text-color: var(--accent-orange);
-            --btn-outline-border-color: var(--accent-orange);
-            --btn-outline-hover-bg-color: var(--accent-orange);
-            --btn-outline-hover-text-color: white;
-            
-            --form-control-border: #dddddd;
-            --form-control-focus-border: var(--primary-bright-blue);
-            --product-img-bg: #f5f5f5;
-            --testimonial-border: var(--primary-bright-blue);
-            --contact-icon-bg: var(--primary-bright-blue);
-            --contact-icon-text: white;
-            --social-link-bg: #444444; /* Default for light theme footer */
-        }
+        /* Default to light theme */
+        --bg-color: var(--light-bg);
+        --text-color: var(--light-text);
+        --card-bg-color: var(--light-card-bg);
+        --section-title-color: var(--light-section-title);
+        --header-bg-color: var(--light-header-bg);
+        --header-text-color: var(--light-header-text);
+        --footer-bg-color: var(--light-footer-bg);
+        --footer-text-color: var(--light-footer-text);
 
-        body.dark-theme {
-            --bg-color: var(--dark-bg);
-            --text-color: var(--dark-text);
-            --card-bg-color: var(--dark-card-bg);
-            --section-title-color: var(--dark-section-title);
-            --header-bg-color: var(--dark-header-bg);
-            --header-text-color: var(--dark-header-text);
-            --footer-bg-color: var(--dark-footer-bg);
-            --footer-text-color: var(--dark-footer-text);
+        --logo-text-color: var(--primary-deep-blue);
+        --logo-subtitle-color: var(--primary-deep-blue);
+        --nav-link-color: var(--primary-deep-blue);
+        --nav-link-hover-color: var(--accent-orange);
 
-            --logo-text-color: var(--accent-gold);
-            --logo-subtitle-color: var(--accent-gold);
-            --nav-link-color: var(--light-bg); 
-            --nav-link-hover-color: var(--accent-orange);
+        --btn-primary-bg: var(--accent-orange);
+        --btn-primary-text: white;
+        --btn-primary-hover-bg: var(--accent-gold);
 
-            --btn-primary-bg: var(--accent-orange);
-            --btn-primary-text: var(--primary-deep-blue);
-            --btn-primary-hover-bg: var(--accent-gold);
-            
-            --btn-outline-text-color: var(--accent-gold);
-            --btn-outline-border-color: var(--accent-gold);
-            --btn-outline-hover-bg-color: var(--accent-gold);
-            --btn-outline-hover-text-color: var(--dark-bg);
-            
-            --form-control-border: #555555;
-            --form-control-focus-border: var(--accent-gold);
-            --product-img-bg: #4a4a4a;
-            --testimonial-border: var(--accent-gold);
-            --contact-icon-bg: var(--accent-gold);
-            --contact-icon-text: var(--dark-bg);
-            --social-link-bg: #555555;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Added Inter as primary */
-        }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            position: relative; 
-            transition: background-color 0.3s ease, color 0.3s ease;
-            font-size: 16px; /* Base font size */
-        }
-        body.mobile-menu-open {
-            overflow: hidden; /* Prevent body scroll when mobile menu is open */
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary-bright-blue);
-            transition: all 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--accent-orange);
-        }
-        
+        --btn-outline-text-color: var(--accent-orange);
+        --btn-outline-border-color: var(--accent-orange);
+        --btn-outline-hover-bg-color: var(--accent-orange);
+        --btn-outline-hover-text-color: white;
+
+        --form-control-border: #dddddd;
+        --form-control-focus-border: var(--primary-bright-blue);
+        --product-img-bg: #f5f5f5;
+        --testimonial-border: var(--primary-bright-blue);
+        --contact-icon-bg: var(--primary-bright-blue);
+        --contact-icon-text: white;
+        --social-link-bg: #444444; /* Default for light theme footer */
+      }
+
+      body.dark-theme {
+        --bg-color: var(--dark-bg);
+        --text-color: var(--dark-text);
+        --card-bg-color: var(--dark-card-bg);
+        --section-title-color: var(--dark-section-title);
+        --header-bg-color: var(--dark-header-bg);
+        --header-text-color: var(--dark-header-text);
+        --footer-bg-color: var(--dark-footer-bg);
+        --footer-text-color: var(--dark-footer-text);
+
+        --logo-text-color: var(--accent-gold);
+        --logo-subtitle-color: var(--accent-gold);
+        --nav-link-color: var(--light-bg);
+        --nav-link-hover-color: var(--accent-orange);
+
+        --btn-primary-bg: var(--accent-orange);
+        --btn-primary-text: var(--primary-deep-blue);
+        --btn-primary-hover-bg: var(--accent-gold);
+
+        --btn-outline-text-color: var(--accent-gold);
+        --btn-outline-border-color: var(--accent-gold);
+        --btn-outline-hover-bg-color: var(--accent-gold);
+        --btn-outline-hover-text-color: var(--dark-bg);
+
+        --form-control-border: #555555;
+        --form-control-focus-border: var(--accent-gold);
+        --product-img-bg: #4a4a4a;
+        --testimonial-border: var(--accent-gold);
+        --contact-icon-bg: var(--accent-gold);
+        --contact-icon-text: var(--dark-bg);
+        --social-link-bg: #555555;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Added Inter as primary */
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        position: relative;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+        font-size: 16px; /* Base font size */
+      }
+      body.mobile-menu-open {
+        overflow: hidden; /* Prevent body scroll when mobile menu is open */
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-bright-blue);
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--accent-orange);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (max-width: 480px) {
         .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+          padding: 0 10px; /* Less padding on very small screens */
         }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 10px; /* Less padding on very small screens */
-            }
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 28px; 
-            background-color: var(--btn-primary-bg);
-            color: var(--btn-primary-text);
-            border-radius: 5px; 
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: var(--btn-primary-hover-bg);
-            color: var(--btn-primary-text); 
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--btn-outline-border-color);
-            color: var(--btn-outline-text-color);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--btn-outline-hover-bg-color);
-            color: var(--btn-outline-hover-text-color);
-        }
+      }
 
-        .btn-gemini { /* Style for the new Gemini button */
-            background-color: var(--primary-bright-blue);
-            color: white;
-            margin-top: 10px;
-        }
-        .btn-gemini:hover {
-            background-color: var(--primary-deep-blue);
-        }
-        body.dark-theme .btn-gemini {
-            background-color: var(--accent-gold);
-            color: var(--primary-deep-blue);
-        }
-        body.dark-theme .btn-gemini:hover {
-            background-color: var(--accent-orange);
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        /* Header */
-        header {
-            background-color: var(--header-bg-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); 
-            position: sticky;
-            top: 0;
-            z-index: 1000; 
-            transition: background-color 0.3s ease;
-            padding: 0; /* Adjusted padding to be handled by container or specific elements */
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0; 
-            position: relative; /* For mobile menu positioning */
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo-link {
-            display: flex;
-            align-items: center;
-            margin-right: 10px;
-        }
-        
-        .logo-img {
-            height: 35px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .logo-link:hover .logo-img {
-            transform: scale(1.05);
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-        }
-        
-        .logo {
-            font-size: 22px; 
-            font-weight: 700;
-            color: var(--logo-text-color);
-            margin-bottom: 2px;
-        }
-        
-        .logo span {
-            color: var(--accent-orange);
-        }
-        
-        .logo-subtitle {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--logo-subtitle-color);
-            letter-spacing: 0.5px;
-        }
-        
-        /* Desktop Navigation Styles */
-        nav { /* Renamed from #main-navigation for simpler targeting initially */
-             /* Default state for desktop */
-        }
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background-color: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
+        border-radius: 5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        cursor: pointer;
+      }
 
-        nav ul {
-            display: flex;
-            align-items: center; 
-            list-style: none;
-            padding: 0; margin: 0;
-        }
-        
-        nav ul li {
-            margin-left: 30px; 
-            position: relative; 
-        }
-        
-        nav ul li a,
-        .language-btn { /* Original styles for desktop */
-            font-weight: 600;
-            font-size: 15px; 
-            color: var(--nav-link-color);
-            padding: 8px 12px; 
-            border-radius: 4px;
-            transition: color 0.3s ease, border-color 0.3s ease;
-            background: none;
-            border: 1px solid transparent; 
-            cursor: pointer;
-            display: inline-flex; 
-            align-items: center;
-            text-decoration: none;
-        }
+      .btn:hover {
+        background-color: var(--btn-primary-hover-bg);
+        color: var(--btn-primary-text);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
 
-        .language-btn {
-             border: 1px solid var(--nav-link-color); 
-        }
-        
-        nav ul li a:hover,
-        .language-btn:hover {
-            color: var(--nav-link-hover-color);
-            border-color: var(--nav-link-hover-color); 
-        }
-        nav ul li a.active { 
-            color: var(--accent-orange);
-            font-weight: 700;
-        }
+      .btn-outline {
+        background-color: transparent;
+        border: 2px solid var(--btn-outline-border-color);
+        color: var(--btn-outline-text-color);
+      }
 
-        .language-dropdown { /* Original for desktop */
-            display: none; 
-            position: absolute;
-            top: calc(100% + 5px); 
-            left: 50%; 
-            transform: translateX(-50%); 
-            background-color: var(--card-bg-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            border-radius: 4px;
-            padding: 8px 0;
-            z-index: 1001; 
-            min-width: 120px; 
-            border: 1px solid var(--form-control-border);
-        }
+      .btn-outline:hover {
+        background-color: var(--btn-outline-hover-bg-color);
+        color: var(--btn-outline-hover-text-color);
+      }
 
-        .language-dropdown a { /* Original for desktop */
-            display: block;
-            padding: 10px 20px;
-            color: var(--text-color);
-            white-space: nowrap;
-            border: none; 
-            font-size: 15px; 
-        }
+      .btn-gemini {
+        /* Style for the new Gemini button */
+        background-color: var(--primary-bright-blue);
+        color: white;
+        margin-top: 10px;
+      }
+      .btn-gemini:hover {
+        background-color: var(--primary-deep-blue);
+      }
+      body.dark-theme .btn-gemini {
+        background-color: var(--accent-gold);
+        color: var(--primary-deep-blue);
+      }
+      body.dark-theme .btn-gemini:hover {
+        background-color: var(--accent-orange);
+      }
 
-        .language-dropdown a:hover { /* Original for desktop */
-            background-color: var(--bg-color); 
-            color: var(--accent-orange); 
-            border: none;
-        }
-        
-        .language-btn-container.open .language-dropdown {
-            display: block; 
-        }
-        .language-btn .icon {
-            margin-right: 6px;
-        }
+      .text-center {
+        text-align: center;
+      }
 
-        /* Mobile Menu Toggle Button */
+      /* Header */
+      header {
+        background-color: var(--header-bg-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+        padding: 0; /* Adjusted padding to be handled by container or specific elements */
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        position: relative; /* For mobile menu positioning */
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-link {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .logo-img {
+        height: 35px;
+        width: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-link:hover .logo-img {
+        transform: scale(1.05);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--logo-text-color);
+        margin-bottom: 2px;
+      }
+
+      .logo span {
+        color: var(--accent-orange);
+      }
+
+      .logo-subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--logo-subtitle-color);
+        letter-spacing: 0.5px;
+      }
+
+      /* Desktop Navigation Styles */
+      nav {
+        /* Renamed from #main-navigation for simpler targeting initially */
+        /* Default state for desktop */
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+        position: relative;
+      }
+
+      nav ul li a,
+      .language-btn {
+        /* Original styles for desktop */
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--nav-link-color);
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease;
+        background: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .language-btn {
+        border: 1px solid var(--nav-link-color);
+      }
+
+      nav ul li a:hover,
+      .language-btn:hover {
+        color: var(--nav-link-hover-color);
+        border-color: var(--nav-link-hover-color);
+      }
+      nav ul li a.active {
+        color: var(--accent-orange);
+        font-weight: 700;
+      }
+
+      .language-dropdown {
+        /* Original for desktop */
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--card-bg-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 8px 0;
+        z-index: 1001;
+        min-width: 120px;
+        border: 1px solid var(--form-control-border);
+      }
+
+      .language-dropdown a {
+        /* Original for desktop */
+        display: block;
+        padding: 10px 20px;
+        color: var(--text-color);
+        white-space: nowrap;
+        border: none;
+        font-size: 15px;
+      }
+
+      .language-dropdown a:hover {
+        /* Original for desktop */
+        background-color: var(--bg-color);
+        color: var(--accent-orange);
+        border: none;
+      }
+
+      .language-btn-container.open .language-dropdown {
+        display: block;
+      }
+      .language-btn .icon {
+        margin-right: 6px;
+      }
+
+      /* Mobile Menu Toggle Button */
+      .mobile-menu-toggle {
+        display: none; /* Hidden by default, shown in media query */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px; /* Good touch target */
+        z-index: 1005; /* Above sticky header content, below opened menu */
+        margin-left: auto; /* Pushes to the right if nav is also present for a moment */
+      }
+
+      .mobile-menu-toggle .menu-icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--nav-link-color); /* Consistent with nav links */
+        margin: 5px 0;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+        border-radius: 1px;
+      }
+      body.dark-theme .mobile-menu-toggle .menu-icon-bar {
+        background-color: var(
+          --nav-link-color
+        ); /* Ensure dark theme uses its nav link color */
+      }
+
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+      }
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      /* Mobile Navigation Container (the <nav> tag with ID) */
+      #main-navigation {
+        /* Styles for when it's hidden on mobile by default */
+      }
+
+      /* Styles for when mobile menu is open */
+      #main-navigation.open {
+        display: block;
+        position: absolute;
+        top: 100%; /* Below the header block */
+        left: 0;
+        right: 0;
+        background-color: var(--header-bg-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1002; /* Above content, below toggle if it needs to overlap */
+        border-top: 1px solid var(--form-control-border);
+        max-height: calc(
+          100vh - 60px
+        ); /* Example: viewport height minus header height */
+        overflow-y: auto; /* Scroll if content exceeds height */
+        padding-top: 5px; /* Add a little space at the top */
+      }
+
+      #main-navigation.open ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0; /* Padding for the list itself */
+      }
+
+      #main-navigation.open ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--form-control-border);
+      }
+      #main-navigation.open ul li:last-child {
+        border-bottom: none;
+      }
+
+      #main-navigation.open ul li a,
+      #main-navigation.open .language-btn {
+        display: block;
+        padding: 15px 20px; /* Generous padding for touch */
+        color: var(--nav-link-color);
+        font-weight: 600;
+        border: none; /* Remove desktop borders */
+        border-radius: 0;
+      }
+      #main-navigation.open ul li a:hover,
+      #main-navigation.open .language-btn:hover {
+        background-color: var(--bg-color); /* Subtle hover */
+        color: var(--nav-link-hover-color);
+      }
+
+      #main-navigation.open .language-btn-container {
+        width: 100%;
+        display: block;
+        text-align: center;
+        /* Stacks like other li items */
+      }
+      #main-navigation.open .language-dropdown {
+        position: static; /* Flow naturally in the mobile menu */
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-top: 1px dashed var(--form-control-border); /* Separator within language section */
+        background-color: var(--header-bg-color); /* Match parent menu */
+        min-width: auto;
+        padding: 0;
+      }
+      #main-navigation.open .language-dropdown a {
+        padding: 12px 20px; /* Consistent padding */
+        color: var(--nav-link-color);
+      }
+      #main-navigation.open .language-dropdown a:hover {
+        background-color: var(--bg-color);
+        color: var(--accent-orange);
+      }
+
+      /* Media Query for Mobile Navigation (up to 1024px) */
+      @media (max-width: 1024px) {
         .mobile-menu-toggle {
-            display: none; /* Hidden by default, shown in media query */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 15px; /* Good touch target */
-            z-index: 1005; /* Above sticky header content, below opened menu */
-            margin-left: auto; /* Pushes to the right if nav is also present for a moment */
+          display: block; /* Show hamburger */
+          position: relative;
+          padding: 10px;
+          margin-left: 5px;
         }
 
-        .mobile-menu-toggle .menu-icon-bar {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: var(--nav-link-color); /* Consistent with nav links */
-            margin: 5px 0;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            border-radius: 1px;
-        }
-        body.dark-theme .mobile-menu-toggle .menu-icon-bar {
-            background-color: var(--nav-link-color); /* Ensure dark theme uses its nav link color */
+        .logo-container {
+          flex-shrink: 1; /* Allow logo container to shrink if needed */
         }
 
-        .mobile-menu-toggle.open .menu-icon-bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        .mobile-menu-toggle.open .menu-icon-bar:nth-child(2) {
-            opacity: 0;
-        }
-        .mobile-menu-toggle.open .menu-icon-bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-        
-        /* Mobile Navigation Container (the <nav> tag with ID) */
-        #main-navigation {
-            /* Styles for when it's hidden on mobile by default */
+        .logo {
+          font-size: 20px; /* Slightly smaller font size */
+          white-space: nowrap; /* Prevent text wrapping */
+          margin-bottom: 1px;
         }
 
-        /* Styles for when mobile menu is open */
+        .logo-subtitle {
+          font-size: 12px;
+        }
+
+        nav {
+          /* The desktop nav container */
+          display: none; /* Hide desktop nav container */
+        }
         #main-navigation.open {
-            display: block;
-            position: absolute;
-            top: 100%; /* Below the header block */
-            left: 0;
-            right: 0;
-            background-color: var(--header-bg-color);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            z-index: 1002; /* Above content, below toggle if it needs to overlap */
-            border-top: 1px solid var(--form-control-border);
-            max-height: calc(100vh - 60px); /* Example: viewport height minus header height */
-            overflow-y: auto; /* Scroll if content exceeds height */
-            padding-top: 5px; /* Add a little space at the top */
+          /* This rule now correctly targets the <nav id="main-navigation"> */
+          display: block;
         }
+      }
 
-        #main-navigation.open ul {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 10px 0; /* Padding for the list itself */
-        }
+      /* Hero Section */
+      .hero {
+        background:
+          linear-gradient(rgba(10, 35, 66, 0.7), rgba(0, 51, 102, 0.7)),
+          url("https://placehold.co/1200x600/0A2342/FFFFFF?text=Premium+Packaging")
+            center/cover no-repeat;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto 30px auto;
+        line-height: 1.7;
+      }
+      .hero-btns {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
 
-        #main-navigation.open ul li {
-            margin: 0;
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid var(--form-control-border);
-        }
-        #main-navigation.open ul li:last-child {
-            border-bottom: none;
-        }
-        
-        #main-navigation.open ul li a,
-        #main-navigation.open .language-btn {
-            display: block;
-            padding: 15px 20px; /* Generous padding for touch */
-            color: var(--nav-link-color);
-            font-weight: 600;
-            border: none; /* Remove desktop borders */
-            border-radius: 0;
-        }
-        #main-navigation.open ul li a:hover,
-        #main-navigation.open .language-btn:hover {
-            background-color: var(--bg-color); /* Subtle hover */
-            color: var(--nav-link-hover-color);
-        }
+      .section-title {
+        font-size: 36px;
+        color: var(--section-title-color);
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+        font-weight: 700;
+      }
 
-        #main-navigation.open .language-btn-container {
-             width: 100%;
-    display: block;
-    text-align: center;
-            /* Stacks like other li items */
-        }
-        #main-navigation.open .language-dropdown {
-            position: static; /* Flow naturally in the mobile menu */
-            transform: none;
-            box-shadow: none;
-            border: none;
-            border-top: 1px dashed var(--form-control-border); /* Separator within language section */
-            background-color: var(--header-bg-color); /* Match parent menu */
-            min-width: auto;
-            padding: 0;
-        }
-        #main-navigation.open .language-dropdown a {
-             padding: 12px 20px; /* Consistent padding */
-             color: var(--nav-link-color);
-        }
-         #main-navigation.open .language-dropdown a:hover {
-            background-color: var(--bg-color);
-            color: var(--accent-orange);
-        }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--accent-orange);
+        border-radius: 2px;
+      }
 
+      /* About Section */
+      .about {
+        padding: 80px 0;
+        background-color: var(--card-bg-color);
+      }
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-top: 40px;
+      }
 
-        /* Media Query for Mobile Navigation (up to 1024px) */
-        @media (max-width: 1024px) {
-            .mobile-menu-toggle {
-                display: block; /* Show hamburger */
-                position: relative;
-                padding: 10px;
-                margin-left: 5px;
-            }
-            
-            .logo-container {
-                flex-shrink: 1; /* Allow logo container to shrink if needed */
-            }
-            
-            .logo {
-                font-size: 20px; /* Slightly smaller font size */
-                white-space: nowrap; /* Prevent text wrapping */
-                margin-bottom: 1px;
-            }
-            
-            .logo-subtitle {
-                font-size: 12px;
-            }
-            
-            nav { /* The desktop nav container */
-                 display: none; /* Hide desktop nav container */
-            }
-            #main-navigation.open { /* This rule now correctly targets the <nav id="main-navigation"> */
-                display: block;
-            }
-        }
+      .about-text {
+        flex: 1;
+      }
+      .about-text h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: var(--primary-dark-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .about-text h3 {
+        color: var(--accent-gold);
+      }
+      .about-text p {
+        margin-bottom: 15px;
+        font-size: 17px;
+        opacity: 0.9;
+      }
+      .about-img {
+        flex: 1;
+        text-align: center;
+      }
+      .about-img img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .founder-quote {
+        font-style: italic;
+        color: var(--primary-dark-blue);
+        margin-top: 20px;
+        padding: 15px;
+        border-left: 3px solid var(--accent-orange);
+        background-color: #fdf5e6;
+      }
+      body.dark-theme .founder-quote {
+        background-color: var(--dark-card-bg);
+        border-left-color: var(--accent-gold);
+        color: var(--dark-text);
+      }
 
+      /* Products Section */
+      .products {
+        padding: 80px 0;
+        background-color: var(--bg-color);
+      }
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .product-card {
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        flex-direction: column;
+      }
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+      }
+      .product-card:hover .product-img img {
+        transform: scale(1.05);
+      }
+      .product-img {
+        width: 100%;
+        height: 220px;
+        background-color: var(--product-img-bg);
+        overflow: hidden;
+      }
+      .product-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .product-info {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .product-info h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: var(--primary-deep-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .product-info h3 {
+        color: var(--accent-gold);
+      }
+      .product-info p {
+        color: var(--text-color);
+        opacity: 0.85;
+        margin-bottom: 15px;
+        flex-grow: 1;
+      }
+      .product-feature-hint {
+        font-size: 0.85em;
+        color: var(--primary-bright-blue);
+        margin-bottom: 15px;
+        font-style: italic;
+      }
+      body.dark-theme .product-feature-hint {
+        color: var(--accent-gold);
+      }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(0, 51, 102, 0.7)), url('https://placehold.co/1200x600/0A2342/FFFFFF?text=Premium+Packaging') center/cover no-repeat; 
-            color: white;
-            padding: 100px 0; 
-            text-align: center;
+      /* Capabilities Section */
+      .capabilities {
+        padding: 80px 0;
+        background-color: var(--card-bg-color);
+      }
+      .capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .capability-card {
+        background-color: var(--bg-color);
+        body.dark-theme & {
+          background-color: var(--dark-card-bg);
         }
-        .hero h1 {
-            font-size: 42px; 
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            line-height: 1.7;
-        }
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .capability-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      }
+      .capability-collage {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        cursor: pointer;
+      }
 
+      /* Default state - show cover image */
+      .capability-cover-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        transition: opacity 0.4s ease-in-out;
+        z-index: 2;
+      }
 
-        .section-title {
-            font-size: 36px; 
-            color: var(--section-title-color);
-            margin-bottom: 30px; 
-            text-align: center;
-            position: relative;
-            padding-bottom: 20px; 
-            font-weight: 700;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px; 
-            height: 4px; 
-            background-color: var(--accent-orange);
-            border-radius: 2px;
-        }
+      /* Gallery images (hidden by default) */
+      .capability-gallery {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        z-index: 1;
+      }
 
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background-color: var(--card-bg-color); 
-        }
-         .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px; 
-            margin-top: 40px;
-        }
-        
-        .about-text { flex: 1; }
-        .about-text h3 { font-size: 26px; margin-bottom: 20px; color: var(--primary-dark-blue); font-weight: 600; }
-        body.dark-theme .about-text h3 { color: var(--accent-gold); }
-        .about-text p { margin-bottom: 15px; font-size: 17px; opacity: 0.9;}
-        .about-img { flex: 1; text-align: center; }
-        .about-img img { 
-            width: 100%; 
-            max-width: 450px; 
-            border-radius: 8px; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-        }
-        .founder-quote {
-            font-style: italic;
-            color: var(--primary-dark-blue);
-            margin-top: 20px;
-            padding: 15px;
-            border-left: 3px solid var(--accent-orange);
-            background-color: #fdf5e6; 
-        }
-        body.dark-theme .founder-quote {
-            background-color: var(--dark-card-bg); 
-            border-left-color: var(--accent-gold);
-            color: var(--dark-text);
-        }
+      .capability-gallery-img {
+        width: calc(100% / 3);
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease-in-out;
+      }
 
+      /* Hover/active state */
+      .capability-card.active .capability-cover-img,
+      .capability-card:hover .capability-cover-img {
+        opacity: 0;
+      }
 
-        /* Products Section */
-        .products { padding: 80px 0; background-color: var(--bg-color); }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .product-card { 
-            background-color: var(--card-bg-color); 
-            border-radius: 8px; 
-            overflow: hidden; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.07); 
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
-            display: flex;
-            flex-direction: column;
-        }
-        .product-card:hover { 
-            transform: translateY(-10px); 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12); 
-        }
-        .product-card:hover .product-img img { 
-            transform: scale(1.05); 
-        }
-        .product-img { 
-            width: 100%; 
-            height: 220px; 
-            background-color: var(--product-img-bg); 
-            overflow: hidden; 
-        }
-        .product-img img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            display: block; 
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); 
-        }
-        .product-info { 
-            padding: 25px; 
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .product-info h3 { 
-            font-size: 22px; 
-            margin-bottom: 10px; 
-            color: var(--primary-deep-blue); 
-            font-weight: 600;
-        }
-        body.dark-theme .product-info h3 { color: var(--accent-gold); }
-        .product-info p { color: var(--text-color); opacity: 0.85; margin-bottom: 15px; flex-grow: 1; }
-        .product-feature-hint {
-            font-size: 0.85em;
-            color: var(--primary-bright-blue);
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        body.dark-theme .product-feature-hint { color: var(--accent-gold); }
+      .capability-card.active .capability-gallery,
+      .capability-card:hover .capability-gallery {
+        opacity: 1;
+      }
 
+      .capability-card.active .capability-gallery-img,
+      .capability-card:hover .capability-gallery-img {
+        transform: scale(1.05);
+      }
 
-        /* Capabilities Section */
-        .capabilities {
-            padding: 80px 0;
-            background-color: var(--card-bg-color); 
-        }
-        .capabilities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .capability-card { 
-            background-color: var(--bg-color); 
-            body.dark-theme & { background-color: var(--dark-card-bg); }
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            display: flex; 
-            flex-direction: column; 
-            overflow: hidden; 
-        }
-         .capability-card:hover {
-            transform: translateY(-5px) scale(1.02); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-        }
-        .capability-collage {
-            width: 100%;
-            height: 250px; 
-            position: relative; 
-            display: flex; 
-            overflow: hidden; 
-            cursor: pointer;
-        }
-        
-        /* Default state - show cover image */
-        .capability-cover-img {
-            width: 100%; 
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 1;
-            transition: opacity 0.4s ease-in-out;
-            z-index: 2;
-        }
-        
-        /* Gallery images (hidden by default) */
-        .capability-gallery {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            opacity: 0;
-            transition: opacity 0.4s ease-in-out;
-            z-index: 1;
-        }
-        
-        .capability-gallery-img {
-            width: calc(100% / 3); 
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease-in-out;
-        }
-        
-        /* Hover/active state */
-        .capability-card.active .capability-cover-img,
+      /* Disable hover effect on mobile devices to prevent issues */
+      @media (max-width: 768px) {
         .capability-card:hover .capability-cover-img {
-            opacity: 0;
+          opacity: 1; /* Keep cover image visible on hover for mobile */
         }
-        
-        .capability-card.active .capability-gallery,
+
         .capability-card:hover .capability-gallery {
-            opacity: 1;
+          opacity: 0; /* Keep gallery hidden on hover for mobile */
         }
-        
-        .capability-card.active .capability-gallery-img,
+
         .capability-card:hover .capability-gallery-img {
-            transform: scale(1.05);
-        }
-        
-        /* Disable hover effect on mobile devices to prevent issues */
-        @media (max-width: 768px) {
-            .capability-card:hover .capability-cover-img {
-                opacity: 1; /* Keep cover image visible on hover for mobile */
-            }
-            
-            .capability-card:hover .capability-gallery {
-                opacity: 0; /* Keep gallery hidden on hover for mobile */
-            }
-            
-            .capability-card:hover .capability-gallery-img {
-                transform: none; /* No transform on hover for mobile */
-            }
-            
-            /* Only show gallery on active state for mobile */
-            .capability-card.active .capability-cover-img {
-                opacity: 0;
-            }
-            
-            .capability-card.active .capability-gallery {
-                opacity: 1;
-            }
-        }
-        
-        /* No eye emoji indicator */
-        .capability-text-content {
-            padding: 25px; 
-            text-align: center; 
-            flex-grow: 1; 
-        }
-        .capability-card h3 {
-            font-size: 22px; 
-            margin-bottom: 12px;
-            color: var(--primary-dark-blue); 
-            font-weight: 600;
-        }
-        body.dark-theme .capability-card h3 { color: var(--accent-gold); }
-        .capability-card p {
-            font-size: 16px; 
-            color: var(--text-color);
-            opacity: 0.85;
-            line-height: 1.7;
+          transform: none; /* No transform on hover for mobile */
         }
 
-        /* Sustainability Section */
-        .sustainability { padding: 80px 0; background-color: var(--bg-color); }
-        .sustainability-content { display: flex; align-items: center; gap: 50px; margin-top: 40px; }
-        .sustainability-img { flex: 1; text-align: center; }
-        .sustainability-img img { 
-            width: 100%; 
-            max-width: 500px; 
-            border-radius: 8px; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .sustainability-text { flex: 1; }
-        .sustainability-text h3 { font-size: 26px; margin-bottom: 20px; color: var(--primary-dark-blue); font-weight: 600;}
-        body.dark-theme .sustainability-text h3 { color: var(--accent-gold); }
-        .sustainability-text p { margin-bottom: 15px; font-size: 17px; opacity: 0.9;}
-        .eco-features { margin-top: 30px; }
-        .eco-feature { display: flex; align-items: flex-start; margin-bottom: 20px; }
-        .eco-icon { 
-            width: 45px; height: 45px; 
-            border-radius: 50%; 
-            background-color: var(--accent-orange); 
-            color: white; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin-right: 20px; 
-            font-size: 22px; 
-            flex-shrink: 0;
-        }
-        body.dark-theme .eco-icon { background-color: var(--accent-gold); color: var(--primary-deep-blue); }
-        .eco-feature h4 { font-size: 18px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600;}
-        body.dark-theme .eco-feature h4 { color: var(--light-text); }
-        .eco-feature p { font-size: 15px; opacity: 0.8; margin-bottom: 0; }
-        
-        /* Testimonials Section */
-        .testimonials { padding: 80px 0; background-color: var(--card-bg-color); } 
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
-        .testimonial-card { 
-            background-color: var(--bg-color); 
-            body.dark-theme & { background-color: var(--dark-card-bg); }
-            border-left: 5px solid var(--testimonial-border); 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.07); 
-            padding: 30px; 
-            border-radius: 8px; 
-        }
-        .testimonial-text { font-style: italic; margin-bottom: 25px; color: var(--text-color); opacity: 0.9; font-size: 17px; line-height: 1.7;}
-        .testimonial-author { display: flex; align-items: center; }
-        .author-img { width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; background-color: var(--product-img-bg); overflow: hidden; }
-        .author-img img { width: 100%; height: 100%; object-fit: cover; }
-        .author-info h4 { font-size: 17px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600; }
-        body.dark-theme .author-info h4 { color: var(--light-text); }
-        .author-info p { color: var(--text-color); opacity: 0.75; font-size: 14px; }
-
-        /* CTA Section */
-        .cta { 
-            padding: 80px 0; 
-            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(0, 51, 102, 0.8)), url('https://placehold.co/1200x400/0A2342/FFFFFF?text=Get+In+Touch') center/cover no-repeat; 
-            color: white; 
-            text-align: center; 
-        }
-        .cta h2 { font-size: 38px; margin-bottom: 20px; font-weight: 700; }
-        .cta p { max-width: 750px; margin: 0 auto 35px; font-size: 18px; line-height: 1.7;}
-
-        /* Contact Section */
-        .contact { padding: 80px 0; background-color: var(--bg-color); }
-        .contact-content { display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap; }
-        .contact-info { flex: 1; min-width: 300px; }
-        .contact-info h3 { font-size: 26px; margin-bottom: 25px; color: var(--primary-dark-blue); font-weight: 600;}
-        body.dark-theme .contact-info h3 { color: var(--accent-gold); }
-        .contact-details { margin-bottom: 30px; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 20px; }
-        .contact-link { 
-            text-decoration: none; 
-            color: inherit; 
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            padding: 10px;
-            margin: -10px;
-            cursor: pointer;
-        }
-        .contact-link:hover { 
-            background-color: rgba(0, 0, 0, 0.05);
-            transform: translateY(-2px);
-        }
-        body.dark-theme .contact-link:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-        .contact-icon { 
-            width: 45px; height: 45px; 
-            border-radius: 50%; 
-            background-color: var(--contact-icon-bg); 
-            color: var(--contact-icon-text); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin-right: 20px; 
-            font-size: 20px; 
-            flex-shrink: 0;
-        }
-        .contact-item div h4 { font-size: 18px; margin-bottom: 5px; color: var(--primary-deep-blue); font-weight: 600;}
-        .contact-link div h4 { position: relative; display: inline-block; }
-        .contact-link div h4::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--accent-orange);
-            transition: width 0.3s ease;
-        }
-        .contact-link:hover div h4::after {
-            width: 100%;
-        }
-        body.dark-theme .contact-item div h4 { color: var(--light-text); }
-        .contact-item div p { font-size: 16px; opacity: 0.9; }
-
-        .contact-form { 
-            flex: 1.5; 
-            min-width: 320px;
-            background-color: var(--card-bg-color); 
-            padding: 35px; 
-            border-radius: 8px; 
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
-        }
-        .contact-form h3 { font-size: 26px; margin-bottom: 25px; color: var(--primary-dark-blue); font-weight: 600;}
-        body.dark-theme .contact-form h3 { color: var(--accent-gold); }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-color); font-size: 15px;}
-        .form-control { 
-            width: 100%; 
-            padding: 14px; 
-            border: 1px solid var(--form-control-border); 
-            border-radius: 5px; 
-            font-size: 16px; 
-            background-color: var(--bg-color); 
-            body.dark-theme & { background-color: var(--dark-card-bg); } 
-            color: var(--text-color); 
-            transition: border-color 0.3s ease;
-        }
-        .form-control:focus { 
-            outline: none; 
-            border-color: var(--form-control-focus-border); 
-            box-shadow: 0 0 0 0.2rem rgba(var(--rgb-primary-bright-blue, 0, 123, 255), 0.25); 
-        }
-        body.dark-theme .form-control:focus {
-             box-shadow: 0 0 0 0.2rem rgba(var(--rgb-accent-gold, 255, 191, 0), 0.25);
+        /* Only show gallery on active state for mobile */
+        .capability-card.active .capability-cover-img {
+          opacity: 0;
         }
 
-        textarea.form-control { resize: vertical; min-height: 130px; }
-        .certification-logos { margin-top: 20px; display: flex; gap: 15px; align-items: center;}
-        .certification-logos img { height: 40px; opacity: 0.8; }
+        .capability-card.active .capability-gallery {
+          opacity: 1;
+        }
+      }
 
-        /* Gemini Suggestion Output Styling */
-        #gemini-suggestion-output {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px dashed var(--primary-bright-blue);
-            border-radius: 5px;
-            background-color: var(--bg-color); /* Consistent with form input bg */
-            min-height: 50px;
-            white-space: pre-wrap; /* Preserve formatting from API */
-            font-size: 0.95em;
-        }
-        body.dark-theme #gemini-suggestion-output {
-            border-color: var(--accent-gold);
-            background-color: var(--dark-card-bg);
-        }
-        #gemini-suggestion-output h4 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: var(--primary-deep-blue);
-        }
-        body.dark-theme #gemini-suggestion-output h4 {
-            color: var(--accent-gold);
-        }
-        #gemini-suggestion-output ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        #gemini-suggestion-output li {
-            margin-bottom: 5px;
-        }
-        .loading-spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(0,0,0,.3);
-            border-radius: 50%;
-            border-top-color: var(--primary-bright-blue);
-            animation: spin 1s ease-in-out infinite;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        body.dark-theme .loading-spinner {
-            border-top-color: var(--accent-gold);
-        }
+      /* No eye emoji indicator */
+      .capability-text-content {
+        padding: 25px;
+        text-align: center;
+        flex-grow: 1;
+      }
+      .capability-card h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: var(--primary-dark-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .capability-card h3 {
+        color: var(--accent-gold);
+      }
+      .capability-card p {
+        font-size: 16px;
+        color: var(--text-color);
+        opacity: 0.85;
+        line-height: 1.7;
+      }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        /* Footer */
-        footer { 
-            background-color: var(--footer-bg-color); 
-            color: var(--footer-text-color); 
-            padding: 70px 0 30px; 
-            position: relative; 
-        }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 50px; } 
-        .footer-col h3 { 
-            font-size: 20px; 
-            color: var(--accent-gold); 
-            margin-bottom: 25px; 
-            position: relative; 
-            padding-bottom: 12px; 
-            font-weight: 600;
-        }
-        .footer-col h3::after { 
-            content: ''; 
-            position: absolute; 
-            bottom: 0; 
-            left: 0; 
-            width: 40px; 
-            height: 3px; 
-            background-color: var(--accent-orange); 
-        }
-        .footer-col p { line-height: 1.7; opacity: 0.9; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col ul li a { color: var(--footer-text-color); opacity: 0.85; }
-        .footer-col ul li a:hover { color: var(--accent-orange); opacity: 1; }
-        .social-links { display: flex; gap: 15px; margin-top: 25px; }
-        .social-link { 
-            width: 40px; height: 40px; 
-            border-radius: 50%; 
-            background-color: rgba(255,255,255,0.1); 
-            color: var(--footer-text-color); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 18px; 
-            transition: all 0.3s ease; 
-        }
-        .social-link:hover { 
-            background-color: var(--accent-orange); 
-            color: white;
-            transform: translateY(-3px); 
-        }
-        .footer-bottom { 
-            border-top: 1px solid rgba(255,255,255,0.1); 
-            padding-top: 30px; 
-            text-align: center; 
-            color: var(--footer-text-color); 
-            opacity: 0.8; 
-            font-size: 14px; 
-        }
-        .theme-logos { display:none; }
+      /* Sustainability Section */
+      .sustainability {
+        padding: 80px 0;
+        background-color: var(--bg-color);
+      }
+      .sustainability-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-top: 40px;
+      }
+      .sustainability-img {
+        flex: 1;
+        text-align: center;
+      }
+      .sustainability-img img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      .sustainability-text {
+        flex: 1;
+      }
+      .sustainability-text h3 {
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: var(--primary-dark-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .sustainability-text h3 {
+        color: var(--accent-gold);
+      }
+      .sustainability-text p {
+        margin-bottom: 15px;
+        font-size: 17px;
+        opacity: 0.9;
+      }
+      .eco-features {
+        margin-top: 30px;
+      }
+      .eco-feature {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+      .eco-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: var(--accent-orange);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-size: 22px;
+        flex-shrink: 0;
+      }
+      body.dark-theme .eco-icon {
+        background-color: var(--accent-gold);
+        color: var(--primary-deep-blue);
+      }
+      .eco-feature h4 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: var(--primary-deep-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .eco-feature h4 {
+        color: var(--light-text);
+      }
+      .eco-feature p {
+        font-size: 15px;
+        opacity: 0.8;
+        margin-bottom: 0;
+      }
 
-        /* Floating Buttons Container */
-        .floating-buttons-container { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
-        .floating-btn { 
-            background-color: var(--accent-orange); 
-            color: white; 
-            width: 55px; height: 55px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 22px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
-            cursor: pointer; 
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border: none;
+      /* Testimonials Section */
+      .testimonials {
+        padding: 80px 0;
+        background-color: var(--card-bg-color);
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .testimonial-card {
+        background-color: var(--bg-color);
+        body.dark-theme & {
+          background-color: var(--dark-card-bg);
         }
-        .floating-btn:hover { 
-            background-color: var(--accent-gold); 
-            transform: scale(1.1); 
-        }
-        #theme-toggle-btn .icon-sun { display: inline; } 
-        #theme-toggle-btn .icon-moon { display: none; } 
-        body.dark-theme #theme-toggle-btn .icon-sun { display: none; } 
-        body.dark-theme #theme-toggle-btn .icon-moon { display: inline; } 
+        border-left: 5px solid var(--testimonial-border);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+        padding: 30px;
+        border-radius: 8px;
+      }
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 25px;
+        color: var(--text-color);
+        opacity: 0.9;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+      .author-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: var(--product-img-bg);
+        overflow: hidden;
+      }
+      .author-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .author-info h4 {
+        font-size: 17px;
+        margin-bottom: 5px;
+        color: var(--primary-deep-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .author-info h4 {
+        color: var(--light-text);
+      }
+      .author-info p {
+        color: var(--text-color);
+        opacity: 0.75;
+        font-size: 14px;
+      }
 
-        
-        /* Responsive Adjustments */
-        @media (max-width: 1024px) { /* Mobile menu kicks in here */
-            /* Existing header-container changes from 768px are now relevant here too if nav is hidden */
-             /* .header-container {
+      /* CTA Section */
+      .cta {
+        padding: 80px 0;
+        background:
+          linear-gradient(rgba(10, 35, 66, 0.8), rgba(0, 51, 102, 0.8)),
+          url("https://placehold.co/1200x400/0A2342/FFFFFF?text=Get+In+Touch")
+            center/cover no-repeat;
+        color: white;
+        text-align: center;
+      }
+      .cta h2 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      .cta p {
+        max-width: 750px;
+        margin: 0 auto 35px;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      /* Contact Section */
+      .contact {
+        padding: 80px 0;
+        background-color: var(--bg-color);
+      }
+      .contact-content {
+        display: flex;
+        gap: 40px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+      .contact-info {
+        flex: 1;
+        min-width: 300px;
+      }
+      .contact-info h3 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        color: var(--primary-dark-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .contact-info h3 {
+        color: var(--accent-gold);
+      }
+      .contact-details {
+        margin-bottom: 30px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .contact-link {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        padding: 10px;
+        margin: -10px;
+        cursor: pointer;
+      }
+      .contact-link:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+        transform: translateY(-2px);
+      }
+      body.dark-theme .contact-link:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+      .contact-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: var(--contact-icon-bg);
+        color: var(--contact-icon-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .contact-item div h4 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: var(--primary-deep-blue);
+        font-weight: 600;
+      }
+      .contact-link div h4 {
+        position: relative;
+        display: inline-block;
+      }
+      .contact-link div h4::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--accent-orange);
+        transition: width 0.3s ease;
+      }
+      .contact-link:hover div h4::after {
+        width: 100%;
+      }
+      body.dark-theme .contact-item div h4 {
+        color: var(--light-text);
+      }
+      .contact-item div p {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      .contact-form {
+        flex: 1.5;
+        min-width: 320px;
+        background-color: var(--card-bg-color);
+        padding: 35px;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+      .contact-form h3 {
+        font-size: 26px;
+        margin-bottom: 25px;
+        color: var(--primary-dark-blue);
+        font-weight: 600;
+      }
+      body.dark-theme .contact-form h3 {
+        color: var(--accent-gold);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text-color);
+        font-size: 15px;
+      }
+      .form-control {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid var(--form-control-border);
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: var(--bg-color);
+        body.dark-theme & {
+          background-color: var(--dark-card-bg);
+        }
+        color: var(--text-color);
+        transition: border-color 0.3s ease;
+      }
+      .form-control:focus {
+        outline: none;
+        border-color: var(--form-control-focus-border);
+        box-shadow: 0 0 0 0.2rem
+          rgba(var(--rgb-primary-bright-blue, 0, 123, 255), 0.25);
+      }
+      body.dark-theme .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(var(--rgb-accent-gold, 255, 191, 0), 0.25);
+      }
+
+      textarea.form-control {
+        resize: vertical;
+        min-height: 130px;
+      }
+      .certification-logos {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .certification-logos img {
+        height: 40px;
+        opacity: 0.8;
+      }
+
+      /* Gemini Suggestion Output Styling */
+      #gemini-suggestion-output {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px dashed var(--primary-bright-blue);
+        border-radius: 5px;
+        background-color: var(--bg-color); /* Consistent with form input bg */
+        min-height: 50px;
+        white-space: pre-wrap; /* Preserve formatting from API */
+        font-size: 0.95em;
+      }
+      body.dark-theme #gemini-suggestion-output {
+        border-color: var(--accent-gold);
+        background-color: var(--dark-card-bg);
+      }
+      #gemini-suggestion-output h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: var(--primary-deep-blue);
+      }
+      body.dark-theme #gemini-suggestion-output h4 {
+        color: var(--accent-gold);
+      }
+      #gemini-suggestion-output ul {
+        list-style-position: inside;
+        padding-left: 0;
+      }
+      #gemini-suggestion-output li {
+        margin-bottom: 5px;
+      }
+      .loading-spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        border-top-color: var(--primary-bright-blue);
+        animation: spin 1s ease-in-out infinite;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      body.dark-theme .loading-spinner {
+        border-top-color: var(--accent-gold);
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        padding: 70px 0 30px;
+        position: relative;
+      }
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+      .footer-col h3 {
+        font-size: 20px;
+        color: var(--accent-gold);
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 12px;
+        font-weight: 600;
+      }
+      .footer-col h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-orange);
+      }
+      .footer-col p {
+        line-height: 1.7;
+        opacity: 0.9;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 12px;
+      }
+      .footer-col ul li a {
+        color: var(--footer-text-color);
+        opacity: 0.85;
+      }
+      .footer-col ul li a:hover {
+        color: var(--accent-orange);
+        opacity: 1;
+      }
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 25px;
+      }
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--footer-text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+      .social-link:hover {
+        background-color: var(--accent-orange);
+        color: white;
+        transform: translateY(-3px);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        text-align: center;
+        color: var(--footer-text-color);
+        opacity: 0.8;
+        font-size: 14px;
+      }
+      .theme-logos {
+        display: none;
+      }
+
+      /* Floating Buttons Container */
+      .floating-buttons-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .floating-btn {
+        background-color: var(--accent-orange);
+        color: white;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+        border: none;
+      }
+      .floating-btn:hover {
+        background-color: var(--accent-gold);
+        transform: scale(1.1);
+      }
+      #theme-toggle-btn .icon-sun {
+        display: inline;
+      }
+      #theme-toggle-btn .icon-moon {
+        display: none;
+      }
+      body.dark-theme #theme-toggle-btn .icon-sun {
+        display: none;
+      }
+      body.dark-theme #theme-toggle-btn .icon-moon {
+        display: inline;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 1024px) {
+        /* Mobile menu kicks in here */
+        /* Existing header-container changes from 768px are now relevant here too if nav is hidden */
+        /* .header-container {
                 flex-direction: column; No, keep space-between for logo and toggle
                 align-items: center; 
             } */
-            /* .logo {
+        /* .logo {
                 margin-bottom: 15px; Only if header stacks, not yet
             } */
-            /* Original nav ul modifications are now handled by #main-navigation.open */
+        /* Original nav ul modifications are now handled by #main-navigation.open */
+      }
+
+      @media (max-width: 992px) {
+        .about-content,
+        .sustainability-content {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-content .about-text,
+        .sustainability-content .sustainability-text,
+        .contact-content .contact-info,
+        .contact-content .contact-form {
+          width: 100%;
+          margin-bottom: 30px;
+        }
+        .about-img,
+        .sustainability-img {
+          margin-top: 0;
+          max-width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .capabilities-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .capability-collage {
+          height: 220px;
+        }
+        .footer-content {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .hero p {
+          font-size: 17px;
+        }
+        .section-title {
+          font-size: 32px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: row; /* Keep in a single line */
+          align-items: center;
+          justify-content: space-between;
+          padding: 8px 0; /* Reduced padding */
         }
 
-        @media (max-width: 992px) { 
-            .about-content, .sustainability-content {
-                flex-direction: column;
-                text-align: center; 
-            }
-            .about-content .about-text, .sustainability-content .sustainability-text, .contact-content .contact-info, .contact-content .contact-form {
-                width: 100%; 
-                margin-bottom: 30px;
-            }
-            .about-img, .sustainability-img {
-                margin-top: 0; 
-                max-width: 80%; 
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .capabilities-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            }
-            .capability-collage {
-                height: 220px; 
-            }
-             .footer-content {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            }
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 17px; }
-            .section-title { font-size: 32px; }
+        .logo-container {
+          margin-bottom: 0;
+          flex-shrink: 1; /* Allow logo container to shrink if needed */
         }
-        
-        @media (max-width: 768px) { 
-            .header-container {
-                flex-direction: row; /* Keep in a single line */
-                align-items: center;
-                justify-content: space-between;
-                padding: 8px 0; /* Reduced padding */
-            }
-            
-            .logo-container {
-                margin-bottom: 0;
-                flex-shrink: 1; /* Allow logo container to shrink if needed */
-            }
-            
-            .logo-img {
-                height: 30px; /* Smaller on mobile */
-            }
-            
-            .logo {
-                font-size: 18px; /* Smaller font size on mobile */
-                white-space: nowrap; /* Prevent text wrapping */
-                margin-bottom: 1px;
-            }
-            
-            .logo-subtitle {
-                font-size: 11px;
-            }
-            
-            .mobile-menu-toggle {
-                position: relative;
-                padding: 10px; /* Smaller padding */
-                margin-left: 5px;
-            }
-            
-            /* Header remains in a single line with reduced sizes */
-        }
-        
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            .logo-img {
-                height: 25px; /* Even smaller on very small screens */
-            }
-            
-            .logo {
-                font-size: 16px; /* Smaller font on very small screens */
-                margin-bottom: 0;
-            }
-            
-            .logo-subtitle {
-                font-size: 10px;
-            }
-            
-            .mobile-menu-toggle {
-                padding: 8px; /* Smaller padding */
-            }
-            
-            .mobile-menu-toggle .menu-icon-bar {
-                width: 20px; /* Smaller hamburger icon */
-                height: 2px;
-                margin: 4px 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 30px; } 
-            .hero p { font-size: 16px; }
-            .hero-btns { flex-direction: column; gap: 15px; align-items: center; }
-            .hero-btns .btn { width: 80%; max-width: 300px; }
-            
-            .section-title { font-size: 28px; }
-            .capabilities-grid {
-                grid-template-columns: 1fr; 
-            }
-            .capability-collage {
-                height: 200px; 
-            }
-            .capability-card h3 { font-size: 20px; }
-            .capability-card p { font-size: 15px; }
 
-            .floating-buttons-container { bottom: 20px; right: 20px; gap: 10px; }
-            .floating-btn { width: 50px; height: 50px; font-size: 20px; }
+        .logo-img {
+          height: 30px; /* Smaller on mobile */
+        }
 
-            .contact-content { flex-direction: column; }
-            .footer-content { text-align: center; } 
-            .footer-col h3::after { left: 50%; transform: translateX(-50%); } 
-            .social-links { justify-content: center; }
+        .logo {
+          font-size: 18px; /* Smaller font size on mobile */
+          white-space: nowrap; /* Prevent text wrapping */
+          margin-bottom: 1px;
         }
-        
-        @media print {
-            header, footer, .contact-form .btn, .contact-form .btn-gemini, .hero-btns .btn:last-child, .floating-buttons-container, .language-btn-container, .mobile-menu-toggle {
-                display: none !important; /* Ensure mobile toggle is also hidden */
-            }
-            #main-navigation, #main-navigation.open {
-                display: none !important; /* Hide mobile nav structure in print */
-            }
-            body { background-color: white !important; color: black !important; } 
-            .capability-collage {
-                display: block; 
-                height: auto;
-            }
-            .capability-cover-img { 
-                position: static; 
-                opacity: 1; 
-                width: 100%;
-            }
-            .capability-gallery { 
-                display: none; 
-            } 
-            .capability-text-content { position: static; background-color: transparent; }
-            .btn, .btn-outline { border: 1px solid #ccc; color: #333; background: #eee; }
+
+        .logo-subtitle {
+          font-size: 11px;
         }
+
+        .mobile-menu-toggle {
+          position: relative;
+          padding: 10px; /* Smaller padding */
+          margin-left: 5px;
+        }
+
+        /* Header remains in a single line with reduced sizes */
+      }
+
+      /* Extra small screens */
+      @media (max-width: 480px) {
+        .logo-img {
+          height: 25px; /* Even smaller on very small screens */
+        }
+
+        .logo {
+          font-size: 16px; /* Smaller font on very small screens */
+          margin-bottom: 0;
+        }
+
+        .logo-subtitle {
+          font-size: 10px;
+        }
+
+        .mobile-menu-toggle {
+          padding: 8px; /* Smaller padding */
+        }
+
+        .mobile-menu-toggle .menu-icon-bar {
+          width: 20px; /* Smaller hamburger icon */
+          height: 2px;
+          margin: 4px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 30px;
+        }
+        .hero p {
+          font-size: 16px;
+        }
+        .hero-btns {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+        .hero-btns .btn {
+          width: 80%;
+          max-width: 300px;
+        }
+
+        .section-title {
+          font-size: 28px;
+        }
+        .capabilities-grid {
+          grid-template-columns: 1fr;
+        }
+        .capability-collage {
+          height: 200px;
+        }
+        .capability-card h3 {
+          font-size: 20px;
+        }
+        .capability-card p {
+          font-size: 15px;
+        }
+
+        .floating-buttons-container {
+          bottom: 20px;
+          right: 20px;
+          gap: 10px;
+        }
+        .floating-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+        }
+
+        .contact-content {
+          flex-direction: column;
+        }
+        .footer-content {
+          text-align: center;
+        }
+        .footer-col h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      @media print {
+        header,
+        footer,
+        .contact-form .btn,
+        .contact-form .btn-gemini,
+        .hero-btns .btn:last-child,
+        .floating-buttons-container,
+        .language-btn-container,
+        .mobile-menu-toggle {
+          display: none !important; /* Ensure mobile toggle is also hidden */
+        }
+        #main-navigation,
+        #main-navigation.open {
+          display: none !important; /* Hide mobile nav structure in print */
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+        }
+        .capability-collage {
+          display: block;
+          height: auto;
+        }
+        .capability-cover-img {
+          position: static;
+          opacity: 1;
+          width: 100%;
+        }
+        .capability-gallery {
+          display: none;
+        }
+        .capability-text-content {
+          position: static;
+          background-color: transparent;
+        }
+        .btn,
+        .btn-outline {
+          border: 1px solid #ccc;
+          color: #333;
+          background: #eee;
+        }
+      }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-</head>
-<body class="light-theme"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-theme">
     <header>
-        <div class="container header-container">
-            <div class="logo-container">
-                <a href="index.html" class="logo-link">
-                    <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img">
-                </a>
-                <div class="logo-text">
-                    <div class="logo">Vijaya <span>Packaging</span></div>
-                    <div class="logo-subtitle">Industries</div>
-                </div>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
-            <nav id="main-navigation"> <ul>
-                    <li class="language-btn-container">
-                        <button type="button" class="language-btn" aria-label="Switch Language" aria-haspopup="true" aria-expanded="false">
-                            <span class="icon">🌐</span> Lang
-                        </button>
-                        <div class="language-dropdown">
-                            <a href="index_kannada.html">ಕನ್ನಡ</a>
-                            <a href="index_hindi.html">हिन्दी</a>
-                        </div>
-                    </li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#capabilities">Capabilities</a></li>
-                    <li><a href="#sustainability">Sustainability</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="container header-container">
+        <div class="logo-container">
+          <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" />
+          </a>
+          <div class="logo-text">
+            <div class="logo">Vijaya <span>Packaging</span></div>
+            <div class="logo-subtitle">Industries</div>
+          </div>
         </div>
+        <button
+          class="mobile-menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
+        <nav id="main-navigation">
+          <ul>
+            <li class="language-btn-container">
+              <button
+                type="button"
+                class="language-btn"
+                aria-label="Switch Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="icon">🌐</span> Lang
+              </button>
+              <div class="language-dropdown">
+                <a href="index_kannada.html">ಕನ್ನಡ</a>
+                <a href="index_hindi.html">हिन्दी</a>
+              </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#sustainability">Sustainability</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h1>Vijaya Packaging Industries</h1>
-            <p>Your trusted partner for premium, eco-friendly corrugated packaging solutions. Proudly <strong>woman-owned</strong> and operated since 2019.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn">Request a Quote</a>
-                <a href="#" class="btn btn-outline" id="downloadBrochureBtn">Download Brochure</a>
-            </div>
+      <div class="container">
+        <h1>Vijaya Packaging Industries</h1>
+        <p>
+          Your trusted partner for premium, eco-friendly corrugated packaging
+          solutions. Proudly <strong>woman-owned</strong> and operated since
+          2019.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn">Request a Quote</a>
+          <a href="#" class="btn btn-outline" id="downloadBrochureBtn"
+            >Download Brochure</a
+          >
         </div>
+      </div>
     </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Vijaya Packaging</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Story: A Legacy of Innovation & Trust</h3>
-                    <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has rapidly evolved from a dedicated corrugated box manufacturing unit into one of the region's leading and most trusted packaging solution providers. We are a proud <strong>woman-led enterprise</strong>, committed to excellence.</p>
-                    <p>Our commitment to unparalleled quality, continuous innovation, and unwavering sustainability has earned us the trust of a diverse clientele across industries including FMCG, electronics, pharmaceuticals, and e-commerce.</p>
-                    
-                    <h3>Meet Our Founder: Mrs. Vijayalakshmi D</h3>
-                    <p>Mrs. Vijayalakshmi's journey in the dynamic packaging industry is a testament to her pioneering spirit. She embarked on this path with a clear vision: to create superior, sustainable packaging solutions while fostering economic empowerment within the local community. Her leadership and business acumen have been recognized with several prestigious entrepreneurship awards, including the notable Business Excellence Award in 2018.</p>
-                    <p>Under her inspiring guidance, Vijaya Packaging Industries consistently pushes the boundaries of innovation, all while maintaining an unwavering focus on environmental responsibility and positive social impact.</p>
-                    <div class="founder-quote">
-                        <p>"We don't just make boxes; we build trust and deliver solutions that protect what's valuable, both for our clients and our planet." - Mrs. Vijayalakshmi D</p>
-                    </div>
-                </div>
-                <div class="about-img">
-                    <img src="mom.png" alt="Mrs. Vijayalakshmi D, Founder of Vijaya Packaging Industries" onerror="this.onerror=null;this.src='https://placehold.co/450x350/cccccc/333333?text=Image+Not+Found';">
-                </div>
+      <div class="container">
+        <h2 class="section-title">About Vijaya Packaging</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Our Story: A Legacy of Innovation & Trust</h3>
+            <p>
+              Founded in 2019 by visionary entrepreneur
+              <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries
+              has rapidly evolved from a dedicated corrugated box manufacturing
+              unit into one of the region's leading and most trusted packaging
+              solution providers. We are a proud
+              <strong>woman-led enterprise</strong>, committed to excellence.
+            </p>
+            <p>
+              Our commitment to unparalleled quality, continuous innovation, and
+              unwavering sustainability has earned us the trust of a diverse
+              clientele across industries including FMCG, electronics,
+              pharmaceuticals, and e-commerce.
+            </p>
+
+            <h3>Meet Our Founder: Mrs. Vijayalakshmi D</h3>
+            <p>
+              Mrs. Vijayalakshmi's journey in the dynamic packaging industry is
+              a testament to her pioneering spirit. She embarked on this path
+              with a clear vision: to create superior, sustainable packaging
+              solutions while fostering economic empowerment within the local
+              community. Her leadership and business acumen have been recognized
+              with several prestigious entrepreneurship awards, including the
+              notable Business Excellence Award in 2018.
+            </p>
+            <p>
+              Under her inspiring guidance, Vijaya Packaging Industries
+              consistently pushes the boundaries of innovation, all while
+              maintaining an unwavering focus on environmental responsibility
+              and positive social impact.
+            </p>
+            <div class="founder-quote">
+              <p>
+                "We don't just make boxes; we build trust and deliver solutions
+                that protect what's valuable, both for our clients and our
+                planet." - Mrs. Vijayalakshmi D
+              </p>
             </div>
+          </div>
+          <div class="about-img">
+            <img
+              src="mom.png"
+              alt="Mrs. Vijayalakshmi D, Founder of Vijaya Packaging Industries"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/450x350/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">Our Premium Products</h2>
-            <p class="text-center" style="max-width: 700px; margin: -20px auto 40px auto; font-size: 17px; opacity:0.9;">Discover our range of high-quality, customizable corrugated packaging. We are working on bringing interactive 3D animated views for an enhanced product exploration experience!</p>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="Regular Slotted Cartons.png" alt="Regular Slotted Cartons" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=RSC+Box';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Regular Slotted Cartons (RSC)</h3>
-                        <p>Our most versatile and commonly used box style, perfect for shipping and storage across various industries.</p>
-                        <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="regular_slotted_cartoons.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="Die-Cut Boxes.png" alt="Die-Cut Boxes" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Die-Cut+Box';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Die-Cut Boxes</h3>
-                        <p>Custom-designed boxes with precise cuts and folds for specialized products and enhanced brand presentation.</p>
-                         <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="Die-Cut Boxes.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="Telescoping Containers.jpg" alt="Telescoping Containers" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Telescopic+Box';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Telescoping Containers</h3>
-                        <p>Two-piece boxes with separate lids, ideal for heavy items and products requiring added protection.</p>
-                         <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="Telescoping Containers.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img">
-                        <img src="Retail Display Packaging.jpg" alt="Retail Display Packaging" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Retail+Display';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Retail Display Packaging</h3>
-                        <p>Eye-catching point-of-purchase displays and shelf-ready packaging that enhances product visibility.</p>
-                         <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="Retail Display Packaging.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="Heavy-Duty Packaging.jpg" alt="Heavy-Duty Packaging" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Heavy+Duty';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Heavy-Duty Packaging</h3>
-                        <p>Multi-wall corrugated solutions designed for industrial applications and robust protection requirements.</p>
-                         <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="Heavy-Duty Packaging.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
-                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="Custom Inserts & Dividers.jpg" alt="Custom Inserts & Dividers" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Inserts';">
-                    </div>
-                    <div class="product-info">
-                        <h3>Custom Inserts & Dividers</h3>
-                        <p>Interior components that provide organization, separation, and additional protection for your products.</p>
-                         <p class="product-feature-hint"><small><em>Interactive 3D view coming soon!</em></small></p>
-                        <a href="Custom Inserts & Dividers.html" class="btn btn-outline">Learn More</a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Our Premium Products</h2>
+        <p
+          class="text-center"
+          style="
+            max-width: 700px;
+            margin: -20px auto 40px auto;
+            font-size: 17px;
+            opacity: 0.9;
+          "
+        >
+          Discover our range of high-quality, customizable corrugated packaging.
+          We are working on bringing interactive 3D animated views for an
+          enhanced product exploration experience!
+        </p>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Regular Slotted Cartons.png"
+                alt="Regular Slotted Cartons"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=RSC+Box';
+                "
+              />
             </div>
+            <div class="product-info">
+              <h3>Regular Slotted Cartons (RSC)</h3>
+              <p>
+                Our most versatile and commonly used box style, perfect for
+                shipping and storage across various industries.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="regular_slotted_cartoons.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Die-Cut Boxes.png"
+                alt="Die-Cut Boxes"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Die-Cut+Box';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>Die-Cut Boxes</h3>
+              <p>
+                Custom-designed boxes with precise cuts and folds for
+                specialized products and enhanced brand presentation.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="Die-Cut Boxes.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Telescoping Containers.jpg"
+                alt="Telescoping Containers"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Telescopic+Box';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>Telescoping Containers</h3>
+              <p>
+                Two-piece boxes with separate lids, ideal for heavy items and
+                products requiring added protection.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="Telescoping Containers.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Retail Display Packaging.jpg"
+                alt="Retail Display Packaging"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Retail+Display';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>Retail Display Packaging</h3>
+              <p>
+                Eye-catching point-of-purchase displays and shelf-ready
+                packaging that enhances product visibility.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="Retail Display Packaging.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Heavy-Duty Packaging.jpg"
+                alt="Heavy-Duty Packaging"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Heavy+Duty';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>Heavy-Duty Packaging</h3>
+              <p>
+                Multi-wall corrugated solutions designed for industrial
+                applications and robust protection requirements.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="Heavy-Duty Packaging.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img
+                src="Custom Inserts & Dividers.jpg"
+                alt="Custom Inserts & Dividers"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Inserts';
+                "
+              />
+            </div>
+            <div class="product-info">
+              <h3>Custom Inserts & Dividers</h3>
+              <p>
+                Interior components that provide organization, separation, and
+                additional protection for your products.
+              </p>
+              <p class="product-feature-hint">
+                <small><em>Interactive 3D view coming soon!</em></small>
+              </p>
+              <a href="Custom Inserts & Dividers.html" class="btn btn-outline"
+                >Learn More</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="capabilities" class="capabilities">
-        <div class="container">
-            <h2 class="section-title">Our Core Capabilities</h2>  
-            <div class="capabilities-grid">
-                <div class="capability-card" id="capability-1">
-                    <div class="capability-collage">
-                        <img src="custom_cover.jpg" alt="Custom Design Cover" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Custom+Design';">
-                        <div class="capability-gallery">
-                            <img src="custom_1.jpg" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Design';">
-                            <img src="custom_2.jpg" alt="Packaging Prototype" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Prototype';">
-                            <img src="custom_3.jpg" alt="Final Custom Box" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Final+Box';">
-                        </div>
-                    </div>
-                    <div class="capability-text-content">
-                        <h3>Custom Sizing & Design</h3>
-                        <p>Tailored dimensions and structural design to fit your product perfectly, minimizing waste and maximizing protection with innovative flair.</p>
-                    </div>
-                </div>
-                <div class="capability-card" id="capability-2">
-                    <div class="capability-collage">
-                        <img src="advanced_cover.jpg" alt="Advanced Printing Cover" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Advanced+Printing';">
-                        <div class="capability-gallery">
-                            <img src="advanced_1.jpg" alt="Flexographic Printing Detail" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Flexo+Print';">
-                            <img src="advanced_2.jpg" alt="Digital Print Sample" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Digital+Print';">
-                            <img src="advanced_3.jpg" alt="Color Matching Process" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Colors';">
-                        </div>
-                    </div>
-                    <div class="capability-text-content">
-                        <h3>Advanced Printing</h3>
-                        <p>High-quality flexographic and digital printing options, including vibrant water-based inks, to bring your brand to life beautifully.</p>
-                    </div>
-                </div>
-                <div class="capability-card" id="capability-3">
-                    <div class="capability-collage">
-                        <img src="material_cover.jpg" alt="Material Expertise Cover" class="capability-cover-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Material+Expertise';">
-                        <div class="capability-gallery">
-                            <img src="material_1.png" alt="Material Strength Test" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Testing';">
-                            <img src="material_2.png" alt="Sustainable Material Options" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Eco+Materials';">
-                            <img src="material_3.jpg" alt="Quality Check of Materials" class="capability-gallery-img" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Quality';">
-                        </div>
-                    </div>
-                    <div class="capability-text-content">
-                        <h3>Material Expertise</h3>
-                        <p>Comprehensive material testing and selection, focusing on recycled and sustainable options, to ensure optimal performance.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Our Core Capabilities</h2>
+        <div class="capabilities-grid">
+          <div class="capability-card" id="capability-1">
+            <div class="capability-collage">
+              <img
+                src="custom_cover.jpg"
+                alt="Custom Design Cover"
+                class="capability-cover-img"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Custom+Design';
+                "
+              />
+              <div class="capability-gallery">
+                <img
+                  src="custom_1.jpg"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Design';
+                  "
+                />
+                <img
+                  src="custom_2.jpg"
+                  alt="Packaging Prototype"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Prototype';
+                  "
+                />
+                <img
+                  src="custom_3.jpg"
+                  alt="Final Custom Box"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Final+Box';
+                  "
+                />
+              </div>
             </div>
+            <div class="capability-text-content">
+              <h3>Custom Sizing & Design</h3>
+              <p>
+                Tailored dimensions and structural design to fit your product
+                perfectly, minimizing waste and maximizing protection with
+                innovative flair.
+              </p>
+            </div>
+          </div>
+          <div class="capability-card" id="capability-2">
+            <div class="capability-collage">
+              <img
+                src="advanced_cover.jpg"
+                alt="Advanced Printing Cover"
+                class="capability-cover-img"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Advanced+Printing';
+                "
+              />
+              <div class="capability-gallery">
+                <img
+                  src="advanced_1.jpg"
+                  alt="Flexographic Printing Detail"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Flexo+Print';
+                  "
+                />
+                <img
+                  src="advanced_2.jpg"
+                  alt="Digital Print Sample"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Digital+Print';
+                  "
+                />
+                <img
+                  src="advanced_3.jpg"
+                  alt="Color Matching Process"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Colors';
+                  "
+                />
+              </div>
+            </div>
+            <div class="capability-text-content">
+              <h3>Advanced Printing</h3>
+              <p>
+                High-quality flexographic and digital printing options,
+                including vibrant water-based inks, to bring your brand to life
+                beautifully.
+              </p>
+            </div>
+          </div>
+          <div class="capability-card" id="capability-3">
+            <div class="capability-collage">
+              <img
+                src="material_cover.jpg"
+                alt="Material Expertise Cover"
+                class="capability-cover-img"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/400x300/cccccc/333333?text=Material+Expertise';
+                "
+              />
+              <div class="capability-gallery">
+                <img
+                  src="material_1.png"
+                  alt="Material Strength Test"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Testing';
+                  "
+                />
+                <img
+                  src="material_2.png"
+                  alt="Sustainable Material Options"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Eco+Materials';
+                  "
+                />
+                <img
+                  src="material_3.jpg"
+                  alt="Quality Check of Materials"
+                  class="capability-gallery-img"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/400x300/cccccc/333333?text=Quality';
+                  "
+                />
+              </div>
+            </div>
+            <div class="capability-text-content">
+              <h3>Material Expertise</h3>
+              <p>
+                Comprehensive material testing and selection, focusing on
+                recycled and sustainable options, to ensure optimal performance.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="sustainability" class="sustainability">
-        <div class="container">
-            <h2 class="section-title">Our Commitment to Sustainability</h2>
-            <div class="sustainability-content">
-                <div class="sustainability-text">
-                    <h3>Eco-Friendly By Design, Ethical By Choice</h3>
-                    <p>At Vijaya Packaging Industries, environmental responsibility is not an afterthought—it's integral to our identity. We champion the belief that premium packaging and profound sustainability can, and must, coexist.</p>
-                    <p>Our holistic approach to sustainability is woven into the fabric of our operations, from responsibly sourced raw materials and eco-conscious manufacturing processes to ensuring the end-of-life recyclability of our products.</p>
-                    <div class="eco-features">
-                        <div class="eco-feature">
-                            <div class="eco-icon">♻️</div>
-                            <div>
-                                <h4>Recycled Materials Focus</h4>
-                                <p>Our corrugated board proudly contains a high percentage (up to 70-100% where feasible) of post-consumer recycled content, significantly reducing reliance on virgin resources.</p>
-                            </div>
-                        </div>
-                        <div class="eco-feature">
-                            <div class="eco-icon">💧</div> 
-                            <div>
-                                <h4>Water-Based Inks Exclusively</h4>
-                                <p>We exclusively utilize advanced water-based inks, which are free from harmful Volatile Organic Compounds (VOCs) and heavy metals, ensuring safety and minimal environmental impact.</p>
-                            </div>
-                        </div>
-                        <div class="eco-feature">
-                            <div class="eco-icon">⚡</div>
-                            <div>
-                                <h4>Energy Efficiency & Green Practices</h4>
-                                <p>Our state-of-the-art facility operates with energy-efficient machinery and embraces green manufacturing practices to actively minimize our carbon footprint.</p>
-                            </div>
-                        </div>
-                        <div class="eco-feature">
-                            <div class="eco-icon">🌱</div>
-                            <div>
-                                <h4>Waste Reduction & Circularity</h4>
-                                <p>Our robust zero-waste initiative ensures that over 95% of our production waste is meticulously recycled or repurposed, contributing to a circular economy.</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2 class="section-title">Our Commitment to Sustainability</h2>
+        <div class="sustainability-content">
+          <div class="sustainability-text">
+            <h3>Eco-Friendly By Design, Ethical By Choice</h3>
+            <p>
+              At Vijaya Packaging Industries, environmental responsibility is
+              not an afterthought—it's integral to our identity. We champion the
+              belief that premium packaging and profound sustainability can, and
+              must, coexist.
+            </p>
+            <p>
+              Our holistic approach to sustainability is woven into the fabric
+              of our operations, from responsibly sourced raw materials and
+              eco-conscious manufacturing processes to ensuring the end-of-life
+              recyclability of our products.
+            </p>
+            <div class="eco-features">
+              <div class="eco-feature">
+                <div class="eco-icon">♻️</div>
+                <div>
+                  <h4>Recycled Materials Focus</h4>
+                  <p>
+                    Our corrugated board proudly contains a high percentage (up
+                    to 70-100% where feasible) of post-consumer recycled
+                    content, significantly reducing reliance on virgin
+                    resources.
+                  </p>
                 </div>
-                <div class="sustainability-img">
-                    <img src="Sustainable Packaging Process.jpeg" alt="Sustainable Packaging Process at Vijaya Packaging" onerror="this.onerror=null;this.src='https://placehold.co/500x400/cccccc/333333?text=Eco+Process';">
+              </div>
+              <div class="eco-feature">
+                <div class="eco-icon">💧</div>
+                <div>
+                  <h4>Water-Based Inks Exclusively</h4>
+                  <p>
+                    We exclusively utilize advanced water-based inks, which are
+                    free from harmful Volatile Organic Compounds (VOCs) and
+                    heavy metals, ensuring safety and minimal environmental
+                    impact.
+                  </p>
                 </div>
+              </div>
+              <div class="eco-feature">
+                <div class="eco-icon">⚡</div>
+                <div>
+                  <h4>Energy Efficiency & Green Practices</h4>
+                  <p>
+                    Our state-of-the-art facility operates with energy-efficient
+                    machinery and embraces green manufacturing practices to
+                    actively minimize our carbon footprint.
+                  </p>
+                </div>
+              </div>
+              <div class="eco-feature">
+                <div class="eco-icon">🌱</div>
+                <div>
+                  <h4>Waste Reduction & Circularity</h4>
+                  <p>
+                    Our robust zero-waste initiative ensures that over 95% of
+                    our production waste is meticulously recycled or repurposed,
+                    contributing to a circular economy.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="sustainability-img">
+            <img
+              src="Sustainable Packaging Process.jpeg"
+              alt="Sustainable Packaging Process at Vijaya Packaging"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/500x400/cccccc/333333?text=Eco+Process';
+              "
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Vijaya Packaging has been our trusted packaging partner for over 5 years. Their attention to detail, consistent quality, and reliable delivery have been crucial to our supply chain efficiency. The fact that they are a woman-led business with strong ethical practices is a huge plus for us!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://placehold.co/60x60/FFA500/FFFFFF?text=AM" alt="Client Anil Mehta" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=AM';">
-                        </div>
-                        <div class="author-info">
-                            <h4>Anil Mehta</h4>
-                            <p>Operations Director, HealthCare Products</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "The custom die-cut boxes they designed for our new product line are fantastic. They look great and provide excellent protection. Their innovative approach and commitment to sustainability really stand out."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                             <img src="https://placehold.co/60x60/007BFF/FFFFFF?text=PS" alt="Client Priya Sharma" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=PS';">
-                        </div>
-                        <div class="author-info">
-                            <h4>Priya Sharma</h4>
-                            <p>Marketing Manager, Artisan Goods Co.</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "Their commitment to sustainability, especially the use of recycled materials and water-based inks, aligns perfectly with our company values. Professional, trustworthy, and innovative!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-img">
-                            <img src="https://placehold.co/60x60/0A2342/FFFFFF?text=RK" alt="Client Rahul Kumar" onerror="this.onerror=null;this.src='https://placehold.co/60x60/cccccc/333333?text=RK';">
-                        </div>
-                        <div class="author-info">
-                            <h4>Rahul Kumar</h4>
-                            <p>Founder, Organic Foods Ltd.</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Vijaya Packaging has been our trusted packaging partner for over
+              5 years. Their attention to detail, consistent quality, and
+              reliable delivery have been crucial to our supply chain
+              efficiency. The fact that they are a woman-led business with
+              strong ethical practices is a huge plus for us!"
             </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img
+                  src="https://placehold.co/60x60/FFA500/FFFFFF?text=AM"
+                  alt="Client Anil Mehta"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/60x60/cccccc/333333?text=AM';
+                  "
+                />
+              </div>
+              <div class="author-info">
+                <h4>Anil Mehta</h4>
+                <p>Operations Director, HealthCare Products</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "The custom die-cut boxes they designed for our new product line
+              are fantastic. They look great and provide excellent protection.
+              Their innovative approach and commitment to sustainability really
+              stand out."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img
+                  src="https://placehold.co/60x60/007BFF/FFFFFF?text=PS"
+                  alt="Client Priya Sharma"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/60x60/cccccc/333333?text=PS';
+                  "
+                />
+              </div>
+              <div class="author-info">
+                <h4>Priya Sharma</h4>
+                <p>Marketing Manager, Artisan Goods Co.</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Their commitment to sustainability, especially the use of
+              recycled materials and water-based inks, aligns perfectly with our
+              company values. Professional, trustworthy, and innovative!"
+            </div>
+            <div class="testimonial-author">
+              <div class="author-img">
+                <img
+                  src="https://placehold.co/60x60/0A2342/FFFFFF?text=RK"
+                  alt="Client Rahul Kumar"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/60x60/cccccc/333333?text=RK';
+                  "
+                />
+              </div>
+              <div class="author-info">
+                <h4>Rahul Kumar</h4>
+                <p>Founder, Organic Foods Ltd.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="cta">
-        <div class="container">
-            <h2>Ready to Elevate Your Packaging?</h2>
-            <p>Partner with Vijaya Packaging Industries for innovative, sustainable, and high-quality corrugated solutions that make your brand shine. Let our expertise work for you.</p>
-            <a href="#contact" class="btn">Get a Free Quote Today</a>
-        </div>
+      <div class="container">
+        <h2>Ready to Elevate Your Packaging?</h2>
+        <p>
+          Partner with Vijaya Packaging Industries for innovative, sustainable,
+          and high-quality corrugated solutions that make your brand shine. Let
+          our expertise work for you.
+        </p>
+        <a href="#contact" class="btn">Get a Free Quote Today</a>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p style="margin-bottom:20px; opacity:0.9;">We're here to help with all your packaging needs. Reach out to us for inquiries, quotes, or to discuss your next project.</p>
-                    <div class="contact-details">
-                        <a href="https://maps.app.goo.gl/QtHuJUWojt1bhhWy9" target="_blank" class="contact-item contact-link">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4>Address</h4>
-                                <p>Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016</p>
-                            </div>
-                        </a>
-                        <a href="tel:+919343830540" class="contact-item contact-link">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 9343830540</p>
-                            </div>
-                        </a>
-                        <a href="mailto:vijayapkgindustries@gmail.com" class="contact-item contact-link">
-                            <div class="contact-icon">✉️</div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>vijayapkgindustries@gmail.com</p>
-                            </div>
-                        </a>
-                        <div class="contact-item">
-                            <div class="contact-icon">🕒</div>
-                            <div>
-                                <h4>Business Hours</h4>
-                                <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>Our Certifications</h3>
-                    <div class="certification-logos">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=ISO+9001" alt="ISO 9001:2015 Certification" title="ISO 9001:2015 Certified">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=FSC" alt="FSC Certified Paper" title="FSC Certified">
-                        <img src="https://placehold.co/100x50/cccccc/333333?text=EcoVadis" alt="EcoVadis Rating" title="EcoVadis Rated">
-                    </div>
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p style="margin-bottom: 20px; opacity: 0.9">
+              We're here to help with all your packaging needs. Reach out to us
+              for inquiries, quotes, or to discuss your next project.
+            </p>
+            <div class="contact-details">
+              <a
+                href="https://maps.app.goo.gl/QtHuJUWojt1bhhWy9"
+                target="_blank"
+                class="contact-item contact-link"
+              >
+                <div class="contact-icon">📍</div>
+                <div>
+                  <h4>Address</h4>
+                  <p>Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016</p>
                 </div>
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                       <form id="contactForm" action="https://formsubmit.co/bestpersonal8@gmail.com" method="POST"> 
-                            <input type="text" name="_honey" style="display:none"> 
-                            <input type="hidden" name="_captcha" value="false"> 
-                            <input type="hidden" name="_next" value="https://vijaya-packaging-industries.github.io/thank-you/"> 
-                            <input type="hidden" name="_template" value="table"> 
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number (Optional)</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message / Inquiry</label>
-                                <textarea id="message" name="message" class="form-control" required rows="5"></textarea>
-                            </div>
-                            <div id="gemini-suggestion-output-container" style="display: none;">
-                                <h4>✨ AI-Powered Packaging Ideas:</h4>
-                                <div id="gemini-suggestion-output">
-                                    </div>
-                            </div>
-                            <div id="gemini-loading-spinner" style="display: none;">
-                                <div class="loading-spinner"></div> Thinking of ideas...
-                            </div>
-
-                            <button type="button" id="getSuggestionBtn" class="btn btn-gemini">✨ Get Packaging Ideas</button>
-                            <button type="submit" class="btn" style="margin-top: 10px;">Submit Request</button>
-                        </form>
+              </a>
+              <a href="tel:+919343830540" class="contact-item contact-link">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+91 9343830540</p>
                 </div>
+              </a>
+              <a
+                href="mailto:vijayapkgindustries@gmail.com"
+                class="contact-item contact-link"
+              >
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <h4>Email</h4>
+                  <p>vijayapkgindustries@gmail.com</p>
+                </div>
+              </a>
+              <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div>
+                  <h4>Business Hours</h4>
+                  <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
             </div>
+            <h3>Our Certifications</h3>
+            <div class="certification-logos">
+              <img
+                src="https://placehold.co/100x50/cccccc/333333?text=ISO+9001"
+                alt="ISO 9001:2015 Certification"
+                title="ISO 9001:2015 Certified"
+              />
+              <img
+                src="https://placehold.co/100x50/cccccc/333333?text=FSC"
+                alt="FSC Certified Paper"
+                title="FSC Certified"
+              />
+              <img
+                src="https://placehold.co/100x50/cccccc/333333?text=EcoVadis"
+                alt="EcoVadis Rating"
+                title="EcoVadis Rated"
+              />
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/bestpersonal8@gmail.com"
+              method="POST"
+            >
+              <input type="text" name="_honey" style="display: none" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://vijaya-packaging-industries.github.io/thank-you/"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message / Inquiry</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  required
+                  rows="5"
+                ></textarea>
+              </div>
+              <div
+                id="gemini-suggestion-output-container"
+                style="display: none"
+              >
+                <h4>✨ AI-Powered Packaging Ideas:</h4>
+                <div id="gemini-suggestion-output"></div>
+              </div>
+              <div id="gemini-loading-spinner" style="display: none">
+                <div class="loading-spinner"></div>
+                Thinking of ideas...
+              </div>
+
+              <button
+                type="button"
+                id="getSuggestionBtn"
+                class="btn btn-gemini"
+              >
+                ✨ Get Packaging Ideas
+              </button>
+              <button type="submit" class="btn" style="margin-top: 10px">
+                Submit Request
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-             <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Vijaya Packaging</h3>
-                    <p>Premium, eco-friendly corrugated packaging solutions. A woman-owned enterprise committed to innovation, quality, and sustainability since 2019.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook" title="Facebook">FB</a> 
-                        <a href="#" class="social-link" aria-label="LinkedIn" title="LinkedIn">LI</a>
-                        <a href="#" class="social-link" aria-label="Instagram" title="Instagram">IG</a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#capabilities">Capabilities</a></li>
-                        <li><a href="#sustainability">Sustainability</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Our Products</h3>
-                    <ul>
-                        <li><a href="#">Regular Slotted Cartons</a></li>
-                        <li><a href="#">Die-Cut Boxes</a></li>
-                        <li><a href="#">Telescoping Containers</a></li>
-                        <li><a href="#">Retail Display Packaging</a></li>
-                        <li><a href="#">Heavy-Duty Solutions</a></li>
-                        <li><a href="#">Custom Inserts & Dividers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#" id="footerDownloadBrochure">Download Brochure</a></li>
-                        <li><a href="#">Packaging Guide</a></li>
-                        <li><a href="#">Material Specifications</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Blog / News</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h3>Vijaya Packaging</h3>
+            <p>
+              Premium, eco-friendly corrugated packaging solutions. A
+              woman-owned enterprise committed to innovation, quality, and
+              sustainability since 2019.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Facebook"
+                title="Facebook"
+                >FB</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                >LI</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Instagram"
+                title="Instagram"
+                >IG</a
+              >
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Vijaya Packaging Industries. All Rights Reserved. Designed with care.</p>
-            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#capabilities">Capabilities</a></li>
+              <li><a href="#sustainability">Sustainability</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Our Products</h3>
+            <ul>
+              <li><a href="#">Regular Slotted Cartons</a></li>
+              <li><a href="#">Die-Cut Boxes</a></li>
+              <li><a href="#">Telescoping Containers</a></li>
+              <li><a href="#">Retail Display Packaging</a></li>
+              <li><a href="#">Heavy-Duty Solutions</a></li>
+              <li><a href="#">Custom Inserts & Dividers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                <a href="#" id="footerDownloadBrochure">Download Brochure</a>
+              </li>
+              <li><a href="#">Packaging Guide</a></li>
+              <li><a href="#">Material Specifications</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog / News</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Vijaya Packaging Industries.
+            All Rights Reserved. Designed with care.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <div class="floating-buttons-container">
-        <button id="theme-toggle-btn" class="floating-btn" aria-label="Toggle theme" title="Toggle Theme">
-            <span class="icon-sun">☀️</span>
-            <span class="icon-moon">🌙</span>
-        </button>
-        <a href="#contact" id="floating-contact-btn" class="floating-btn" aria-label="Contact Us" title="Quick Contact">
-            💬 
-        </a>
+      <button
+        id="theme-toggle-btn"
+        class="floating-btn"
+        aria-label="Toggle theme"
+        title="Toggle Theme"
+      >
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <a
+        href="#contact"
+        id="floating-contact-btn"
+        class="floating-btn"
+        aria-label="Contact Us"
+        title="Quick Contact"
+      >
+        💬
+      </a>
     </div>
 
     <script>
-        // Brochure Download
-        function downloadBrochure() {
-            const brochureUrl = 'brochure.pdf'; 
-            const link = document.createElement('a');
-            link.href = brochureUrl;
-            link.download = 'Vijaya_Packaging_Brochure.pdf'; 
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
-        const downloadBrochureBtn = document.getElementById('downloadBrochureBtn');
-        if (downloadBrochureBtn) {
-            downloadBrochureBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                downloadBrochure();
-            });
-        }
-        const footerDownloadBrochureLink = document.getElementById('footerDownloadBrochure');
-        if (footerDownloadBrochureLink) {
-            footerDownloadBrochureLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                downloadBrochure();
-            });
-        }
+      // Brochure Download
+      function downloadBrochure() {
+        const brochureUrl = "brochure.pdf";
+        const link = document.createElement("a");
+        link.href = brochureUrl;
+        link.download = "Vijaya_Packaging_Brochure.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      const downloadBrochureBtn = document.getElementById(
+        "downloadBrochureBtn",
+      );
+      if (downloadBrochureBtn) {
+        downloadBrochureBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          downloadBrochure();
+        });
+      }
+      const footerDownloadBrochureLink = document.getElementById(
+        "footerDownloadBrochure",
+      );
+      if (footerDownloadBrochureLink) {
+        footerDownloadBrochureLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          downloadBrochure();
+        });
+      }
 
-        // Language Dropdown Toggle
-        const langBtnContainer = document.querySelector('.language-btn-container');
-        const langBtn = document.querySelector('.language-btn');
-        if (langBtnContainer && langBtn) { 
-            langBtn.addEventListener('click', function(event) {
-                event.stopPropagation(); 
-                langBtnContainer.classList.toggle('open');
-                langBtn.setAttribute('aria-expanded', langBtnContainer.classList.contains('open'));
-            });
+      // Language Dropdown Toggle
+      const langBtnContainer = document.querySelector(
+        ".language-btn-container",
+      );
+      const langBtn = document.querySelector(".language-btn");
+      if (langBtnContainer && langBtn) {
+        langBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          langBtnContainer.classList.toggle("open");
+          langBtn.setAttribute(
+            "aria-expanded",
+            langBtnContainer.classList.contains("open"),
+          );
+        });
+      }
+      // Close language dropdown if clicked outside (specific to language dropdown)
+      document.addEventListener("click", function (event) {
+        if (
+          langBtnContainer &&
+          langBtnContainer.classList.contains("open") &&
+          !langBtnContainer.contains(event.target)
+        ) {
+          langBtnContainer.classList.remove("open");
+          if (langBtn) langBtn.setAttribute("aria-expanded", "false");
         }
-        // Close language dropdown if clicked outside (specific to language dropdown)
-        document.addEventListener('click', function(event) {
-            if (langBtnContainer && langBtnContainer.classList.contains('open') && !langBtnContainer.contains(event.target)) {
-                langBtnContainer.classList.remove('open');
-                if (langBtn) langBtn.setAttribute('aria-expanded', 'false');
-            }
+      });
+
+      // Theme Toggle Functionality
+      const themeToggleButton = document.getElementById("theme-toggle-btn");
+      const body = document.body;
+
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        body.className = themeName + "-theme";
+        const root = document.documentElement;
+        if (themeName === "dark") {
+          root.style.setProperty(
+            "--rgb-primary-bright-blue",
+            "var(--rgb-accent-gold-val, 255, 191, 0)",
+          );
+        } else {
+          root.style.setProperty(
+            "--rgb-primary-bright-blue",
+            "var(--rgb-primary-bright-blue-val, 0, 123, 255)",
+          );
+        }
+        if (
+          body.classList.contains("mobile-menu-open") &&
+          themeName === "dark"
+        ) {
+          body.classList.add("dark-theme"); // re-apply if mobile-menu-open removed it
+        } else if (
+          body.classList.contains("mobile-menu-open") &&
+          themeName === "light"
+        ) {
+          body.classList.remove("dark-theme"); // ensure it's just light-theme
+        }
+      }
+
+      document.documentElement.style.setProperty(
+        "--rgb-primary-bright-blue-val",
+        "0, 123, 255",
+      );
+      document.documentElement.style.setProperty(
+        "--rgb-accent-gold-val",
+        "255, 191, 0",
+      );
+
+      if (themeToggleButton) {
+        themeToggleButton.addEventListener("click", () => {
+          const currentClass = body.className;
+          if (currentClass.includes("dark-theme")) {
+            setTheme("light");
+          } else {
+            setTheme("dark");
+          }
+        });
+      }
+      (function () {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") {
+          setTheme("dark");
+        } else {
+          setTheme("light");
+        }
+      })();
+
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Smooth Scroll for internal links (original)
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const isMobileNavLink = this.closest("#main-navigation.open");
+          if (!isMobileNavLink) {
+            // Prevent default only if not handled by mobile nav close
+            e.preventDefault();
+          }
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Delay slightly for menu to close if it was open
+            const delay = isMobileNavLink ? 150 : 0;
+            setTimeout(() => {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+              });
+            }, delay);
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      const menuToggleBtn = document.querySelector(".mobile-menu-toggle");
+      const mainNav = document.getElementById("main-navigation");
+
+      if (menuToggleBtn && mainNav) {
+        menuToggleBtn.addEventListener("click", (event) => {
+          event.stopPropagation(); // Prevent click from bubbling to document listener immediately
+          const isExpanded =
+            menuToggleBtn.getAttribute("aria-expanded") === "true" || false;
+          menuToggleBtn.setAttribute("aria-expanded", !isExpanded);
+          menuToggleBtn.classList.toggle("open");
+          mainNav.classList.toggle("open");
+          // Toggle body class for overflow and theme consistency
+          const currentTheme = localStorage.getItem("theme") || "light";
+          const bodyClass =
+            currentTheme + "-theme" + (!isExpanded ? " mobile-menu-open" : "");
+          body.className = bodyClass.trim();
         });
 
-
-        // Theme Toggle Functionality
-        const themeToggleButton = document.getElementById('theme-toggle-btn');
-        const body = document.body;
-
-        function setTheme(themeName) {
-            localStorage.setItem('theme', themeName);
-            body.className = themeName + '-theme'; 
-            const root = document.documentElement;
-            if (themeName === 'dark') {
-                root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-accent-gold-val, 255, 191, 0)');
-            } else {
-                root.style.setProperty('--rgb-primary-bright-blue', 'var(--rgb-primary-bright-blue-val, 0, 123, 255)');
+        // Close menu when a link inside it is clicked
+        mainNav.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function () {
+            if (mainNav.classList.contains("open")) {
+              menuToggleBtn.setAttribute("aria-expanded", "false");
+              menuToggleBtn.classList.remove("open");
+              mainNav.classList.remove("open");
+              const currentTheme = localStorage.getItem("theme") || "light";
+              body.className = currentTheme + "-theme"; // Remove mobile-menu-open
             }
-             if (body.classList.contains('mobile-menu-open') && themeName === 'dark') {
-                body.classList.add('dark-theme'); // re-apply if mobile-menu-open removed it
-            } else if (body.classList.contains('mobile-menu-open') && themeName === 'light') {
-                body.classList.remove('dark-theme'); // ensure it's just light-theme
-            }
-        }
-        
-        document.documentElement.style.setProperty('--rgb-primary-bright-blue-val', '0, 123, 255');
-        document.documentElement.style.setProperty('--rgb-accent-gold-val', '255, 191, 0');
-
-        if (themeToggleButton) {
-            themeToggleButton.addEventListener('click', () => {
-                const currentClass = body.className;
-                if (currentClass.includes('dark-theme')) {
-                    setTheme('light');
-                } else {
-                    setTheme('dark');
-                }
-            });
-        }
-        (function () {
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme === 'dark') {
-                setTheme('dark');
-            } else {
-                setTheme('light'); 
-            }
-        })();
-
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Smooth Scroll for internal links (original)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const isMobileNavLink = this.closest('#main-navigation.open');
-                if (!isMobileNavLink) { // Prevent default only if not handled by mobile nav close
-                    e.preventDefault();
-                }
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    // Delay slightly for menu to close if it was open
-                    const delay = isMobileNavLink ? 150 : 0;
-                    setTimeout(() => {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }, delay);
-                }
-            });
+            // Smooth scroll is handled by the general anchor click listener
+          });
         });
+      }
 
-        // Mobile Menu Toggle
-        const menuToggleBtn = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.getElementById('main-navigation');
+      // Close mobile menu if clicked outside
+      document.addEventListener("click", function (event) {
+        if (mainNav && menuToggleBtn) {
+          // Ensure elements exist
+          const isClickInsideNav = mainNav.contains(event.target);
+          const isClickOnToggle = menuToggleBtn.contains(event.target);
 
-        if (menuToggleBtn && mainNav) {
-            menuToggleBtn.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevent click from bubbling to document listener immediately
-                const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true' || false;
-                menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
-                menuToggleBtn.classList.toggle('open');
-                mainNav.classList.toggle('open');
-                // Toggle body class for overflow and theme consistency
-                const currentTheme = localStorage.getItem('theme') || 'light';
-                const bodyClass = currentTheme + '-theme' + (!isExpanded ? ' mobile-menu-open' : '');
-                body.className = bodyClass.trim();
-            });
-
-            // Close menu when a link inside it is clicked
-            mainNav.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function () {
-                    if (mainNav.classList.contains('open')) {
-                        menuToggleBtn.setAttribute('aria-expanded', 'false');
-                        menuToggleBtn.classList.remove('open');
-                        mainNav.classList.remove('open');
-                        const currentTheme = localStorage.getItem('theme') || 'light';
-                        body.className = currentTheme + '-theme'; // Remove mobile-menu-open
-                    }
-                    // Smooth scroll is handled by the general anchor click listener
-                });
-            });
+          if (
+            !isClickInsideNav &&
+            !isClickOnToggle &&
+            mainNav.classList.contains("open")
+          ) {
+            menuToggleBtn.setAttribute("aria-expanded", "false");
+            menuToggleBtn.classList.remove("open");
+            mainNav.classList.remove("open");
+            const currentTheme = localStorage.getItem("theme") || "light";
+            body.className = currentTheme + "-theme"; // Remove mobile-menu-open
+          }
         }
-        
-        // Close mobile menu if clicked outside
-        document.addEventListener('click', function(event) {
-            if (mainNav && menuToggleBtn) { // Ensure elements exist
-                const isClickInsideNav = mainNav.contains(event.target);
-                const isClickOnToggle = menuToggleBtn.contains(event.target);
+      });
 
-                if (!isClickInsideNav && !isClickOnToggle && mainNav.classList.contains('open')) {
-                    menuToggleBtn.setAttribute('aria-expanded', 'false');
-                    menuToggleBtn.classList.remove('open');
-                    mainNav.classList.remove('open');
-                    const currentTheme = localStorage.getItem('theme') || 'light';
-                    body.className = currentTheme + '-theme'; // Remove mobile-menu-open
-                }
-            }
-        });
+      // Gemini API Integration
+      const getSuggestionBtn = document.getElementById("getSuggestionBtn");
+      const messageTextarea = document.getElementById("message");
+      const suggestionOutputDiv = document.getElementById(
+        "gemini-suggestion-output",
+      );
+      const suggestionContainerDiv = document.getElementById(
+        "gemini-suggestion-output-container",
+      );
+      const loadingSpinnerDiv = document.getElementById(
+        "gemini-loading-spinner",
+      );
 
+      if (getSuggestionBtn) {
+        getSuggestionBtn.addEventListener("click", async () => {
+          const userMessage = messageTextarea.value.trim();
+          if (!userMessage) {
+            suggestionOutputDiv.innerHTML =
+              '<p style="color: red;">Please describe your packaging needs in the message box first.</p>';
+            suggestionContainerDiv.style.display = "block";
+            loadingSpinnerDiv.style.display = "none";
+            return;
+          }
 
-        // Gemini API Integration
-        const getSuggestionBtn = document.getElementById('getSuggestionBtn');
-        const messageTextarea = document.getElementById('message');
-        const suggestionOutputDiv = document.getElementById('gemini-suggestion-output');
-        const suggestionContainerDiv = document.getElementById('gemini-suggestion-output-container');
-        const loadingSpinnerDiv = document.getElementById('gemini-loading-spinner');
+          suggestionOutputDiv.innerHTML = "";
+          loadingSpinnerDiv.style.display = "block";
+          suggestionContainerDiv.style.display = "none";
 
-        if (getSuggestionBtn) {
-            getSuggestionBtn.addEventListener('click', async () => {
-                const userMessage = messageTextarea.value.trim();
-                if (!userMessage) {
-                    suggestionOutputDiv.innerHTML = '<p style="color: red;">Please describe your packaging needs in the message box first.</p>';
-                    suggestionContainerDiv.style.display = 'block';
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    return;
-                }
-
-                suggestionOutputDiv.innerHTML = ''; 
-                loadingSpinnerDiv.style.display = 'block'; 
-                suggestionContainerDiv.style.display = 'none';
-
-
-                const prompt = `
+          const prompt = `
                     A potential customer is looking for corrugated packaging. Their message is: "${userMessage}".
 
                     Based on this, please provide concise and actionable suggestions for Vijaya Packaging Industries. Structure your response under the following headings:
@@ -1839,156 +2705,181 @@
                     Example of a good concise point: "Consider a Die-Cut Box for a unique shape and branding."
                 `;
 
-                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-                const payload = { contents: chatHistory };
-                const apiKey = "AIzaSyCl6_FYAQQHLxQV4mVC0eEnuQKoaZfeWdw"; // API key will be injected by the environment
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+          let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+          const payload = { contents: chatHistory };
+          const apiKey = "AIzaSyCl6_FYAQQHLxQV4mVC0eEnuQKoaZfeWdw"; // API key will be injected by the environment
+          const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
+          try {
+            const response = await fetch(apiUrl, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload),
+            });
+
+            let result;
+            try {
+              result = await response.json();
+            } catch (jsonError) {
+              loadingSpinnerDiv.style.display = "none";
+              suggestionContainerDiv.style.display = "block";
+              console.error("Error parsing JSON response:", jsonError);
+              let errorText = "Could not parse server response.";
+              if (response && typeof response.text === "function") {
                 try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    let result;
-                    try {
-                        result = await response.json();
-                    } catch (jsonError) {
-                        loadingSpinnerDiv.style.display = 'none';
-                        suggestionContainerDiv.style.display = 'block';
-                        console.error('Error parsing JSON response:', jsonError);
-                        let errorText = "Could not parse server response.";
-                        if (response && typeof response.text === 'function') {
-                            try {
-                                errorText = await response.text();
-                            } catch (textErr) {
-                                // ignore if text cannot be read
-                            }
-                        }
-                        suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Server communication issue. ${errorText}</p>`;
-                        return; 
-                    }
-
-
-                    if (!response.ok) {
-                        const errorMessage = result?.error?.message || `API request failed with status ${response.status}.`;
-                        console.error("API Error Full Payload:", result);
-                        throw new Error(errorMessage);
-                    }
-                    
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    suggestionContainerDiv.style.display = 'block'; 
-
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        
-                        let text = result.candidates[0].content.parts[0].text;
-                        
-                        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); 
-                        text = text.replace(/\n\s*\n/g, '<br><br>'); 
-                        text = text.replace(/\n/g, '<br>'); 
-                        text = text.replace(/(\d\.\s*<br>\s*<strong>.*?<\/strong>|<br>\s*\d\.\s*<strong>.*?<\/strong>)/g, (match) => {
-                            return match.startsWith('<br>') ? `<p style="margin-top:10px;">${match.substring(4)}</p>` : `<p style="margin-top:10px;">${match}</p>`;
-                        });
-                        text = text.replace(/(\d\.\s*<strong>.*?<\/strong>)/g, '<p style="margin-top:10px;">$1</p>');
-
-
-                        suggestionOutputDiv.innerHTML = text;
-                    } else {
-                        if (result.promptFeedback && result.promptFeedback.blockReason) {
-                            let feedbackMessage = `The request was blocked. Reason: ${result.promptFeedback.blockReason}.`;
-                            if (result.promptFeedback.safetyRatings && result.promptFeedback.safetyRatings.length > 0) {
-                                feedbackMessage += " Details: ";
-                                result.promptFeedback.safetyRatings.forEach(rating => {
-                                    feedbackMessage += `${rating.category}: ${rating.probability}; `;
-                                });
-                            }
-                            suggestionOutputDiv.innerHTML = `<p style="color: orange;">${feedbackMessage} Please rephrase your message and try again.</p>`;
-                            console.error("Prompt Feedback:", result.promptFeedback);
-                        } else {
-                            suggestionOutputDiv.innerHTML = '<p>Sorry, no suggestions were generated. Please try rephrasing your message or try again later.</p>';
-                        }
-                        console.error("No candidates or unexpected API response structure:", result);
-                    }
-                } catch (error) { 
-                    loadingSpinnerDiv.style.display = 'none'; 
-                    suggestionContainerDiv.style.display = 'block'; 
-                    console.error('Error fetching packaging suggestions:', error);
-                    suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Could not fetch suggestions. ${error.message}</p>`;
+                  errorText = await response.text();
+                } catch (textErr) {
+                  // ignore if text cannot be read
                 }
-            });
-        }
+              }
+              suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Server communication issue. ${errorText}</p>`;
+              return;
+            }
 
-        // Capability Cards Gallery Interaction
-        const capabilityCards = document.querySelectorAll('.capability-card');
-        
-        // Function to check if device is mobile
-        function isMobileDevice() {
-            return window.matchMedia("(max-width: 768px)").matches || 
-                   ('ontouchstart' in window) || 
-                   (navigator.maxTouchPoints > 0);
-        }
-        
-        const isMobile = isMobileDevice();
-        
-        capabilityCards.forEach(card => {
-            // Toggle active class on click
-            card.querySelector('.capability-collage').addEventListener('click', (event) => {
-                // For mobile devices, we need to handle click events
-                if (isMobile) {
-                    event.preventDefault();
-                    // If already active, deactivate
-                    if (card.classList.contains('active')) {
-                        card.classList.remove('active');
-                    } else {
-                        // Deactivate all cards first
-                        capabilityCards.forEach(c => c.classList.remove('active'));
-                        // Activate this card
-                        card.classList.add('active');
-                    }
+            if (!response.ok) {
+              const errorMessage =
+                result?.error?.message ||
+                `API request failed with status ${response.status}.`;
+              console.error("API Error Full Payload:", result);
+              throw new Error(errorMessage);
+            }
+
+            loadingSpinnerDiv.style.display = "none";
+            suggestionContainerDiv.style.display = "block";
+
+            if (
+              result.candidates &&
+              result.candidates.length > 0 &&
+              result.candidates[0].content &&
+              result.candidates[0].content.parts &&
+              result.candidates[0].content.parts.length > 0
+            ) {
+              let text = result.candidates[0].content.parts[0].text;
+
+              text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+              text = text.replace(/\n\s*\n/g, "<br><br>");
+              text = text.replace(/\n/g, "<br>");
+              text = text.replace(
+                /(\d\.\s*<br>\s*<strong>.*?<\/strong>|<br>\s*\d\.\s*<strong>.*?<\/strong>)/g,
+                (match) => {
+                  return match.startsWith("<br>")
+                    ? `<p style="margin-top:10px;">${match.substring(4)}</p>`
+                    : `<p style="margin-top:10px;">${match}</p>`;
+                },
+              );
+              text = text.replace(
+                /(\d\.\s*<strong>.*?<\/strong>)/g,
+                '<p style="margin-top:10px;">$1</p>',
+              );
+
+              suggestionOutputDiv.innerHTML = text;
+            } else {
+              if (result.promptFeedback && result.promptFeedback.blockReason) {
+                let feedbackMessage = `The request was blocked. Reason: ${result.promptFeedback.blockReason}.`;
+                if (
+                  result.promptFeedback.safetyRatings &&
+                  result.promptFeedback.safetyRatings.length > 0
+                ) {
+                  feedbackMessage += " Details: ";
+                  result.promptFeedback.safetyRatings.forEach((rating) => {
+                    feedbackMessage += `${rating.category}: ${rating.probability}; `;
+                  });
                 }
-            });
-            
-            // Close when clicking outside (for mobile)
-            document.addEventListener('click', (event) => {
-                if (isMobile && !card.contains(event.target) && card.classList.contains('active')) {
-                    card.classList.remove('active');
-                }
-            });
-            
-            // Improved touch support for mobile
-            let touchStartX, touchStartY;
-            let touchEndX, touchEndY;
-            
-            card.addEventListener('touchstart', (event) => {
-                touchStartX = event.touches[0].clientX;
-                touchStartY = event.touches[0].clientY;
-            });
-            
-            card.addEventListener('touchend', (event) => {
-                if (event.changedTouches.length > 0) {
-                    touchEndX = event.changedTouches[0].clientX;
-                    touchEndY = event.changedTouches[0].clientY;
-                    
-                    // Calculate distance moved
-                    const distX = Math.abs(touchEndX - touchStartX);
-                    const distY = Math.abs(touchEndY - touchStartY);
-                    
-                    // Only trigger if it's a tap (not a scroll)
-                    if (distX < 10 && distY < 10) {
-                        if (card.classList.contains('active')) {
-                            card.classList.remove('active');
-                        } else {
-                            capabilityCards.forEach(c => c.classList.remove('active'));
-                            card.classList.add('active');
-                        }
-                    }
-                }
-            });
+                suggestionOutputDiv.innerHTML = `<p style="color: orange;">${feedbackMessage} Please rephrase your message and try again.</p>`;
+                console.error("Prompt Feedback:", result.promptFeedback);
+              } else {
+                suggestionOutputDiv.innerHTML =
+                  "<p>Sorry, no suggestions were generated. Please try rephrasing your message or try again later.</p>";
+              }
+              console.error(
+                "No candidates or unexpected API response structure:",
+                result,
+              );
+            }
+          } catch (error) {
+            loadingSpinnerDiv.style.display = "none";
+            suggestionContainerDiv.style.display = "block";
+            console.error("Error fetching packaging suggestions:", error);
+            suggestionOutputDiv.innerHTML = `<p style="color: red;">Error: Could not fetch suggestions. ${error.message}</p>`;
+          }
+        });
+      }
+
+      // Capability Cards Gallery Interaction
+      const capabilityCards = document.querySelectorAll(".capability-card");
+
+      // Function to check if device is mobile
+      function isMobileDevice() {
+        return (
+          window.matchMedia("(max-width: 768px)").matches ||
+          "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0
+        );
+      }
+
+      const isMobile = isMobileDevice();
+
+      capabilityCards.forEach((card) => {
+        // Toggle active class on click
+        card
+          .querySelector(".capability-collage")
+          .addEventListener("click", (event) => {
+            // For mobile devices, we need to handle click events
+            if (isMobile) {
+              event.preventDefault();
+              // If already active, deactivate
+              if (card.classList.contains("active")) {
+                card.classList.remove("active");
+              } else {
+                // Deactivate all cards first
+                capabilityCards.forEach((c) => c.classList.remove("active"));
+                // Activate this card
+                card.classList.add("active");
+              }
+            }
+          });
+
+        // Close when clicking outside (for mobile)
+        document.addEventListener("click", (event) => {
+          if (
+            isMobile &&
+            !card.contains(event.target) &&
+            card.classList.contains("active")
+          ) {
+            card.classList.remove("active");
+          }
         });
 
+        // Improved touch support for mobile
+        let touchStartX, touchStartY;
+        let touchEndX, touchEndY;
+
+        card.addEventListener("touchstart", (event) => {
+          touchStartX = event.touches[0].clientX;
+          touchStartY = event.touches[0].clientY;
+        });
+
+        card.addEventListener("touchend", (event) => {
+          if (event.changedTouches.length > 0) {
+            touchEndX = event.changedTouches[0].clientX;
+            touchEndY = event.changedTouches[0].clientY;
+
+            // Calculate distance moved
+            const distX = Math.abs(touchEndX - touchStartX);
+            const distY = Math.abs(touchEndY - touchStartY);
+
+            // Only trigger if it's a tap (not a scroll)
+            if (distX < 10 && distY < 10) {
+              if (card.classList.contains("active")) {
+                card.classList.remove("active");
+              } else {
+                capabilityCards.forEach((c) => c.classList.remove("active"));
+                card.classList.add("active");
+              }
+            }
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
