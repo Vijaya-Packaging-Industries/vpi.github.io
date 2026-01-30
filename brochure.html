@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijaya Packaging Industries - Company Brochure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        :root {
+            --primary-deep-blue: #0A2342;
+            --accent-orange: #FFA500;
+            --light-text: #333333;
+            --off-white-bg: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ccc;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* A4 Page Styling */
+        .a4-page {
+            width: 210mm;
+            height: 297mm;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            color: var(--light-text);
+            margin: 20px 0; /* Add margin for screen view */
+        }
+
+        /* Header and Footer for all pages */
+        .page-header {
+            padding: 15mm 15mm 10mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--accent-orange);
+        }
+
+        .logo-img {
+            height: 15mm;
+            width: auto;
+        }
+        
+        .logo-text-container {
+             line-height: 1;
+        }
+
+        .logo-title {
+            font-size: 24pt;
+            font-weight: 700;
+            color: var(--primary-deep-blue);
+        }
+        
+        .logo-title span {
+            color: var(--accent-orange);
+        }
+
+        .logo-subtitle {
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--primary-deep-blue);
+            text-align: right;
+        }
+
+        .page-footer {
+            margin-top: auto;
+            padding: 10mm 15mm;
+            background-color: var(--primary-deep-blue);
+            color: white;
+            text-align: center;
+            font-size: 9pt;
+        }
+
+        .page-footer a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+
+        .page-content {
+            padding: 10mm 15mm;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-deep-blue);
+            font-weight: 700;
+        }
+
+        /* --- Page 1: Cover --- */
+        .cover-page {
+            background: linear-gradient(rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.7)), url('material_1.png') center/cover no-repeat;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .cover-logo {
+            height: 40mm;
+            margin-bottom: 10mm;
+        }
+        .cover-title {
+            font-size: 32pt;
+            font-weight: 700;
+            margin-bottom: 5mm;
+        }
+         .cover-title span {
+            color: var(--accent-orange);
+        }
+        .cover-tagline {
+            font-size: 16pt;
+            font-weight: 400;
+            max-width: 150mm;
+        }
+
+        /* --- Page 2: Our Story --- */
+        .story-content {
+            flex-direction: row;
+            align-items: center;
+            gap: 10mm;
+        }
+        .story-text {
+            flex: 1;
+        }
+        .story-text h1 {
+            font-size: 24pt;
+            margin-bottom: 8mm;
+            border-left: 3mm solid var(--accent-orange);
+            padding-left: 5mm;
+            line-height: 1.2;
+        }
+        .story-text p {
+            font-size: 11pt;
+            line-height: 1.6;
+            margin-bottom: 5mm;
+        }
+        .story-image {
+            flex: 0 0 80mm;
+            text-align: center;
+        }
+        .founder-img {
+            width: 100%;
+            border-radius: 8px;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+         .founder-name {
+            font-weight: 600;
+            margin-top: 3mm;
+            font-size: 12pt;
+        }
+        .founder-title {
+            font-size: 10pt;
+            opacity: 0.8;
+        }
+
+        /* --- Page 3 & 4: Products --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+            height: 100%;
+        }
+        .product-card {
+            background-color: var(--off-white-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        .product-card img {
+            width: 100%;
+            height: 60mm;
+            object-fit: cover;
+        }
+        .product-card-title {
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--primary-deep-blue);
+            padding: 5mm;
+            margin: 0;
+            text-align: center;
+            background: #fff;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 28pt;
+            margin-bottom: 10mm;
+        }
+        
+        /* --- Page 5: Our Commitment --- */
+        .commitment-content {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            height: 100%;
+            gap: 10mm;
+        }
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+        }
+        .commitment-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: var(--off-white-bg);
+            padding: 8mm;
+            border-radius: 8px;
+        }
+        .commitment-card img {
+            width: 100%;
+            height: 50mm;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 5mm;
+        }
+        .commitment-card h3 {
+            font-size: 16pt;
+            margin-bottom: 2mm;
+        }
+        .commitment-card p {
+            font-size: 10pt;
+            line-height: 1.5;
+        }
+
+        /* --- Page 6: Back Cover --- */
+        .back-cover {
+            background-color: var(--off-white-bg);
+            align-items: center;
+            justify-content: space-between;
+        }
+        .contact-info {
+            width: 100%;
+            background-color: var(--primary-deep-blue);
+            color: white;
+            padding: 15mm;
+            text-align: center;
+        }
+        .contact-info h2 {
+            color: var(--accent-orange);
+            font-size: 22pt;
+            margin-bottom: 8mm;
+        }
+        .contact-details p {
+            font-size: 11pt;
+            margin: 2mm 0;
+            line-height: 1.6;
+        }
+        .contact-details a {
+            color: white;
+        }
+        .qr-code-section {
+            padding: 15mm;
+            text-align: center;
+        }
+         .qr-code-section img {
+            width: 40mm;
+            height: 40mm;
+            margin-bottom: 4mm;
+        }
+        .qr-code-section p {
+            font-size: 10pt;
+            font-weight: 600;
+        }
+
+
+        /* Print Styles */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background-color: #fff;
+                -webkit-print-color-adjust: exact; /* For Chrome, Safari */
+                color-adjust: exact; /* Standard */
+            }
+
+            .a4-page {
+                box-shadow: none;
+                margin: 0;
+                page-break-after: always; /* Ensure each div is a new page */
+            }
+
+            .a4-page:last-child {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container for all pages -->
+    <div class="brochure-container">
+
+        <!-- Page 1: Cover Page -->
+        <div class="a4-page cover-page">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="cover-logo" onerror="this.onerror=null;this.src='https://placehold.co/400x120/FFFFFF/0A2342?text=Logo';">
+            <h1 class="cover-title">Vijaya <span>Packaging</span> Industries</h1>
+            <p class="cover-tagline">Your trusted partner for premium, eco-friendly corrugated packaging solutions.</p>
+        </div>
+
+        <!-- Page 2: Our Story -->
+        <div class="a4-page">
+            <div class="page-header">
+                <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/150x45/FFFFFF/0A2342?text=Logo';">
+                <div class="logo-text-container">
+                    <div class="logo-title">Vijaya <span>Packaging</span></div>
+                    <div class="logo-subtitle">Industries</div>
+                </div>
+            </div>
+            <div class="page-content story-content">
+                <div class="story-text">
+                    <h1>A Woman-Led Enterprise Built on Trust & Innovation.</h1>
+                    <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has rapidly become one of the region's most trusted packaging providers.</p>
+                    <p>Our commitment to quality, innovation, and unwavering sustainability has earned us the trust of a diverse clientele across industries including FMCG, electronics, pharmaceuticals, and e-commerce.</p>
+                    <p>We don't just make boxes; we build partnerships and deliver solutions that protect what's valuable—for our clients and our planet.</p>
+                </div>
+                <div class="story-image">
+                    <img src="mom.png" alt="Mrs. Vijayalakshmi D, Founder" class="founder-img" onerror="this.onerror=null;this.src='https://placehold.co/300x400/cccccc/333333?text=Founder';">
+                    <p class="founder-name">Mrs. Vijayalakshmi D</p>
+                    <p class="founder-title">Founder & Proprietor</p>
+                </div>
+            </div>
+            <div class="page-footer">
+                Premium, Eco-Friendly Corrugated Packaging Solutions Since 2019
+            </div>
+        </div>
+
+        <!-- Page 3: Our Products (Part 1) -->
+        <div class="a4-page">
+            <div class="page-header">
+                 <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/150x45/FFFFFF/0A2342?text=Logo';">
+                 <div class="logo-text-container">
+                    <div class="logo-title">Vijaya <span>Packaging</span></div>
+                    <div class="logo-subtitle">Industries</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <h1 class="page-title">Our Premium Products</h1>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="Regular Slotted Cartons.png" alt="Regular Slotted Cartons" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=RSC';">
+                        <h3 class="product-card-title">Regular Slotted Cartons (RSC)</h3>
+                    </div>
+                    <div class="product-card">
+                        <img src="Die-Cut Boxes.png" alt="Die-Cut Boxes" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Die-Cut';">
+                        <h3 class="product-card-title">Die-Cut Boxes</h3>
+                    </div>
+                    <div class="product-card">
+                        <img src="Heavy-Duty Packaging.jpg" alt="Heavy-Duty Packaging" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Heavy-Duty';">
+                        <h3 class="product-card-title">Heavy-Duty Packaging</h3>
+                    </div>
+                     <div class="product-card">
+                        <img src="Telescoping Containers.jpg" alt="Telescoping Containers" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Telescopic';">
+                        <h3 class="product-card-title">Telescoping Containers</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer">
+                Quality and Precision in Every Box We Create.
+            </div>
+        </div>
+
+        <!-- Page 4: Our Products (Part 2) -->
+        <div class="a4-page">
+             <div class="page-header">
+                 <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/150x45/FFFFFF/0A2342?text=Logo';">
+                 <div class="logo-text-container">
+                    <div class="logo-title">Vijaya <span>Packaging</span></div>
+                    <div class="logo-subtitle">Industries</div>
+                </div>
+            </div>
+            <div class="page-content">
+                 <h1 class="page-title">Customized Solutions</h1>
+                 <div class="products-grid">
+                    <div class="product-card">
+                        <img src="Retail Display Packaging.jpg" alt="Retail Display Packaging" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Retail+Display';">
+                        <h3 class="product-card-title">Retail Display Packaging</h3>
+                    </div>
+                    <div class="product-card">
+                        <img src="Custom Inserts & Dividers.jpg" alt="Custom Inserts & Dividers" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Inserts';">
+                        <h3 class="product-card-title">Custom Inserts & Dividers</h3>
+                    </div>
+                    <div class="product-card">
+                        <img src="Window Patching.png" alt="Special Finishes" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Finishes';">
+                        <h3 class="product-card-title">Special Finishes & Add-ons</h3>
+                    </div>
+                     <div class="product-card">
+                        <img src="Brand Printing.png" alt="Advanced Printing" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Printing';">
+                        <h3 class="product-card-title">Advanced Printing</h3>
+                    </div>
+                </div>
+            </div>
+             <div class="page-footer">
+                From Concept to Creation, Your Vision is Our Blueprint.
+            </div>
+        </div>
+
+        <!-- Page 5: Our Commitment -->
+        <div class="a4-page">
+            <div class="page-header">
+                <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.onerror=null;this.src='https://placehold.co/150x45/FFFFFF/0A2342?text=Logo';">
+                <div class="logo-text-container">
+                    <div class="logo-title">Vijaya <span>Packaging</span></div>
+                    <div class="logo-subtitle">Industries</div>
+                </div>
+            </div>
+            <div class="page-content commitment-content">
+                <h1 class="page-title">Our Commitment</h1>
+                <div class="commitment-grid">
+                    <div class="commitment-card">
+                        <img src="custom_cover.jpg" alt="Custom Design & Sizing" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Custom+Design';">
+                        <h3>Custom Design & Sizing</h3>
+                        <p>We provide tailored dimensions and structural designs to fit your product perfectly, minimizing waste and maximizing protection.</p>
+                    </div>
+                    <div class="commitment-card">
+                        <img src="material_2.png" alt="Sustainability" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Sustainability';">
+                        <h3>Sustainability</h3>
+                        <p>We champion eco-friendly practices, using high-recycled content, water-based inks, and energy-efficient manufacturing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer">
+                Innovative Design. Sustainable Practices. Unmatched Quality.
+            </div>
+        </div>
+
+        <!-- Page 6: Back Cover / Contact -->
+        <div class="a4-page back-cover">
+            <div class="qr-code-section">
+                 <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" style="height: 25mm; margin-bottom: 10mm;" onerror="this.onerror=null;this.src='https://placehold.co/200x75/FFFFFF/0A2342?text=Logo';">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://vijaya-packaging-industries.github.io/" alt="QR Code to website" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/333333?text=QR+Code';">
+                <p>Scan to visit our website</p>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <p><strong>Address:</strong> Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016</p>
+                    <p><strong>Phone:</strong> <a href="tel:+919343830540">+91 9343830540</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

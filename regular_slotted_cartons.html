@@ -1,0 +1,1919 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Regular Slotted Cartons (RSC) - Visual Guide - Vijaya Packaging Industries
+    </title>
+    <style>
+      :root {
+        /* Updated Color Palette */
+        --primary-deep-blue: #0a2342; /* For headings, dark backgrounds, primary text */
+        --primary-dark-blue: #003366; /* Alternative dark blue */
+        --primary-bright-blue: #007bff; /* For links, interactive elements */
+
+        --accent-orange: #ffa500; /* Primary accent for CTAs */
+        --accent-gold: #ffbf00; /* Secondary accent */
+
+        /* Light Theme Variables */
+        --light-bg: #f0f8ff;
+        --light-text: #333333;
+        --light-card-bg: #ffffff;
+        --light-section-title: var(--primary-deep-blue);
+        --light-header-bg: #ffffff;
+        --light-header-text: var(--primary-deep-blue);
+        --light-footer-bg: var(--primary-deep-blue);
+        --light-footer-text: #e0e0e0;
+
+        /* Dark Theme Variables */
+        --dark-bg: #0a192f;
+        --dark-text: #e0e0e0;
+        --dark-card-bg: #172a45;
+        --dark-section-title: var(--accent-gold);
+        --dark-header-bg: #172a45;
+        --dark-header-text: var(--light-bg);
+        --dark-footer-bg: #071322;
+        --dark-footer-text: #b0b0b0;
+
+        /* Default to light theme */
+        --bg-color: var(--light-bg);
+        --text-color: var(--light-text);
+        --card-bg-color: var(--light-card-bg);
+        --section-title-color: var(--light-section-title);
+        --header-bg-color: var(--light-header-bg);
+        --header-text-color: var(--light-header-text);
+        --footer-bg-color: var(--light-footer-bg);
+        --footer-text-color: var(--light-footer-text);
+
+        --logo-text-color: var(--primary-deep-blue);
+        --logo-subtitle-color: var(--primary-deep-blue);
+        --nav-link-color: var(--primary-deep-blue);
+        --nav-link-hover-color: var(--accent-orange);
+
+        --btn-primary-bg: var(--accent-orange);
+        --btn-primary-text: white;
+        --btn-primary-hover-bg: var(--accent-gold);
+
+        --btn-outline-text-color: var(--accent-orange);
+        --btn-outline-border-color: var(--accent-orange);
+        --btn-outline-hover-bg-color: var(--accent-orange);
+        --btn-outline-hover-text-color: white;
+
+        --form-control-border: #dddddd;
+        --form-control-focus-border: var(--primary-bright-blue);
+        --product-img-bg: #f5f5f5; /* Used for image placeholders */
+        --gallery-item-bg: #e9ecef; /* Background for gallery items */
+      }
+
+      body.dark-theme {
+        --bg-color: var(--dark-bg);
+        --text-color: var(--dark-text);
+        --card-bg-color: var(--dark-card-bg);
+        --section-title-color: var(--dark-section-title);
+        --header-bg-color: var(--dark-header-bg);
+        --header-text-color: var(--dark-header-text);
+        --footer-bg-color: var(--dark-footer-bg);
+        --footer-text-color: var(--dark-footer-text);
+
+        --logo-text-color: var(--accent-gold);
+        --logo-subtitle-color: var(--accent-gold);
+        --nav-link-color: var(--light-bg);
+        --nav-link-hover-color: var(--accent-orange);
+
+        --btn-primary-bg: var(--accent-orange);
+        --btn-primary-text: var(--primary-deep-blue);
+        --btn-primary-hover-bg: var(--accent-gold);
+
+        --btn-outline-text-color: var(--accent-gold);
+        --btn-outline-border-color: var(--accent-gold);
+        --btn-outline-hover-bg-color: var(--accent-gold);
+        --btn-outline-hover-text-color: var(--dark-bg);
+
+        --form-control-border: #555555;
+        --form-control-focus-border: var(--accent-gold);
+        --product-img-bg: #4a4a4a;
+        --gallery-item-bg: #2c3e50;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        position: relative;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+        font-size: 16px;
+      }
+      body.mobile-menu-open {
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-bright-blue);
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--accent-orange);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 10px;
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        background-color: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
+        border-radius: 5px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: var(--btn-primary-hover-bg);
+        color: var(--btn-primary-text);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 2px solid var(--btn-outline-border-color);
+        color: var(--btn-outline-text-color);
+      }
+
+      .btn-outline:hover {
+        background-color: var(--btn-outline-hover-bg-color);
+        color: var(--btn-outline-hover-text-color);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* Header */
+      header {
+        background-color: var(--header-bg-color);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+        padding: 0;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        position: relative;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo-link {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .logo-img {
+        height: 35px;
+        width: auto;
+        transition: transform 0.3s ease;
+      }
+
+      .logo-link:hover .logo-img {
+        transform: scale(1.05);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--logo-text-color);
+        margin-bottom: 2px;
+      }
+
+      .logo span {
+        color: var(--accent-orange);
+      }
+
+      .logo-subtitle {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--logo-subtitle-color);
+        letter-spacing: 0.5px;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+        position: relative;
+      }
+
+      nav ul li a,
+      .language-btn {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--nav-link-color);
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease;
+        background: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .language-btn {
+        border: 1px solid var(--nav-link-color);
+      }
+
+      nav ul li a:hover,
+      .language-btn:hover {
+        color: var(--nav-link-hover-color);
+        border-color: var(--nav-link-hover-color);
+      }
+      nav ul li a.active {
+        color: var(--accent-orange);
+        font-weight: 700;
+      }
+
+      .language-dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--card-bg-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        padding: 8px 0;
+        z-index: 1001;
+        min-width: 120px;
+        border: 1px solid var(--form-control-border);
+      }
+
+      .language-dropdown a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--text-color);
+        white-space: nowrap;
+        border: none;
+        font-size: 15px;
+      }
+
+      .language-dropdown a:hover {
+        background-color: var(--bg-color);
+        color: var(--accent-orange);
+        border: none;
+      }
+
+      .language-btn-container.open .language-dropdown {
+        display: block;
+      }
+      .language-btn .icon {
+        margin-right: 6px;
+      }
+
+      /* Mobile Header Controls */
+      .mobile-header-controls {
+        display: none; /* Hidden by default, shown in media query */
+        align-items: center;
+      }
+
+      /* Mobile Language Button */
+      .mobile-language-btn-container {
+        position: relative;
+        margin-right: 10px;
+      }
+
+      .mobile-language-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      .mobile-language-btn-container .language-dropdown {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        transform: none;
+        min-width: 120px;
+        z-index: 1006;
+      }
+
+      .mobile-language-btn-container.open .language-dropdown {
+        display: block;
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 1005;
+      }
+
+      .mobile-menu-toggle .menu-icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--nav-link-color);
+        margin: 5px 0;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+        border-radius: 1px;
+      }
+      body.dark-theme .mobile-menu-toggle .menu-icon-bar {
+        background-color: var(--nav-link-color);
+      }
+
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+      }
+      .mobile-menu-toggle.open .menu-icon-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      #main-navigation.open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--header-bg-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1002;
+        border-top: 1px solid var(--form-control-border);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        padding-top: 5px;
+      }
+
+      #main-navigation.open ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      #main-navigation.open ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--form-control-border);
+      }
+      #main-navigation.open ul li:last-child {
+        border-bottom: none;
+      }
+
+      #main-navigation.open ul li a,
+      #main-navigation.open .language-btn {
+        display: block;
+        padding: 15px 20px;
+        color: var(--nav-link-color);
+        font-weight: 600;
+        border: none;
+        border-radius: 0;
+      }
+      #main-navigation.open ul li a:hover,
+      #main-navigation.open .language-btn:hover {
+        background-color: var(--bg-color);
+        color: var(--nav-link-hover-color);
+      }
+
+      #main-navigation.open .language-btn-container {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+      #main-navigation.open .language-dropdown {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-top: 1px dashed var(--form-control-border);
+        background-color: var(--header-bg-color);
+        min-width: auto;
+        padding: 0;
+      }
+      #main-navigation.open .language-dropdown a {
+        padding: 12px 20px;
+        color: var(--nav-link-color);
+      }
+      #main-navigation.open .language-dropdown a:hover {
+        background-color: var(--bg-color);
+        color: var(--accent-orange);
+      }
+
+      @media (max-width: 1024px) {
+        .mobile-header-controls {
+          display: flex; /* Show mobile controls container */
+        }
+
+        .mobile-menu-toggle {
+          display: block;
+          position: relative;
+          padding: 10px;
+        }
+
+        /* Hide language button in main navigation on mobile */
+        #main-navigation .language-btn-container {
+          display: none;
+        }
+
+        .logo-container {
+          flex-shrink: 1;
+        }
+
+        .logo {
+          font-size: 20px;
+          white-space: nowrap;
+          margin-bottom: 1px;
+        }
+
+        .logo-subtitle {
+          font-size: 12px;
+        }
+
+        nav {
+          display: none;
+        }
+        #main-navigation.open {
+          display: block;
+        }
+      }
+
+      /* Hero Section - Product Page Specific */
+      .product-hero {
+        background:
+          linear-gradient(rgba(10, 35, 66, 0.8), rgba(0, 51, 102, 0.8)),
+          url("https://placehold.co/1200x400/0A2342/FFFFFF?text=RSC+Visual+Guide")
+            center/cover no-repeat;
+        color: white;
+        padding: 70px 0;
+        text-align: center;
+      }
+      .product-hero h1 {
+        font-size: 38px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+      .product-hero p {
+        font-size: 17px;
+        max-width: 700px;
+        margin: 0 auto 20px auto;
+        line-height: 1.6;
+      }
+      .breadcrumb {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      .breadcrumb a {
+        color: var(--accent-gold);
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .breadcrumb span {
+        color: #ccc;
+      }
+
+      .section-title {
+        font-size: 34px;
+        color: var(--section-title-color);
+        margin-bottom: 25px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 3px;
+        background-color: var(--accent-orange);
+        border-radius: 2px;
+      }
+
+      /* Product Detail Section - Image Focused */
+      .product-visual-section {
+        padding: 60px 0;
+        background-color: var(--bg-color);
+      }
+      .product-intro-text {
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 40px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.9;
+      }
+
+      .image-grid {
+        display: grid;
+        /* Adjusted to fit more items if needed, but 3-4 across is good for desktop */
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+        margin-bottom: 40px;
+      }
+      .grid-item {
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        display: flex; /* For vertical alignment of caption */
+        flex-direction: column; /* Stack image and caption */
+      }
+      .grid-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      .grid-item img {
+        width: 100%;
+        height: 200px; /* Slightly reduced height for more items */
+        object-fit: cover;
+        display: block;
+        background-color: var(--product-img-bg);
+      }
+      .grid-item-caption {
+        padding: 15px;
+        text-align: center;
+        flex-grow: 1; /* Allow caption to take remaining space */
+        display: flex; /* For centering text if needed */
+        flex-direction: column;
+        justify-content: center;
+      }
+      .grid-item-caption h4 {
+        font-size: 17px; /* Adjusted for potentially longer variant names */
+        color: var(--primary-dark-blue);
+        margin-bottom: 5px;
+        font-weight: 600;
+        line-height: 1.3; /* Allow wrapping */
+      }
+      body.dark-theme .grid-item-caption h4 {
+        color: var(--accent-gold);
+      }
+      .grid-item-caption p {
+        /* Optional: for short descriptions under variant names */
+        font-size: 13px;
+        opacity: 0.7;
+        line-height: 1.4;
+        margin-top: 3px;
+      }
+
+      .features-visual-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .feature-item {
+        background-color: var(--card-bg-color);
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .feature-image-container {
+        /* New container for feature images */
+        width: 80px; /* Adjust as needed */
+        height: 80px; /* Adjust as needed */
+        margin-bottom: 15px;
+        background-color: var(--product-img-bg); /* Placeholder bg */
+        border-radius: 6px; /* Optional: rounded corners for image container */
+        overflow: hidden; /* If images are larger */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .feature-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Or 'cover' depending on image aspect ratio */
+      }
+      .feature-item h4 {
+        font-size: 17px;
+        color: var(--primary-deep-blue);
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      body.dark-theme .feature-item h4 {
+        color: var(--light-text);
+      }
+      .feature-item p {
+        font-size: 14px;
+        opacity: 0.8;
+      }
+
+      /* Product Detail Sidebar (Simplified) */
+      .product-detail-sidebar {
+        background-color: var(--card-bg-color);
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+        margin-top: 40px;
+      }
+      .product-detail-sidebar h3 {
+        font-size: 20px;
+        color: var(--primary-deep-blue);
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--accent-orange);
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      body.dark-theme .product-detail-sidebar h3 {
+        color: var(--accent-gold);
+        border-bottom-color: var(--accent-gold);
+      }
+      .sidebar-main-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px auto;
+        border-radius: 6px;
+        display: block;
+        background-color: var(--product-img-bg);
+      }
+      .product-detail-sidebar ul {
+        list-style: none;
+        padding-left: 0;
+        text-align: center;
+      }
+      .product-detail-sidebar ul li {
+        font-size: 15px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .product-detail-sidebar ul li::before {
+        content: "✓";
+        color: var(--accent-orange);
+        margin-right: 8px;
+        font-weight: bold;
+      }
+      body.dark-theme .product-detail-sidebar ul li::before {
+        color: var(--accent-gold);
+      }
+      .product-detail-sidebar .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 20px auto 0 auto;
+        display: block;
+      }
+
+      /* CTA Section */
+      .cta {
+        padding: 70px 0;
+        background:
+          linear-gradient(rgba(10, 35, 66, 0.8), rgba(0, 51, 102, 0.8)),
+          url("https://placehold.co/1200x350/0A2342/FFFFFF?text=Get+Your+RSC+Quote")
+            center/cover no-repeat;
+        color: white;
+        text-align: center;
+      }
+      .cta h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      .cta p {
+        max-width: 700px;
+        margin: 0 auto 30px;
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text-color);
+        padding: 60px 0 25px;
+        position: relative;
+      }
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 35px;
+        margin-bottom: 40px;
+      }
+      .footer-col h3 {
+        font-size: 19px;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+        font-weight: 600;
+      }
+      .footer-col h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 35px;
+        height: 2px;
+        background-color: var(--accent-orange);
+      }
+      .footer-col p {
+        line-height: 1.6;
+        opacity: 0.85;
+        font-size: 14px;
+      }
+      .footer-col ul {
+        list-style: none;
+      }
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      .footer-col ul li a {
+        color: var(--footer-text-color);
+        opacity: 0.8;
+        font-size: 14px;
+      }
+      .footer-col ul li a:hover {
+        color: var(--accent-orange);
+        opacity: 1;
+      }
+      .social-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .social-link {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--footer-text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        transition: all 0.3s ease;
+      }
+      .social-link:hover {
+        background-color: var(--accent-orange);
+        color: white;
+        transform: translateY(-2px);
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 25px;
+        text-align: center;
+        color: var(--footer-text-color);
+        opacity: 0.75;
+        font-size: 13px;
+      }
+
+      /* Floating Buttons Container */
+      .floating-buttons-container {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .floating-btn {
+        background-color: var(--accent-orange);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease;
+        border: none;
+      }
+      .floating-btn:hover {
+        background-color: var(--accent-gold);
+        transform: scale(1.08);
+      }
+      #theme-toggle-btn .icon-sun {
+        display: inline;
+      }
+      #theme-toggle-btn .icon-moon {
+        display: none;
+      }
+      body.dark-theme #theme-toggle-btn .icon-sun {
+        display: none;
+      }
+      body.dark-theme #theme-toggle-btn .icon-moon {
+        display: inline;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .product-hero h1 {
+          font-size: 32px;
+        }
+        .product-hero p {
+          font-size: 16px;
+        }
+        .section-title {
+          font-size: 30px;
+        }
+        .footer-content {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .image-grid {
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+          ); /* Adjust for tablets */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 8px 0;
+        }
+        .logo-img {
+          height: 30px;
+        }
+        .logo {
+          font-size: 18px;
+        }
+        .logo-subtitle {
+          font-size: 11px;
+        }
+        .mobile-menu-toggle {
+          padding: 10px;
+        }
+
+        .mobile-language-btn {
+          padding: 6px 8px;
+          font-size: 13px;
+        }
+
+        .product-hero h1 {
+          font-size: 26px;
+        }
+        .product-hero p {
+          font-size: 15px;
+        }
+        .section-title {
+          font-size: 26px;
+        }
+        .image-grid {
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 20px;
+        } /* Adjust for smaller tablets / large phones */
+        .grid-item img {
+          height: 180px;
+        } /* Adjust image height */
+        .grid-item-caption h4 {
+          font-size: 16px;
+        }
+
+        .floating-buttons-container {
+          bottom: 15px;
+          right: 15px;
+          gap: 10px;
+        }
+        .floating-btn {
+          width: 45px;
+          height: 45px;
+          font-size: 18px;
+        }
+
+        .footer-content {
+          text-align: center;
+        }
+        .footer-col h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .social-links {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .logo-img {
+          height: 25px;
+        }
+        .logo {
+          font-size: 16px;
+        }
+        .logo-subtitle {
+          font-size: 10px;
+        }
+        .mobile-menu-toggle {
+          padding: 8px;
+        }
+        .mobile-menu-toggle .menu-icon-bar {
+          width: 20px;
+          height: 2px;
+          margin: 4px 0;
+        }
+
+        /* For RSC Variants, 2 columns on small mobile, then 1 if too small */
+        .image-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 15px;
+        }
+        .grid-item img {
+          height: 130px;
+        }
+        .grid-item-caption h4 {
+          font-size: 14px;
+        }
+        .grid-item-caption p {
+          font-size: 12px;
+        }
+
+        .features-visual-list {
+          grid-template-columns: 1fr;
+        } /* Single column for features on small mobile */
+        .feature-item {
+          padding: 15px;
+        }
+        .feature-image-container {
+          width: 60px;
+          height: 60px;
+        }
+
+        .product-detail-sidebar {
+          padding: 20px;
+        }
+      }
+
+      @media print {
+        header,
+        footer,
+        .cta .btn,
+        .floating-buttons-container,
+        .language-btn-container,
+        .mobile-menu-toggle,
+        .product-detail-sidebar .btn {
+          display: none !important;
+        }
+        #main-navigation,
+        #main-navigation.open {
+          display: none !important;
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+        }
+        .product-hero {
+          background: none;
+          color: black;
+          padding: 30px 0;
+        }
+        .product-detail-sidebar {
+          box-shadow: none;
+          border: 1px solid #eee;
+        }
+        .grid-item {
+          box-shadow: none;
+          border: 1px solid #eee;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-theme">
+    <header>
+      <div class="container header-container">
+        <div class="logo-container">
+          <a href="index.html" class="logo-link">
+            <img
+              src="logo.png"
+              alt="Vijaya Packaging Logo"
+              class="logo-img"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/100x35/0A2342/FFFFFF?text=Logo';
+              "
+            />
+          </a>
+          <div class="logo-text">
+            <div class="logo">Vijaya <span>Packaging</span></div>
+            <div class="logo-subtitle">Industries</div>
+          </div>
+        </div>
+        <div class="mobile-header-controls">
+          <div class="mobile-language-btn-container">
+            <button
+              type="button"
+              class="language-btn mobile-language-btn"
+              aria-label="Switch Language"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="icon">🌐</span> Lang
+            </button>
+            <div class="language-dropdown">
+              <a href="index_kannada.html">ಕನ್ನಡ</a>
+              <a href="index_hindi.html">हिन्दी</a>
+            </div>
+          </div>
+          <button
+            class="mobile-menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+          </button>
+        </div>
+        <nav id="main-navigation">
+          <ul>
+            <li class="language-btn-container">
+              <button
+                type="button"
+                class="language-btn"
+                aria-label="Switch Language"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span class="icon">🌐</span> Lang
+              </button>
+              <div class="language-dropdown">
+                <a href="index_kannada.html">ಕನ್ನಡ</a>
+                <a href="index_hindi.html">हिन्दी</a>
+              </div>
+            </li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products" class="active">Products</a></li>
+            <li><a href="index.html#capabilities">Capabilities</a></li>
+            <li><a href="index.html#sustainability">Sustainability</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="product-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>&raquo;</span>
+          <a href="index.html#products">Products</a>
+          <span>&raquo;</span> Regular Slotted Cartons
+        </div>
+        <h1>Regular Slotted Cartons (RSC)</h1>
+        <p>
+          Explore the industry-standard packaging solution through our visual
+          guide.
+        </p>
+      </div>
+    </section>
+
+    <section class="product-visual-section">
+      <div class="container">
+        <p class="product-intro-text">
+          Regular Slotted Cartons (RSCs) are the most common and versatile box
+          style, made from a single piece of corrugated board. All flaps are the
+          same length, and the outer flaps meet at the center for easy sealing.
+          See how they come together and what makes them ideal for shipping and
+          storage.
+        </p>
+
+        <h2 class="section-title">Understanding RSC Structure</h2>
+        <div class="image-grid">
+          <div class="grid-item">
+            <img
+              src="The Flat Blank.png"
+              alt="Flat RSC Blank"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>1. The Flat Blank</h4>
+              <p>
+                RSCs start as a single, die-cut and scored piece of corrugated
+                board, shipped flat for space efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Easy Folding.png"
+              alt="Folding an RSC"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>2. Easy Folding</h4>
+              <p>
+                Pre-scored lines make folding straightforward, forming the box
+                structure quickly.
+              </p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Secure Sealing.png"
+              alt="Sealing RSC Flaps"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>3. Secure Sealing</h4>
+              <p>
+                Outer flaps meet at the center for taping or gluing, creating a
+                secure closure.
+              </p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Ready for Use.png"
+              alt="Assembled RSC Box"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>4. Ready for Use</h4>
+              <p>
+                The assembled RSC provides robust protection for a wide variety
+                of products.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title">Key Features & Benefits Visualized</h2>
+        <div class="features-visual-list">
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="Efficient Design.png"
+                alt="Efficient Design Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Efficient';
+                "
+              />
+            </div>
+            <h4>Efficient Design</h4>
+            <p>Minimal material waste, making it cost-effective.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="Versatile Use.png"
+                alt="Versatile Use Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Versatile';
+                "
+              />
+            </div>
+            <h4>Versatile Use</h4>
+            <p>Ideal for shipping, storage, and various industries.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="Stacking Strength.png"
+                alt="Stacking Strength Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Strong';
+                "
+              />
+            </div>
+            <h4>Stacking Strength</h4>
+            <p>Good structural integrity for warehousing.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="Fully Customizable.png"
+                alt="Customizable Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Custom';
+                "
+              />
+            </div>
+            <h4>Customizable</h4>
+            <p>Adaptable in size, strength, and print.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="CustomizableSpace-Saving.png"
+                alt="Space-Saving Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Space-Saving';
+                "
+              />
+            </div>
+            <h4>Space-Saving</h4>
+            <p>Shipped flat to optimize storage space.</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-image-container">
+              <img
+                src="Eco-Friendly.png"
+                alt="Eco-Friendly Feature"
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://placehold.co/80x80/cccccc/333333?text=Eco';
+                "
+              />
+            </div>
+            <h4>Eco-Friendly</h4>
+            <p>Made from recyclable materials.</p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 50px">
+          RSC Customization Examples
+        </h2>
+        <div class="image-grid">
+          <div class="grid-item">
+            <img
+              src="Custom Sizing.png"
+              alt="Custom Sized RSC"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Custom Sizing</h4>
+              <p>Tailored dimensions to perfectly fit your products.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Brand Printing.png"
+              alt="RSC with Custom Printing"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Brand Printing</h4>
+              <p>Flexographic printing for logos and information.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Functional Additions.png"
+              alt="RSC with Hand Holes"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Functional Additions</h4>
+              <p>Options like hand holes for easier handling.</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Board Strength Options.png"
+              alt="RSC with various board strengths"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/600x400/cccccc/333333?text=Image+Not+Found';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Board Strength Options</h4>
+              <p>Various flute types for different protection needs.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 50px">
+          Explore RSC Variants
+        </h2>
+        <div class="image-grid">
+          <div class="grid-item">
+            <img
+              src="Five Panel Folder (FPF).png"
+              alt="Five Panel Folder (FPF)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=FPF';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Five Panel Folder (FPF)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Overlap Slotted Container (OSC).png"
+              alt="Overlap Slotted Container (OSC)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=OSC';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Overlap Slotted Container (OSC)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Full Telescope Half Slotted Container (FTHS).png"
+              alt="Full Telescope Half Slotted Container (FTHS)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=FTHS';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Full Telescope Half Slotted Container (FTHS)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Roll End Tray.png"
+              alt="Roll End Tray"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=Roll+End+Tray';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Roll End Tray</h4>
+              <p>(Walker Lock / Self Locking)</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Half Slotted Container (HSC).png"
+              alt="Half Slotted Container (HSC)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=HSC';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Half Slotted Container (HSC)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Regular Slotted Container (RSC).png"
+              alt="Regular Slotted Container (RSC)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=RSC';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Regular Slotted Container (RSC)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Integral Divider Container.png"
+              alt="Integral Divider Container"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=Divider+Box';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Integral Divider Container</h4>
+              <p>(Self Divider Box)</p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Snap Lock  1-2-3 Bottom (RSC Top).png"
+              alt="Snap Lock Bottom Container"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=Snap+Lock';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Snap Lock / 1-2-3 Bottom (RSC Top)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Octagonal Double Cover Container.png"
+              alt="Octagonal Double Cover Container"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=Octagonal';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Octagonal Double Cover Container</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="Full Telescope Design (FTD).png"
+              alt="Full Telescope Design Style Container (FTD)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=FTD';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>Full Telescope Design (FTD)</h4>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              src="One Piece Folder (OPF).png"
+              alt="One Piece Folder (OPF)"
+              onerror="
+                this.onerror = null;
+                this.src =
+                  'https://placehold.co/260x200/cccccc/333333?text=OPF';
+              "
+            />
+            <div class="grid-item-caption">
+              <h4>One Piece Folder (OPF)</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail-sidebar">
+          <h3>RSC: Your Go-To Packaging</h3>
+          <img
+            src="Regular Slotted Cartons.png"
+            alt="Featured Regular Slotted Carton"
+            class="sidebar-main-image"
+            onerror="
+              this.onerror = null;
+              this.src =
+                'https://placehold.co/600x450/cccccc/333333?text=Image+Not+Found';
+            "
+          />
+          <ul>
+            <li>Industry Standard Solution</li>
+            <li>Cost-Efficient & Reliable</li>
+            <li>Highly Versatile & Customizable</li>
+            <li>Easy to Assemble & Seal</li>
+            <li>Sustainable & Recyclable</li>
+          </ul>
+          <a href="index.html#contact" class="btn">Get a Quote for RSCs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Need Reliable Regular Slotted Cartons?</h2>
+        <p>
+          Partner with Vijaya Packaging Industries for high-quality,
+          customizable RSCs that meet your exact specifications. We offer
+          competitive pricing and a commitment to sustainability.
+        </p>
+        <a href="index.html#contact" class="btn">Discuss Your RSC Needs</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h3>Vijaya Packaging</h3>
+            <p>
+              Premium, eco-friendly corrugated packaging solutions. A
+              woman-owned enterprise committed to innovation, quality, and
+              sustainability since 2019.
+            </p>
+            <div class="social-links">
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Facebook"
+                title="Facebook"
+                >FB</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="LinkedIn"
+                title="LinkedIn"
+                >LI</a
+              >
+              <a
+                href="#"
+                class="social-link"
+                aria-label="Instagram"
+                title="Instagram"
+                >IG</a
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#products">Products</a></li>
+              <li><a href="index.html#capabilities">Capabilities</a></li>
+              <li><a href="index.html#sustainability">Sustainability</a></li>
+              <li><a href="index.html#contact">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Our Products</h3>
+            <ul>
+              <li>
+                <a href="regular_slotted_cartons.html"
+                  >Regular Slotted Cartons</a
+                >
+              </li>
+              <li><a href="Die-Cut Boxes.html">Die-Cut Boxes</a></li>
+              <li>
+                <a href="Telescoping Containers.html">Telescoping Containers</a>
+              </li>
+              <li>
+                <a href="Retail Display Packaging.html"
+                  >Retail Display Packaging</a
+                >
+              </li>
+              <li>
+                <a href="Heavy-Duty Packaging.html">Heavy-Duty Solutions</a>
+              </li>
+              <li>
+                <a href="Custom Inserts & Dividers.html"
+                  >Custom Inserts & Dividers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                <a href="#" id="footerDownloadBrochure">Download Brochure</a>
+              </li>
+              <li><a href="#">Packaging Guide</a></li>
+              <li><a href="#">Material Specifications</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog / News</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="currentYear"></span> Vijaya Packaging Industries. All
+            Rights Reserved. Designed with care.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-buttons-container">
+      <button
+        id="theme-toggle-btn"
+        class="floating-btn"
+        aria-label="Toggle theme"
+        title="Toggle Theme"
+      >
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <a
+        href="index.html#contact"
+        id="floating-contact-btn"
+        class="floating-btn"
+        aria-label="Contact Us"
+        title="Quick Contact"
+      >
+        💬
+      </a>
+    </div>
+
+    <script>
+      // Brochure Download
+      function downloadBrochure() {
+        const brochureUrl = "Vijaya Packaging Industries Brouchure.pdf";
+        const link = document.createElement("a");
+        link.href = brochureUrl;
+        link.download = "Vijaya_Packaging_Brochure.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      const footerDownloadBrochureLink = document.getElementById(
+        "footerDownloadBrochure",
+      );
+      if (footerDownloadBrochureLink) {
+        footerDownloadBrochureLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          downloadBrochure();
+        });
+      }
+
+      // Language Dropdown Toggle
+      const langBtnContainer = document.querySelector(
+        ".language-btn-container",
+      );
+      const langBtn = document.querySelector(".language-btn");
+      if (langBtnContainer && langBtn) {
+        langBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          langBtnContainer.classList.toggle("open");
+          langBtn.setAttribute(
+            "aria-expanded",
+            langBtnContainer.classList.contains("open"),
+          );
+        });
+      }
+
+      // Mobile Language Dropdown Toggle
+      const mobileLangBtnContainer = document.querySelector(
+        ".mobile-language-btn-container",
+      );
+      const mobileLangBtn = document.querySelector(".mobile-language-btn");
+      if (mobileLangBtnContainer && mobileLangBtn) {
+        mobileLangBtn.addEventListener("click", function (event) {
+          event.stopPropagation();
+          mobileLangBtnContainer.classList.toggle("open");
+          mobileLangBtn.setAttribute(
+            "aria-expanded",
+            mobileLangBtnContainer.classList.contains("open"),
+          );
+        });
+      }
+
+      document.addEventListener("click", function (event) {
+        if (
+          langBtnContainer &&
+          langBtnContainer.classList.contains("open") &&
+          !langBtnContainer.contains(event.target)
+        ) {
+          langBtnContainer.classList.remove("open");
+          if (langBtn) langBtn.setAttribute("aria-expanded", "false");
+        }
+
+        if (
+          mobileLangBtnContainer &&
+          mobileLangBtnContainer.classList.contains("open") &&
+          !mobileLangBtnContainer.contains(event.target)
+        ) {
+          mobileLangBtnContainer.classList.remove("open");
+          if (mobileLangBtn)
+            mobileLangBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Theme Toggle Functionality
+      const themeToggleButton = document.getElementById("theme-toggle-btn");
+      const body = document.body;
+
+      function setTheme(themeName) {
+        localStorage.setItem("theme", themeName);
+        body.className = themeName + "-theme";
+        const root = document.documentElement;
+        if (themeName === "dark") {
+          root.style.setProperty(
+            "--rgb-primary-bright-blue",
+            "var(--rgb-accent-gold-val, 255, 191, 0)",
+          );
+        } else {
+          root.style.setProperty(
+            "--rgb-primary-bright-blue",
+            "var(--rgb-primary-bright-blue-val, 0, 123, 255)",
+          );
+        }
+        if (
+          body.classList.contains("mobile-menu-open") &&
+          themeName === "dark"
+        ) {
+          body.classList.add("dark-theme");
+        } else if (
+          body.classList.contains("mobile-menu-open") &&
+          themeName === "light"
+        ) {
+          body.classList.remove("dark-theme");
+        }
+      }
+
+      document.documentElement.style.setProperty(
+        "--rgb-primary-bright-blue-val",
+        "0, 123, 255",
+      );
+      document.documentElement.style.setProperty(
+        "--rgb-accent-gold-val",
+        "255, 191, 0",
+      );
+
+      if (themeToggleButton) {
+        themeToggleButton.addEventListener("click", () => {
+          const currentClass = body.className;
+          if (currentClass.includes("dark-theme")) {
+            setTheme("light");
+          } else {
+            setTheme("dark");
+          }
+        });
+      }
+      (function () {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") {
+          setTheme("dark");
+        } else {
+          setTheme("light");
+        }
+      })();
+
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Smooth Scroll
+      document
+        .querySelectorAll('a[href^="#"], a[href^="index.html#"]')
+        .forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            const isSamePageAnchor = href.startsWith("#");
+            const isMobileNavLink = this.closest("#main-navigation.open");
+
+            if (isSamePageAnchor) {
+              if (!isMobileNavLink) {
+                e.preventDefault();
+              }
+              const targetId = href;
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                const delay = isMobileNavLink ? 150 : 0;
+                setTimeout(() => {
+                  targetElement.scrollIntoView({ behavior: "smooth" });
+                }, delay);
+              }
+            } else if (href.includes("#")) {
+              if (isMobileNavLink && mainNav.classList.contains("open")) {
+                menuToggleBtn.click();
+              }
+            }
+
+            if (isMobileNavLink && mainNav.classList.contains("open")) {
+              if (isSamePageAnchor) {
+                setTimeout(() => {
+                  if (mainNav.classList.contains("open")) {
+                    menuToggleBtn.click();
+                  }
+                }, 50);
+              } else {
+                menuToggleBtn.click();
+              }
+            }
+          });
+        });
+
+      // Mobile Menu Toggle
+      const menuToggleBtn = document.querySelector(".mobile-menu-toggle");
+      const mainNav = document.getElementById("main-navigation");
+
+      if (menuToggleBtn && mainNav) {
+        menuToggleBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const isExpanded =
+            menuToggleBtn.getAttribute("aria-expanded") === "true" || false;
+          menuToggleBtn.setAttribute("aria-expanded", !isExpanded);
+          menuToggleBtn.classList.toggle("open");
+          mainNav.classList.toggle("open");
+          const currentTheme = localStorage.getItem("theme") || "light";
+          const bodyClass =
+            currentTheme + "-theme" + (!isExpanded ? " mobile-menu-open" : "");
+          body.className = bodyClass.trim();
+        });
+      }
+
+      document.addEventListener("click", function (event) {
+        if (mainNav && menuToggleBtn) {
+          const isClickInsideNav = mainNav.contains(event.target);
+          const isClickOnToggle = menuToggleBtn.contains(event.target);
+
+          if (
+            !isClickInsideNav &&
+            !isClickOnToggle &&
+            mainNav.classList.contains("open")
+          ) {
+            menuToggleBtn.setAttribute("aria-expanded", "false");
+            menuToggleBtn.classList.remove("open");
+            mainNav.classList.remove("open");
+            const currentTheme = localStorage.getItem("theme") || "light";
+            body.className = currentTheme + "-theme";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

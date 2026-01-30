@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vijaya Packaging Industries - Brochure</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-deep-blue: #0A2342;
+            --primary-dark-blue: #003366;
+            --primary-bright-blue: #007BFF;
+            --accent-orange: #8B4513;
+            --accent-gold: #A0522D;
+            --light-bg: #f0f8ff;
+            --light-text: #333333;
+            --white: #ffffff;
+            --footer-text: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #eee; /* Grey background for viewing HTML */
+            color: var(--light-text);
+            line-height: 1.5;
+        }
+
+        .page {
+            width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
+            margin: 20px auto;
+            background-color: var(--white);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25mm;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden; /* Ensure elements don't spill out */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-deep-blue);
+            font-weight: 700;
+        }
+
+        h1 { font-size: 28pt; margin-bottom: 10px; }
+        h2 { font-size: 20pt; margin-bottom: 15px; border-bottom: 3px solid var(--accent-orange); padding-bottom: 8px; margin-top: 30px;}
+        h3 { font-size: 16pt; margin-bottom: 10px; color: var(--primary-dark-blue); }
+        h4 { font-size: 12pt; margin-bottom: 5px; color: var(--primary-dark-blue); font-weight: 600;}
+
+        p, ul {
+            font-size: 11pt;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: var(--primary-bright-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-orange);
+            text-decoration: underline;
+        }
+
+        .header, .footer {
+            width: calc(100% + 50mm); /* Span full width including padding */
+            margin-left: -25mm;
+            padding: 15px 25mm;
+            box-sizing: border-box;
+            background-color: var(--primary-deep-blue);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .header {
+            padding: 20px 25mm;
+            background-color: var(--white);
+            color: var(--primary-deep-blue);
+            border-bottom: 5px solid var(--accent-orange);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+         .header .logo-img { height: 65px; }
+         .header .logo-text { text-align: left; }
+         .header .logo { font-size: 28px; font-weight: 700; }
+         .header .logo span { color: var(--accent-orange); }
+         .header .logo-subtitle { font-size: 18px; font-weight: 600; }
+
+        .footer {
+            margin-top: auto; /* Push footer to the bottom */
+            padding: 15px 25mm;
+            font-size: 9pt;
+            color: var(--footer-text);
+            text-align: center;
+        }
+        .footer a { color: var(--accent-gold); }
+
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .cover-page .logo-img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+        .cover-page h1 {
+            font-size: 36pt;
+            color: var(--primary-deep-blue);
+            line-height: 1.2;
+        }
+         .cover-page h1 span { color: var(--accent-orange); }
+        .cover-page p.tagline {
+            font-size: 16pt;
+            color: var(--primary-dark-blue);
+            margin: 20px 0 40px 0;
+            max-width: 80%;
+        }
+        .cover-page .contact-info {
+            font-size: 12pt;
+            font-weight: 600;
+        }
+        .cover-page .contact-info a {
+            color: var(--primary-dark-blue);
+            text-decoration: none;
+        }
+        .cover-page .contact-info a:hover {
+            color: var(--accent-orange);
+        }
+
+        .two-column {
+            display: flex;
+            gap: 20mm;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+        .column { flex: 1; }
+
+        .founder-quote {
+            font-style: italic;
+            color: var(--primary-dark-blue);
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 4px solid var(--accent-orange);
+            background-color: #fdf5e6;
+            font-size: 12pt;
+        }
+
+        .product-list, .capability-list, .sustainability-list {
+            list-style: none;
+            padding: 0;
+        }
+        .product-list li, .capability-list li, .sustainability-list li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-left: 4px solid var(--accent-gold);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .sustainability-list li {
+            display: flex;
+            align-items: flex-start;
+        }
+        .sustainability-list .icon {
+            font-size: 20pt;
+            margin-right: 15px;
+            color: var(--accent-orange);
+            line-height: 1;
+        }
+
+        .cta-box {
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .cta-box h2 {
+            color: var(--white);
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 22pt;
+        }
+        .cta-box p { font-size: 13pt; }
+        .cta-box a.btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--accent-orange);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 15px;
+            font-size: 14pt;
+        }
+         .cta-box a.btn:hover { background-color: #f0f0f0; }
+
+        .contact-details { margin-top: 20px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 15px; }
+        .contact-icon { font-size: 18pt; margin-right: 15px; width: 30px; text-align: center; color: var(--accent-orange); }
+
+        .placeholder-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 10pt;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            overflow: hidden; /* To contain the image properly */
+        }
+        .placeholder-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area, might crop */
+        }
+        .placeholder-img .fallback-text {
+            color: #666; font-size: 12pt; text-align: center; padding: 20px;
+        }
+
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-left: 4px solid var(--accent-gold);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-item .img-container {
+            width: 100%;
+            height: 120px; /* Fixed height for the image container */
+            background-color: #e0e0e0; /* Fallback background if image fails */
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: 2px solid var(--accent-gold);
+            overflow: hidden; /* Ensures image stays within bounds */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the container, might crop */
+            transition: transform 0.3s ease;
+        }
+        .product-item .img-container .fallback-text {
+             font-size: 10pt; color: #555;
+        }
+
+
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-item h4 {
+            margin: 10px 0 5px 0;
+            font-size: 11pt;
+            color: var(--primary-deep-blue);
+        }
+
+        .product-item p {
+            font-size: 9pt;
+            margin: 0;
+            line-height: 1.3;
+            flex-grow: 1; /* Allows paragraph to take available space */
+        }
+
+        .single-column {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .founder-photo {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .founder-photo:hover {
+            transform: scale(1.02);
+        }
+
+        @media print {
+            body { 
+                background-color: var(--white); 
+                margin: 0;
+                padding: 0;
+                -webkit-print-color-adjust: exact; /* Ensures backgrounds and colors print in Chrome/Safari */
+                print-color-adjust: exact; /* Standard */
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 15mm; /* Optimized padding for A4 print */
+                page-break-after: always; /* Ensure each div.page starts a new page */
+                min-height: 267mm; /* Adjusted for print margins */
+            }
+            .page:last-child {
+                page-break-after: auto;
+            }
+            .product-grid {
+                gap: 10px; /* Reduced gap for print */
+            }
+            .product-item .img-container { /* Adjusted for print */
+                height: 100px; 
+                border-width: 1px; 
+            }
+            .placeholder-img {
+                height: 100px; /* Smaller images for print optimization */
+            }
+             .placeholder-img img {
+                object-fit: contain; /* Prefer contain for print to avoid cropping important parts */
+            }
+            .product-item img {
+                 object-fit: contain; /* Prefer contain for print */
+            }
+            h2 {
+                font-size: 18pt; /* Slightly smaller headings for print */
+            }
+            .founder-photo {
+                width: 150px !important;
+                height: 150px !important;
+                border-width: 2px !important;
+            }
+            .cta-box {
+                background-color: var(--accent-orange) !important; /* Ensure background prints */
+                color: var(--white) !important;
+            }
+            .cta-box h2 {
+                 color: var(--white) !important;
+            }
+             .cta-box a.btn {
+                background-color: var(--white) !important;
+                color: var(--accent-orange) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page cover-page">
+        <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none';">
+        <h1>Vijaya <span>Packaging</span><br>Industries</h1>
+        <p class="tagline">Your Trusted Partner for Premium, Eco-Friendly Corrugated Packaging Solutions.</p>
+        <div class="placeholder-img" style="height: 200px;"> <img src="brouchure_bg_center.jpg" alt="Packaging Showcase" 
+                 onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Corrugated Packaging Showcase Image</div>';">
+        </div>
+        <p class="tagline">Proudly <strong>Woman-Owned</strong> and Operated Since 2019.</p>
+        <div class="contact-info">
+            <p>
+                <a href="https://shorturl.at/aXkKu">Website: https://shorturl.at/aXkKu</a><br>
+                <a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a> | <a href="tel:+919343830540">+91 93438 30540</a>
+            </p>
+            <br><br><br>
+        </div>
+        <div class="footer">
+             Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none';">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <h2>About Vijaya Packaging</h2>
+        <div class="two-column">
+            <div class="column">
+                <h3>Our Story: Innovation & Trust</h3>
+                <p>Founded in 2019 by visionary entrepreneur <strong>Mrs. Vijayalakshmi D</strong>, Vijaya Packaging Industries has swiftly grown into a leading and trusted packaging solution provider. As a proud <strong>woman-led enterprise</strong>, we are deeply committed to excellence in everything we do.</p>
+                <p>Our dedication to superior quality, ongoing innovation, and strong sustainability practices has built trust with clients across diverse sectors like FMCG, electronics, pharmaceuticals, e-commerce etc,.</p>
+
+                <h3>Meet Our Founder</h3>
+                <p>Mrs. Vijayalakshmi D is a pioneer in the packaging industry. Her vision extends beyond creating top-tier, sustainable packaging; she aims to foster economic empowerment within our community. Her leadership has been celebrated with prestigious awards.</p>
+                 <div class="founder-quote">
+                    <p>"We don't just make boxes; we build trust and deliver solutions that protect what's valuable, both for our clients and our planet."<br>– Mrs. Vijayalakshmi D</p>
+                </div>
+            </div>
+            <div class="column">
+                 <div class="founder-photo" style="width: 200px; height: 200px; margin: 0 auto 20px auto; border-radius: 10px; overflow: hidden; border: 3px solid var(--accent-orange); background-color: #f5f5f5;">
+                    <img src="mom.png" alt="Founder Image" style="width: 100%; height: 100%; object-fit: cover;"
+                         onerror="this.style.display='none'; this.parentElement.innerHTML = '<div style=\'display: flex; align-items: center; justify-content: center; height: 100%; color: #666; font-size: 12pt; text-align: center;\'>Founder Photo<br>Mrs. Vijayalakshmi D</div>';">
+                </div>
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li><strong>Unmatched Quality:</strong> We deliver durable and reliable packaging every time.</li>
+                    <li><strong>Woman-Led Enterprise:</strong> Supporting diversity and strong leadership.</li>
+                    <li><strong>Innovative Solutions:</strong> Custom designs and advanced techniques.</li>
+                    <li><strong>Sustainable Focus:</strong> Eco-friendly materials and processes.</li>
+                    <li><strong>Customer-Centric:</strong> Your needs are our priority.</li>
+                    <li><strong>Reliable Delivery:</strong> Ensuring your supply chain runs smoothly.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Learn More: <a href="https://shorturl.at/aXkKu">https://shorturl.at/aXkKu</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+             <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none';">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <div class="single-column">
+            <h2>Our Premium Products</h2>
+            <p style="text-align: center; font-size: 12pt; margin-bottom: 20px;">We offer a comprehensive range of high-quality, customizable corrugated packaging solutions designed to meet your specific needs.</p>
+            
+            <div class="placeholder-img" style="height: 120px; margin-bottom: 25px; background: linear-gradient(135deg, var(--primary-deep-blue), var(--primary-dark-blue));">
+                 <img src="brouchure_bg_premium.jpg" alt="Products Showcase" style="object-fit: cover;"
+                      onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color: white; font-size: 14pt; text-align: center; padding: 40px 20px;\'>🏭 Premium Packaging Solutions Showcase</div>';">
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-item">
+                    <div class="img-container">
+                        <img src="Regular Slotted Cartons.png" alt="Regular Slotted Cartons" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>RSC Box Image</div>';">
+                    </div>
+                    <h4>Regular Slotted Cartons (RSC)</h4>
+                    <p>Versatile and widely used for shipping and storage across all industries.</p>
+                </div>
+                
+                <div class="product-item">
+                     <div class="img-container">
+                        <img src="Die-Cut Boxes.png" alt="Die-Cut Boxes"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Die-Cut Box Image</div>';">
+                    </div>
+                    <h4>Die-Cut Boxes</h4>
+                    <p>Custom shapes for unique products and distinctive branding solutions.</p>
+                </div>
+                
+                <div class="product-item">
+                    <div class="img-container">
+                        <img src="Telescoping Containers.jpg" alt="Telescoping Containers"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Telescoping Container Image</div>';">
+                    </div>
+                    <h4>Telescoping Containers</h4>
+                    <p>Two-piece boxes providing added strength and superior protection.</p>
+                </div>
+                
+                <div class="product-item">
+                    <div class="img-container">
+                        <img src="Retail Display Packaging.jpg" alt="Retail Display Packaging"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Retail Display Image</div>';">
+                    </div>
+                    <h4>Retail Display Packaging</h4>
+                    <p>Eye-catching designs perfect for point-of-purchase marketing.</p>
+                </div>
+                
+                <div class="product-item">
+                     <div class="img-container">
+                        <img src="Heavy-Duty Packaging.jpg" alt="Heavy-Duty Packaging"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Heavy-Duty Packaging Image</div>';">
+                    </div>
+                    <h4>Heavy-Duty Packaging</h4>
+                    <p>Robust solutions engineered for demanding industrial applications.</p>
+                </div>
+                
+                <div class="product-item">
+                    <div class="img-container">
+                        <img src="Custom Inserts & Dividers.jpg" alt="Custom Inserts & Dividers"
+                            onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Custom Inserts Image</div>';">
+                    </div>
+                    <h4>Custom Inserts & Dividers</h4>
+                    <p>Internal protection and organization for delicate or multiple items.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Quality | Innovation | Sustainability | <a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none';">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <h2>Our Core Capabilities</h2>
+        <p style="text-align: center; font-size: 12pt; margin-bottom: 25px;">Our state-of-the-art facility and expert team enable us to deliver exceptional results through advanced technology and innovative processes.</p>
+        
+        <div class="two-column">
+            <div class="column">
+                <ul class="capability-list">
+                    <li>
+                        <h4>Custom Sizing & Design</h4>
+                        <p>Tailored packaging to perfectly fit your product, minimizing waste and maximizing protection with innovative structural designs.</p>
+                    </li>
+                    <li>
+                        <h4>Advanced Printing</h4>
+                        <p>High-quality flexographic and digital printing with vibrant, eco-friendly water-based inks to elevate your brand.</p>
+                    </li>
+                    <li>
+                        <h4>Prototyping & Testing</h4>
+                        <p>We can create samples and conduct tests to guarantee your packaging performs under real-world conditions.</p>
+                    </li>
+                    <li>
+                        <h4>Quality Assurance</h4>
+                        <p>Rigorous quality control processes ensure every product meets our high standards and your specifications.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="placeholder-img" style="height: 200px;">
+                     <img src="logo.png" alt="Manufacturing Facility"
+                          onerror="this.style.display='none'; this.parentElement.innerHTML = '<div class=\'fallback-text\'>Manufacturing Facility & Equipment</div>';">
+                </div>
+                <ul class="capability-list">
+                    <li>
+                        <h4>Fast Turnaround</h4>
+                        <p>Efficient production processes and streamlined workflows ensure quick delivery without compromising quality.</p>
+                    </li>
+                    <li>
+                        <h4>Sustainable Practices</h4>
+                        <p>Eco-friendly materials and processes that reduce environmental impact while maintaining superior performance.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Excellence in Every Box | <a href="https://shorturl.at/aXkKu">https://shorturl.at/aXkKu</a>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="logo.png" alt="Vijaya Packaging Logo" class="logo-img" onerror="this.style.display='none';">
+             <div class="logo-text">
+                <div class="logo">Vijaya <span>Packaging</span></div>
+                <div class="logo-subtitle">Industries</div>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Ready to Elevate Your Packaging?</h2>
+            <p>Partner with us for innovative, sustainable, and high-quality solutions. Let our expertise work for you.</p>
+            <a href="#contact" class="btn" onclick="window.location.href='mailto:vijayapkgindustries@gmail.com?subject=Packaging%20Inquiry%20from%20Brochure'; return false;">Get a Free Quote Today!</a>
+        </div>
+
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div><h4>Address:</h4> <p>Q 211, KSSIDC Industrial Estate, Hebbal, Mysuru 570016</p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div><h4>Phone:</h4> <p><a href="tel:+919343830540">+91 93438 30540</a></p></div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div><h4>Email:</h4> <p><a href="mailto:vijayapkgindustries@gmail.com">vijayapkgindustries@gmail.com</a></p></div>
+            </div>
+             <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div><h4>Website:</h4> <p><a href="https://shorturl.at/aXkKu">https://shorturl.at/aXkKu</a></p></div>
+            </div>
+        </div>
+
+        <div class="footer">
+             © 2025 Vijaya Packaging Industries. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
